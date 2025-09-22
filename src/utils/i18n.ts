@@ -38,38 +38,51 @@ export function getLocalizedPath(path: string, lang: Language): string {
 
 // 生成语言切换链接
 export function getLanguageSwitchUrl(currentUrl: string, targetLang: Language): string {
-  const url = new URL(currentUrl, 'http://localhost');
-  const currentLang = getLanguageFromUrl(url);
+  // 如果是完整URL，解析pathname；否则直接使用
+  let pathname = currentUrl;
+  if (currentUrl.startsWith('http')) {
+    const url = new URL(currentUrl);
+    pathname = url.pathname;
+  }
+  
+  const currentLang = getLanguageFromUrl({ pathname } as URL);
   
   if (currentLang === targetLang) {
     return currentUrl;
   }
   
-  let pathname = url.pathname;
+  // 获取基础路径
   const baseUrl = import.meta.env.BASE_URL || '/';
+  let processPath = pathname;
   
   // 移除 base URL 前缀进行处理
-  if (baseUrl !== '/' && pathname.startsWith(baseUrl)) {
-    pathname = pathname.slice(baseUrl.length);
-    if (!pathname.startsWith('/')) {
-      pathname = '/' + pathname;
+  if (baseUrl !== '/' && processPath.startsWith(baseUrl)) {
+    processPath = processPath.slice(baseUrl.length);
+    if (!processPath.startsWith('/')) {
+      processPath = '/' + processPath;
     }
   }
   
   // 移除当前语言前缀
-  if (pathname.startsWith(`/${currentLang}/`)) {
-    pathname = pathname.replace(`/${currentLang}/`, '/');
-  } else if (pathname === `/${currentLang}`) {
-    pathname = '/';
+  if (currentLang === 'en' && processPath.startsWith('/en/')) {
+    processPath = processPath.replace('/en/', '/');
+  } else if (currentLang === 'en' && processPath === '/en') {
+    processPath = '/';
   }
   
   // 添加目标语言前缀
-  if (targetLang !== 'zh') {
-    pathname = `/${targetLang}${pathname}`;
+  if (targetLang === 'en') {
+    processPath = `/en${processPath}`;
+  }
+  
+  // 清理路径
+  processPath = processPath.replace(/\/+/g, '/');
+  if (processPath !== '/' && processPath.endsWith('/')) {
+    processPath = processPath.slice(0, -1);
   }
   
   // 重新添加 base URL
-  const finalPath = baseUrl === '/' ? pathname : `${baseUrl}${pathname}`.replace(/\/+/g, '/');
+  const finalPath = baseUrl === '/' ? processPath : `${baseUrl}${processPath}`.replace(/\/+/g, '/');
   
   return finalPath;
 }

@@ -11,6 +11,9 @@ function getBasePath(): string {
   return isProduction ? '/cnusergroup-website' : '/';
 }
 
+// 导出基础路径获取函数供其他地方使用
+export { getBasePath };
+
 // 处理路径，确保包含正确的 base path
 function processRoutePath(path: string): string {
   const basePath = getBasePath();

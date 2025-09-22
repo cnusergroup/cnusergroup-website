@@ -1,10 +1,15 @@
 ---
 import { getLanguageFromUrl, getLanguageSwitchUrl, t, getRoute } from '@/utils';
+import { getBasePath } from '@/utils/routes';
 import LanguageToggle from './LanguageToggle.astro';
 
 const currentUrl = Astro.url.pathname;
 const lang = getLanguageFromUrl(Astro.url);
+const basePath = getBasePath();
 ---
+
+<!-- 添加base路径meta标签供客户端脚本使用 -->
+<meta name="astro-base" content={basePath} />
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
   <div class="container-custom">
@@ -154,36 +159,56 @@ const lang = getLanguageFromUrl(Astro.url);
       });
     }
 
-    // Add active state to current page navigation
+    // 导航高亮处理
+    setupNavigation();
+  });
+
+  function setupNavigation() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
-      if (href) {
-        // 直接比较完整的URL路径
-        let isActive = false;
-        
-        // 移除末尾的斜杠进行比较
-        const cleanCurrentPath = currentPath.replace(/\/$/, '') || '/';
-        const cleanHrefPath = href.replace(/\/$/, '') || '/';
-        
-        // 首页匹配：精确匹配
-        if (cleanHrefPath.endsWith('/cnusergroup-website') || cleanHrefPath.endsWith('/cnusergroup-website/en')) {
-          isActive = cleanCurrentPath === cleanHrefPath;
-        } 
-        // 其他页面匹配：精确匹配或前缀匹配
-        else {
-          isActive = cleanCurrentPath === cleanHrefPath || 
-                    cleanCurrentPath.startsWith(cleanHrefPath + '/');
-        }
-        
-        if (isActive) {
-          link.classList.add('active');
-        }
+      if (href && isActiveLink(currentPath, href)) {
+        link.classList.add('active');
       }
     });
-  });
+  }
+
+  function isActiveLink(currentPath: string, linkHref: string): boolean {
+    // 移除末尾的斜杠进行比较
+    const cleanCurrentPath = currentPath.replace(/\/$/, '') || '/';
+    const cleanHrefPath = linkHref.replace(/\/$/, '') || '/';
+    
+    // 获取基础路径
+    const baseMetaTag = document.querySelector('meta[name="astro-base"]') as HTMLMetaElement;
+    const basePath = baseMetaTag?.content || '/';
+    const cleanBasePath = basePath.replace(/\/$/, '');
+    
+    // 移除基础路径进行比较
+    let normalizedCurrentPath = cleanCurrentPath;
+    let normalizedHrefPath = cleanHrefPath;
+    
+    if (cleanBasePath !== '' && normalizedCurrentPath.startsWith(cleanBasePath)) {
+      normalizedCurrentPath = normalizedCurrentPath.substring(cleanBasePath.length) || '/';
+    }
+    if (cleanBasePath !== '' && normalizedHrefPath.startsWith(cleanBasePath)) {
+      normalizedHrefPath = normalizedHrefPath.substring(cleanBasePath.length) || '/';
+    }
+    
+    // 首页匹配：精确匹配根路径或语言路径
+    if (isHomePage(normalizedHrefPath)) {
+      return isHomePage(normalizedCurrentPath) || normalizedCurrentPath === normalizedHrefPath;
+    }
+    
+    // 其他页面匹配：精确匹配或前缀匹配
+    return normalizedCurrentPath === normalizedHrefPath || 
+           normalizedCurrentPath.startsWith(normalizedHrefPath + '/');
+  }
+
+  function isHomePage(path: string): boolean {
+    return path === '/' || path === '' || path === '/en';
+  }
 </script>
 
 <style>

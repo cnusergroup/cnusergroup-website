@@ -1,0 +1,273 @@
+---
+/**
+ * Optimized Event Image Component
+ * High-performance image component with lazy loading, modern formats, and SEO optimization
+ */
+
+import { 
+  getEventImageUrl, 
+  getEventImageSrcSet, 
+  getEventImagePlaceholder,
+  generateEventImageAlt,
+  generateModernImageSources,
+  EVENT_IMAGE_SIZES
+} from '../../utils/eventImageOptimization.js';
+
+export interface Props {
+  src: string;
+  alt?: string;
+  title?: string;
+  location?: string;
+  size?: keyof typeof EVENT_IMAGE_SIZES;
+  lazy?: boolean;
+  critical?: boolean;
+  className?: string;
+  locale?: 'zh' | 'en';
+  width?: number;
+  height?: number;
+}
+
+const {
+  src,
+  alt,
+  title,
+  location,
+  size = 'card',
+  lazy = true,
+  critical = false,
+  className = '',
+  locale = 'zh',
+  width,
+  height
+} = Astro.props;
+
+// Generate optimized image URLs and attributes
+const optimizedSrc = getEventImageUrl(src, size, { width, height });
+const srcSet = getEventImageSrcSet(src, size);
+const placeholder = getEventImagePlaceholder(size);
+const modernSources = generateModernImageSources(src, size);
+
+// Generate SEO-friendly alt text
+const imageAlt = alt || generateEventImageAlt(title || '', location, locale);
+
+// Get dimensions
+const dimensions = EVENT_IMAGE_SIZES[size];
+const imageWidth = width || dimensions.width;
+const imageHeight = height || dimensions.height;
+
+// Determine loading strategy
+const loading = critical ? 'eager' : 'lazy';
+const fetchPriority = critical ? 'high' : 'auto';
+
+// Generate sizes attribute for responsive images
+const sizesAttr = `(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw`;
+---
+
+<div class={`optimized-event-image ${className}`} data-size={size}>
+  {src ? (
+    <picture class="event-picture">
+      <!-- Modern formats for supported browsers -->
+      {modernSources.map(source => (
+        <source 
+          type={source.type}
+          srcset={lazy ? undefined : source.srcset}
+          data-srcset={lazy ? source.srcset : undefined}
+          sizes={sizesAttr}
+        />
+      ))}
+      
+      <!-- Fallback JPEG/PNG -->
+      <img
+        src={lazy ? placeholder : optimizedSrc}
+        data-src={lazy ? optimizedSrc : undefined}
+        srcset={lazy ? undefined : srcSet}
+        data-srcset={lazy ? srcSet : undefined}
+        alt={imageAlt}
+        width={imageWidth}
+        height={imageHeight}
+        sizes={sizesAttr}
+        loading={loading}
+        fetchpriority={fetchPriority}
+        decoding="async"
+        class={`event-image ${lazy ? 'lazy-loading' : ''} ${critical ? 'critical-image' : ''}`}
+        data-event-image="true"
+        data-size={size}
+        data-critical={critical ? 'true' : undefined}
+        onload="this.classList.add('loaded')"
+        onerror="window.handleImageError?.(this, this.dataset.size)"
+      />
+    </picture>
+  ) : (
+    <!-- Placeholder when no image is provided -->
+    <div class="event-image-placeholder" style={`width: ${imageWidth}px; height: ${imageHeight}px;`}>
+      <svg 
+        width={imageWidth} 
+        height={imageHeight} 
+        viewBox={`0 0 ${imageWidth} ${imageHeight}`}
+        class="placeholder-svg"
+      >
+        <rect width="100%" height="100%" fill="#f3f4f6"/>
+        <g transform={`translate(${imageWidth/2}, ${imageHeight/2})`}>
+          <svg width="48" height="48" x="-24" y="-24" fill="#9ca3af" viewBox="0 0 24 24">
+            <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </g>
+        <text 
+          x="50%" 
+          y="65%" 
+          text-anchor="middle" 
+          class="placeholder-text"
+          font-family="system-ui, -apple-system, sans-serif"
+          font-size="14"
+          fill="#6b7280"
+        >
+          {locale === 'zh' ? '活动图片' : 'Event Image'}
+        </text>
+      </svg>
+    </div>
+  )}
+</div>
+
+<style>
+  .optimized-event-image {
+    position: relative;
+    overflow: hidden;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+  }
+  
+  .event-picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .event-image.lazy-loading {
+    opacity: 0.7;
+    filter: blur(2px);
+  }
+  
+  .event-image.lazy-loaded,
+  .event-image.loaded {
+    opacity: 1;
+    filter: none;
+  }
+  
+  .event-image.image-error {
+    opacity: 0.5;
+    filter: grayscale(100%);
+  }
+  
+  .event-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-radius: 0.5rem;
+  }
+  
+  .placeholder-svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .placeholder-text {
+    font-weight: 500;
+  }
+  
+  /* Hover effects */
+  .optimized-event-image:hover .event-image {
+    transform: scale(1.02);
+  }
+  
+  /* Loading animation */
+  .lazy-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Critical image optimization */
+  .critical-image {
+    will-change: transform;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .optimized-event-image {
+      border-radius: 0.375rem;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .event-image,
+    .lazy-loading::after {
+      transition: none;
+      animation: none;
+    }
+    
+    .optimized-event-image:hover .event-image {
+      transform: none;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .event-image-placeholder {
+      border: 2px solid #000;
+    }
+    
+    .placeholder-text {
+      fill: #000;
+      font-weight: bold;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .optimized-event-image {
+      break-inside: avoid;
+    }
+    
+    .lazy-loading::after {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Initialize image optimization when component loads
+  document.addEventListener('DOMContentLoaded', function() {
+    // Import and run image optimization
+    import('../../utils/eventImageOptimization.js').then(module => {
+      module.optimizeEventImages();
+    });
+  });
+</script>

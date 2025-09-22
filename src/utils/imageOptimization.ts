@@ -56,11 +56,12 @@ export function getImagePlaceholder(width: number, height: number): string {
     <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
       <rect width="100%" height="100%" fill="#f3f4f6"/>
       <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="14" 
-            fill="#9ca3af" text-anchor="middle" dy=".3em">加载中...</text>
+            fill="#9ca3af" text-anchor="middle" dy=".3em">Loading...</text>
     </svg>
   `;
   
-  return `data:image/svg+xml;base64,${btoa(svg)}`;
+  // Use encodeURIComponent instead of btoa to handle Unicode characters
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
 /**

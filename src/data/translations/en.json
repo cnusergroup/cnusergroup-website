@@ -42,7 +42,71 @@
   },
   "events": {
     "title": "Events",
-    "subtitle": "Participate in our technical events and community gatherings"
+    "subtitle": "Participate in our technical events and community gatherings",
+    "description": "Discover exciting tech events, network with peers, and grow together",
+    "searchPlaceholder": "Search events...",
+    "allEvents": "All Events",
+    "upcomingEvents": "Upcoming",
+    "pastEvents": "Past Events",
+    "noEvents": "No Events",
+    "noEventsDesc": "No events match your criteria. Please check back later.",
+    "viewDetails": "View Details",
+    "viewAll": "View All",
+    "showingResults": "Showing {start} - {end} of {total} results",
+    "previousPage": "Previous",
+    "nextPage": "Next",
+    "page": "Page {page}",
+    "filters": {
+      "status": "Event Status",
+      "tag": "Filter by Tag",
+      "city": "Filter by City",
+      "allTags": "All Tags",
+      "allCities": "All Cities",
+      "clearFilters": "Clear filters",
+      "activeFilters": "Active filters"
+    },
+    "stats": {
+      "title": "Event Statistics",
+      "totalEvents": "Total Events",
+      "upcomingEvents": "Upcoming",
+      "pastEvents": "Past Events",
+      "totalViews": "Total Views",
+      "totalFavorites": "Total Favorites",
+      "avgViews": "Avg Views",
+      "avgFavorites": "Avg Favorites",
+      "averageViews": "Average Views",
+      "averageFavorites": "Average Favorites",
+      "mappedEvents": "Mapped Events",
+      "unmappedEvents": "Unmapped Events",
+      "mappingSuccessRate": "Mapping Success Rate",
+
+      "noData": "No Data"
+    },
+    "engagement": {
+      "views": "Views",
+      "favorites": "Favorites",
+      "shares": "Shares"
+    },
+    "status": {
+      "upcoming": "Upcoming",
+      "ongoing": "Ongoing",
+      "past": "Past",
+      "cancelled": "Cancelled"
+    },
+    "time": {
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "thisWeek": "This Week",
+      "nextWeek": "Next Week",
+      "thisMonth": "This Month",
+      "nextMonth": "Next Month"
+    },
+    "cta": {
+      "learnMore": "Want to learn about more events?",
+      "followUs": "Follow our social media for the latest event notifications",
+      "contactUs": "Contact Us",
+      "viewCities": "View Cities"
+    }
   },
   "about": {
     "title": "About Us",
@@ -91,7 +155,13 @@
     "wechat": "WeChat Group",
     "email": "Email",
     "noEvents": "No events available",
-    "comingSoon": "Coming Soon"
+    "comingSoon": "Coming Soon",
+    "upcomingEvents": "Upcoming Events",
+    "pastEvents": "Past Events",
+    "viewAllEvents": "View All Events",
+    "noEventsDesc": "No events are currently scheduled for this city. Please check back for updates.",
+    "eventCount": "{count} events total",
+    "moreEvents": "{count} more events"
   },
   "common": {
     "loading": "Loading...",

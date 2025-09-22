@@ -9,6 +9,10 @@
   "exclude": [
     "archive/**/*",
     "node_modules/**/*",
-    "dist/**/*"
+    "dist/**/*",
+    "scripts/**/*.cjs",
+    "scripts/**/*.js",
+    "test-*.js",
+    "simple-test.js"
   ]
 }

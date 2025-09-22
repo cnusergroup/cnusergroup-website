@@ -68,7 +68,7 @@ const sizes = responsive
   : undefined;
 
 // 生成唯一ID用于占位符
-const placeholderId = `placeholder-${Math.random().toString(36).substr(2, 9)}`;
+const placeholderId = `placeholder-${Math.random().toString(36).substring(2, 11)}`;
 ---
 
 <div class={`enhanced-image-container ${className}`} data-image-container>
@@ -102,7 +102,7 @@ const placeholderId = `placeholder-${Math.random().toString(36).substr(2, 9)}`;
     data-city-name={cityName}
     data-lang={lang}
     onload="this.parentElement.querySelector('.image-placeholder')?.remove(); this.classList.add('loaded'); window.imageLoadSuccess?.(this)"
-    onerror="window.handleImageError?.(event)"
+    onerror="window.handleImageError?.(this)"
   />
 </div>
 

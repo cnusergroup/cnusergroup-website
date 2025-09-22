@@ -3,6 +3,7 @@ import { getLocalizedValue, t } from '../../utils';
 import { getCityImage, generateImageAlt } from '../../utils/images';
 import Button from '../ui/Button.astro';
 import Card from '../ui/Card.astro';
+import CityEvents from './CityEvents.astro';
 import type { City, Language } from '../../types';
 
 interface Props {
@@ -15,25 +16,17 @@ const cityName = getLocalizedValue(city.name, lang);
 const cityDescription = getLocalizedValue(city.description, lang);
 const imageAlt = generateImageAlt(city.id, lang);
 
-// 模拟一些活动数据
-const upcomingEvents = [
-  {
-    id: 1,
-    title: lang === 'zh' ? 'AWS 云原生技术分享会' : 'AWS Cloud Native Tech Sharing',
-    date: '2024-10-15',
-    time: '14:00-17:00',
-    location: lang === 'zh' ? '线上会议' : 'Online Meeting',
-    description: lang === 'zh' ? '深入探讨容器化、微服务架构和 Kubernetes 最佳实践' : 'Deep dive into containerization, microservices architecture and Kubernetes best practices'
-  },
-  {
-    id: 2,
-    title: lang === 'zh' ? '机器学习实战工作坊' : 'Machine Learning Hands-on Workshop',
-    date: '2024-10-28',
-    time: '09:00-16:00',
-    location: lang === 'zh' ? '本地会议室' : 'Local Conference Room',
-    description: lang === 'zh' ? '使用 AWS SageMaker 构建和部署机器学习模型' : 'Build and deploy ML models using AWS SageMaker'
-  }
-];
+// Calculate real event count for this city
+let realEventCount = 0;
+try {
+  const eventsData = await import('../../data/events/processed-events.json');
+  const allEvents = eventsData.default || [];
+  realEventCount = allEvents.filter((event: any) => 
+    event.cityMappings && event.cityMappings.includes(city.id)
+  ).length;
+} catch (error) {
+  console.warn(`Could not load events for city ${city.id}:`, error);
+}
 ---
 
 <div class="city-detail">
@@ -120,57 +113,15 @@ const upcomingEvents = [
             </div>
           </Card>
           
-          <!-- Upcoming Events -->
+          <!-- City Events -->
           <Card class="p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <svg class="w-6 h-6 text-aws-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              {t('cityDetail.events', lang)}
-            </h2>
-            
-            {upcomingEvents.length > 0 ? (
-              <div class="space-y-6">
-                {upcomingEvents.map((event) => (
-                  <div class="border-l-4 border-aws-orange pl-6 py-4 bg-orange-50 rounded-r-lg">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                      {event.title}
-                    </h3>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-3">
-                      <div class="flex items-center">
-                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        {event.date}
-                      </div>
-                      <div class="flex items-center">
-                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        {event.time}
-                      </div>
-                      <div class="flex items-center">
-                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        {event.location}
-                      </div>
-                    </div>
-                    <p class="text-gray-700">
-                      {event.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div class="text-center py-8 text-gray-500">
-                <svg class="w-12 h-12 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-                <p>{t('cityDetail.noEvents', lang)}</p>
-              </div>
-            )}
+            <CityEvents 
+              cityId={city.id}
+              cityName={cityName}
+              locale={lang}
+              maxEvents={5}
+              showViewAll={true}
+            />
           </Card>
         </div>
         
@@ -198,27 +149,23 @@ const upcomingEvents = [
           </Card>
           
           <!-- Community Stats -->
-          {city.stats && (
-            <Card class="p-6">
-              <h3 class="text-lg font-semibold text-gray-900 mb-4">
-                {lang === 'zh' ? '社区数据' : 'Community Stats'}
-              </h3>
-              <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                  <span class="text-gray-600">{lang === 'zh' ? '成员数量' : 'Members'}</span>
-                  <span class="font-semibold text-aws-orange">{city.stats.members}+</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-gray-600">{lang === 'zh' ? '活动次数' : 'Events'}</span>
-                  <span class="font-semibold text-aws-orange">{city.stats.events}</span>
-                </div>
+          <Card class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">
+              {lang === 'zh' ? '社区数据' : 'Community Stats'}
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">{lang === 'zh' ? '活动次数' : 'Events'}</span>
+                <span class="font-semibold text-aws-orange">{realEventCount}</span>
+              </div>
+              {city.stats?.founded && (
                 <div class="flex justify-between items-center">
                   <span class="text-gray-600">{lang === 'zh' ? '成立时间' : 'Founded'}</span>
                   <span class="font-semibold text-aws-orange">{city.stats.founded}</span>
                 </div>
-              </div>
-            </Card>
-          )}
+              )}
+            </div>
+          </Card>
           
 
         </div>

@@ -1,0 +1,229 @@
+---
+/**
+ * Event Card Component
+ * Displays individual event information with engagement metrics
+ */
+
+import type { ProcessedEvent } from '../../utils/eventProcessing.js';
+import OptimizedEventImage from './OptimizedEventImage.astro';
+
+export interface Props {
+  event: ProcessedEvent;
+  locale?: 'zh' | 'en';
+  showEngagement?: boolean;
+  className?: string;
+}
+
+const { event, locale = 'zh', showEngagement = true, className = '' } = Astro.props;
+
+// Format engagement numbers
+function formatNumber(num: number): string {
+  if (num >= 1000) {
+    return (num / 1000).toFixed(1) + 'k';
+  }
+  return num.toString();
+}
+
+// Load translations
+const translationsModule = locale === 'zh' 
+  ? await import('../../data/translations/zh.json')
+  : await import('../../data/translations/en.json');
+const translations = translationsModule.default;
+const t = translations.events;
+
+// Get event status from status field
+const isUpcoming = event.status === 'upcoming';
+const statusClass = isUpcoming ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-600';
+const statusText = isUpcoming ? t.status.upcoming : t.status.past;
+
+// Format date for display
+const displayDate = locale === 'zh' ? event.formattedDate : event.time;
+
+// Generate structured data for the event
+const eventStructuredData = {
+  "@type": "Event",
+  "name": event.title,
+  "description": event.title,
+  "startDate": event.time,
+  "location": {
+    "@type": "Place",
+    "name": event.location
+  },
+  "url": event.url,
+  "image": event.imageUrl,
+  "organizer": {
+    "@type": "Organization",
+    "name": "CNUserGroup"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "CNY",
+    "availability": "https://schema.org/InStock"
+  }
+};
+---
+
+<div 
+  class={`group relative bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 hover:border-gray-300 flex flex-col h-full ${className}`}
+  data-event-id={event.id}
+  data-event-title={event.title}
+  data-event-location={event.location}
+  data-event-status={event.status}
+  data-event-cities={event.cityMappings?.join(',') || ''}
+>
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json" set:html={JSON.stringify(eventStructuredData)} />
+  <!-- Event Image -->
+  <div class="relative aspect-video overflow-hidden rounded-t-lg">
+    <OptimizedEventImage
+      src={event.imageUrl}
+      alt={event.title}
+      title={event.title}
+      location={event.location}
+      size="card"
+      lazy={true}
+      critical={false}
+      locale={locale}
+      className="w-full h-full group-hover:scale-105 transition-transform duration-200"
+    />
+    
+    <!-- Event Status Badge -->
+    <div class="absolute top-3 left-3">
+      <span class={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusClass}`}>
+        {statusText}
+      </span>
+    </div>
+    
+    <!-- Engagement Metrics (if enabled) -->
+    {showEngagement && (event.views > 0 || event.favorites > 0) && (
+      <div class="absolute top-3 right-3 flex space-x-2">
+        {event.views > 0 && (
+          <div class="bg-black bg-opacity-60 text-white px-2 py-1 rounded text-xs flex items-center space-x-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>{formatNumber(event.views)}</span>
+          </div>
+        )}
+        {event.favorites > 0 && (
+          <div class="bg-black bg-opacity-60 text-white px-2 py-1 rounded text-xs flex items-center space-x-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+            </svg>
+            <span>{formatNumber(event.favorites)}</span>
+          </div>
+        )}
+      </div>
+    )}
+  </div>
+  
+  <!-- Event Content -->
+  <div class="p-4 flex flex-col flex-grow">
+    <!-- Event Title -->
+    <h3 class="font-semibold text-gray-900 text-lg mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+      {event.title}
+    </h3>
+    
+    <!-- Event Details -->
+    <div class="space-y-2 mb-4 flex-grow">
+      <!-- Date and Time -->
+      {displayDate && (
+        <div class="flex items-center text-sm text-gray-600">
+          <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <span>{displayDate}</span>
+        </div>
+      )}
+      
+      <!-- Location -->
+      {event.location && (
+        <div class="flex items-center text-sm text-gray-600">
+          <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span>{event.location}</span>
+        </div>
+      )}
+    </div>
+    
+    <!-- Action Button - Always at bottom -->
+    <div class="mt-auto">
+      <div class="flex items-center justify-between">
+        <a
+          href={event.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+        >
+          {t.viewDetails}
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+        
+        <!-- Additional Engagement Info -->
+        {showEngagement && (event.views > 0 || event.favorites > 0) && (
+          <div class="text-xs text-gray-500 flex items-center space-x-3">
+            {event.views > 0 && (
+              <span class="flex items-center">
+                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                {event.views.toLocaleString()}
+              </span>
+            )}
+            {event.favorites > 0 && (
+              <span class="flex items-center">
+                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+                {event.favorites.toLocaleString()}
+              </span>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+    max-height: 3em; /* 2 lines * 1.5 line-height */
+    min-height: 3em; /* Ensure consistent height even for short titles */
+  }
+  
+  /* Performance optimizations */
+  .group {
+    will-change: transform;
+  }
+  
+  .group:hover {
+    transform: translateZ(0);
+  }
+  
+  /* Lazy loading placeholder */
+  .lazy-load {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .lazy-load img {
+    filter: blur(2px);
+    transition: filter 0.3s ease;
+  }
+  
+  .lazy-load:not(.lazy-load) img {
+    filter: none;
+  }
+</style>

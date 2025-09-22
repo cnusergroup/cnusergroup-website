@@ -1,0 +1,120 @@
+---
+/**
+ * Events Statistics Component
+ * Displays comprehensive statistics about events
+ */
+
+import type { ProcessedEvent } from '../../utils/eventProcessing.js';
+
+export interface Props {
+  events: ProcessedEvent[];
+  locale?: 'zh' | 'en';
+  className?: string;
+}
+
+const { events = [], locale = 'zh', className = '' } = Astro.props;
+
+// Calculate statistics
+const totalEvents = events.length;
+const upcomingEvents = events.filter(e => e.isUpcoming).length;
+const pastEvents = totalEvents - upcomingEvents;
+
+// Engagement statistics
+const totalViews = events.reduce((sum, e) => sum + (e.views || 0), 0);
+const totalFavorites = events.reduce((sum, e) => sum + (e.favorites || 0), 0);
+const avgViews = totalEvents > 0 ? Math.round(totalViews / totalEvents) : 0;
+const avgFavorites = totalEvents > 0 ? Math.round(totalFavorites / totalEvents) : 0;
+
+
+
+// Format numbers
+function formatNumber(num: number): string {
+  if (num >= 1000000) {
+    return (num / 1000000).toFixed(1) + 'M';
+  } else if (num >= 1000) {
+    return (num / 1000).toFixed(1) + 'K';
+  }
+  return num.toString();
+}
+
+// Load translations
+const translationsModule = locale === 'zh' 
+  ? await import('../../data/translations/zh.json')
+  : await import('../../data/translations/en.json');
+const translations = translationsModule.default;
+const t = translations.events.stats;
+---
+
+<div class={`events-stats bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
+  <h3 class="text-lg font-semibold text-gray-900 mb-6">{t.title}</h3>
+  
+  <!-- Main Statistics Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <!-- Total Events -->
+    <div class="text-center p-4 bg-blue-50 rounded-lg">
+      <div class="text-2xl font-bold text-blue-600">{formatNumber(totalEvents)}</div>
+      <div class="text-sm text-blue-800">{t.totalEvents}</div>
+    </div>
+    
+    <!-- Upcoming Events -->
+    <div class="text-center p-4 bg-green-50 rounded-lg">
+      <div class="text-2xl font-bold text-green-600">{formatNumber(upcomingEvents)}</div>
+      <div class="text-sm text-green-800">{t.upcomingEvents}</div>
+    </div>
+    
+    <!-- Past Events -->
+    <div class="text-center p-4 bg-gray-50 rounded-lg">
+      <div class="text-2xl font-bold text-gray-600">{formatNumber(pastEvents)}</div>
+      <div class="text-sm text-gray-800">{t.pastEvents}</div>
+    </div>
+    
+    <!-- Total Views -->
+    <div class="text-center p-4 bg-purple-50 rounded-lg">
+      <div class="text-2xl font-bold text-purple-600">{formatNumber(totalViews)}</div>
+      <div class="text-sm text-purple-800">{t.totalViews}</div>
+    </div>
+  </div>
+  
+  <!-- Engagement Statistics -->
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+    <div class="text-center p-3 bg-orange-50 rounded-lg">
+      <div class="text-xl font-bold text-orange-600">{formatNumber(totalFavorites)}</div>
+      <div class="text-xs text-orange-800">{t.totalFavorites}</div>
+    </div>
+    
+    <div class="text-center p-3 bg-indigo-50 rounded-lg">
+      <div class="text-xl font-bold text-indigo-600">{formatNumber(avgViews)}</div>
+      <div class="text-xs text-indigo-800">{t.avgViews}</div>
+    </div>
+    
+    <div class="text-center p-3 bg-pink-50 rounded-lg">
+      <div class="text-xl font-bold text-pink-600">{formatNumber(avgFavorites)}</div>
+      <div class="text-xs text-pink-800">{t.avgFavorites}</div>
+    </div>
+  </div>
+  
+
+</div>
+
+<style>
+  .events-stats {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover effects for interactive elements */
+  .events-stats > div > div:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+  }
+</style>

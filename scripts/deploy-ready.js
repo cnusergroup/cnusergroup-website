@@ -219,7 +219,148 @@ function cleanupOldFiles() {
   console.log('');
 }
 
-// 8. 安装依赖
+// 8. 处理事件数据
+function processEvents() {
+  console.log('📅 处理事件数据...');
+  
+  try {
+    // 检查是否需要强制处理
+    const forceProcess = process.argv.includes('--force-events') || 
+                        process.env.FORCE_EVENT_PROCESSING === 'true';
+    
+    const command = forceProcess ? 
+      'node scripts/process-events.js --force' : 
+      'node scripts/process-events.js';
+    
+    console.log('正在运行事件处理流程...');
+    execSync(command, { stdio: 'inherit', cwd: rootDir });
+    console.log('✅ 事件数据处理完成');
+    
+    // 验证处理结果
+    const processedEventsPath = join(rootDir, 'src/data/events/processed-events.json');
+    const cityMappingsPath = join(rootDir, 'src/data/events/city-mappings.json');
+    const eventStatsPath = join(rootDir, 'src/data/events/event-stats.json');
+    
+    let validationPassed = true;
+    const validationResults = [];
+    
+    // 检查必需文件
+    if (existsSync(processedEventsPath)) {
+      try {
+        const events = JSON.parse(readFileSync(processedEventsPath, 'utf8'));
+        validationResults.push(`✅ 处理事件数据: ${events.length} 个事件`);
+        
+        // 检查事件数据质量
+        const eventsWithCities = events.filter(e => e.cityMappings && e.cityMappings.length > 0);
+        const mappingRate = Math.round((eventsWithCities.length / events.length) * 100);
+        validationResults.push(`📍 城市映射率: ${mappingRate}%`);
+        
+        if (mappingRate < 50) {
+          console.log('⚠️  城市映射率较低，可能影响城市页面显示');
+        }
+      } catch (parseError) {
+        validationResults.push('❌ 处理事件数据格式错误');
+        validationPassed = false;
+      }
+    } else {
+      validationResults.push('❌ 处理事件数据文件不存在');
+      validationPassed = false;
+    }
+    
+    if (existsSync(cityMappingsPath)) {
+      try {
+        const mappings = JSON.parse(readFileSync(cityMappingsPath, 'utf8'));
+        const cityCount = Object.keys(mappings).length;
+        validationResults.push(`✅ 城市映射数据: ${cityCount} 个城市`);
+      } catch (parseError) {
+        validationResults.push('❌ 城市映射数据格式错误');
+        validationPassed = false;
+      }
+    } else {
+      validationResults.push('❌ 城市映射数据文件不存在');
+      validationPassed = false;
+    }
+    
+    if (existsSync(eventStatsPath)) {
+      try {
+        const stats = JSON.parse(readFileSync(eventStatsPath, 'utf8'));
+        validationResults.push(`📊 事件统计数据: ${stats.totalEvents} 个事件`);
+      } catch (parseError) {
+        validationResults.push('⚠️  事件统计数据格式错误');
+      }
+    } else {
+      validationResults.push('⚠️  事件统计数据文件不存在');
+    }
+    
+    // 显示验证结果
+    console.log('\n📋 事件数据验证结果:');
+    validationResults.forEach(result => console.log(`   ${result}`));
+    
+    if (validationPassed) {
+      console.log('✅ 事件数据验证通过');
+    } else {
+      console.log('⚠️  事件数据验证有问题，但继续构建');
+    }
+    
+    return true; // 总是返回 true，不阻止构建
+    
+  } catch (error) {
+    console.log('⚠️  事件处理失败，尝试使用现有数据:', error.message);
+    
+    // 尝试验证现有数据
+    const processedEventsPath = join(rootDir, 'src/data/events/processed-events.json');
+    if (existsSync(processedEventsPath)) {
+      console.log('✅ 发现现有事件数据，将使用现有数据继续构建');
+    } else {
+      console.log('⚠️  未找到任何事件数据，将创建空数据文件');
+      
+      // 创建空的事件数据文件以防止构建失败
+      try {
+        const emptyEvents = [];
+        const emptyMappings = {};
+        const emptyStats = {
+          totalEvents: 0,
+          upcomingEvents: 0,
+          pastEvents: 0,
+          cityDistribution: {},
+          engagementMetrics: {
+            totalViews: 0,
+            totalFavorites: 0,
+            averageViews: 0,
+            averageFavorites: 0,
+            topViewedEvents: [],
+            topFavoritedEvents: []
+          },
+          mappingStats: {
+            mappedEvents: 0,
+            unmappedEvents: 0,
+            mappingSuccessRate: 0
+          },
+          timeDistribution: {},
+          lastUpdated: new Date().toISOString()
+        };
+        
+        // 确保目录存在
+        const eventsDir = join(rootDir, 'src/data/events');
+        if (!existsSync(eventsDir)) {
+          execSync(`mkdir -p "${eventsDir}"`, { cwd: rootDir });
+        }
+        
+        writeFileSync(join(rootDir, 'src/data/events/processed-events.json'), JSON.stringify(emptyEvents, null, 2));
+        writeFileSync(join(rootDir, 'src/data/events/city-mappings.json'), JSON.stringify(emptyMappings, null, 2));
+        writeFileSync(join(rootDir, 'src/data/events/event-stats.json'), JSON.stringify(emptyStats, null, 2));
+        
+        console.log('✅ 创建空事件数据文件成功');
+      } catch (createError) {
+        console.log('❌ 创建空事件数据文件失败:', createError.message);
+      }
+    }
+    
+    return true; // 不阻止构建
+  }
+}
+
+// 9. 安装依赖
 function installDependencies() {
   console.log('📥 安装/更新依赖...');
   
@@ -242,7 +383,7 @@ function installDependencies() {
   return true;
 }
 
-// 9. 构建项目
+// 10. 构建项目
 function buildProject() {
   console.log('🔨 构建项目...');
   
@@ -272,7 +413,7 @@ function buildProject() {
   }
 }
 
-// 10. 创建部署文件
+// 11. 创建部署文件
 function createDeploymentFiles() {
   console.log('📝 创建部署文件...');
   
@@ -296,7 +437,7 @@ function createDeploymentFiles() {
   console.log('');
 }
 
-// 11. 生成部署报告
+// 12. 生成部署报告
 function generateReport() {
   console.log('📋 生成部署报告...');
   
@@ -377,6 +518,9 @@ async function main() {
     if (!depsInstalled) {
       process.exit(1);
     }
+    
+    // 处理事件数据
+    processEvents();
     
     const buildSuccess = buildProject();
     if (!buildSuccess) {

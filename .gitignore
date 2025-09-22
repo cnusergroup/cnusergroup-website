@@ -33,6 +33,9 @@ Thumbs.db
 # Logs
 logs/
 *.log
+data/events/*.log
+data/events/debug.log
+data/events/scraper.log
 
 # Archive folder (development files)
 archive/
@@ -86,6 +89,35 @@ jspm_packages/
 *.test.*
 test-*
 *-test.*
+performance-test.js
+simple-test.js
+test-basic.js
+test-playwright.js
+test-sort.js
+
+# Development and deployment files
+deployment-report.json
+validation-report.json
+generate-fallbacks.html
 
 # Development documentation
 docs/development/
+TRANSLATION_IMPLEMENTATION_SUMMARY.md
+
+# Build and deployment artifacts
+build-info.json
+*.tgz
+*.zip
+
+# Data files that shouldn't be committed
+data/events/quality-report.json
+data/events/report.json
+data/events/backup/
+
+# IDE and development files
+.vscode/settings.json
+
+# Playwright test results
+test-results/
+playwright-report/
+playwright/.cache/

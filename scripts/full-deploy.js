@@ -129,8 +129,50 @@ function runDeployPreparation() {
   logStep('执行部署准备');
   
   try {
+    // Run comprehensive event processing workflow
+    logInfo('执行完整事件处理工作流...');
+    try {
+      // 1. 运行事件爬取（如果需要）
+      const shouldScrape = process.argv.includes('--scrape-events') || 
+                          process.env.FORCE_EVENT_SCRAPING === 'true';
+      
+      if (shouldScrape) {
+        logInfo('执行事件数据爬取...');
+        runCommand('npm run events:workflow:quick');
+        logSuccess('事件数据爬取完成');
+      } else {
+        logInfo('跳过事件爬取，使用现有数据');
+      }
+      
+      // 2. 处理和映射事件数据
+      logInfo('处理事件数据和城市映射...');
+      runCommand('node scripts/process-events.js --force');
+      logSuccess('事件数据处理完成');
+      
+      // 3. 验证事件数据质量
+      logInfo('验证事件数据质量...');
+      runCommand('npm run events:quality:report');
+      logSuccess('事件数据质量验证完成');
+      
+    } catch (eventError) {
+      logWarning('事件数据处理失败，使用现有数据继续部署');
+      logWarning(`错误: ${eventError.message}`);
+      
+      // 尝试使用备份数据
+      try {
+        logInfo('尝试使用备份事件数据...');
+        runCommand('node scripts/process-events.js --use-backup');
+        logSuccess('使用备份事件数据成功');
+      } catch (backupError) {
+        logWarning('备份数据也不可用，将使用空事件数据');
+      }
+    }
+    
+    // Run main deployment preparation
+    logInfo('执行主要部署准备...');
     runCommand('npm run deploy:ready');
     logSuccess('部署准备完成');
+    
   } catch (error) {
     logError('部署准备失败');
     throw error;

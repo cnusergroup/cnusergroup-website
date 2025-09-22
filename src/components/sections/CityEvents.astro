@@ -1,0 +1,298 @@
+---
+/**
+ * City Events Component
+ * Displays events relevant to a specific city
+ */
+
+import type { ProcessedEvent } from '../../utils/eventProcessing.js';
+import EventCard from '../ui/EventCard.astro';
+
+export interface Props {
+  cityId: string;
+  cityName: string;
+  locale?: 'zh' | 'en';
+  maxEvents?: number;
+  showViewAll?: boolean;
+  className?: string;
+}
+
+const { 
+  cityId, 
+  cityName, 
+  locale = 'zh', 
+  maxEvents = 5, 
+  showViewAll = true,
+  className = '' 
+} = Astro.props;
+
+// Load processed events data and filter by city
+let cityEvents: ProcessedEvent[] = [];
+try {
+  const eventsData = await import('../../data/events/processed-events.json');
+  const allEvents = eventsData.default as ProcessedEvent[] || [];
+  
+  // Filter events for this city
+  cityEvents = allEvents
+    .filter((event: ProcessedEvent) => event.cityMappings.includes(cityId))
+    .sort((a, b) => {
+      // Sort by upcoming first, then by sort field (ascending)
+      if (a.isUpcoming !== b.isUpcoming) {
+        return a.isUpcoming ? -1 : 1;
+      }
+      return (a.sort || 0) - (b.sort || 0);
+    })
+    .slice(0, maxEvents);
+} catch (error) {
+  console.warn(`Could not load events for city ${cityId}:`, error);
+}
+
+// Separate upcoming and past events
+const upcomingEvents = cityEvents.filter(event => event.isUpcoming);
+const pastEvents = cityEvents.filter(event => !event.isUpcoming);
+
+// Load translations
+const translationsModule = locale === 'zh' 
+  ? await import('../../data/translations/zh.json')
+  : await import('../../data/translations/en.json');
+const translations = translationsModule.default;
+const t = translations.cityDetail;
+
+// Calculate total events for this city
+let totalCityEvents = 0;
+try {
+  const eventsData = await import('../../data/events/processed-events.json');
+  const allEvents = eventsData.default as ProcessedEvent[] || [];
+  totalCityEvents = allEvents.filter((event: ProcessedEvent) => event.cityMappings.includes(cityId)).length;
+} catch (error) {
+  // Fallback to current events count
+  totalCityEvents = cityEvents.length;
+}
+
+const hasMoreEvents = totalCityEvents > maxEvents;
+const remainingEvents = totalCityEvents - maxEvents;
+
+// Generate view all events URL with city filter
+const viewAllUrl = locale === 'zh' 
+  ? `/events?city=${encodeURIComponent(cityId)}`
+  : `/en/events?city=${encodeURIComponent(cityId)}`;
+---
+
+<section class={`city-events ${className}`}>
+  <!-- Section Header -->
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <h2 class="text-2xl font-bold text-gray-900 mb-2">
+        {t.events}
+      </h2>
+      {totalCityEvents > 0 && (
+        <p class="text-sm text-gray-600">
+          {t.eventCount.replace('{count}', totalCityEvents.toString())}
+        </p>
+      )}
+    </div>
+    
+    {showViewAll && hasMoreEvents && (
+      <a 
+        href={viewAllUrl}
+        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+      >
+        {t.viewAllEvents}
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    )}
+  </div>
+
+  <!-- Events Content -->
+  {cityEvents.length > 0 ? (
+    <div class="space-y-6">
+      <!-- Upcoming Events -->
+      {upcomingEvents.length > 0 && (
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+            {t.upcomingEvents}
+            <span class="ml-2 text-sm font-normal text-gray-500">({upcomingEvents.length})</span>
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {upcomingEvents.map(event => (
+              <EventCard 
+                event={event} 
+                locale={locale} 
+                showEngagement={true}
+                className="h-full"
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Past Events -->
+      {pastEvents.length > 0 && (
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <div class="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+            {t.pastEvents}
+            <span class="ml-2 text-sm font-normal text-gray-500">({pastEvents.length})</span>
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {pastEvents.map(event => (
+              <EventCard 
+                event={event} 
+                locale={locale} 
+                showEngagement={true}
+                className="h-full opacity-75 hover:opacity-100 transition-opacity"
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- View More Link -->
+      {hasMoreEvents && (
+        <div class="text-center pt-4 border-t border-gray-100">
+          <a 
+            href={viewAllUrl}
+            class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+          >
+            {t.moreEvents.replace('{count}', remainingEvents.toString())}
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      )}
+    </div>
+  ) : (
+    <!-- No Events State -->
+    <div class="text-center py-12 bg-gray-50 rounded-lg">
+      <svg class="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      <h3 class="text-lg font-medium text-gray-900 mb-2">{t.noEvents}</h3>
+      <p class="text-gray-600 max-w-md mx-auto">{t.noEventsDesc}</p>
+      
+      <!-- Suggest viewing all events -->
+      <div class="mt-6">
+        <a 
+          href={locale === 'zh' ? '/events' : '/en/events'}
+          class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-600 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+        >
+          {t.viewAllEvents}
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  )}
+</section>
+
+<style>
+  .city-events {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover effects for event cards */
+  .city-events .event-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .city-events .event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .city-events .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .city-events .lg\\:grid-cols-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Loading state for better UX */
+  .city-events.loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  .city-events.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+  // Add interactive functionality for better UX
+  document.addEventListener('DOMContentLoaded', function() {
+    const cityEventsSection = document.querySelector('.city-events');
+    if (!cityEventsSection) return;
+    
+    // Add intersection observer for lazy loading
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '50px'
+    });
+    
+    // Observe event cards for staggered animation
+    const eventCards = cityEventsSection.querySelectorAll('.event-card');
+    eventCards.forEach((card, index) => {
+      (card as HTMLElement).style.animationDelay = `${index * 0.1}s`;
+      observer.observe(card);
+    });
+    
+    // Add click tracking for analytics
+    const viewAllLinks = cityEventsSection.querySelectorAll('a[href*="/events"]');
+    viewAllLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Track view all events click
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'view_all_city_events', {
+            city_id: (cityEventsSection as HTMLElement).dataset.cityId || 'unknown',
+            event_category: 'engagement'
+          });
+        }
+      });
+    });
+  });
+</script>

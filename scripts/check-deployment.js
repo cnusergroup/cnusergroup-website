@@ -151,6 +151,7 @@ async function testPageContent(baseResponse) {
   // 检查关键内容
   logResult('包含中国用户组内容', html.includes('中国用户组') || html.includes('CNUserGroup'));
   logResult('包含城市信息', html.includes('城市') || html.includes('city') || html.includes('cities'));
+  logResult('包含事件信息', html.includes('活动') || html.includes('event') || html.includes('events'));
   
   // 检查 CSS 和 JS
   logResult('CSS 样式加载', html.includes('.css') || html.includes('<style>'));
@@ -166,9 +167,11 @@ async function testKeyPages() {
   const keyPages = [
     { path: '/', name: '首页' },
     { path: '/cities/', name: '城市页面' },
+    { path: '/events/', name: '事件页面' },
     { path: '/about/', name: '关于页面' },
     { path: '/en/', name: '英文首页' },
     { path: '/en/cities/', name: '英文城市页面' },
+    { path: '/en/events/', name: '英文事件页面' },
     { path: '/en/about/', name: '英文关于页面' }
   ];
   
@@ -263,7 +266,50 @@ async function testSEO() {
   console.log('');
 }
 
-// 7. 移动端适配测试
+// 7. 事件系统测试
+async function testEventSystem() {
+  console.log('📅 测试事件系统...');
+  
+  try {
+    // 测试事件列表页面
+    const eventsResponse = await requestWithRetry(config.baseUrl + '/events/');
+    logResult('事件列表页面可访问', eventsResponse.statusCode === 200, `状态码: ${eventsResponse.statusCode}`);
+    
+    if (eventsResponse.statusCode === 200) {
+      const html = eventsResponse.body;
+      
+      // 检查事件页面内容
+      logResult('包含事件列表', html.includes('event') || html.includes('活动'));
+      logResult('包含事件卡片', html.includes('event-card') || html.includes('EventCard'));
+      logResult('包含分页功能', html.includes('pagination') || html.includes('page'));
+      logResult('包含筛选功能', html.includes('filter') || html.includes('筛选'));
+      
+      // 检查事件结构化数据
+      logResult('事件结构化数据', html.includes('application/ld+json') && html.includes('Event'));
+      
+      // 检查事件统计
+      logResult('事件统计信息', html.includes('stats') || html.includes('统计'));
+    }
+    
+    // 测试英文事件页面
+    const enEventsResponse = await requestWithRetry(config.baseUrl + '/en/events/');
+    logResult('英文事件页面可访问', enEventsResponse.statusCode === 200, `状态码: ${enEventsResponse.statusCode}`);
+    
+    // 测试城市页面中的事件集成
+    const cityResponse = await requestWithRetry(config.baseUrl + '/cities/beijing/');
+    if (cityResponse.statusCode === 200) {
+      const cityHtml = cityResponse.body;
+      logResult('城市页面包含事件', cityHtml.includes('event') || cityHtml.includes('活动') || cityHtml.includes('近期活动'));
+    }
+    
+  } catch (error) {
+    logResult('事件系统测试', false, error.message);
+  }
+  
+  console.log('');
+}
+
+// 8. 移动端适配测试
 async function testMobileCompatibility() {
   console.log('📱 测试移动端适配...');
   
@@ -340,6 +386,7 @@ async function main() {
     await testStaticResources();
     await testPerformance();
     await testSEO();
+    await testEventSystem();
     await testMobileCompatibility();
     
     // 生成报告
