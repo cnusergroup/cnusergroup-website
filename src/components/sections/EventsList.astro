@@ -140,7 +140,10 @@ function generatePaginationUrl(pageNum: number): string {
   }
   
   const queryString = params.toString();
-  return `/events${queryString ? '?' + queryString : ''}`;
+  // Use import.meta.env.BASE_URL to get the correct base path
+  const basePath = import.meta.env.BASE_URL || '/';
+  const eventsPath = basePath === '/' ? '/events' : `${basePath.replace(/\/$/, '')}/events`;
+  return `${eventsPath}${queryString ? '?' + queryString : ''}`;
 }
 ---
 

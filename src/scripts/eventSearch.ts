@@ -94,6 +94,7 @@ interface ProcessedEvent {
 class EventSearchManager {
   private searchInput: HTMLInputElement | null = null;
   private filterSelect: HTMLSelectElement | null = null;
+  private cityFilterSelect: HTMLSelectElement | null = null;
   private clearFiltersBtn: HTMLElement | null = null;
   private resultsCount: HTMLElement | null = null;
   private eventCards: NodeListOf<Element> | null = null;
@@ -117,6 +118,7 @@ class EventSearchManager {
     // 获取DOM元素
     this.searchInput = document.getElementById('event-search') as HTMLInputElement;
     this.filterSelect = document.getElementById('statusFilter') as HTMLSelectElement;
+    this.cityFilterSelect = document.getElementById('cityFilter') as HTMLSelectElement;
     this.clearFiltersBtn = document.getElementById('clear-filters') as HTMLElement;
     this.resultsCount = document.getElementById('results-count') as HTMLElement;
     this.eventsGrid = document.getElementById('events-grid') as HTMLElement;
@@ -174,6 +176,11 @@ class EventSearchManager {
       this.filterSelect.addEventListener('change', () => this.filterEvents());
     }
 
+    // 城市筛选下拉框事件
+    if (this.cityFilterSelect) {
+      this.cityFilterSelect.addEventListener('change', () => this.filterEvents());
+    }
+
     // 清除筛选按钮事件
     if (this.clearFiltersBtn) {
       this.clearFiltersBtn.addEventListener('click', () => this.clearFilters());
@@ -183,9 +190,10 @@ class EventSearchManager {
   private filterEvents(): void {
     const searchTerm = this.searchInput?.value.toLowerCase().trim() || '';
     const filterValue = this.filterSelect?.value || 'all';
+    const cityFilterValue = this.cityFilterSelect?.value || '';
     let visibleCount = 0;
 
-    console.log('Filtering events:', { searchTerm, filterValue });
+    console.log('Filtering events:', { searchTerm, filterValue, cityFilterValue });
 
     // 使用事件数据进行过滤
     const filteredEvents = this.allEventsData.filter(event => {
@@ -208,18 +216,21 @@ class EventSearchManager {
         matchesSearch = searchTerms.every(term => searchText.includes(term));
       }
 
-      // 筛选匹配
-      let matchesFilter = true;
+      // 状态筛选匹配
+      let matchesStatusFilter = true;
       if (filterValue === 'upcoming') {
-        matchesFilter = event.status === 'upcoming';
+        matchesStatusFilter = event.status === 'upcoming';
       } else if (filterValue === 'past') {
-        matchesFilter = event.status === 'ended';
-      } else if (filterValue && filterValue !== 'all') {
-        // 城市筛选 - 直接使用城市ID
-        matchesFilter = event.cityMappings && event.cityMappings.includes(filterValue);
+        matchesStatusFilter = event.status === 'ended';
       }
 
-      const shouldShow = matchesSearch && matchesFilter;
+      // 城市筛选匹配
+      let matchesCityFilter = true;
+      if (cityFilterValue) {
+        matchesCityFilter = event.cityMappings && event.cityMappings.includes(cityFilterValue);
+      }
+
+      const shouldShow = matchesSearch && matchesStatusFilter && matchesCityFilter;
       
       if (shouldShow) {
         visibleCount++;
@@ -235,7 +246,7 @@ class EventSearchManager {
     this.updateResultsCount(visibleCount);
 
     // 显示/隐藏清除按钮
-    this.updateClearButton(searchTerm, filterValue);
+    this.updateClearButton(searchTerm, filterValue, cityFilterValue);
 
     console.log(`Filtered to ${visibleCount} events`);
   }
@@ -276,10 +287,10 @@ class EventSearchManager {
     }
   }
 
-  private updateClearButton(searchTerm: string, filterValue: string): void {
+  private updateClearButton(searchTerm: string, filterValue: string, cityFilterValue: string): void {
     if (!this.clearFiltersBtn) return;
 
-    const hasFilters = searchTerm || filterValue !== 'all';
+    const hasFilters = searchTerm || filterValue !== 'all' || cityFilterValue;
     this.clearFiltersBtn.classList.toggle('hidden', !hasFilters);
   }
 
@@ -290,6 +301,10 @@ class EventSearchManager {
     
     if (this.filterSelect) {
       this.filterSelect.value = 'all';
+    }
+
+    if (this.cityFilterSelect) {
+      this.cityFilterSelect.value = '';
     }
     
     this.filterEvents();
@@ -306,15 +321,16 @@ class EventSearchManager {
   }
 
   // 公共方法：获取当前筛选状态
-  public getFilterState(): { searchTerm: string; filterValue: string; visibleCount: number } {
+  public getFilterState(): { searchTerm: string; filterValue: string; cityFilterValue: string; visibleCount: number } {
     const searchTerm = this.searchInput?.value || '';
     const filterValue = this.filterSelect?.value || 'all';
+    const cityFilterValue = this.cityFilterSelect?.value || '';
     
     // 计算当前可见的事件数量
     const visibleCards = this.eventsGrid?.querySelectorAll('[data-event-id]:not([style*="display: none"])');
     const visibleCount = visibleCards?.length || 0;
 
-    return { searchTerm, filterValue, visibleCount };
+    return { searchTerm, filterValue, cityFilterValue, visibleCount };
   }
 
   // 公共方法：设置事件数据
