@@ -397,7 +397,9 @@ function generatePaginationUrl(pageNum: number): string {
 
 <script is:inline>
   // Pure Frontend Pagination and Filtering for Static Deployment
-  document.addEventListener('DOMContentLoaded', function() {
+  function initEventSearch() {
+    console.log('Initializing event search...');
+    
     const searchInput = document.getElementById('event-search');
     const statusFilter = document.getElementById('statusFilter');
     const cityFilter = document.getElementById('cityFilter');
@@ -413,14 +415,17 @@ function generatePaginationUrl(pageNum: number): string {
     let currentPage = 1;
     let filteredEvents = [];
     
+    console.log('Found event cards:', allEventCards.length);
+    
     if (allEventCards.length === 0) {
       console.warn('No event cards found for search functionality');
+      setTimeout(initEventSearch, 500); // Retry after 500ms
       return;
     }
 
     // Extract event data from DOM
     const allEventsData = allEventCards.map(function(card) {
-      return {
+      const eventData = {
         element: card,
         id: card.dataset.eventId || '',
         title: (card.dataset.eventTitle || '').toLowerCase(),
@@ -432,6 +437,8 @@ function generatePaginationUrl(pageNum: number): string {
         formattedDate: (card.dataset.eventFormattedDate || '').toLowerCase(),
         originalIndex: allEventCards.indexOf(card)
       };
+      console.log('Event data:', eventData.title, eventData.status, eventData.cities);
+      return eventData;
     });
 
     // Set initial filter values from URL
@@ -455,6 +462,8 @@ function generatePaginationUrl(pageNum: number): string {
       const searchTerm = searchInput?.value.toLowerCase().trim() || '';
       const statusValue = statusFilter?.value || 'all';
       const cityValue = cityFilter?.value || '';
+
+      console.log('Filtering with:', { searchTerm, statusValue, cityValue });
 
       filteredEvents = allEventsData.filter(function(event) {
         // Search matching
@@ -706,6 +715,29 @@ function generatePaginationUrl(pageNum: number): string {
     filterEvents();
     
     console.log('Pure frontend event search initialized with', allEventsData.length, 'events');
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEventSearch);
+  } else {
+    // DOM is already ready
+    initEventSearch();
+  }
+
+  // Also try to initialize after a short delay for GitHub Pages
+  setTimeout(function() {
+    if (typeof initEventSearch === 'function') {
+      initEventSearch();
+    }
+  }, 1000);
+
+  // Backup initialization for GitHub Pages
+  window.addEventListener('load', function() {
+    console.log('Window loaded, trying to initialize event search...');
+    if (typeof initEventSearch === 'function') {
+      initEventSearch();
+    }
   });
 </script>
 
