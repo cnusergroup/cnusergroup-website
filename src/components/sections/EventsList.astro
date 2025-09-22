@@ -396,7 +396,7 @@ function generatePaginationUrl(pageNum: number): string {
 </div>
 
 <script is:inline>
-  // Pure Frontend Pagination and Filtering for Static Deployment
+  /* Pure Frontend Pagination and Filtering for Static Deployment */
   function initEventSearch() {
     console.log('Initializing event search...');
     
@@ -409,7 +409,7 @@ function generatePaginationUrl(pageNum: number): string {
     const searchResultsCount = document.getElementById('searchResultsCount');
     const eventsGrid = document.getElementById('events-grid');
     
-    // Get all event cards and extract data
+    /* Get all event cards and extract data */
     const allEventCards = Array.from(document.querySelectorAll('[data-event-id]'));
     const eventsPerPage = 12;
     let currentPage = 1;
@@ -419,11 +419,11 @@ function generatePaginationUrl(pageNum: number): string {
     
     if (allEventCards.length === 0) {
       console.warn('No event cards found for search functionality');
-      setTimeout(initEventSearch, 500); // Retry after 500ms
+      setTimeout(initEventSearch, 500); /* Retry after 500ms */
       return;
     }
 
-    // Extract event data from DOM
+    /* Extract event data from DOM */
     const allEventsData = allEventCards.map(function(card) {
       const eventData = {
         element: card,
@@ -441,7 +441,7 @@ function generatePaginationUrl(pageNum: number): string {
       return eventData;
     });
 
-    // Set initial filter values from URL
+    /* Set initial filter values from URL */
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('q') || '';
     const status = urlParams.get('status') || 'all';
@@ -466,7 +466,7 @@ function generatePaginationUrl(pageNum: number): string {
       console.log('Filtering with:', { searchTerm, statusValue, cityValue });
 
       filteredEvents = allEventsData.filter(function(event) {
-        // Search matching
+        /* Search matching */
         let matchesSearch = true;
         if (searchTerm) {
           const searchFields = [
@@ -483,7 +483,7 @@ function generatePaginationUrl(pageNum: number): string {
           matchesSearch = searchTerms.every(function(term) { return searchText.includes(term); });
         }
 
-        // Status matching
+        /* Status matching */
         let matchesStatus = true;
         if (statusValue !== 'all') {
           if (statusValue === 'upcoming') {
@@ -493,7 +493,7 @@ function generatePaginationUrl(pageNum: number): string {
           }
         }
 
-        // City matching
+        /* City matching */
         let matchesCity = true;
         if (cityValue) {
           matchesCity = event.cities.includes(cityValue.toLowerCase());
@@ -502,7 +502,7 @@ function generatePaginationUrl(pageNum: number): string {
         return matchesSearch && matchesStatus && matchesCity;
       });
 
-      // Reset to page 1 when filtering changes
+      /* Reset to page 1 when filtering changes */
       const hasFilters = searchTerm || statusValue !== 'all' || cityValue;
       if (hasFilters) {
         currentPage = 1;
@@ -515,29 +515,29 @@ function generatePaginationUrl(pageNum: number): string {
     }
 
     function updateDisplay() {
-      // Calculate pagination
+      /* Calculate pagination */
       const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
       const startIndex = (currentPage - 1) * eventsPerPage;
       const endIndex = startIndex + eventsPerPage;
       const currentPageEvents = filteredEvents.slice(startIndex, endIndex);
 
-      // Hide all cards first
+      /* Hide all cards first */
       allEventCards.forEach(function(card) {
         card.style.display = 'none';
       });
 
-      // Show only current page events
+      /* Show only current page events */
       currentPageEvents.forEach(function(event) {
         event.element.style.display = 'block';
       });
 
-      // Update results count
+      /* Update results count */
       updateResultsCount(filteredEvents.length, startIndex + 1, Math.min(endIndex, filteredEvents.length));
       
-      // Update clear buttons
+      /* Update clear buttons */
       updateClearButtons();
       
-      // Update pagination
+      /* Update pagination */
       updatePagination(totalPages);
     }
 
@@ -684,7 +684,7 @@ function generatePaginationUrl(pageNum: number): string {
       filterEvents();
     }
 
-    // Bind event listeners
+    /* Bind event listeners */
     if (searchInput) {
       searchInput.addEventListener('input', filterEvents);
       searchInput.addEventListener('keydown', function(e) {
@@ -711,13 +711,13 @@ function generatePaginationUrl(pageNum: number): string {
       clearAllFiltersBtn.addEventListener('click', clearFilters);
     }
 
-    // Initial setup
+    /* Initial setup */
     filterEvents();
     
     console.log('Pure frontend event search initialized with', allEventsData.length, 'events');
   }
 
-  // Multiple initialization strategies for GitHub Pages compatibility
+  /* Multiple initialization strategies for GitHub Pages compatibility */
   let initAttempts = 0;
   const maxAttempts = 5;
   
@@ -725,7 +725,7 @@ function generatePaginationUrl(pageNum: number): string {
     initAttempts++;
     console.log('Initialization attempt:', initAttempts);
     
-    // Check if we have event cards
+    /* Check if we have event cards */
     const eventCards = document.querySelectorAll('[data-event-id]');
     console.log('Event cards found:', eventCards.length);
     
@@ -743,7 +743,7 @@ function generatePaginationUrl(pageNum: number): string {
     }
   }
 
-  // Strategy 1: DOM ready
+  /* Strategy 1: DOM ready */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       console.log('DOM ready, trying to initialize...');
@@ -754,7 +754,7 @@ function generatePaginationUrl(pageNum: number): string {
     tryInitialize();
   }
 
-  // Strategy 2: Window load (backup)
+  /* Strategy 2: Window load (backup) */
   window.addEventListener('load', function() {
     console.log('Window loaded, trying backup initialization...');
     setTimeout(function() {
@@ -766,7 +766,7 @@ function generatePaginationUrl(pageNum: number): string {
     }, 100);
   });
 
-  // Strategy 3: Delayed initialization for GitHub Pages
+  /* Strategy 3: Delayed initialization for GitHub Pages */
   setTimeout(function() {
     const eventCards = document.querySelectorAll('[data-event-id]');
     if (eventCards.length > 0) {
