@@ -59,11 +59,18 @@ export class ResourcePreloader {
 
   // 预加载关键资源
   preloadCriticalResources() {
+    const basePath = import.meta.env.BASE_URL || '/';
+    const processPath = (path: string) => {
+      const normalizedBasePath = basePath.endsWith('/') ? basePath : basePath + '/';
+      const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+      return normalizedBasePath + cleanPath;
+    };
+    
     const criticalResources = [
-      '/images/hero-bg.webp',
-      '/images/aws-logo.webp',
-      '/cities',
-      '/en/cities'
+      processPath('/images/hero-bg.webp'),
+      processPath('/images/aws-logo.webp'),
+      processPath('/cities'),
+      processPath('/en/cities')
     ];
 
     criticalResources.forEach(resource => {
@@ -122,28 +129,41 @@ export class ResourcePreloader {
 
   private preloadNextPage() {
     const currentPath = window.location.pathname;
+    const basePath = import.meta.env.BASE_URL || '/';
+    const processPath = (path: string) => {
+      const normalizedBasePath = basePath.endsWith('/') ? basePath : basePath + '/';
+      const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+      return normalizedBasePath + cleanPath;
+    };
     
     // 根据当前页面预测下一页
     if (currentPath === '/' || currentPath === '/en') {
-      this.preloadResource('/cities');
-      this.preloadResource('/en/cities');
+      this.preloadResource(processPath('/cities'));
+      this.preloadResource(processPath('/en/cities'));
     } else if (currentPath.includes('/cities') && !currentPath.includes('/cities/')) {
       // 在城市列表页，预加载热门城市详情页
       const popularCities = ['beijing', 'shanghai', 'shenzhen'];
       popularCities.forEach(city => {
-        this.preloadResource(`/cities/${city}`);
-        this.preloadResource(`/en/cities/${city}`);
+        this.preloadResource(processPath(`/cities/${city}`));
+        this.preloadResource(processPath(`/en/cities/${city}`));
       });
     }
   }
 
   private preloadPopularCities() {
+    const basePath = import.meta.env.BASE_URL || '/';
+    const processPath = (path: string) => {
+      const normalizedBasePath = basePath.endsWith('/') ? basePath : basePath + '/';
+      const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+      return normalizedBasePath + cleanPath;
+    };
+    
     // 预加载热门城市的图片
     const popularCityImages = [
-      '/images/cities/beijing.webp',
-      '/images/cities/shanghai.webp',
-      '/images/cities/shenzhen.webp',
-      '/images/cities/guangzhou.webp'
+      processPath('/images/cities/beijing.webp'),
+      processPath('/images/cities/shanghai.webp'),
+      processPath('/images/cities/shenzhen.webp'),
+      processPath('/images/cities/guangzhou.webp')
     ];
 
     popularCityImages.forEach(image => {

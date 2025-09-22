@@ -15,9 +15,16 @@ export function preloadCriticalResources() {
   document.head.appendChild(fontLink);
 
   // 预加载关键图片
+  const basePath = import.meta.env.BASE_URL || '/';
+  const processPath = (path: string) => {
+    const normalizedBasePath = basePath.endsWith('/') ? basePath : basePath + '/';
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    return normalizedBasePath + cleanPath;
+  };
+  
   const criticalImages = [
-    '/images/hero-bg.webp',
-    '/images/aws-logo.webp'
+    processPath('/images/hero-bg.webp'),
+    processPath('/images/aws-logo.webp')
   ];
 
   criticalImages.forEach(src => {
@@ -165,9 +172,16 @@ export function addResourceHints() {
   document.head.appendChild(dnsPreconnect);
 
   // 预加载下一页可能需要的资源
+  const basePath = import.meta.env.BASE_URL || '/';
+  const processPath = (path: string) => {
+    const normalizedBasePath = basePath.endsWith('/') ? basePath : basePath + '/';
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    return normalizedBasePath + cleanPath;
+  };
+  
   const prefetchLink = document.createElement('link');
   prefetchLink.rel = 'prefetch';
-  prefetchLink.href = '/cities';
+  prefetchLink.href = processPath('/cities');
   document.head.appendChild(prefetchLink);
 }
 

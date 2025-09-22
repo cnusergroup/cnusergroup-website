@@ -92,7 +92,7 @@ export function getFallbackImage(src: string): string {
     case 'qr':
       return fallbackImages.qr.default;
     default:
-      return '/images/fallback-generic.png';
+      return processImagePath('/images/fallback-generic.png');
   }
 }
 
