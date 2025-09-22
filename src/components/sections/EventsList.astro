@@ -395,7 +395,7 @@ function generatePaginationUrl(pageNum: number): string {
   )}
 </div>
 
-<script define:vars={{ allEvents, eventsPerPage, showingResultsTemplate: t.showingResults, translations: t }}>
+<script define:vars={{ allEvents, eventsPerPage }}>
   // Client-side pagination and filtering for static sites
   document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('event-search');
@@ -527,7 +527,7 @@ function generatePaginationUrl(pageNum: number): string {
             <!-- Event Status Badge -->
             <div class="absolute top-3 left-3">
               <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${event.status === 'upcoming' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-600'}">
-                ${event.status === 'upcoming' ? translations.status.upcoming : translations.status.past}
+                ${event.status === 'upcoming' ? (document.documentElement.lang === 'zh' ? '即将举行' : 'Upcoming') : (document.documentElement.lang === 'zh' ? '已结束' : 'Past')}
               </span>
             </div>
             
@@ -591,7 +591,7 @@ function generatePaginationUrl(pageNum: number): string {
                   rel="noopener noreferrer"
                   class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
                 >
-                  ${translations.viewDetails}
+                  ${document.documentElement.lang === 'zh' ? '查看详情' : 'View Details'}
                   <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                   </svg>
@@ -632,15 +632,14 @@ function generatePaginationUrl(pageNum: number): string {
     function updateSearchResultsCount(start, end, total, isFiltered = false) {
       if (searchResultsCount) {
         let text;
+        const locale = document.documentElement.lang || 'zh';
         if (total === 0) {
-          text = translations.noEvents;
+          text = locale === 'zh' ? '未找到匹配的活动' : 'No events found';
         } else if (isFiltered && total < allEventsData.length) {
-          text = translations.showingResults
-            .replace('{start}', start.toString())
-            .replace('{end}', end.toString())
-            .replace('{total}', total.toString());
+          text = locale === 'zh' 
+            ? `显示第 ${start} - ${end} 个，共 ${total} 个活动`
+            : `Showing ${start} - ${end} of ${total} events`;
         } else {
-          const locale = document.documentElement.lang || 'zh';
           text = `${locale === 'zh' ? '显示' : 'Showing'} ${total} ${locale === 'zh' ? '个活动' : 'events'}`;
         }
         searchResultsCount.textContent = text;
@@ -649,10 +648,10 @@ function generatePaginationUrl(pageNum: number): string {
       // Also update pagination info if it exists
       const paginationInfo = document.querySelector('.hidden.sm\\:flex-1 p');
       if (paginationInfo && total > 0) {
-        const showingText = translations.showingResults
-          .replace('{start}', start.toString())
-          .replace('{end}', Math.min(end, total).toString())
-          .replace('{total}', total.toString());
+        const locale = document.documentElement.lang || 'zh';
+        const showingText = locale === 'zh' 
+          ? `显示第 ${start} - ${Math.min(end, total)} 个，共 ${total} 个活动`
+          : `Showing ${start} - ${Math.min(end, total)} of ${total} events`;
         paginationInfo.textContent = showingText;
       }
     }
@@ -694,7 +693,7 @@ function generatePaginationUrl(pageNum: number): string {
       const prevButton = document.createElement('button');
       prevButton.className = `relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 text-sm font-medium ${current > 1 ? 'bg-white text-gray-500 hover:bg-gray-50 cursor-pointer' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`;
       prevButton.innerHTML = `
-        <span class="sr-only">${translations.previousPage}</span>
+        <span class="sr-only">${document.documentElement.lang === 'zh' ? '上一页' : 'Previous'}</span>
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
         </svg>
@@ -726,7 +725,7 @@ function generatePaginationUrl(pageNum: number): string {
       const nextButton = document.createElement('button');
       nextButton.className = `relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 text-sm font-medium ${current < total ? 'bg-white text-gray-500 hover:bg-gray-50 cursor-pointer' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`;
       nextButton.innerHTML = `
-        <span class="sr-only">${translations.nextPage}</span>
+        <span class="sr-only">${document.documentElement.lang === 'zh' ? '下一页' : 'Next'}</span>
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
         </svg>
