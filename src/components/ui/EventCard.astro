@@ -71,6 +71,12 @@ const eventStructuredData = {
   data-event-location={event.location}
   data-event-status={event.status}
   data-event-cities={event.cityMappings?.join(',') || ''}
+  data-event-tags={event.tags?.join(',') || ''}
+  data-event-time={event.time || ''}
+  data-event-formatted-date={event.formattedDate || ''}
+  data-event-views={event.views || 0}
+  data-event-favorites={event.favorites || 0}
+  data-event-url={event.url || ''}
 >
   <!-- Structured Data for SEO -->
   <script type="application/ld+json" set:html={JSON.stringify(eventStructuredData)} />
@@ -123,7 +129,12 @@ const eventStructuredData = {
   <div class="p-4 flex flex-col flex-grow">
     <!-- Event Title -->
     <h3 class="font-semibold text-gray-900 text-lg mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-      {event.title}
+      <a 
+        href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}${locale === 'en' ? '/en' : ''}/events/${event.slug || `event-${event.id}`}`}
+        class="hover:text-blue-600 transition-colors"
+      >
+        {event.title}
+      </a>
     </h3>
     
     <!-- Event Details -->
@@ -154,14 +165,12 @@ const eventStructuredData = {
     <div class="mt-auto">
       <div class="flex items-center justify-between">
         <a
-          href={event.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}${locale === 'en' ? '/en' : ''}/events/${event.slug || `event-${event.id}`}`}
           class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
         >
           {t.viewDetails}
           <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </a>
         
@@ -212,12 +221,19 @@ const eventStructuredData = {
     transform: translateZ(0);
   }
   
-  /* Lazy loading placeholder */
-  .lazy-load {
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+  /* Selected state - matching city card style */
+  .group.selected,
+  .group[data-selected="true"] {
+    border-color: var(--aws-orange, #ff9900) !important;
+    box-shadow: 0 2px 8px rgba(255, 153, 0, 0.2) !important;
   }
-  
+
+  .group.selected h3,
+  .group[data-selected="true"] h3 {
+    color: var(--aws-orange, #ff9900) !important;
+  }
+
+  /* Lazy loading placeholder - removed opacity effect to ensure consistent appearance */
   .lazy-load img {
     filter: blur(2px);
     transition: filter 0.3s ease;
@@ -227,3 +243,52 @@ const eventStructuredData = {
     filter: none;
   }
 </style>
+
+<script is:inline>
+  // Add click selection effect similar to city cards
+  document.addEventListener('DOMContentLoaded', function() {
+    var eventCards = document.querySelectorAll('[data-event-id]');
+    
+    eventCards.forEach(function(card) {
+      // Add click handler for selection
+      card.addEventListener('click', function(e) {
+        // Don't interfere with link clicks
+        var target = e.target || e.srcElement;
+        if (target && (target.tagName === 'A' || (target.closest && target.closest('a')))) {
+          return;
+        }
+        
+        // Toggle selected state
+        card.classList.toggle('selected');
+        
+        // Remove selected state from other cards (single selection mode)
+        eventCards.forEach(function(otherCard) {
+          if (otherCard !== card) {
+            otherCard.classList.remove('selected');
+          }
+        });
+      });
+
+      // Keyboard support
+      card.addEventListener('keydown', function(e) {
+        var key = e.key || e.keyCode;
+        if (key === 'Enter' || key === ' ' || key === 13 || key === 32) {
+          e.preventDefault();
+          card.classList.toggle('selected');
+          
+          // Remove selected state from other cards
+          eventCards.forEach(function(otherCard) {
+            if (otherCard !== card) {
+              otherCard.classList.remove('selected');
+            }
+          });
+        }
+      });
+
+      // Make card focusable for keyboard navigation
+      if (!card.hasAttribute('tabindex')) {
+        card.setAttribute('tabindex', '0');
+      }
+    });
+  });
+</script>

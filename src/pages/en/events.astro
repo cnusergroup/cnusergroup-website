@@ -65,6 +65,13 @@ if (searchQuery) {
 // Sort events with status-based priority (upcoming first, then by sort field ascending)
 const sortedEvents = sortEvents(filteredEvents, 'sort', 'asc');
 
+// For static sites, pass all events to client for pagination
+const eventsPerPage = 12;
+
+// Don't pre-filter or paginate on server side for static deployment
+// Pass all events to client for complete frontend control
+const allEventsForClient = sortedEvents;
+
 // Load translations
 const translations = await import('../../data/translations/en.json');
 const t = translations.default;
@@ -186,16 +193,16 @@ const structuredData = {
 
     <!-- Events List -->
     <EventsList
-      events={sortedEvents}
+      events={allEventsForClient}
       locale="en"
       showEngagement={true}
       showFilters={true}
       showPagination={true}
-      eventsPerPage={12}
-      currentPage={currentPage}
-      totalEvents={sortedEvents.length}
-      totalPages={Math.ceil(sortedEvents.length / 12)}
-      allEvents={sortedEvents}
+      eventsPerPage={eventsPerPage}
+      currentPage={1}
+      totalEvents={allEventsForClient.length}
+      totalPages={Math.ceil(allEventsForClient.length / eventsPerPage)}
+      allEvents={allEventsForClient}
     />
 
     <!-- Call to Action -->

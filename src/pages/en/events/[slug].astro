@@ -1,25 +1,25 @@
 ---
 /**
- * Individual Event Detail Page
+ * Individual Event Detail Page (English)
  * SEO-optimized page for individual events
  */
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import OptimizedEventImage from '../../components/ui/OptimizedEventImage.astro';
-import type { ProcessedEvent } from '../../utils/eventProcessing.js';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import OptimizedEventImage from '../../../components/ui/OptimizedEventImage.astro';
+import type { ProcessedEvent } from '../../../utils/eventProcessing.js';
 import { 
   generateEventSEOData, 
   generateEventOGTags, 
   generateEventTwitterTags,
   generateEventBreadcrumbData
-} from '../../utils/eventSEO.js';
+} from '../../../utils/eventSEO.js';
 
 
 export async function getStaticPaths() {
   // Load processed events data
   let processedEvents: ProcessedEvent[] = [];
   try {
-    const eventsData = await import('../../data/events/processed-events.json');
+    const eventsData = await import('../../../data/events/processed-events.json');
     processedEvents = eventsData.default as ProcessedEvent[] || [];
   } catch (error) {
     console.warn('Could not load processed events data for static paths:', error);
@@ -36,20 +36,20 @@ const { event } = Astro.props as { event: ProcessedEvent };
 
 // Generate comprehensive SEO data
 const siteUrl = Astro.site?.toString() || 'https://cnusergroup.com';
-const seoData = generateEventSEOData(event, siteUrl, 'zh');
-const ogTags = generateEventOGTags(event, siteUrl, 'zh');
-const twitterTags = generateEventTwitterTags(event, siteUrl, 'zh');
-const breadcrumbData = generateEventBreadcrumbData(event, siteUrl, 'zh');
+const seoData = generateEventSEOData(event, siteUrl, 'en');
+const ogTags = generateEventOGTags(event, siteUrl, 'en');
+const twitterTags = generateEventTwitterTags(event, siteUrl, 'en');
+const breadcrumbData = generateEventBreadcrumbData(event, siteUrl, 'en');
 
 // Page metadata
 const pageTitle = seoData.title;
 const pageDescription = seoData.description;
-const canonicalUrl = new URL(`/events/${event.slug}`, Astro.site);
+const canonicalUrl = new URL(`/en/events/${event.slug}`, Astro.site);
 
 // Load related events (same city or tags)
 let relatedEvents: ProcessedEvent[] = [];
 try {
-  const eventsData = await import('../../data/events/processed-events.json');
+  const eventsData = await import('../../../data/events/processed-events.json');
   const allEvents = eventsData.default || [];
   
   relatedEvents = (allEvents as ProcessedEvent[])
@@ -92,7 +92,7 @@ try {
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4" aria-label="Breadcrumb">
     <ol class="flex items-center space-x-2 text-sm text-gray-500">
       <li>
-        <a href={import.meta.env.BASE_URL || "/"} class="hover:text-gray-700">首页</a>
+        <a href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/en`} class="hover:text-gray-700">Home</a>
       </li>
       <li>
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -100,7 +100,7 @@ try {
         </svg>
       </li>
       <li>
-        <a href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/events`} class="hover:text-gray-700">活动列表</a>
+        <a href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/en/events`} class="hover:text-gray-700">Events</a>
       </li>
       <li>
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -126,7 +126,7 @@ try {
                   <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                   </svg>
-                  <span>{event.formattedDate}</span>
+                  <span>{event.time}</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ try {
               <span class={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
                 event.isUpcoming ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-600'
               }`}>
-                {event.isUpcoming ? '即将举行' : '已结束'}
+                {event.isUpcoming ? 'Upcoming' : 'Past'}
               </span>
             </div>
           </div>
@@ -156,7 +156,7 @@ try {
                 size="hero"
                 lazy={false}
                 critical={true}
-                locale="zh"
+                locale="en"
                 className="w-full h-64 rounded-lg"
               />
             </div>
@@ -183,7 +183,7 @@ try {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                   </svg>
                   <span class="font-medium">{event.views.toLocaleString()}</span>
-                  <span class="ml-1">浏览</span>
+                  <span class="ml-1">views</span>
                 </div>
               )}
               {event.favorites > 0 && (
@@ -192,7 +192,7 @@ try {
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
                   </svg>
                   <span class="font-medium">{event.favorites.toLocaleString()}</span>
-                  <span class="ml-1">收藏</span>
+                  <span class="ml-1">favorites</span>
                 </div>
               )}
             </div>
@@ -206,7 +206,7 @@ try {
               rel="noopener noreferrer"
               class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
             >
-              查看活动详情
+              View Event Details
               <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
               </svg>
@@ -220,12 +220,12 @@ try {
         <!-- Related Events -->
         {relatedEvents.length > 0 && (
           <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">相关活动</h2>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Related Events</h2>
             <div class="space-y-4">
               {relatedEvents.map(relatedEvent => (
                 <div class="border-b border-gray-100 pb-4 last:border-b-0 last:pb-0">
                   <h3 class="font-medium text-gray-900 mb-2 line-clamp-2">
-                    <a href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/events/${relatedEvent.slug}`} class="hover:text-blue-600">
+                    <a href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/en/events/${relatedEvent.slug}`} class="hover:text-blue-600">
                       {relatedEvent.title}
                     </a>
                   </h3>
@@ -234,7 +234,7 @@ try {
                       <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                       </svg>
-                      <span>{relatedEvent.formattedDate}</span>
+                      <span>{relatedEvent.time}</span>
                     </div>
                     <div class="flex items-center">
                       <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -249,10 +249,10 @@ try {
             </div>
             <div class="mt-4 pt-4 border-t border-gray-100">
               <a 
-                href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/events`}
+                href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/en/events`}
                 class="text-sm text-blue-600 hover:text-blue-800 font-medium"
               >
-                查看所有活动 →
+                View All Events →
               </a>
             </div>
           </div>
@@ -260,25 +260,25 @@ try {
         
         <!-- Share Section -->
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-4">分享活动</h2>
+          <h2 class="text-lg font-semibold text-gray-900 mb-4">Share Event</h2>
           <div class="flex space-x-3">
             <button 
-              onclick="shareEvent('weibo')"
-              class="flex-1 bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
+              onclick="shareEvent('twitter')"
+              class="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
             >
-              微博
+              Twitter
             </button>
             <button 
-              onclick="shareEvent('wechat')"
-              class="flex-1 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
+              onclick="shareEvent('linkedin')"
+              class="flex-1 bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
             >
-              微信
+              LinkedIn
             </button>
             <button 
               onclick="shareEvent('copy')"
               class="flex-1 bg-gray-500 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
             >
-              复制链接
+              Copy Link
             </button>
           </div>
         </div>
@@ -291,21 +291,18 @@ try {
   // Share functionality
   function shareEvent(platform) {
     const url = canonicalUrl.toString();
-    const text = `${event.title} - ${event.location} - ${event.formattedDate}`;
+    const text = `${event.title} - ${event.location} - ${event.time}`;
     
     switch (platform) {
-      case 'weibo':
-        window.open(`https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`, '_blank');
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
         break;
-      case 'wechat':
-        // For WeChat, we'll copy to clipboard and show a message
-        navigator.clipboard.writeText(`${text} ${url}`).then(() => {
-          alert('链接已复制到剪贴板，请在微信中粘贴分享');
-        });
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
         break;
       case 'copy':
         navigator.clipboard.writeText(url).then(() => {
-          alert('链接已复制到剪贴板');
+          alert('Link copied to clipboard');
         });
         break;
     }

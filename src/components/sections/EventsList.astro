@@ -277,7 +277,7 @@ function generatePaginationUrl(pageNum: number): string {
             event={event} 
             locale={locale} 
             showEngagement={showEngagement}
-            className={index >= 6 ? 'lazy-load' : ''}
+            className=""
           />
         ))}
       </div>
@@ -395,465 +395,317 @@ function generatePaginationUrl(pageNum: number): string {
   )}
 </div>
 
-<script define:vars={{ allEvents, eventsPerPage }}>
-  // Client-side pagination and filtering for static sites
+<script is:inline>
+  // Pure Frontend Pagination and Filtering for Static Deployment
   document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('event-search');
     const statusFilter = document.getElementById('statusFilter');
     const cityFilter = document.getElementById('cityFilter');
-    const clearSearchBtn = document.getElementById('clear-filters');
+    const clearFiltersBtn = document.getElementById('clear-filters');
     const clearAllFiltersBtn = document.getElementById('clearAllFilters');
+    const resultsCount = document.getElementById('results-count');
     const searchResultsCount = document.getElementById('searchResultsCount');
+    const eventsGrid = document.getElementById('events-grid');
     
-    // Get all events data from component props
-    const allEventsData = allEvents || [];
-    const itemsPerPage = eventsPerPage || 12;
+    // Get all event cards and extract data
+    const allEventCards = Array.from(document.querySelectorAll('[data-event-id]'));
+    const eventsPerPage = 12;
+    let currentPage = 1;
+    let filteredEvents = [];
     
-    // Initialize client-side pagination
-    function initializeClientPagination() {
-      // Get current page from URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const currentPage = parseInt(urlParams.get('page') || '1');
-      
-      // Apply current filters
-      let filteredEvents = [...allEventsData];
-      
-      // Status filter
-      const status = statusFilter?.value || 'all';
-      if (status !== 'all') {
-        filteredEvents = filteredEvents.filter(event => {
-          if (status === 'upcoming') return event.status === 'upcoming';
-          if (status === 'past') return event.status === 'ended';
-          return true;
-        });
-      }
-      
-      // City filter
-      const cityId = cityFilter?.value || '';
-      if (cityId) {
-        filteredEvents = filteredEvents.filter(event => 
-          event.cityMappings && event.cityMappings.includes(cityId)
-        );
-      }
-      
-      // Search filter
-      const searchQuery = searchInput?.value?.toLowerCase().trim() || '';
-      if (searchQuery) {
-        const searchTerms = searchQuery.split(/\s+/).filter(term => term.length > 0);
-        filteredEvents = filteredEvents.filter(event => {
-          // Create comprehensive search text
+    if (allEventCards.length === 0) {
+      console.warn('No event cards found for search functionality');
+      return;
+    }
+
+    // Extract event data from DOM
+    const allEventsData = allEventCards.map(function(card) {
+      return {
+        element: card,
+        id: card.dataset.eventId || '',
+        title: (card.dataset.eventTitle || '').toLowerCase(),
+        location: (card.dataset.eventLocation || '').toLowerCase(),
+        status: card.dataset.eventStatus || 'ended',
+        cities: (card.dataset.eventCities || '').toLowerCase(),
+        tags: (card.dataset.eventTags || '').toLowerCase(),
+        time: (card.dataset.eventTime || '').toLowerCase(),
+        formattedDate: (card.dataset.eventFormattedDate || '').toLowerCase(),
+        originalIndex: allEventCards.indexOf(card)
+      };
+    });
+
+    // Set initial filter values from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('q') || '';
+    const status = urlParams.get('status') || 'all';
+    const city = urlParams.get('city') || '';
+    const pageFromUrl = parseInt(urlParams.get('page') || '1');
+
+    if (searchInput && searchQuery) {
+      searchInput.value = searchQuery;
+    }
+    if (statusFilter) {
+      statusFilter.value = status;
+    }
+    if (cityFilter && city) {
+      cityFilter.value = city;
+    }
+
+    function filterEvents() {
+      const searchTerm = searchInput?.value.toLowerCase().trim() || '';
+      const statusValue = statusFilter?.value || 'all';
+      const cityValue = cityFilter?.value || '';
+
+      filteredEvents = allEventsData.filter(function(event) {
+        // Search matching
+        let matchesSearch = true;
+        if (searchTerm) {
           const searchFields = [
-            event.title || '',
-            event.location || '',
-            (event.tags || []).join(' '),
-            (event.cityMappings || []).join(' '),
-            event.time || '',
-            event.formattedDate || ''
+            event.title,
+            event.location,
+            event.cities,
+            event.tags,
+            event.time,
+            event.formattedDate
           ];
           
-          const searchText = searchFields.join(' ').toLowerCase();
-          
-          // Support multiple search terms (AND logic)
-          return searchTerms.every(term => searchText.includes(term));
-        });
+          const searchText = searchFields.join(' ');
+          const searchTerms = searchTerm.split(/\s+/).filter(function(term) { return term.length > 0; });
+          matchesSearch = searchTerms.every(function(term) { return searchText.includes(term); });
+        }
+
+        // Status matching
+        let matchesStatus = true;
+        if (statusValue !== 'all') {
+          if (statusValue === 'upcoming') {
+            matchesStatus = event.status === 'upcoming';
+          } else if (statusValue === 'past') {
+            matchesStatus = event.status === 'ended';
+          }
+        }
+
+        // City matching
+        let matchesCity = true;
+        if (cityValue) {
+          matchesCity = event.cities.includes(cityValue.toLowerCase());
+        }
+
+        return matchesSearch && matchesStatus && matchesCity;
+      });
+
+      // Reset to page 1 when filtering changes
+      const hasFilters = searchTerm || statusValue !== 'all' || cityValue;
+      if (hasFilters) {
+        currentPage = 1;
+      } else {
+        currentPage = pageFromUrl;
       }
-      
+
+      updateDisplay();
+      updateURL();
+    }
+
+    function updateDisplay() {
       // Calculate pagination
-      const totalEvents = filteredEvents.length;
-      const totalPages = Math.ceil(totalEvents / itemsPerPage);
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const endIndex = Math.min(startIndex + itemsPerPage, totalEvents);
-      const paginatedEvents = filteredEvents.slice(startIndex, endIndex);
-      
-      // Update events grid
-      updateEventsGrid(paginatedEvents);
-      
-      // Update search results count
-      const isFiltered = searchInput?.value?.trim() || statusFilter?.value !== 'all' || cityFilter?.value;
-      updateSearchResultsCount(startIndex + 1, endIndex, totalEvents, isFiltered);
+      const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
+      const startIndex = (currentPage - 1) * eventsPerPage;
+      const endIndex = startIndex + eventsPerPage;
+      const currentPageEvents = filteredEvents.slice(startIndex, endIndex);
+
+      // Hide all cards first
+      allEventCards.forEach(function(card) {
+        card.style.display = 'none';
+      });
+
+      // Show only current page events
+      currentPageEvents.forEach(function(event) {
+        event.element.style.display = 'block';
+      });
+
+      // Update results count
+      updateResultsCount(filteredEvents.length, startIndex + 1, Math.min(endIndex, filteredEvents.length));
       
       // Update clear buttons
       updateClearButtons();
       
-      // Update pagination controls
-      updatePaginationControls(currentPage, totalPages);
+      // Update pagination
+      updatePagination(totalPages);
     }
-    
-    // Update events grid with new events
-    function updateEventsGrid(events) {
-      const eventsGrid = document.getElementById('events-grid');
-      if (!eventsGrid) return;
+
+    function updateResultsCount(total, start, end) {
+      const lang = document.documentElement.lang || 'zh';
       
-      eventsGrid.innerHTML = '';
-      
-      events.forEach((event, index) => {
-        const eventCard = createEventCard(event, index);
-        eventsGrid.appendChild(eventCard);
-      });
-      
-      // Re-initialize lazy loading
-      const lazyLoadCards = eventsGrid.querySelectorAll('.lazy-load');
-      if (lazyLoadCards.length > 0) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const card = entry.target;
-              card.classList.remove('lazy-load');
-              observer.unobserve(card);
-            }
-          });
-        });
-        
-        lazyLoadCards.forEach(card => imageObserver.observe(card));
+      let text;
+      if (total === 0) {
+        text = lang === 'zh' ? '未找到匹配的活动' : 'No events found';
+      } else if (total <= eventsPerPage) {
+        text = lang === 'zh' 
+          ? '显示 ' + total + ' 个活动' 
+          : 'Showing ' + total + ' events';
+      } else {
+        text = lang === 'zh' 
+          ? '显示第 ' + start + ' - ' + end + ' 项，共 ' + total + ' 项结果'
+          : 'Showing ' + start + ' - ' + end + ' of ' + total + ' events';
       }
-    }
-    
-    // Create event card HTML
-    function createEventCard(event, index) {
-      const card = document.createElement('div');
-      card.className = index >= 6 ? 'lazy-load' : '';
-      card.setAttribute('data-event-id', event.id);
-      card.setAttribute('data-event-title', event.title);
-      card.setAttribute('data-event-location', event.location);
-      card.setAttribute('data-event-status', event.status);
-      card.setAttribute('data-event-cities', (event.cityMappings || []).join(','));
       
-      card.innerHTML = `
-        <div class="group relative bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 hover:border-gray-300 flex flex-col h-full">
-          <!-- Event Image -->
-          <div class="relative aspect-video overflow-hidden rounded-t-lg">
-            <img src="${event.imageUrl || event.localImage || '/images/placeholder-event.jpg'}" alt="${event.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" loading="lazy">
-            
-            <!-- Event Status Badge -->
-            <div class="absolute top-3 left-3">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${event.status === 'upcoming' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-600'}">
-                ${event.status === 'upcoming' ? (document.documentElement.lang === 'zh' ? '即将举行' : 'Upcoming') : (document.documentElement.lang === 'zh' ? '已结束' : 'Past')}
-              </span>
-            </div>
-            
-            <!-- Engagement Metrics -->
-            ${event.views > 0 || event.favorites > 0 ? `
-            <div class="absolute top-3 right-3 flex space-x-2">
-              ${event.views > 0 ? `
-              <div class="bg-black bg-opacity-60 text-white px-2 py-1 rounded text-xs flex items-center space-x-1">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                </svg>
-                <span>${(event.views || 0) >= 1000 ? ((event.views || 0) / 1000).toFixed(1) + 'k' : (event.views || 0)}</span>
-              </div>
-              ` : ''}
-              ${event.favorites > 0 ? `
-              <div class="bg-black bg-opacity-60 text-white px-2 py-1 rounded text-xs flex items-center space-x-1">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-                </svg>
-                <span>${event.favorites >= 1000 ? (event.favorites / 1000).toFixed(1) + 'k' : event.favorites}</span>
-              </div>
-              ` : ''}
-            </div>
-            ` : ''}
-          </div>
-          
-          <!-- Event Content -->
-          <div class="p-4 flex flex-col flex-grow">
-            <!-- Event Title -->
-            <h3 class="font-semibold text-gray-900 text-lg mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-              ${event.title}
-            </h3>
-            
-            <!-- Event Details -->
-            <div class="space-y-2 mb-4 flex-grow">
-              <!-- Date and Time -->
-              <div class="flex items-center text-sm text-gray-600">
-                <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-                <span>${event.formattedDate || event.time}</span>
-              </div>
-              
-              <!-- Location -->
-              <div class="flex items-center text-sm text-gray-600">
-                <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                <span>${event.location}</span>
-              </div>
-            </div>
-            
-            <!-- Action Button - Always at bottom -->
-            <div class="mt-auto">
-              <div class="flex items-center justify-between">
-                <a
-                  href="${event.url}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-                >
-                  ${document.documentElement.lang === 'zh' ? '查看详情' : 'View Details'}
-                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
-                
-                <!-- Additional Engagement Info -->
-                ${event.views > 0 || event.favorites > 0 ? `
-                <div class="text-xs text-gray-500 flex items-center space-x-3">
-                  ${event.views > 0 ? `
-                  <span class="flex items-center">
-                    <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                    </svg>
-                    ${(event.views || 0).toLocaleString()}
-                  </span>
-                  ` : ''}
-                  ${event.favorites > 0 ? `
-                  <span class="flex items-center">
-                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-                    </svg>
-                    ${event.favorites.toLocaleString()}
-                  </span>
-                  ` : ''}
-                </div>
-                ` : ''}
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-      
-      return card;
-    }
-    
-    // Update search results count
-    function updateSearchResultsCount(start, end, total, isFiltered = false) {
+      if (resultsCount) {
+        resultsCount.textContent = text;
+      }
       if (searchResultsCount) {
-        let text;
-        const locale = document.documentElement.lang || 'zh';
-        if (total === 0) {
-          text = locale === 'zh' ? '未找到匹配的活动' : 'No events found';
-        } else if (isFiltered && total < allEventsData.length) {
-          text = locale === 'zh' 
-            ? `显示第 ${start} - ${end} 个，共 ${total} 个活动`
-            : `Showing ${start} - ${end} of ${total} events`;
-        } else {
-          text = `${locale === 'zh' ? '显示' : 'Showing'} ${total} ${locale === 'zh' ? '个活动' : 'events'}`;
-        }
         searchResultsCount.textContent = text;
       }
-      
-      // Also update pagination info if it exists
-      const paginationInfo = document.querySelector('.hidden.sm\\:flex-1 p');
-      if (paginationInfo && total > 0) {
-        const locale = document.documentElement.lang || 'zh';
-        const showingText = locale === 'zh' 
-          ? `显示第 ${start} - ${Math.min(end, total)} 个，共 ${total} 个活动`
-          : `Showing ${start} - ${Math.min(end, total)} of ${total} events`;
-        paginationInfo.textContent = showingText;
-      }
     }
-    
-    // Update clear buttons visibility
+
     function updateClearButtons() {
-      const hasSearch = searchInput?.value?.trim() || '';
-      const hasStatusFilter = statusFilter?.value !== 'all';
-      const hasCityFilter = cityFilter?.value || '';
-      const hasAnyFilter = hasSearch || hasStatusFilter || hasCityFilter;
+      const searchTerm = searchInput?.value.toLowerCase().trim() || '';
+      const statusValue = statusFilter?.value || 'all';
+      const cityValue = cityFilter?.value || '';
+      const hasFilters = searchTerm || statusValue !== 'all' || cityValue;
       
-      // Show/hide clear search button
-      if (clearSearchBtn) {
-        clearSearchBtn.classList.toggle('hidden', !hasSearch);
+      if (clearFiltersBtn) {
+        clearFiltersBtn.classList.toggle('hidden', !hasFilters);
       }
-      
-      // Show/hide clear all filters button
       if (clearAllFiltersBtn) {
-        clearAllFiltersBtn.classList.toggle('hidden', !hasAnyFilter);
+        clearAllFiltersBtn.classList.toggle('hidden', !hasFilters);
       }
     }
-    
-    // Update pagination controls
-    function updatePaginationControls(current, total) {
+
+    function updatePagination(totalPages) {
+      const paginationContainer = document.querySelector('.flex.items-center.justify-between');
       const paginationNav = document.querySelector('nav[aria-label="Pagination"]');
-      if (!paginationNav) return;
       
-      // Hide pagination if only one page or no results
-      const paginationContainer = paginationNav.closest('.flex.items-center.justify-between');
-      if (paginationContainer) {
-        paginationContainer.style.display = total <= 1 ? 'none' : 'flex';
+      if (!paginationContainer || !paginationNav) return;
+
+      if (totalPages <= 1) {
+        paginationContainer.style.display = 'none';
+        return;
       }
+
+      paginationContainer.style.display = 'flex';
       
-      if (total <= 1) return;
-      
+      // Update pagination info text
+      const paginationInfo = paginationContainer.querySelector('p');
+      if (paginationInfo) {
+        const start = (currentPage - 1) * eventsPerPage + 1;
+        const end = Math.min(currentPage * eventsPerPage, filteredEvents.length);
+        const lang = document.documentElement.lang || 'zh';
+        const text = lang === 'zh' 
+          ? '显示第 ' + start + ' - ' + end + ' 项，共 ' + filteredEvents.length + ' 项结果'
+          : 'Showing ' + start + ' - ' + end + ' of ' + filteredEvents.length + ' results';
+        paginationInfo.textContent = text;
+      }
+
+      // Rebuild pagination buttons
       paginationNav.innerHTML = '';
-      
+
       // Previous button
       const prevButton = document.createElement('button');
-      prevButton.className = `relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 text-sm font-medium ${current > 1 ? 'bg-white text-gray-500 hover:bg-gray-50 cursor-pointer' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`;
-      prevButton.innerHTML = `
-        <span class="sr-only">${document.documentElement.lang === 'zh' ? '上一页' : 'Previous'}</span>
-        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-        </svg>
-      `;
-      if (current > 1) {
-        prevButton.addEventListener('click', () => goToPage(current - 1));
+      prevButton.className = 'relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 text-sm font-medium ' + 
+        (currentPage > 1 ? 'bg-white text-gray-500 hover:bg-gray-50 cursor-pointer' : 'bg-gray-100 text-gray-400 cursor-not-allowed');
+      prevButton.innerHTML = '<span class="sr-only">Previous</span><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>';
+      
+      if (currentPage > 1) {
+        prevButton.addEventListener('click', function() {
+          currentPage--;
+          updateDisplay();
+        });
       }
       paginationNav.appendChild(prevButton);
-      
-      // Page numbers - show max 5 pages
+
+      // Page numbers (show max 5 pages)
       const maxPages = 5;
-      let startPage = Math.max(1, current - Math.floor(maxPages / 2));
-      let endPage = Math.min(total, startPage + maxPages - 1);
+      let startPage = Math.max(1, currentPage - Math.floor(maxPages / 2));
+      let endPage = Math.min(totalPages, startPage + maxPages - 1);
       
-      // Adjust start page if we're near the end
       if (endPage - startPage + 1 < maxPages) {
         startPage = Math.max(1, endPage - maxPages + 1);
       }
-      
+
       for (let i = startPage; i <= endPage; i++) {
         const pageButton = document.createElement('button');
-        pageButton.className = `relative inline-flex items-center px-4 py-2 border text-sm font-medium cursor-pointer ${i === current ? 'z-10 bg-blue-50 border-blue-500 text-blue-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'}`;
+        pageButton.className = 'relative inline-flex items-center px-4 py-2 border text-sm font-medium cursor-pointer ' +
+          (i === currentPage 
+            ? 'z-10 bg-blue-50 border-blue-500 text-blue-600' 
+            : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50');
         pageButton.textContent = i;
-        pageButton.addEventListener('click', () => goToPage(i));
+        pageButton.addEventListener('click', function() {
+          currentPage = i;
+          updateDisplay();
+        });
         paginationNav.appendChild(pageButton);
       }
-      
+
       // Next button
       const nextButton = document.createElement('button');
-      nextButton.className = `relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 text-sm font-medium ${current < total ? 'bg-white text-gray-500 hover:bg-gray-50 cursor-pointer' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`;
-      nextButton.innerHTML = `
-        <span class="sr-only">${document.documentElement.lang === 'zh' ? '下一页' : 'Next'}</span>
-        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-        </svg>
-      `;
-      if (current < total) {
-        nextButton.addEventListener('click', () => goToPage(current + 1));
+      nextButton.className = 'relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 text-sm font-medium ' +
+        (currentPage < totalPages ? 'bg-white text-gray-500 hover:bg-gray-50 cursor-pointer' : 'bg-gray-100 text-gray-400 cursor-not-allowed');
+      nextButton.innerHTML = '<span class="sr-only">Next</span><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>';
+      
+      if (currentPage < totalPages) {
+        nextButton.addEventListener('click', function() {
+          currentPage++;
+          updateDisplay();
+        });
       }
       paginationNav.appendChild(nextButton);
     }
-    
-    // Go to specific page
-    function goToPage(page) {
-      // Update URL
-      const url = new URL(window.location);
-      if (page === 1) {
-        url.searchParams.delete('page');
-      } else {
-        url.searchParams.set('page', page.toString());
-      }
-      window.history.pushState({}, '', url);
+
+    function updateURL() {
+      const searchTerm = searchInput?.value.trim() || '';
+      const statusValue = statusFilter?.value || 'all';
+      const cityValue = cityFilter?.value || '';
       
-      // Re-initialize pagination with new page
-      initializeClientPagination();
+      const params = new URLSearchParams();
       
-      // Scroll to top of events list
-      const eventsGrid = document.getElementById('events-grid');
-      if (eventsGrid) {
-        eventsGrid.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (searchTerm) params.set('q', searchTerm);
+      if (statusValue !== 'all') params.set('status', statusValue);
+      if (cityValue) params.set('city', cityValue);
+      if (currentPage > 1) params.set('page', currentPage.toString());
+      
+      const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+      window.history.replaceState({}, '', newUrl);
     }
-    
-    // Add event listeners for filters
-    if (statusFilter) {
-      statusFilter.addEventListener('change', () => {
-        // Reset to page 1 when filtering
-        const url = new URL(window.location);
-        url.searchParams.delete('page');
-        window.history.pushState({}, '', url);
-        initializeClientPagination();
-      });
+
+    function clearFilters() {
+      if (searchInput) searchInput.value = '';
+      if (statusFilter) statusFilter.value = 'all';
+      if (cityFilter) cityFilter.value = '';
+      currentPage = 1;
+      
+      filterEvents();
     }
-    
-    if (cityFilter) {
-      cityFilter.addEventListener('change', () => {
-        // Reset to page 1 when filtering
-        const url = new URL(window.location);
-        url.searchParams.delete('page');
-        window.history.pushState({}, '', url);
-        initializeClientPagination();
-      });
-    }
-    
+
+    // Bind event listeners
     if (searchInput) {
-      // Add real-time search functionality (no debounce for better UX)
-      searchInput.addEventListener('input', () => {
-        // Reset to page 1 when searching
-        const url = new URL(window.location);
-        url.searchParams.delete('page');
-        window.history.pushState({}, '', url);
-        initializeClientPagination();
-      });
-      
-      // Handle Enter key
-      searchInput.addEventListener('keydown', (e) => {
+      searchInput.addEventListener('input', filterEvents);
+      searchInput.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
           e.preventDefault();
-          initializeClientPagination();
+          filterEvents();
         }
       });
     }
-    
-    // Clear search button
-    if (clearSearchBtn) {
-      clearSearchBtn.addEventListener('click', () => {
-        if (searchInput) {
-          searchInput.value = '';
-          searchInput.focus();
-          const url = new URL(window.location);
-          url.searchParams.delete('page');
-          window.history.pushState({}, '', url);
-          initializeClientPagination();
-        }
-      });
+
+    if (statusFilter) {
+      statusFilter.addEventListener('change', filterEvents);
+    }
+
+    if (cityFilter) {
+      cityFilter.addEventListener('change', filterEvents);
+    }
+
+    if (clearFiltersBtn) {
+      clearFiltersBtn.addEventListener('click', clearFilters);
     }
     
-    // Clear all filters button
     if (clearAllFiltersBtn) {
-      clearAllFiltersBtn.addEventListener('click', () => {
-        if (searchInput) searchInput.value = '';
-        if (statusFilter) statusFilter.value = 'all';
-        if (cityFilter) cityFilter.value = '';
-        
-        const url = new URL(window.location);
-        url.searchParams.delete('page');
-        window.history.pushState({}, '', url);
-        initializeClientPagination();
-        
-        if (searchInput) searchInput.focus();
-      });
+      clearAllFiltersBtn.addEventListener('click', clearFilters);
     }
+
+    // Initial setup
+    filterEvents();
     
-    // Set initial filter values from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    if (statusFilter && urlParams.get('status')) {
-      statusFilter.value = urlParams.get('status') || 'all';
-    }
-    if (cityFilter && urlParams.get('city')) {
-      cityFilter.value = urlParams.get('city') || '';
-    }
-    
-    // Initialize client-side pagination
-    initializeClientPagination();
-    
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', function() {
-        setTimeout(() => {
-          try {
-            const perfData = performance.getEntriesByType('navigation')[0];
-            if (perfData && perfData.loadEventEnd > 0) {
-              console.log(`Events page loaded in ${Math.round(perfData.loadEventEnd)} ms`);
-            }
-          } catch (e) {
-            // Ignore performance monitoring errors
-          }
-        }, 100);
-      });
-    }
+    console.log('Pure frontend event search initialized with', allEventsData.length, 'events');
   });
 </script>
 
@@ -904,12 +756,7 @@ function generatePaginationUrl(pageNum: number): string {
     transform: translateZ(0);
   }
   
-  /* Lazy loading placeholder */
-  .lazy-load {
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-  }
-  
+  /* Lazy loading placeholder - removed opacity effect to ensure consistent appearance */
   .lazy-load img {
     filter: blur(2px);
     transition: filter 0.3s ease;

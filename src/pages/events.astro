@@ -75,13 +75,10 @@ const sortedEvents = sortEvents(filteredEvents, 'sort', 'asc');
 
 // For static sites, pass all events to client for pagination
 const eventsPerPage = 12;
-const totalFilteredEvents = sortedEvents.length;
-const totalPages = Math.ceil(totalFilteredEvents / eventsPerPage);
 
-// Show first page by default, client will handle pagination
-const startIndex = (currentPage - 1) * eventsPerPage;
-const endIndex = startIndex + eventsPerPage;
-const paginatedEvents = sortedEvents.slice(startIndex, endIndex);
+// Don't pre-filter or paginate on server side for static deployment
+// Pass all events to client for complete frontend control
+const allEventsForClient = sortedEvents;
 
 // Load translations
 const translations = await import('../data/translations/zh.json');
@@ -240,16 +237,16 @@ const criticalEventImages = sortedEvents.slice(0, 6).map(event => event.imageUrl
 
     <!-- Events List -->
     <EventsList
-      events={paginatedEvents}
+      events={allEventsForClient}
       locale="zh"
       showEngagement={true}
       showFilters={true}
       showPagination={true}
       eventsPerPage={eventsPerPage}
-      currentPage={currentPage}
-      totalEvents={totalFilteredEvents}
-      totalPages={totalPages}
-      allEvents={sortedEvents}
+      currentPage={1}
+      totalEvents={allEventsForClient.length}
+      totalPages={Math.ceil(allEventsForClient.length / eventsPerPage)}
+      allEvents={allEventsForClient}
     />
     
 
