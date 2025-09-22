@@ -8,7 +8,6 @@ function initEventSearch() {
   const clearAllFiltersBtn = document.getElementById('clearAllFilters');
   const resultsCount = document.getElementById('results-count');
   const searchResultsCount = document.getElementById('searchResultsCount');
-  const eventsGrid = document.getElementById('events-grid');
   
   /* Get all event cards and extract data */
   const allEventCards = Array.from(document.querySelectorAll('[data-event-id]'));
@@ -112,6 +111,12 @@ function initEventSearch() {
   function updateDisplay() {
     /* Calculate pagination */
     const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
+    
+    /* Ensure current page is within valid range */
+    if (currentPage > totalPages && totalPages > 0) {
+      currentPage = 1;
+    }
+    
     const startIndex = (currentPage - 1) * eventsPerPage;
     const endIndex = startIndex + eventsPerPage;
     const currentPageEvents = filteredEvents.slice(startIndex, endIndex);
@@ -180,7 +185,8 @@ function initEventSearch() {
     
     if (!paginationContainer || !paginationNav) return;
 
-    if (totalPages <= 1) {
+    /* Hide pagination if no results or only one page */
+    if (totalPages <= 1 || filteredEvents.length === 0) {
       paginationContainer.style.display = 'none';
       return;
     }
