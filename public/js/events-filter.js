@@ -180,8 +180,17 @@ function initEventSearch() {
   }
 
   function updatePagination(totalPages) {
-    const paginationContainer = document.querySelector('.flex.items-center.justify-between');
+    /* Find all pagination containers - there might be multiple due to mobile/desktop versions */
+    const paginationContainers = document.querySelectorAll('.flex.items-center.justify-between');
     const paginationNav = document.querySelector('nav[aria-label="Pagination"]');
+    
+    /* Find the correct pagination container (the one that contains pagination nav) */
+    let paginationContainer = null;
+    paginationContainers.forEach(function(container) {
+      if (container.querySelector('nav[aria-label="Pagination"]')) {
+        paginationContainer = container;
+      }
+    });
     
     if (!paginationContainer || !paginationNav) return;
 
