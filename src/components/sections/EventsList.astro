@@ -396,10 +396,12 @@ function generatePaginationUrl(pageNum: number): string {
 </div>
 
 <script is:inline>
-  /* Pure Frontend Pagination and Filtering for Static Deployment */
-  function initEventSearch() {
+  ;(function() {
     alert('JavaScript 代码已加载并执行！前端过滤功能正在初始化...');
-    console.log('Initializing event search...');
+    
+    /* Pure Frontend Pagination and Filtering for Static Deployment */
+    function initEventSearch() {
+      console.log('Initializing event search...');
     
     const searchInput = document.getElementById('event-search');
     const statusFilter = document.getElementById('statusFilter');
@@ -777,6 +779,8 @@ function generatePaginationUrl(pageNum: number): string {
       }
     }
   }, 2000);
+  
+  })(); /* End of IIFE */
 </script>
 
 
