@@ -858,13 +858,7 @@ function generatePaginationUrl(pageNum: number): string {
   });
 </script>
 
-<!-- Pass events data to the search script -->
-<script define:vars={{ allEvents }}>
-  // Make events data available to the search script
-  if (typeof window !== 'undefined') {
-    window.allEventsData = allEvents || [];
-  }
-</script>
+
 
 <style>
   /* Ensure consistent card heights */
