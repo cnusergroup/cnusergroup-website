@@ -717,28 +717,65 @@ function generatePaginationUrl(pageNum: number): string {
     console.log('Pure frontend event search initialized with', allEventsData.length, 'events');
   }
 
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initEventSearch);
-  } else {
-    // DOM is already ready
-    initEventSearch();
+  // Multiple initialization strategies for GitHub Pages compatibility
+  let initAttempts = 0;
+  const maxAttempts = 5;
+  
+  function tryInitialize() {
+    initAttempts++;
+    console.log('Initialization attempt:', initAttempts);
+    
+    // Check if we have event cards
+    const eventCards = document.querySelectorAll('[data-event-id]');
+    console.log('Event cards found:', eventCards.length);
+    
+    if (eventCards.length > 0) {
+      console.log('Event cards found, initializing search...');
+      initEventSearch();
+      return true;
+    } else if (initAttempts < maxAttempts) {
+      console.log('No event cards found, retrying in 500ms...');
+      setTimeout(tryInitialize, 500);
+      return false;
+    } else {
+      console.warn('Max initialization attempts reached, no event cards found');
+      return false;
+    }
   }
 
-  // Also try to initialize after a short delay for GitHub Pages
-  setTimeout(function() {
-    if (typeof initEventSearch === 'function') {
-      initEventSearch();
-    }
-  }, 1000);
+  // Strategy 1: DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM ready, trying to initialize...');
+      tryInitialize();
+    });
+  } else {
+    console.log('DOM already ready, trying to initialize...');
+    tryInitialize();
+  }
 
-  // Backup initialization for GitHub Pages
+  // Strategy 2: Window load (backup)
   window.addEventListener('load', function() {
-    console.log('Window loaded, trying to initialize event search...');
-    if (typeof initEventSearch === 'function') {
-      initEventSearch();
-    }
+    console.log('Window loaded, trying backup initialization...');
+    setTimeout(function() {
+      const eventCards = document.querySelectorAll('[data-event-id]');
+      if (eventCards.length > 0 && typeof initEventSearch === 'function') {
+        console.log('Backup initialization with', eventCards.length, 'event cards');
+        initEventSearch();
+      }
+    }, 100);
   });
+
+  // Strategy 3: Delayed initialization for GitHub Pages
+  setTimeout(function() {
+    const eventCards = document.querySelectorAll('[data-event-id]');
+    if (eventCards.length > 0) {
+      console.log('Delayed initialization with', eventCards.length, 'event cards');
+      if (typeof initEventSearch === 'function') {
+        initEventSearch();
+      }
+    }
+  }, 2000);
 </script>
 
 

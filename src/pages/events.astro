@@ -243,7 +243,7 @@ const criticalEventImages = sortedEvents.slice(0, 6).map(event => event.imageUrl
       showFilters={true}
       showPagination={true}
       eventsPerPage={eventsPerPage}
-      currentPage={1}
+      currentPage={currentPage}
       totalEvents={allEventsForClient.length}
       totalPages={Math.ceil(allEventsForClient.length / eventsPerPage)}
       allEvents={allEventsForClient}
