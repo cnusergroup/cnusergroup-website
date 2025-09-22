@@ -1,7 +1,5 @@
 /* Pure Frontend Pagination and Filtering for Static Deployment */
 function initEventSearch() {
-  alert('JavaScript 代码已加载并执行！前端过滤功能正在初始化...');
-  console.log('Initializing event search...');
   
   const searchInput = document.getElementById('event-search');
   const statusFilter = document.getElementById('statusFilter');
@@ -18,10 +16,7 @@ function initEventSearch() {
   let currentPage = 1;
   let filteredEvents = [];
   
-  console.log('Found event cards:', allEventCards.length);
-  
   if (allEventCards.length === 0) {
-    console.warn('No event cards found for search functionality');
     setTimeout(initEventSearch, 500); /* Retry after 500ms */
     return;
   }
@@ -40,7 +35,6 @@ function initEventSearch() {
       formattedDate: (card.dataset.eventFormattedDate || '').toLowerCase(),
       originalIndex: allEventCards.indexOf(card)
     };
-    console.log('Event data:', eventData.title, eventData.status, eventData.cities);
     return eventData;
   });
 
@@ -65,8 +59,6 @@ function initEventSearch() {
     const searchTerm = searchInput?.value.toLowerCase().trim() || '';
     const statusValue = statusFilter?.value || 'all';
     const cityValue = cityFilter?.value || '';
-
-    console.log('Filtering with:', { searchTerm, statusValue, cityValue });
 
     filteredEvents = allEventsData.filter(function(event) {
       /* Search matching */
@@ -316,8 +308,6 @@ function initEventSearch() {
 
   /* Initial setup */
   filterEvents();
-  
-  console.log('Pure frontend event search initialized with', allEventsData.length, 'events');
 }
 
 /* Multiple initialization strategies for GitHub Pages compatibility */
@@ -326,22 +316,17 @@ const maxAttempts = 5;
 
 function tryInitialize() {
   initAttempts++;
-  console.log('Initialization attempt:', initAttempts);
   
   /* Check if we have event cards */
   const eventCards = document.querySelectorAll('[data-event-id]');
-  console.log('Event cards found:', eventCards.length);
   
   if (eventCards.length > 0) {
-    console.log('Event cards found, initializing search...');
     initEventSearch();
     return true;
   } else if (initAttempts < maxAttempts) {
-    console.log('No event cards found, retrying in 500ms...');
     setTimeout(tryInitialize, 500);
     return false;
   } else {
-    console.warn('Max initialization attempts reached, no event cards found');
     return false;
   }
 }
@@ -349,21 +334,17 @@ function tryInitialize() {
 /* Strategy 1: DOM ready */
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM ready, trying to initialize...');
     tryInitialize();
   });
 } else {
-  console.log('DOM already ready, trying to initialize...');
   tryInitialize();
 }
 
 /* Strategy 2: Window load (backup) */
 window.addEventListener('load', function() {
-  console.log('Window loaded, trying backup initialization...');
   setTimeout(function() {
     const eventCards = document.querySelectorAll('[data-event-id]');
     if (eventCards.length > 0 && typeof initEventSearch === 'function') {
-      console.log('Backup initialization with', eventCards.length, 'event cards');
       initEventSearch();
     }
   }, 100);
@@ -373,7 +354,6 @@ window.addEventListener('load', function() {
 setTimeout(function() {
   const eventCards = document.querySelectorAll('[data-event-id]');
   if (eventCards.length > 0) {
-    console.log('Delayed initialization with', eventCards.length, 'event cards');
     if (typeof initEventSearch === 'function') {
       initEventSearch();
     }

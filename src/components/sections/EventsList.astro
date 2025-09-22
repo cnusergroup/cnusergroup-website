@@ -234,11 +234,8 @@ function generatePaginationUrl(pageNum: number): string {
         )}
       </div>
       
-      <!-- Results Summary and Clear Button -->
-      <div class="mt-4 flex items-center justify-between text-sm text-gray-600">
-        <span id="results-count">
-          {locale === 'zh' ? '显示所有活动' : 'Showing all events'}
-        </span>
+      <!-- Clear Button -->
+      <div class="mt-4 flex items-center justify-end text-sm text-gray-600">
         <button
           id="clear-filters"
           class="text-blue-600 hover:text-blue-800 transition-colors duration-200 hidden"
