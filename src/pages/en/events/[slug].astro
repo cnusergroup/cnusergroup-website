@@ -288,37 +288,62 @@ try {
 </BaseLayout>
 
 <script is:inline>
-  // Share functionality - Define globally immediately
-  window.shareEvent = function(platform) {
-    const url = window.location.href;
-    const title = document.title.split(' | ')[0]; // 获取页面标题，去掉网站名称
-    const text = title;
-    
-    switch (platform) {
-      case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
-        break;
-      case 'linkedin':
-        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
-        break;
-      case 'copy':
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(url).then(() => {
-            alert('Link copied to clipboard');
-          }).catch(() => {
-            // Fallback for older browsers
-            const textArea = document.createElement('textarea');
-            textArea.value = url;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            alert('Link copied to clipboard');
-          });
+  // Ensure the script runs after DOM is loaded
+  (function() {
+    // Share functionality - Define globally immediately
+    window.shareEvent = function(platform) {
+      try {
+        const url = window.location.href;
+        const title = document.title.split(' | ')[0]; // 获取页面标题，去掉网站名称
+        const text = title;
+        
+        console.log('Share function called with platform:', platform);
+        console.log('URL:', url);
+        console.log('Title:', text);
+        
+        switch (platform) {
+          case 'twitter':
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+            break;
+          case 'linkedin':
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+            break;
+          case 'copy':
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(url).then(() => {
+                alert('Link copied to clipboard');
+              }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('Link copied to clipboard');
+              });
+            } else {
+              // Fallback for browsers without clipboard API
+              const textArea = document.createElement('textarea');
+              textArea.value = url;
+              document.body.appendChild(textArea);
+              textArea.select();
+              document.execCommand('copy');
+              document.body.removeChild(textArea);
+              alert('Link copied to clipboard');
+            }
+            break;
+          default:
+            console.warn('Unknown share platform:', platform);
         }
-        break;
-    }
-  };
+      } catch (error) {
+        console.error('Share function error:', error);
+        alert('Share function is temporarily unavailable, please try again later');
+      }
+    };
+    
+    console.log('Share function initialized');
+  })();
 </script>
 
 <style>
