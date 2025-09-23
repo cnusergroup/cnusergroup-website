@@ -288,8 +288,8 @@ try {
 </BaseLayout>
 
 <script define:vars={{ event, pageTitle, canonicalUrl }}>
-  // Share functionality
-  function shareEvent(platform) {
+  // Share functionality - Define globally immediately
+  window.shareEvent = function(platform) {
     const url = canonicalUrl.toString();
     const text = `${event.title} - ${event.location} - ${event.time}`;
     
@@ -301,15 +301,23 @@ try {
         window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
         break;
       case 'copy':
-        navigator.clipboard.writeText(url).then(() => {
-          alert('Link copied to clipboard');
-        });
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(() => {
+            alert('Link copied to clipboard');
+          }).catch(() => {
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = url;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Link copied to clipboard');
+          });
+        }
         break;
     }
-  }
-  
-  // Make shareEvent available globally
-  window.shareEvent = shareEvent;
+  };
 </script>
 
 <style>
