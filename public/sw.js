@@ -8,26 +8,29 @@ const STATIC_CACHE = 'cnusergroup-static-v1.0.0';
 const DYNAMIC_CACHE = 'cnusergroup-dynamic-v1.0.0';
 const IMAGE_CACHE = 'cnusergroup-images-v1.0.0';
 
-// 需要缓存的静态资源
-const STATIC_ASSETS = [
-  '/',
-  '/en',
-  '/cities',
-  '/en/cities',
-  '/manifest.json',
-  '/favicon.svg',
-  '/images/ui/hero-background.png',
-  '/images/ui/title-left.png',
-  '/images/ui/title-right.png',
-  '/images/aws-logo.webp'
-];
+// 获取BASE_URL，支持GitHub Pages部署
+const BASE_URL = self.location.pathname.includes('/cnusergroup-website/') ? '/cnusergroup-website' : '';
 
-// 需要缓存的动态内容模式
+// 需要缓存的静态资源 - 动态添加BASE_URL前缀
+const STATIC_ASSETS = [
+  `${BASE_URL}/`,
+  `${BASE_URL}/en`,
+  `${BASE_URL}/cities`,
+  `${BASE_URL}/en/cities`,
+  `${BASE_URL}/manifest.json`,
+  `${BASE_URL}/favicon.svg`,
+  `${BASE_URL}/images/ui/hero-background.png`,
+  `${BASE_URL}/images/ui/title-left.png`,
+  `${BASE_URL}/images/ui/title-right.png`,
+  `${BASE_URL}/images/aws-logo.webp`
+].filter(path => path !== BASE_URL); // 移除空的BASE_URL项
+
+// 需要缓存的动态内容模式 - 考虑BASE_URL
 const DYNAMIC_PATTERNS = [
-  /^\/cities\/[^\/]+$/,
-  /^\/en\/cities\/[^\/]+$/,
-  /^\/images\/cities\/.+\.(webp|jpg|png)$/,
-  /^\/api\/.+$/
+  new RegExp(`^${BASE_URL}/cities/[^/]+$`),
+  new RegExp(`^${BASE_URL}/en/cities/[^/]+$`),
+  new RegExp(`^${BASE_URL}/images/cities/.+\\.(webp|jpg|png)$`),
+  new RegExp(`^${BASE_URL}/api/.+$`)
 ];
 
 // 安装事件 - 缓存静态资源
@@ -138,7 +141,8 @@ async function handleStaticRequest(request) {
     
     // 返回离线页面
     if (request.mode === 'navigate') {
-      return caches.match('/offline.html') || 
+      return caches.match(`${BASE_URL}/offline.html`) || 
+             caches.match(`${BASE_URL}/`) ||
              new Response('Offline', { status: 503 });
     }
     
@@ -169,7 +173,7 @@ async function handleDynamicRequest(request) {
     
     // 如果是页面导航，返回离线页面
     if (request.mode === 'navigate') {
-      return caches.match('/') || 
+      return caches.match(`${BASE_URL}/`) || 
              new Response('Offline', { status: 503 });
     }
     
@@ -185,7 +189,7 @@ async function handleDefaultRequest(request) {
     console.log('Default request failed:', error);
     
     if (request.mode === 'navigate') {
-      return caches.match('/') || 
+      return caches.match(`${BASE_URL}/`) || 
              new Response('Offline', { status: 503 });
     }
     
@@ -195,18 +199,20 @@ async function handleDefaultRequest(request) {
 
 // 判断是否为静态资源
 function isStaticAsset(url) {
-  return STATIC_ASSETS.some(asset => url.endsWith(asset)) ||
-         url.includes('/assets/') ||
-         url.includes('/_astro/') ||
-         url.endsWith('.css') ||
-         url.endsWith('.js') ||
-         url.endsWith('.woff2') ||
-         url.endsWith('.woff');
+  const urlPath = new URL(url).pathname;
+  return STATIC_ASSETS.some(asset => urlPath === asset || urlPath.endsWith(asset)) ||
+         urlPath.includes('/assets/') ||
+         urlPath.includes('/_astro/') ||
+         urlPath.endsWith('.css') ||
+         urlPath.endsWith('.js') ||
+         urlPath.endsWith('.woff2') ||
+         urlPath.endsWith('.woff');
 }
 
 // 判断是否为动态内容
 function isDynamicContent(url) {
-  return DYNAMIC_PATTERNS.some(pattern => pattern.test(url));
+  const urlPath = new URL(url).pathname;
+  return DYNAMIC_PATTERNS.some(pattern => pattern.test(urlPath));
 }
 
 // 后台同步
@@ -235,8 +241,8 @@ self.addEventListener('push', (event) => {
     
     const options = {
       body: data.body,
-      icon: '/images/icons/icon-192x192.png',
-      badge: '/images/icons/badge-72x72.png',
+      icon: `${BASE_URL}/images/icons/icon-192x192.png`,
+      badge: `${BASE_URL}/images/icons/badge-72x72.png`,
       data: data.url,
       actions: [
         {
@@ -262,7 +268,7 @@ self.addEventListener('notificationclick', (event) => {
   
   if (event.action === 'open') {
     event.waitUntil(
-      clients.openWindow(event.notification.data || '/')
+      clients.openWindow(event.notification.data || `${BASE_URL}/`)
     );
   }
 });

@@ -287,11 +287,12 @@ try {
   </main>
 </BaseLayout>
 
-<script define:vars={{ event, pageTitle, canonicalUrl }}>
+<script is:inline>
   // Share functionality - Define globally immediately
   window.shareEvent = function(platform) {
-    const url = canonicalUrl.toString();
-    const text = `${event.title} - ${event.location} - ${event.time}`;
+    const url = window.location.href;
+    const title = document.title.split(' | ')[0]; // 获取页面标题，去掉网站名称
+    const text = title;
     
     switch (platform) {
       case 'twitter':

@@ -198,9 +198,8 @@ export class ResourcePreloader {
 
 // Service Worker 缓存策略
 export function registerServiceWorker() {
-  // 暂时禁用Service Worker，因为它在GitHub Pages上会导致路径问题
-  // TODO: 需要修复Service Worker中的BASE_URL路径处理
-  if (false && 'serviceWorker' in navigator) {
+  // Service Worker已修复BASE_URL路径处理问题
+  if ('serviceWorker' in navigator) {
     const baseUrl = import.meta.env.BASE_URL || '/';
     const swPath = baseUrl.endsWith('/') ? `${baseUrl}sw.js` : `${baseUrl}/sw.js`;
     navigator.serviceWorker.register(swPath)
