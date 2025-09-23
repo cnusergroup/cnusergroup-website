@@ -199,7 +199,8 @@ export class ResourcePreloader {
 // Service Worker 缓存策略
 export function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
-    const swPath = `${import.meta.env.BASE_URL || '/'}sw.js`;
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const swPath = baseUrl.endsWith('/') ? `${baseUrl}sw.js` : `${baseUrl}/sw.js`;
     navigator.serviceWorker.register(swPath)
       .then(registration => {
         console.log('Service Worker registered:', registration);

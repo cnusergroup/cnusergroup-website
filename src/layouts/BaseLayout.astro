@@ -23,7 +23,8 @@ const lang = getLanguageFromUrl(Astro.url);
 const pageTitle = getPageTitle(title || '', lang);
 const pageDescription = description || t('site.description', lang);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImage = image || `${import.meta.env.BASE_URL}images/og-image.jpg`;
+const baseUrl = import.meta.env.BASE_URL || '/';
+const socialImage = image || `${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}images/og-image.jpg`;
 ---
 
 <!DOCTYPE html>
@@ -70,14 +71,14 @@ const socialImage = image || `${import.meta.env.BASE_URL}images/og-image.jpg`;
     <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname.replace(/^\/en/, ''), Astro.site)} />
     
     <!-- PWA Manifest -->
-    <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.json`} />
+    <link rel="manifest" href={`${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}manifest.json`} />
     <meta name="theme-color" content="#FF9900" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="CNUserGroup" />
-    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}images/icons/icon-192x192.png`} />
+    <link rel="apple-touch-icon" href={`${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}images/icons/icon-192x192.png`} />
     <meta name="msapplication-TileColor" content="#FF9900" />
-    <meta name="msapplication-TileImage" content={`${import.meta.env.BASE_URL}images/icons/icon-144x144.png`} />
+    <meta name="msapplication-TileImage" content={`${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}images/icons/icon-144x144.png`} />
     
     <!-- 预加载关键图片 -->
     <ImagePreloader images={[
