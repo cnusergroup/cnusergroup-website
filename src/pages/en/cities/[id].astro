@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import CityDetail from '../../../components/sections/CityDetail.astro';
-import Breadcrumb from '../../../components/ui/Breadcrumb.astro';
 import { getLanguageFromUrl, getCityById, getLocalizedValue, t, getRoute } from '../../../utils';
 
 export async function getStaticPaths() {
@@ -28,11 +27,27 @@ const pageDescription = getLocalizedValue(city.description, lang);
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   <!-- Breadcrumb Navigation -->
-  <div class="bg-gray-50 py-2">
-    <div class="max-w-7xl mx-auto px-1 sm:px-2">
-      <Breadcrumb currentPath={Astro.url.pathname} lang={lang} />
-    </div>
-  </div>
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4" aria-label="Breadcrumb">
+    <ol class="flex items-center space-x-2 text-sm text-gray-500">
+      <li>
+        <a href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/en`} class="hover:text-orange-600" style="transition: color 0.2s;">Home</a>
+      </li>
+      <li>
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </li>
+      <li>
+        <a href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}/en/cities`} class="hover:text-orange-600" style="transition: color 0.2s;">Cities</a>
+      </li>
+      <li>
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </li>
+      <li class="text-gray-900 font-medium truncate">{cityName}</li>
+    </ol>
+  </nav>
   
   <!-- City Detail Content -->
   <CityDetail city={city} lang={lang} />
