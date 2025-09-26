@@ -356,6 +356,15 @@ class EventPaginationScraper {
       const browserPage = await browser.newPage();
       browserPage.setDefaultTimeout(60000);
 
+      // 设置浏览器环境
+      try {
+        await browserPage.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+        await browserPage.setViewportSize({ width: 1920, height: 1080 });
+        this.log('浏览器环境设置完成');
+      } catch (error) {
+        this.log(`设置浏览器环境失败: ${error.message}`);
+      }
+
       // 访问首页
       this.log('访问首页...');
       await browserPage.goto(this.baseUrl, {
