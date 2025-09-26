@@ -61,10 +61,10 @@ jobs:
           # 设置抓取模式
           if [ "${{ github.event.inputs.force_full_scrape }}" = "true" ]; then
             echo "🔄 执行强制完整数据抓取"
-            npm run scrape:events:v2 || npm run scrape:events:force
+            npm run scrape:events:force
           else
-            echo "🔄 执行标准数据抓取"
-            npm run scrape:events:v2 || npm run scrape:events
+            echo "🔄 执行标准数据抓取（分页抓取）"
+            npm run scrape:events
           fi
         env:
           CI: true

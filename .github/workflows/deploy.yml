@@ -89,10 +89,10 @@ jobs:
           # 设置抓取参数 - 总是执行完整抓取（因为已清空数据）
           if [ "${{ github.event.inputs.force_scrape }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ]; then
             echo "🔄 执行强制完整数据抓取"
-            npm run scrape:events:v2 || npm run scrape:events:force
+            npm run scrape:events:force
           else
-            echo "🔄 执行标准数据抓取"
-            npm run scrape:events:v2 || npm run scrape:events
+            echo "🔄 执行标准数据抓取（分页抓取）"
+            npm run scrape:events
           fi
           
           # 验证抓取结果
