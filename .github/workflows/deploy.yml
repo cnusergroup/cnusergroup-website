@@ -115,6 +115,30 @@ jobs:
           CI: true
           FORCE_EVENT_SCRAPING: ${{ github.event.inputs.force_scrape }}
         timeout-minutes: 15
+
+      - name: Process event data
+        run: |
+          echo "⚙️ 处理事件数据..."
+          
+          # 运行事件数据处理脚本
+          if [ -f "data/events/events.json" ]; then
+            echo "📊 开始处理原始事件数据"
+            node scripts/process-events.js --force
+            
+            # 验证处理结果
+            if [ -f "src/data/events/processed-events.json" ]; then
+              processed_count=$(jq length src/data/events/processed-events.json 2>/dev/null || echo "0")
+              echo "✅ 处理完成，生成 $processed_count 个处理后的事件"
+            else
+              echo "❌ 事件处理失败，未生成处理后的数据"
+            fi
+          else
+            echo "⚠️ 没有原始事件数据，跳过处理步骤"
+          fi
+        env:
+          NODE_ENV: production
+          CI: true
+        timeout-minutes: 10
           
       - name: Validate scraped data
         run: |
