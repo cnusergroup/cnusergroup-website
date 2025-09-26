@@ -161,10 +161,10 @@ class GitHubActionSimulator {
   async scrapeEventData() {
     this.log('=== 步骤 3: 抓取事件数据 ===', 'step');
 
-    // 运行事件抓取
+    // 运行事件抓取 - 使用正确的 improved-pagination-scraper.cjs
     const scrapeResult = this.runCommand(
-      'node scripts/improved-pagination-scraper.cjs incremental',
-      '执行事件数据抓取',
+      'npm run scrape:events',
+      '执行事件数据抓取 (增量模式)',
       { timeout: 600000 } // 10 minutes
     );
 
