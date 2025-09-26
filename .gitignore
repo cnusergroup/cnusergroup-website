@@ -22,13 +22,9 @@ dist/
 *~
 
 # OS generated files
-.DS_Store
-.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
-Thumbs.db
 
 # Logs
 logs/
@@ -39,6 +35,9 @@ data/events/scraper.log
 
 # Archive folder (development files)
 archive/
+
+# Back directory (moved development files)
+back/
 
 # Temporary files
 tmp/
@@ -85,24 +84,14 @@ jspm_packages/
 # Kiro IDE files
 .kiro/
 
-# Test files
+# Test files (general patterns)
 *.test.*
 test-*
 *-test.*
-performance-test.js
-simple-test.js
-test-basic.js
-test-playwright.js
-test-sort.js
 
-# Development and deployment files
-deployment-report.json
-validation-report.json
-generate-fallbacks.html
-
-# Development documentation
-docs/development/
-TRANSLATION_IMPLEMENTATION_SUMMARY.md
+# Development and deployment files (general patterns)
+*-report.json
+generate-*.html
 
 # Build and deployment artifacts
 build-info.json
@@ -121,3 +110,76 @@ data/events/backup/
 test-results/
 playwright-report/
 playwright/.cache/
+
+# Additional development files
+*.orig
+*.rej
+
+# IDE specific files
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux specific
+*~
+
+# Backup files
+*.backup
+
+# Report files (various formats)
+*-report.*
+*_report.*
+report-*
+quality-report.*
+
+# Generated documentation
+docs/generated/
+api-docs/
+
+# Temporary build files
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# Package manager lock files (if using different package managers)
+yarn.lock
+pnpm-lock.yaml
+
+# Environment and config files
+.env.*
+!.env.example
+config.local.*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip

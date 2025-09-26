@@ -8,6 +8,7 @@
   },
   "exclude": [
     "archive/**/*",
+    "back/**/*",
     "node_modules/**/*",
     "dist/**/*",
     "scripts/**/*.cjs",

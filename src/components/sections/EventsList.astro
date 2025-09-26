@@ -395,9 +395,11 @@ function generatePaginationUrl(pageNum: number): string {
 </div>
 
 <script>
-  const baseUrl = import.meta.env.BASE_URL || '/';
-  const scriptPath = baseUrl.endsWith('/') ? `${baseUrl}js/events-filter.js` : `${baseUrl}/js/events-filter.js`;
-  import(scriptPath);
+  // Use a more reliable way to load the script
+  const script = document.createElement('script');
+  script.src = '/js/events-filter.js';
+  script.type = 'text/javascript';
+  document.head.appendChild(script);
 </script>
 
 
