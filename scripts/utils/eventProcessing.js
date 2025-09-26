@@ -265,6 +265,12 @@ export function cleanEventData(events) {
     const cleanedEvent = { ...event };
     const actions = [];
 
+    // Map extractedAt to scrapedAt for compatibility
+    if (cleanedEvent.extractedAt && !cleanedEvent.scrapedAt) {
+      cleanedEvent.scrapedAt = cleanedEvent.extractedAt;
+      actions.push('Mapped extractedAt to scrapedAt');
+    }
+
     // Clean title
     if (cleanedEvent.title) {
       const originalTitle = cleanedEvent.title;
