@@ -223,6 +223,12 @@ function cleanupOldFiles() {
 function processEvents() {
   console.log('📅 处理事件数据...');
   
+  // 检查是否跳过事件处理
+  if (process.argv.includes('--skip-events')) {
+    console.log('⏭️  跳过事件数据处理（已在CI中完成）');
+    return true;
+  }
+  
   try {
     // 检查是否需要强制处理
     const forceProcess = process.argv.includes('--force-events') || 

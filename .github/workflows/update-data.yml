@@ -1,0 +1,120 @@
+name: Update Event Data
+
+on:
+  # 每天早上8点和晚上8点更新数据
+  schedule:
+    - cron: '0 8,20 * * *'
+  
+  # 允许手动触发
+  workflow_dispatch:
+    inputs:
+      force_full_scrape:
+        description: '强制完整抓取'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Setup Playwright
+        run: |
+          npx playwright install chromium
+          npx playwright install-deps chromium
+        
+      - name: Clear and scrape event data
+        run: |
+          echo "🧹 清空上次的活动数据..."
+          
+          # 清空事件数据
+          mkdir -p src/data/events
+          echo "[]" > src/data/events/processed-events.json
+          echo "{}" > src/data/events/city-mappings.json
+          echo '{"totalEvents":0,"lastUpdated":"'$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")'","status":"cleared"}' > src/data/events/event-stats.json
+          
+          if [ -f "data/events/events.json" ]; then
+            echo "[]" > data/events/events.json
+          fi
+          
+          echo "🕷️ 开始抓取最新活动数据..."
+          
+          # 设置抓取模式
+          if [ "${{ github.event.inputs.force_full_scrape }}" = "true" ]; then
+            echo "🔄 执行强制完整数据抓取"
+            npm run scrape:events:force
+          else
+            echo "🔄 执行标准数据抓取"
+            npm run scrape:events
+          fi
+        env:
+          CI: true
+        timeout-minutes: 15
+          
+      - name: Validate data
+        run: |
+          echo "🔍 验证数据完整性..."
+          
+          # 检查关键文件
+          if [ -f "src/data/events/processed-events.json" ]; then
+            event_count=$(jq length src/data/events/processed-events.json)
+            echo "📊 当前事件数量: $event_count"
+            
+            if [ $event_count -eq 0 ]; then
+              echo "⚠️ 没有事件数据，可能抓取失败"
+              exit 1
+            fi
+          else
+            echo "❌ 事件数据文件不存在"
+            exit 1
+          fi
+          
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          
+          # 检查是否有更新
+          if git diff --quiet src/data/events/; then
+            echo "📝 没有数据更新"
+          else
+            echo "📝 发现数据更新，提交更改"
+            
+            # 显示更改统计
+            echo "📊 更改统计:"
+            git diff --stat src/data/events/
+            
+            git add src/data/events/
+            git commit -m "🤖 自动更新事件数据 $(date -u +"%Y-%m-%d %H:%M UTC")"
+            git push
+            
+            echo "✅ 数据更新已提交"
+          fi
+          
+      - name: Trigger deployment
+        if: success()
+        run: |
+          # 如果有数据更新，触发部署工作流
+          if ! git diff --quiet HEAD~1 src/data/events/; then
+            echo "🚀 数据已更新，将触发网站重新部署"
+            # GitHub Actions 会自动触发 deploy.yml（因为推送到 main 分支）
+          fi

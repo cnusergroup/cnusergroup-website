@@ -1,47 +1,220 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   # 在推送到 main 分支时触发
   push:
     branches: [ main ]
   
+  # 定时触发 - 每天早上8点抓取最新数据
+  schedule:
+    - cron: '0 8 * * *'
+  
   # 允许手动触发工作流
   workflow_dispatch:
+    inputs:
+      force_scrape:
+        description: '强制重新抓取所有数据'
+        required: false
+        default: false
+        type: boolean
+      skip_cache:
+        description: '跳过缓存，重新安装依赖'
+        required: false
+        default: false
+        type: boolean
 
-# 设置 GITHUB_TOKEN 的权限以允许部署到 GitHub Pages
+# 设置 GITHUB_TOKEN 的权限
 permissions:
-  contents: read
+  contents: write  # 需要写权限来提交抓取的数据
   pages: write
   id-token: write
+  actions: read
 
-# 只允许一个并发部署，跳过正在运行和最新排队之间的运行
-# 但是，不要取消正在进行的运行，因为我们希望让这些生产部署完成
+# 只允许一个并发部署
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  build:
+  scrape-and-build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
         
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: ${{ github.event.inputs.skip_cache != 'true' && 'npm' || '' }}
           
       - name: Install dependencies
-        run: npm ci
-        
-      - name: Build with Astro
         run: |
-          npm run build
+          if [ "${{ github.event.inputs.skip_cache }}" = "true" ]; then
+            npm install
+          else
+            npm ci
+          fi
+        
+      - name: Setup Playwright (for scraping)
+        run: |
+          npx playwright install chromium
+          npx playwright install-deps chromium
+        
+      - name: Clear previous event data
+        run: |
+          echo "🧹 清空上次抓取的活动数据..."
+          
+          # 清空事件数据文件，但保留目录结构
+          mkdir -p src/data/events
+          echo "[]" > src/data/events/processed-events.json
+          echo "{}" > src/data/events/city-mappings.json
+          echo '{"totalEvents":0,"lastUpdated":"'$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")'","status":"cleared"}' > src/data/events/event-stats.json
+          
+          # 清空原始数据文件（如果存在）
+          if [ -f "data/events/events.json" ]; then
+            echo "[]" > data/events/events.json
+          fi
+          
+          echo "✅ 活动数据已清空，准备重新抓取"
+        
+      - name: Scrape event data
+        run: |
+          echo "🕷️ 开始抓取活动数据..."
+          
+          # 设置抓取参数 - 总是执行完整抓取（因为已清空数据）
+          if [ "${{ github.event.inputs.force_scrape }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "🔄 执行强制完整数据抓取"
+            npm run scrape:events:force
+          else
+            echo "🔄 执行标准数据抓取"
+            npm run scrape:events
+          fi
+          
+          # 验证抓取结果
+          if [ -f "src/data/events/processed-events.json" ]; then
+            event_count=$(jq length src/data/events/processed-events.json 2>/dev/null || echo "0")
+            echo "📊 抓取到 $event_count 个事件"
+            
+            if [ "$event_count" -eq 0 ]; then
+              echo "⚠️ 没有抓取到事件数据，但继续构建"
+            fi
+          else
+            echo "❌ 抓取失败，创建空数据文件"
+            mkdir -p src/data/events
+            echo "[]" > src/data/events/processed-events.json
+            echo "{}" > src/data/events/city-mappings.json
+            echo '{"totalEvents":0,"lastUpdated":"'$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")'","status":"scrape_failed"}' > src/data/events/event-stats.json
+          fi
         env:
           NODE_ENV: production
           CI: true
+          FORCE_EVENT_SCRAPING: ${{ github.event.inputs.force_scrape }}
+        timeout-minutes: 15
+          
+      - name: Validate scraped data
+        run: |
+          echo "🔍 验证抓取的数据..."
+          
+          # 检查必需的数据文件
+          files_to_check=(
+            "src/data/events/processed-events.json"
+            "src/data/events/city-mappings.json"
+            "src/data/events/event-stats.json"
+          )
+          
+          for file in "${files_to_check[@]}"; do
+            if [ -f "$file" ]; then
+              # 验证JSON格式
+              if jq empty "$file" 2>/dev/null; then
+                echo "✅ $file - 格式正确"
+                
+                # 显示数据统计
+                if [ "$file" = "src/data/events/processed-events.json" ]; then
+                  event_count=$(jq length "$file")
+                  echo "📊 事件数量: $event_count"
+                fi
+              else
+                echo "❌ $file - JSON格式错误"
+                exit 1
+              fi
+            else
+              echo "⚠️ $file - 文件不存在"
+            fi
+          done
+          
+      - name: Commit scraped data
+        run: |
+          # 配置git
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # 检查是否有数据更新
+          if git diff --quiet src/data/events/; then
+            echo "📝 没有数据更新"
+          else
+            echo "📝 提交更新的事件数据"
+            git add src/data/events/
+            git commit -m "🤖 自动更新事件数据 - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            git push
+          fi
+        
+      - name: Run deployment preparation
+        run: |
+          echo "🚀 执行部署准备..."
+          # 运行完整的部署准备，但跳过事件处理（已经完成）
+          node scripts/deploy-ready.js --skip-events || {
+            echo "⚠️ 部署准备脚本失败，尝试直接构建"
+          }
+        env:
+          NODE_ENV: production
+          CI: true
+          
+      - name: Build with Astro
+        run: |
+          echo "🔨 构建 Astro 项目..."
+          npm run build:ci
+        env:
+          NODE_ENV: production
+          CI: true
+          
+      - name: Verify build output
+        run: |
+          echo "🔍 验证构建输出..."
+          
+          if [ ! -d "dist" ]; then
+            echo "❌ 构建目录不存在"
+            exit 1
+          fi
+          
+          if [ ! -f "dist/index.html" ]; then
+            echo "❌ 主页文件不存在"
+            exit 1
+          fi
+          
+          # 检查文件大小
+          index_size=$(stat -c%s "dist/index.html")
+          echo "📊 index.html 大小: $((index_size / 1024)) KB"
+          
+          if [ $index_size -lt 1000 ]; then
+            echo "⚠️ 主页文件过小，可能构建有问题"
+          fi
+          
+          # 检查关键页面
+          key_pages=("cities/index.html" "about/index.html" "en/index.html")
+          for page in "${key_pages[@]}"; do
+            if [ -f "dist/$page" ]; then
+              echo "✅ $page 存在"
+            else
+              echo "⚠️ $page 不存在"
+            fi
+          done
+          
+          echo "✅ 构建验证完成"
           
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -56,8 +229,23 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: scrape-and-build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
+      - name: Verify deployment
+        run: |
+          echo "🌐 部署完成！"
+          echo "📍 网站地址: ${{ steps.deployment.outputs.page_url }}"
+          
+          # 等待几秒让部署生效
+          sleep 10
+          
+          # 验证网站是否可访问
+          if curl -f -s "${{ steps.deployment.outputs.page_url }}" > /dev/null; then
+            echo "✅ 网站访问正常"
+          else
+            echo "⚠️ 网站可能还在部署中，请稍后检查"
+          fi
