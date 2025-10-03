@@ -19,9 +19,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 510486,
-    "totalFavorites": 19033,
-    "averageViews": 3171,
+    "totalViews": 510690,
+    "totalFavorites": 19034,
+    "averageViews": 3172,
     "averageFavorites": 118,
     "topViewedEvents": [
       {
@@ -32,7 +32,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 15686
+        "views": 15691
       },
       {
         "id": "3794987216300",
@@ -47,7 +47,7 @@
       {
         "id": "9798314204700",
         "title": "【活动邀请上海】破界她力量：编码未来！",
-        "views": 9724
+        "views": 9728
       }
     ],
     "topFavoritedEvents": [
@@ -220,7 +220,7 @@
     "12/26": 1,
     "12/11": 1
   },
-  "lastUpdated": "2025-10-02T19:25:43.862Z",
+  "lastUpdated": "2025-10-03T19:26:42.426Z",
   "processing": {
     "totalRawEvents": 161,
     "duplicatesRemoved": 0,
@@ -232,10 +232,10 @@
     "processedEvents": 161,
     "citiesWithEvents": 14,
     "dataQualityScore": 100,
-    "processedAt": "2025-10-02T19:25:43.865Z"
+    "processedAt": "2025-10-03T19:26:42.429Z"
   },
   "qualityReport": {
-    "timestamp": "2025-10-02T19:25:43.864Z",
+    "timestamp": "2025-10-03T19:26:42.429Z",
     "summary": {
       "originalEventCount": 161,
       "finalEventCount": 161,
