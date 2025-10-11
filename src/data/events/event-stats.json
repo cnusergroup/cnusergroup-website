@@ -1,15 +1,15 @@
 {
-  "totalEvents": 161,
-  "upcomingEvents": 1,
+  "totalEvents": 162,
+  "upcomingEvents": 2,
   "pastEvents": 160,
   "cityDistribution": {
+    "beijing": 29,
     "shenzhen": 24,
     "shanghai": 24,
     "fuzhou": 3,
     "hefei": 8,
     "chengdu": 25,
     "guangzhou": 4,
-    "beijing": 28,
     "xian": 9,
     "wuhan": 12,
     "hangzhou": 3,
@@ -19,9 +19,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 513139,
-    "totalFavorites": 19062,
-    "averageViews": 3187,
+    "totalViews": 513518,
+    "totalFavorites": 19077,
+    "averageViews": 3170,
     "averageFavorites": 118,
     "topViewedEvents": [
       {
@@ -32,7 +32,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 15776
+        "views": 15786
       },
       {
         "id": "3794987216300",
@@ -42,7 +42,7 @@
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 10695
+        "views": 10700
       },
       {
         "id": "9798314204700",
@@ -79,16 +79,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 161,
-    "mappedEvents": 153,
+    "totalEvents": 162,
+    "mappedEvents": 154,
     "unmappedEvents": 8,
     "mappingsByConfidence": {
-      "high": 153,
+      "high": 154,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 153
+      "province": 154
     },
     "unmappedLocations": [
       "重庆渝北",
@@ -99,6 +99,7 @@
     ]
   },
   "timeDistribution": {
+    "10/18": 2,
     "10/26": 1,
     "09/27": 1,
     "09/21": 3,
@@ -146,7 +147,6 @@
     "11/17": 1,
     "11/16": 1,
     "10/27": 2,
-    "10/18": 1,
     "11/15": 1,
     "11/22": 1,
     "12/09": 2,
@@ -220,43 +220,43 @@
     "12/26": 1,
     "12/11": 1
   },
-  "lastUpdated": "2025-10-10T19:30:29.816Z",
+  "lastUpdated": "2025-10-11T19:25:55.365Z",
   "processing": {
-    "totalRawEvents": 161,
+    "totalRawEvents": 162,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 161,
+    "eventsAfterDeduplication": 162,
     "eventsCleaned": 35,
-    "validEvents": 161,
+    "validEvents": 162,
     "invalidEvents": 0,
     "warningEvents": 15,
-    "processedEvents": 161,
+    "processedEvents": 162,
     "citiesWithEvents": 14,
     "dataQualityScore": 100,
-    "processedAt": "2025-10-10T19:30:29.820Z"
+    "processedAt": "2025-10-11T19:25:55.367Z"
   },
   "qualityReport": {
-    "timestamp": "2025-10-10T19:30:29.820Z",
+    "timestamp": "2025-10-11T19:25:55.367Z",
     "summary": {
-      "originalEventCount": 161,
-      "finalEventCount": 161,
+      "originalEventCount": 162,
+      "finalEventCount": 162,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 161,
-          "uniqueCount": 161,
+          "originalCount": 162,
+          "uniqueCount": 162,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 161,
+          "totalEvents": 162,
           "cleanedEvents": 35,
           "cleaningStats": {
             "Cleaned title": 35
           }
         },
         "validation": {
-          "totalEvents": 161,
-          "validEvents": 161,
+          "totalEvents": 162,
+          "validEvents": 162,
           "invalidEvents": 0,
           "warningEvents": 15,
           "commonIssues": {
