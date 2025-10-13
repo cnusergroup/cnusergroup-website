@@ -3,8 +3,8 @@
   "upcomingEvents": 2,
   "pastEvents": 160,
   "cityDistribution": {
-    "shenzhen": 24,
     "beijing": 29,
+    "shenzhen": 24,
     "shanghai": 24,
     "fuzhou": 3,
     "hefei": 8,
@@ -19,9 +19,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 513883,
-    "totalFavorites": 19106,
-    "averageViews": 3172,
+    "totalViews": 514169,
+    "totalFavorites": 19111,
+    "averageViews": 3174,
     "averageFavorites": 118,
     "topViewedEvents": [
       {
@@ -32,7 +32,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 15796
+        "views": 15811
       },
       {
         "id": "3794987216300",
@@ -47,7 +47,7 @@
       {
         "id": "9798314204700",
         "title": "【活动邀请上海】破界她力量：编码未来！",
-        "views": 9763
+        "views": 9768
       }
     ],
     "topFavoritedEvents": [
@@ -99,8 +99,8 @@
     ]
   },
   "timeDistribution": {
-    "10/26": 1,
     "10/18": 2,
+    "10/26": 1,
     "09/27": 1,
     "09/21": 3,
     "09/20": 1,
@@ -220,7 +220,7 @@
     "12/26": 1,
     "12/11": 1
   },
-  "lastUpdated": "2025-10-12T19:32:26.538Z",
+  "lastUpdated": "2025-10-13T19:27:42.693Z",
   "processing": {
     "totalRawEvents": 162,
     "duplicatesRemoved": 0,
@@ -232,10 +232,10 @@
     "processedEvents": 162,
     "citiesWithEvents": 14,
     "dataQualityScore": 100,
-    "processedAt": "2025-10-12T19:32:26.541Z"
+    "processedAt": "2025-10-13T19:27:42.697Z"
   },
   "qualityReport": {
-    "timestamp": "2025-10-12T19:32:26.541Z",
+    "timestamp": "2025-10-13T19:27:42.697Z",
     "summary": {
       "originalEventCount": 162,
       "finalEventCount": 162,
