@@ -3,8 +3,8 @@
   "upcomingEvents": 2,
   "pastEvents": 160,
   "cityDistribution": {
-    "beijing": 29,
     "shenzhen": 24,
+    "beijing": 29,
     "shanghai": 24,
     "fuzhou": 3,
     "hefei": 8,
@@ -19,20 +19,20 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 514813,
-    "totalFavorites": 19120,
-    "averageViews": 3178,
+    "totalViews": 515310,
+    "totalFavorites": 19131,
+    "averageViews": 3181,
     "averageFavorites": 118,
     "topViewedEvents": [
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17451
+        "views": 17456
       },
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 15831
+        "views": 15841
       },
       {
         "id": "3794987216300",
@@ -42,7 +42,7 @@
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 10725
+        "views": 10720
       },
       {
         "id": "9798314204700",
@@ -99,8 +99,8 @@
     ]
   },
   "timeDistribution": {
-    "10/18": 2,
     "10/26": 1,
+    "10/18": 2,
     "09/27": 1,
     "09/21": 3,
     "09/20": 1,
@@ -220,7 +220,7 @@
     "12/26": 1,
     "12/11": 1
   },
-  "lastUpdated": "2025-10-14T19:34:19.369Z",
+  "lastUpdated": "2025-10-15T19:36:47.936Z",
   "processing": {
     "totalRawEvents": 162,
     "duplicatesRemoved": 0,
@@ -232,10 +232,10 @@
     "processedEvents": 162,
     "citiesWithEvents": 14,
     "dataQualityScore": 100,
-    "processedAt": "2025-10-14T19:34:19.373Z"
+    "processedAt": "2025-10-15T19:36:47.939Z"
   },
   "qualityReport": {
-    "timestamp": "2025-10-14T19:34:19.373Z",
+    "timestamp": "2025-10-15T19:36:47.939Z",
     "summary": {
       "originalEventCount": 162,
       "finalEventCount": 162,
