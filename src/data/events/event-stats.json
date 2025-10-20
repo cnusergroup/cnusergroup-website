@@ -1,391 +1,88 @@
 {
-  "totalEvents": 162,
-  "upcomingEvents": 1,
-  "pastEvents": 161,
-  "cityDistribution": {
-    "shenzhen": 24,
-    "beijing": 29,
-    "shanghai": 24,
-    "fuzhou": 3,
-    "hefei": 8,
-    "chengdu": 25,
-    "guangzhou": 4,
-    "xian": 9,
-    "wuhan": 12,
-    "hangzhou": 3,
-    "lanzhou": 5,
-    "suzhou": 3,
-    "zhangjiakou": 3,
-    "changji": 2
-  },
+  "totalEvents": 0,
+  "upcomingEvents": 0,
+  "pastEvents": 0,
+  "cityDistribution": {},
   "engagementMetrics": {
-    "totalViews": 517845,
-    "totalFavorites": 19174,
-    "averageViews": 3197,
-    "averageFavorites": 118,
-    "topViewedEvents": [
-      {
-        "id": "3721674476500",
-        "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17471
-      },
-      {
-        "id": "3806075715500",
-        "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 15872
-      },
-      {
-        "id": "3794987216300",
-        "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 11668
-      },
-      {
-        "id": "4794558028800",
-        "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 10750
-      },
-      {
-        "id": "9798314204700",
-        "title": "【活动邀请上海】破界她力量：编码未来！",
-        "views": 9803
-      }
-    ],
-    "topFavoritedEvents": [
-      {
-        "id": "3721674476500",
-        "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "favorites": 1408
-      },
-      {
-        "id": "8713322434100",
-        "title": "AIGC浪潮来袭！亚马逊云科技开发者社区嘉年华！",
-        "favorites": 784
-      },
-      {
-        "id": "2745427115200",
-        "title": "女性创新力量影响未来",
-        "favorites": 403
-      },
-      {
-        "id": "4758529746400",
-        "title": "2024 Community Day：云计算与 AI 技术交融盛会，共筑多元智慧未来",
-        "favorites": 356
-      },
-      {
-        "id": "8744985349000",
-        "title": "AI大模型：技术创新与未来智能的关键驱动力",
-        "favorites": 355
-      }
-    ]
+    "totalViews": 0,
+    "totalFavorites": 0,
+    "averageViews": 0,
+    "averageFavorites": 0,
+    "topViewedEvents": [],
+    "topFavoritedEvents": []
   },
   "mappingStats": {
-    "totalEvents": 162,
-    "mappedEvents": 154,
-    "unmappedEvents": 8,
+    "totalEvents": 0,
+    "mappedEvents": 0,
+    "unmappedEvents": 0,
     "mappingsByConfidence": {
-      "high": 154,
+      "high": 0,
       "medium": 0,
       "low": 0
     },
-    "mappingsByType": {
-      "province": 154
-    },
-    "unmappedLocations": [
-      "重庆渝北",
-      "河南郑州",
-      "重庆九龙坡",
-      "重庆江北",
-      "广西河池"
-    ]
+    "mappingsByType": {},
+    "unmappedLocations": []
   },
-  "timeDistribution": {
-    "10/26": 1,
-    "10/18": 2,
-    "09/27": 1,
-    "09/21": 3,
-    "09/20": 1,
-    "09/14": 2,
-    "08/30": 1,
-    "08/24": 3,
-    "08/23": 1,
-    "08/16": 1,
-    "08/02": 2,
-    "07/27": 1,
-    "07/26": 1,
-    "07/19": 2,
-    "07/13": 1,
-    "07/12": 1,
-    "06/21": 1,
-    "06/20": 1,
-    "05/25": 1,
-    "05/24": 2,
-    "05/18": 3,
-    "05/17": 1,
-    "04/24": 1,
-    "04/19": 2,
-    "04/12": 3,
-    "03/30": 1,
-    "03/22": 3,
-    "03/23": 2,
-    "03/19": 2,
-    "03/15": 1,
-    "03/16": 2,
-    "03/09": 1,
-    "03/08": 1,
-    "02/27": 1,
-    "02/23": 2,
-    "02/22": 2,
-    "02/16": 1,
-    "12/28": 2,
-    "12/29": 1,
-    "12/22": 2,
-    "12/21": 2,
-    "12/04": 1,
-    "12/01": 1,
-    "11/30": 2,
-    "11/24": 1,
-    "11/17": 1,
-    "11/16": 1,
-    "10/27": 2,
-    "11/15": 1,
-    "11/22": 1,
-    "12/09": 2,
-    "12/17": 4,
-    "11/18": 1,
-    "11/10": 1,
-    "12/24": 1,
-    "09/08": 3,
-    "09/07": 1,
-    "08/17": 1,
-    "08/04": 1,
-    "08/03": 1,
-    "07/07": 1,
-    "06/30": 1,
-    "06/29": 1,
-    "06/22": 1,
-    "06/19": 1,
-    "06/15": 1,
-    "06/02": 1,
-    "06/01": 1,
-    "05/19": 1,
-    "04/27": 1,
-    "04/25": 1,
-    "04/21": 3,
-    "04/20": 1,
-    "04/14": 1,
-    "04/13": 1,
-    "04/10": 1,
-    "03/20": 1,
-    "03/10": 1,
-    "03/02": 1,
-    "12/27": 1,
-    "11/05": 2,
-    "10/15": 1,
-    "09/26": 1,
-    "09/23": 1,
-    "09/02": 1,
-    "08/27": 2,
-    "07/29": 1,
-    "07/16": 2,
-    "07/22": 1,
-    "07/08": 1,
-    "06/14": 1,
-    "05/28": 2,
-    "04/26": 1,
-    "04/22": 1,
-    "04/16": 2,
-    "04/08": 1,
-    "04/01": 2,
-    "03/29": 1,
-    "03/26": 1,
-    "03/25": 2,
-    "02/26": 1,
-    "02/25": 1,
-    "02/12": 1,
-    "02/11": 1,
-    "11/19": 1,
-    "11/12": 1,
-    "10/29": 2,
-    "09/03": 1,
-    "08/28": 1,
-    "08/13": 1,
-    "07/30": 1,
-    "07/23": 1,
-    "07/02": 1,
-    "06/05": 1,
-    "05/14": 1,
-    "04/23": 1,
-    "03/27": 1,
-    "01/15": 1,
-    "12/26": 1,
-    "12/11": 1
-  },
-  "lastUpdated": "2025-10-19T19:28:57.511Z",
+  "timeDistribution": {},
+  "lastUpdated": "2025-10-20T19:39:10.568Z",
   "processing": {
-    "totalRawEvents": 162,
+    "totalRawEvents": 0,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 162,
-    "eventsCleaned": 35,
-    "validEvents": 162,
+    "eventsAfterDeduplication": 0,
+    "eventsCleaned": 0,
+    "validEvents": 0,
     "invalidEvents": 0,
-    "warningEvents": 15,
-    "processedEvents": 162,
-    "citiesWithEvents": 14,
-    "dataQualityScore": 100,
-    "processedAt": "2025-10-19T19:28:57.514Z"
+    "warningEvents": 0,
+    "processedEvents": 0,
+    "citiesWithEvents": 0,
+    "dataQualityScore": 0,
+    "processedAt": "2025-10-20T19:39:10.569Z"
   },
   "qualityReport": {
-    "timestamp": "2025-10-19T19:28:57.514Z",
+    "timestamp": "2025-10-20T19:39:10.569Z",
     "summary": {
-      "originalEventCount": 162,
-      "finalEventCount": 162,
-      "dataQualityScore": 100,
+      "originalEventCount": 0,
+      "finalEventCount": 0,
+      "dataQualityScore": 0,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 162,
-          "uniqueCount": 162,
+          "originalCount": 0,
+          "uniqueCount": 0,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 162,
-          "cleanedEvents": 35,
-          "cleaningStats": {
-            "Cleaned title": 35
-          }
+          "totalEvents": 0,
+          "cleanedEvents": 0,
+          "cleaningStats": {}
         },
         "validation": {
-          "totalEvents": 162,
-          "validEvents": 162,
+          "totalEvents": 0,
+          "validEvents": 0,
           "invalidEvents": 0,
-          "warningEvents": 15,
-          "commonIssues": {
-            "Very short title (might be incomplete)": 15
-          },
-          "qualityScore": 100
+          "warningEvents": 0,
+          "commonIssues": {},
+          "qualityScore": 0
         }
       }
     },
     "issues": {
       "critical": [],
-      "warnings": [
-        {
-          "eventId": "6808094019500",
-          "title": "大模型应用挑战赛",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "3727858006600",
-          "title": "AI 我能行",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "2765745772300",
-          "title": "暑期少儿开发之旅",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "8760515081400",
-          "title": "AI 探索与实践",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "2751763696700",
-          "title": "科技女性启航交流会",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "8750794794300",
-          "title": "认识人工智能",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "1699479710500",
-          "title": "关注她力量",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "6699187826500",
-          "title": "拥抱公平，自我成长",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "7695461695000",
-          "title": "科技她力量",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "1695152488000",
-          "title": "拥抱公平，共同成长",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "2674870028811",
-          "title": "现代化应用开发",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "9673286251600",
-          "title": "现代化应用开发",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "2672694358500",
-          "title": "云与APP",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "2665848010311",
-          "title": "元宇宙新观",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "4662467638211",
-          "title": "开源遇上大数据",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        }
-      ],
+      "warnings": [],
       "duplicates": []
     },
     "statistics": {
-      "commonIssues": {
-        "Very short title (might be incomplete)": 15
-      },
+      "commonIssues": {},
       "duplicateReasons": {},
-      "cleaningActions": {
-        "Cleaned title": 35
-      }
+      "cleaningActions": {}
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "priority": "high",
+        "category": "overall_quality",
+        "message": "Data quality score is 0% (below 80% threshold)",
+        "action": "Comprehensive review of data collection and processing pipeline needed"
+      }
+    ]
   }
 }
