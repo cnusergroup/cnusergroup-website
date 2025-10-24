@@ -24,7 +24,7 @@
     "unmappedLocations": []
   },
   "timeDistribution": {},
-  "lastUpdated": "2025-10-23T19:18:46.136Z",
+  "lastUpdated": "2025-10-24T19:18:17.679Z",
   "processing": {
     "totalRawEvents": 0,
     "duplicatesRemoved": 0,
@@ -36,10 +36,10 @@
     "processedEvents": 0,
     "citiesWithEvents": 0,
     "dataQualityScore": 0,
-    "processedAt": "2025-10-23T19:18:46.136Z"
+    "processedAt": "2025-10-24T19:18:17.679Z"
   },
   "qualityReport": {
-    "timestamp": "2025-10-23T19:18:46.136Z",
+    "timestamp": "2025-10-24T19:18:17.679Z",
     "summary": {
       "originalEventCount": 0,
       "finalEventCount": 0,
