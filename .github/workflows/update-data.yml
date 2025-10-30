@@ -42,7 +42,7 @@ jobs:
           npx playwright install chromium
           npx playwright install-deps chromium
         
-      - name: Clear and scrape event data
+      - name: Clear previous event data
         run: |
           echo "🧹 清空上次的活动数据..."
           
@@ -56,6 +56,10 @@ jobs:
             echo "[]" > data/events/events.json
           fi
           
+          echo "✅ 活动数据已清空，准备重新抓取"
+          
+      - name: Scrape event data
+        run: |
           echo "🕷️ 开始抓取最新活动数据..."
           
           # 设置抓取模式
@@ -66,9 +70,44 @@ jobs:
             echo "🔄 执行标准数据抓取（分页抓取）"
             npm run scrape:events
           fi
+          
+          # 验证抓取结果
+          if [ -f "data/events/events.json" ]; then
+            event_count=$(jq length data/events/events.json 2>/dev/null || echo "0")
+            echo "📊 抓取到 $event_count 个原始事件"
+          else
+            echo "❌ 抓取失败，未生成原始数据文件"
+            exit 1
+          fi
         env:
           CI: true
         timeout-minutes: 15
+          
+      - name: Process event data
+        run: |
+          echo "⚙️ 处理事件数据..."
+          
+          # 运行事件数据处理脚本
+          if [ -f "data/events/events.json" ]; then
+            echo "📊 开始处理原始事件数据"
+            node scripts/process-events.js --force
+            
+            # 验证处理结果
+            if [ -f "src/data/events/processed-events.json" ]; then
+              processed_count=$(jq length src/data/events/processed-events.json 2>/dev/null || echo "0")
+              echo "✅ 处理完成，生成 $processed_count 个处理后的事件"
+            else
+              echo "❌ 事件处理失败，未生成处理后的数据"
+              exit 1
+            fi
+          else
+            echo "❌ 没有原始事件数据，无法处理"
+            exit 1
+          fi
+        env:
+          NODE_ENV: production
+          CI: true
+        timeout-minutes: 10
           
       - name: Validate data
         run: |

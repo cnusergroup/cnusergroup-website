@@ -429,9 +429,19 @@ export function validateEventData(events) {
     if (event.url && !event.url.startsWith('http')) issues.push('Invalid URL format');
     if (event.imageUrl && event.imageUrl && !event.imageUrl.startsWith('http')) issues.push('Invalid image URL format');
 
-    // Time format validation
-    if (event.time && !/^\d{2}\/\d{2}\s+\d{2}:\d{2}$/.test(event.time)) {
-      issues.push('Invalid time format (expected MM/DD HH:MM)');
+    // Time format validation - support multiple formats
+    // Formats: MM/DD HH:MM, YYYY/MM/DD 周X HH:MM, MM/DD 周X HH:MM
+    if (event.time) {
+      const validFormats = [
+        /^\d{2}\/\d{2}\s+\d{2}:\d{2}$/,  // MM/DD HH:MM
+        /^\d{4}\/\d{2}\/\d{2}\s+周[一二三四五六日]\s+\d{2}:\d{2}$/,  // YYYY/MM/DD 周X HH:MM
+        /^\d{2}\/\d{2}\s+周[一二三四五六日]\s+\d{2}:\d{2}$/  // MM/DD 周X HH:MM
+      ];
+      
+      const isValidFormat = validFormats.some(format => format.test(event.time));
+      if (!isValidFormat) {
+        issues.push('Invalid time format');
+      }
     }
 
     // Warning-level validation (won't mark as invalid but will be reported)
