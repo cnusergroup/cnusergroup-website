@@ -2,7 +2,6 @@
 function initEventSearch() {
   
   const searchInput = document.getElementById('event-search');
-  const statusFilter = document.getElementById('statusFilter');
   const cityFilter = document.getElementById('cityFilter');
   const clearFiltersBtn = document.getElementById('clear-filters');
   const clearAllFiltersBtn = document.getElementById('clearAllFilters');
@@ -40,15 +39,11 @@ function initEventSearch() {
   /* Set initial filter values from URL */
   const urlParams = new URLSearchParams(window.location.search);
   const searchQuery = urlParams.get('q') || '';
-  const status = urlParams.get('status') || 'all';
   const city = urlParams.get('city') || '';
   const pageFromUrl = parseInt(urlParams.get('page') || '1');
 
   if (searchInput && searchQuery) {
     searchInput.value = searchQuery;
-  }
-  if (statusFilter) {
-    statusFilter.value = status;
   }
   if (cityFilter && city) {
     cityFilter.value = city;
@@ -56,7 +51,6 @@ function initEventSearch() {
 
   function filterEvents() {
     const searchTerm = searchInput?.value.toLowerCase().trim() || '';
-    const statusValue = statusFilter?.value || 'all';
     const cityValue = cityFilter?.value || '';
 
     filteredEvents = allEventsData.filter(function(event) {
@@ -77,27 +71,17 @@ function initEventSearch() {
         matchesSearch = searchTerms.every(function(term) { return searchText.includes(term); });
       }
 
-      /* Status matching */
-      let matchesStatus = true;
-      if (statusValue !== 'all') {
-        if (statusValue === 'upcoming') {
-          matchesStatus = event.status === 'upcoming';
-        } else if (statusValue === 'past') {
-          matchesStatus = event.status === 'ended';
-        }
-      }
-
       /* City matching */
       let matchesCity = true;
       if (cityValue) {
         matchesCity = event.cities.includes(cityValue.toLowerCase());
       }
 
-      return matchesSearch && matchesStatus && matchesCity;
+      return matchesSearch && matchesCity;
     });
 
     /* Reset to page 1 when filtering changes */
-    const hasFilters = searchTerm || statusValue !== 'all' || cityValue;
+    const hasFilters = searchTerm || cityValue;
     if (hasFilters) {
       currentPage = 1;
     } else {
@@ -167,9 +151,8 @@ function initEventSearch() {
 
   function updateClearButtons() {
     const searchTerm = searchInput?.value.toLowerCase().trim() || '';
-    const statusValue = statusFilter?.value || 'all';
     const cityValue = cityFilter?.value || '';
-    const hasFilters = searchTerm || statusValue !== 'all' || cityValue;
+    const hasFilters = searchTerm || cityValue;
     
     if (clearFiltersBtn) {
       clearFiltersBtn.classList.toggle('hidden', !hasFilters);
@@ -268,13 +251,11 @@ function initEventSearch() {
 
   function updateURL() {
     const searchTerm = searchInput?.value.trim() || '';
-    const statusValue = statusFilter?.value || 'all';
     const cityValue = cityFilter?.value || '';
     
     const params = new URLSearchParams();
     
     if (searchTerm) params.set('q', searchTerm);
-    if (statusValue !== 'all') params.set('status', statusValue);
     if (cityValue) params.set('city', cityValue);
     if (currentPage > 1) params.set('page', currentPage.toString());
     
@@ -284,7 +265,6 @@ function initEventSearch() {
 
   function clearFilters() {
     if (searchInput) searchInput.value = '';
-    if (statusFilter) statusFilter.value = 'all';
     if (cityFilter) cityFilter.value = '';
     currentPage = 1;
     
@@ -300,10 +280,6 @@ function initEventSearch() {
         filterEvents();
       }
     });
-  }
-
-  if (statusFilter) {
-    statusFilter.addEventListener('change', filterEvents);
   }
 
   if (cityFilter) {

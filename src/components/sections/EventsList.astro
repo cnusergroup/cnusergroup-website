@@ -50,8 +50,6 @@ const paginatedEvents = events;
 
 // For statistics, we need to use all events, not just paginated ones
 const allEventsForStats = allEvents || events;
-const upcomingEvents = allEventsForStats.filter(event => event.status === 'upcoming');
-const pastEvents = allEventsForStats.filter(event => event.status === 'ended');
 
 // Get unique cities for filtering (only show cities with events)
 const cityCounts = allEventsForStats.reduce((acc, event) => {
@@ -160,23 +158,7 @@ function generatePaginationUrl(pageNum: number): string {
     </div>
   )}
 
-  <!-- Statistics -->
-  {actualTotalEvents > 0 && (
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-      <div class="bg-blue-50 rounded-lg p-4">
-        <div class="text-2xl font-bold text-blue-600">{actualTotalEvents}</div>
-        <div class="text-sm text-blue-800">{t.allEvents}</div>
-      </div>
-      <div class="bg-green-50 rounded-lg p-4">
-        <div class="text-2xl font-bold text-green-600">{upcomingEvents.length}</div>
-        <div class="text-sm text-green-800">{t.upcomingEvents}</div>
-      </div>
-      <div class="bg-gray-50 rounded-lg p-4">
-        <div class="text-2xl font-bold text-gray-600">{pastEvents.length}</div>
-        <div class="text-sm text-gray-800">{t.pastEvents}</div>
-      </div>
-    </div>
-  )}
+
 
   <!-- Search and Filters (Integrated) -->
   {showFilters && actualTotalEvents > 0 && (
@@ -199,22 +181,7 @@ function generatePaginationUrl(pageNum: number): string {
       </div>
       
       <!-- Filter Options -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Event Status Filter -->
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">
-            {t.filters.status}
-          </label>
-          <select 
-            id="statusFilter" 
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="all">{t.allEvents}</option>
-            <option value="upcoming">{t.upcomingEvents}</option>
-            <option value="past">{t.pastEvents}</option>
-          </select>
-        </div>
-
+      <div class="grid grid-cols-1 gap-4">
         <!-- City Filter -->
         {allCities.length > 0 && (
           <div>

@@ -31,10 +31,7 @@ const translationsModule = locale === 'zh'
 const translations = translationsModule.default;
 const t = translations.events;
 
-// Get event status from status field
-const isUpcoming = event.status === 'upcoming';
-const statusClass = isUpcoming ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-600';
-const statusText = isUpcoming ? t.status.upcoming : t.status.past;
+// Status display removed - no longer showing event status
 
 // Format date for display
 const displayDate = locale === 'zh' ? event.formattedDate : event.time;
@@ -94,12 +91,6 @@ const eventStructuredData = {
       className="w-full h-full group-hover:scale-105 transition-transform duration-200"
     />
     
-    <!-- Event Status Badge -->
-    <div class="absolute top-3 left-3">
-      <span class={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusClass}`}>
-        {statusText}
-      </span>
-    </div>
     
     <!-- Engagement Metrics (if enabled) -->
     {showEngagement && (event.views > 0 || event.favorites > 0) && (
