@@ -20,30 +20,30 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 605239,
+    "totalViews": 605434,
     "totalFavorites": 20826,
-    "averageViews": 3057,
+    "averageViews": 3058,
     "averageFavorites": 105,
     "topViewedEvents": [
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17506
+        "views": 17511
       },
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 16007
+        "views": 16022
       },
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 15825
+        "views": 15840
       },
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 11733
+        "views": 11738
       },
       {
         "id": "4657932157823",
@@ -145,7 +145,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-10-31T06:21:51.892Z",
+  "lastUpdated": "2025-10-31T18:22:28.130Z",
   "processing": {
     "totalRawEvents": 198,
     "duplicatesRemoved": 0,
@@ -157,10 +157,10 @@
     "processedEvents": 198,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-10-31T06:21:51.896Z"
+    "processedAt": "2025-10-31T18:22:28.133Z"
   },
   "qualityReport": {
-    "timestamp": "2025-10-31T06:21:51.895Z",
+    "timestamp": "2025-10-31T18:22:28.132Z",
     "summary": {
       "originalEventCount": 198,
       "finalEventCount": 198,
