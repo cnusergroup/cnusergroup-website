@@ -20,15 +20,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 606461,
-    "totalFavorites": 20904,
+    "totalViews": 606537,
+    "totalFavorites": 20905,
     "averageViews": 3048,
     "averageFavorites": 105,
     "topViewedEvents": [
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17511
+        "views": 17521
       },
       {
         "id": "3806075715500",
@@ -38,7 +38,7 @@
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 15916
+        "views": 15921
       },
       {
         "id": "3794987216300",
@@ -146,7 +146,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-11-04T06:23:56.174Z",
+  "lastUpdated": "2025-11-04T18:25:24.717Z",
   "processing": {
     "totalRawEvents": 199,
     "duplicatesRemoved": 0,
@@ -158,10 +158,10 @@
     "processedEvents": 199,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-11-04T06:23:56.177Z"
+    "processedAt": "2025-11-04T18:25:24.719Z"
   },
   "qualityReport": {
-    "timestamp": "2025-11-04T06:23:56.177Z",
+    "timestamp": "2025-11-04T18:25:24.719Z",
     "summary": {
       "originalEventCount": 199,
       "finalEventCount": 199,
