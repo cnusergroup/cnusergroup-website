@@ -1,14 +1,14 @@
 {
-  "totalEvents": 203,
+  "totalEvents": 204,
   "upcomingEvents": 0,
-  "pastEvents": 203,
+  "pastEvents": 204,
   "cityDistribution": {
     "beijing": 30,
+    "shenzhen": 25,
     "shanghai": 26,
     "chengdu": 26,
     "xian": 10,
     "xiamen": 1,
-    "shenzhen": 24,
     "fuzhou": 3,
     "hefei": 8,
     "guangzhou": 4,
@@ -20,10 +20,10 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 620065,
-    "totalFavorites": 21097,
-    "averageViews": 3055,
-    "averageFavorites": 104,
+    "totalViews": 620266,
+    "totalFavorites": 21103,
+    "averageViews": 3041,
+    "averageFavorites": 103,
     "topViewedEvents": [
       {
         "id": "3721674476500",
@@ -33,7 +33,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 17053
+        "views": 17068
       },
       {
         "id": "7827076896900",
@@ -80,16 +80,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 203,
-    "mappedEvents": 160,
+    "totalEvents": 204,
+    "mappedEvents": 161,
     "unmappedEvents": 43,
     "mappingsByConfidence": {
-      "high": 160,
+      "high": 161,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 160
+      "province": 161
     },
     "unmappedLocations": [
       "线上活动",
@@ -102,6 +102,7 @@
   },
   "timeDistribution": {
     "12/21": 1,
+    "12/20": 1,
     "12/12": 1,
     "11/22": 1,
     "11/20": 1,
@@ -150,43 +151,43 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-12-12T06:24:54.223Z",
+  "lastUpdated": "2025-12-12T18:22:39.046Z",
   "processing": {
-    "totalRawEvents": 203,
+    "totalRawEvents": 204,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 203,
+    "eventsAfterDeduplication": 204,
     "eventsCleaned": 40,
-    "validEvents": 203,
+    "validEvents": 204,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 203,
+    "processedEvents": 204,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-12-12T06:24:54.227Z"
+    "processedAt": "2025-12-12T18:22:39.049Z"
   },
   "qualityReport": {
-    "timestamp": "2025-12-12T06:24:54.227Z",
+    "timestamp": "2025-12-12T18:22:39.048Z",
     "summary": {
-      "originalEventCount": 203,
-      "finalEventCount": 203,
+      "originalEventCount": 204,
+      "finalEventCount": 204,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 203,
-          "uniqueCount": 203,
+          "originalCount": 204,
+          "uniqueCount": 204,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 203,
+          "totalEvents": 204,
           "cleanedEvents": 40,
           "cleaningStats": {
             "Cleaned title": 40
           }
         },
         "validation": {
-          "totalEvents": 203,
-          "validEvents": 203,
+          "totalEvents": 204,
+          "validEvents": 204,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
