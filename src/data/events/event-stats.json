@@ -20,9 +20,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 620290,
-    "totalFavorites": 21129,
-    "averageViews": 3041,
+    "totalViews": 620667,
+    "totalFavorites": 21130,
+    "averageViews": 3042,
     "averageFavorites": 104,
     "topViewedEvents": [
       {
@@ -33,7 +33,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 17068
+        "views": 17073
       },
       {
         "id": "7827076896900",
@@ -46,9 +46,9 @@
         "views": 12783
       },
       {
-        "id": "4657932157823",
-        "title": "如何帮助技术工程师做好职业成长规划",
-        "views": 11242
+        "id": "4794558028800",
+        "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
+        "views": 11245
       }
     ],
     "topFavoritedEvents": [
@@ -151,7 +151,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-12-13T19:21:50.323Z",
+  "lastUpdated": "2025-12-14T06:21:20.975Z",
   "processing": {
     "totalRawEvents": 204,
     "duplicatesRemoved": 0,
@@ -163,10 +163,10 @@
     "processedEvents": 204,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-12-13T19:21:50.325Z"
+    "processedAt": "2025-12-14T06:21:20.977Z"
   },
   "qualityReport": {
-    "timestamp": "2025-12-13T19:21:50.325Z",
+    "timestamp": "2025-12-14T06:21:20.977Z",
     "summary": {
       "originalEventCount": 204,
       "finalEventCount": 204,
