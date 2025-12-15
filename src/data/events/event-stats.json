@@ -20,8 +20,8 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 623265,
-    "totalFavorites": 21148,
+    "totalViews": 623281,
+    "totalFavorites": 21149,
     "averageViews": 3055,
     "averageFavorites": 104,
     "topViewedEvents": [
@@ -43,7 +43,7 @@
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 12803
+        "views": 12808
       },
       {
         "id": "4794558028800",
@@ -151,7 +151,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-12-15T18:22:38.221Z",
+  "lastUpdated": "2025-12-15T19:26:46.044Z",
   "processing": {
     "totalRawEvents": 204,
     "duplicatesRemoved": 0,
@@ -163,10 +163,10 @@
     "processedEvents": 204,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-12-15T18:22:38.225Z"
+    "processedAt": "2025-12-15T19:26:46.048Z"
   },
   "qualityReport": {
-    "timestamp": "2025-12-15T18:22:38.225Z",
+    "timestamp": "2025-12-15T19:26:46.047Z",
     "summary": {
       "originalEventCount": 204,
       "finalEventCount": 204,
