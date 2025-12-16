@@ -20,9 +20,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 622658,
-    "totalFavorites": 21155,
-    "averageViews": 3037,
+    "totalViews": 623187,
+    "totalFavorites": 21162,
+    "averageViews": 3040,
     "averageFavorites": 103,
     "topViewedEvents": [
       {
@@ -33,7 +33,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 17134
+        "views": 17154
       },
       {
         "id": "7827076896900",
@@ -48,7 +48,7 @@
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 11265
+        "views": 11275
       }
     ],
     "topFavoritedEvents": [
@@ -151,7 +151,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-12-16T06:24:00.133Z",
+  "lastUpdated": "2025-12-16T18:23:03.828Z",
   "processing": {
     "totalRawEvents": 205,
     "duplicatesRemoved": 0,
@@ -163,10 +163,10 @@
     "processedEvents": 205,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-12-16T06:24:00.137Z"
+    "processedAt": "2025-12-16T18:23:03.831Z"
   },
   "qualityReport": {
-    "timestamp": "2025-12-16T06:24:00.137Z",
+    "timestamp": "2025-12-16T18:23:03.831Z",
     "summary": {
       "originalEventCount": 205,
       "finalEventCount": 205,
