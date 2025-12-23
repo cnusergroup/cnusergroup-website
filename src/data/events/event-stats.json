@@ -1,12 +1,12 @@
 {
-  "totalEvents": 208,
+  "totalEvents": 209,
   "upcomingEvents": 0,
-  "pastEvents": 208,
+  "pastEvents": 209,
   "cityDistribution": {
+    "chengdu": 28,
     "hefei": 9,
     "shanghai": 27,
     "beijing": 30,
-    "chengdu": 27,
     "shenzhen": 25,
     "xian": 11,
     "xiamen": 1,
@@ -20,9 +20,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 630470,
-    "totalFavorites": 21426,
-    "averageViews": 3031,
+    "totalViews": 630647,
+    "totalFavorites": 21469,
+    "averageViews": 3017,
     "averageFavorites": 103,
     "topViewedEvents": [
       {
@@ -33,7 +33,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 17258
+        "views": 17274
       },
       {
         "id": "7827076896900",
@@ -43,7 +43,7 @@
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 12873
+        "views": 12888
       },
       {
         "id": "4794558028800",
@@ -80,16 +80,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 208,
-    "mappedEvents": 165,
+    "totalEvents": 209,
+    "mappedEvents": 166,
     "unmappedEvents": 43,
     "mappingsByConfidence": {
-      "high": 165,
+      "high": 166,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 165
+      "province": 166
     },
     "unmappedLocations": [
       "线上活动",
@@ -101,7 +101,7 @@
     ]
   },
   "timeDistribution": {
-    "12/28": 1,
+    "12/28": 2,
     "12/21": 3,
     "12/20": 2,
     "12/12": 1,
@@ -152,43 +152,43 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-12-22T19:23:46.942Z",
+  "lastUpdated": "2025-12-23T06:23:54.440Z",
   "processing": {
-    "totalRawEvents": 208,
+    "totalRawEvents": 209,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 208,
+    "eventsAfterDeduplication": 209,
     "eventsCleaned": 41,
-    "validEvents": 208,
+    "validEvents": 209,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 208,
+    "processedEvents": 209,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-12-22T19:23:46.946Z"
+    "processedAt": "2025-12-23T06:23:54.444Z"
   },
   "qualityReport": {
-    "timestamp": "2025-12-22T19:23:46.945Z",
+    "timestamp": "2025-12-23T06:23:54.443Z",
     "summary": {
-      "originalEventCount": 208,
-      "finalEventCount": 208,
+      "originalEventCount": 209,
+      "finalEventCount": 209,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 208,
-          "uniqueCount": 208,
+          "originalCount": 209,
+          "uniqueCount": 209,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 208,
+          "totalEvents": 209,
           "cleanedEvents": 41,
           "cleaningStats": {
             "Cleaned title": 41
           }
         },
         "validation": {
-          "totalEvents": 208,
-          "validEvents": 208,
+          "totalEvents": 209,
+          "validEvents": 209,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
