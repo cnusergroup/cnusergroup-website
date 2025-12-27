@@ -20,7 +20,7 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 632995,
+    "totalViews": 633000,
     "totalFavorites": 21610,
     "averageViews": 3014,
     "averageFavorites": 103,
@@ -48,7 +48,7 @@
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 11330
+        "views": 11335
       }
     ],
     "topFavoritedEvents": [
@@ -152,7 +152,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2025-12-27T18:20:19.008Z",
+  "lastUpdated": "2025-12-27T19:22:14.935Z",
   "processing": {
     "totalRawEvents": 210,
     "duplicatesRemoved": 0,
@@ -164,10 +164,10 @@
     "processedEvents": 210,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2025-12-27T18:20:19.010Z"
+    "processedAt": "2025-12-27T19:22:14.938Z"
   },
   "qualityReport": {
-    "timestamp": "2025-12-27T18:20:19.010Z",
+    "timestamp": "2025-12-27T19:22:14.938Z",
     "summary": {
       "originalEventCount": 210,
       "finalEventCount": 210,
