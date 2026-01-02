@@ -107,7 +107,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-01-02T18:21:37.566Z",
+  "lastUpdated": "2026-01-02T19:20:10.587Z",
   "processing": {
     "totalRawEvents": 210,
     "duplicatesRemoved": 0,
@@ -119,10 +119,10 @@
     "processedEvents": 210,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-01-02T18:21:37.569Z"
+    "processedAt": "2026-01-02T19:20:10.590Z"
   },
   "qualityReport": {
-    "timestamp": "2026-01-02T18:21:37.569Z",
+    "timestamp": "2026-01-02T19:20:10.590Z",
     "summary": {
       "originalEventCount": 210,
       "finalEventCount": 210,
