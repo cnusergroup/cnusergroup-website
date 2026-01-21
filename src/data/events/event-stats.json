@@ -20,7 +20,7 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 653178,
+    "totalViews": 653193,
     "totalFavorites": 22223,
     "averageViews": 3052,
     "averageFavorites": 104,
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-01-21T18:35:32.539Z",
+  "lastUpdated": "2026-01-21T19:34:17.178Z",
   "processing": {
     "totalRawEvents": 214,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 214,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-01-21T18:35:32.543Z"
+    "processedAt": "2026-01-21T19:34:17.182Z"
   },
   "qualityReport": {
-    "timestamp": "2026-01-21T18:35:32.543Z",
+    "timestamp": "2026-01-21T19:34:17.181Z",
     "summary": {
       "originalEventCount": 214,
       "finalEventCount": 214,
