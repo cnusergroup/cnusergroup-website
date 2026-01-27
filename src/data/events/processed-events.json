@@ -1,1 +1,4745 @@
-[]
+[
+  {
+    "id": "5844776732000",
+    "title": "天创工坊2025 re:Invent re:Cap 广州站！",
+    "time": "01/25 周日 05:00",
+    "location": "广东广州",
+    "url": "https://usergroup.huodongxing.com/event/5844776732000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202601/5844776732000/115866505087542.jpg",
+    "status": "unknown",
+    "views": 260,
+    "favorites": 14,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 1,
+    "localImage": "5844776732000.jpg",
+    "cityMappings": [
+      "guangzhou"
+    ],
+    "slug": "天创工坊2025-reinvent-recap-广州站-5844776732000",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "01/25 周日 05:00"
+  },
+  {
+    "id": "4842322097900",
+    "title": "OPC 进化论：从想法到 MVP，开启你的一人军团时代",
+    "time": "01/23 周五 01:00",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/4842322097900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202601/4842322097900/245857478418129.jpg",
+    "status": "unknown",
+    "views": 3593,
+    "favorites": 214,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 2,
+    "localImage": "4842322097900.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "opc-进化论从想法到-mvp开启你的一人军团时代-4842322097900",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "01/23 周五 01:00"
+  },
+  {
+    "id": "5842629476400",
+    "title": "Build the Vibe with Kiro1 小时打造能跑的 Agent Demo",
+    "time": "01/18 周日 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/5842629476400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202601/5842629476400/615851602932355.jpg",
+    "status": "unknown",
+    "views": 6403,
+    "favorites": 190,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 3,
+    "localImage": "5842629476400.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "build-the-vibe-with-kiro1-小时打造能跑的-agent-demo-5842629476400",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "01/18 周日 05:30"
+  },
+  {
+    "id": "9842479528500",
+    "title": "Agentic AI 开发实战与行业创新指南",
+    "time": "01/18 周日 05:00",
+    "location": "江苏南京",
+    "url": "https://usergroup.huodongxing.com/event/9842479528500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202601/9842479528500/985850552148619.jpg",
+    "status": "unknown",
+    "views": 1199,
+    "favorites": 127,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 4,
+    "localImage": "9842479528500.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "agentic-ai-开发实战与行业创新指南-9842479528500",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "01/18 周日 05:00"
+  },
+  {
+    "id": "5842032119700",
+    "title": "AI Agent 落地全栈指南",
+    "time": "01/10 周六 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/5842032119700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202601/5842032119700/865847610116766.jpg",
+    "status": "unknown",
+    "views": 3403,
+    "favorites": 100,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 5,
+    "localImage": "5842032119700.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "ai-agent-落地全栈指南-5842032119700",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "01/10 周六 05:30"
+  },
+  {
+    "id": "2840601871100",
+    "title": "智能体驱动开发：探索人机协作新边界",
+    "time": "2025/12/28 周日 05:30",
+    "location": "河南郑州",
+    "url": "https://usergroup.huodongxing.com/event/2840601871100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/2840601871100/115837513100654.jpg",
+    "status": "unknown",
+    "views": 172,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 6,
+    "localImage": "2840601871100.jpg",
+    "cityMappings": [],
+    "slug": "智能体驱动开发探索人机协作新边界-2840601871100",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/28 周日 05:30"
+  },
+  {
+    "id": "4840312919000",
+    "title": "2025 re:Invent re:Cap 成都站！",
+    "time": "2025/12/28 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/4840312919000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/4840312919000/615835506657104.jpg",
+    "status": "unknown",
+    "views": 1246,
+    "favorites": 105,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 7,
+    "localImage": "4840312919000.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "2025-reinvent-recap-成都站-4840312919000",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/28 周日 05:30"
+  },
+  {
+    "id": "8840031737300",
+    "title": "re:Invent 2025之后：Agentic AI 的落地蓝图",
+    "time": "2025/12/28 周日 05:30",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/8840031737300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/8840031737300/615833553580315.jpg",
+    "status": "unknown",
+    "views": 382,
+    "favorites": 51,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 8,
+    "localImage": "8840031737300.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "reinvent-2025之后agentic-ai-的落地蓝图-8840031737300",
+    "tags": [
+      "ai",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/28 周日 05:30"
+  },
+  {
+    "id": "1839311904000",
+    "title": "Agentic AI 上手局 ：代码段子和真操作2025 re:Invent recap",
+    "time": "2025/12/21 周日 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/1839311904000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/1839311904000/185828983075670.jpg",
+    "status": "unknown",
+    "views": 854,
+    "favorites": 49,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 9,
+    "localImage": "1839311904000.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "agentic-ai-上手局-代码段子和真操作2025-reinvent-recap-1839311904000",
+    "tags": [
+      "ai",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/21 周日 05:30"
+  },
+  {
+    "id": "4838445090200",
+    "title": "2025 re:Invent recap：升维智能基座，定义Agent新纪元",
+    "time": "2025/12/21 周日 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/4838445090200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/4838445090200/405822538464407.jpg",
+    "status": "unknown",
+    "views": 2289,
+    "favorites": 71,
+    "scrapedAt": "2026-01-27T06:21:22.706Z",
+    "sort": 10,
+    "localImage": "4838445090200.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "2025-reinvent-recap升维智能基座定义agent新纪元-4838445090200",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/21 周日 05:30"
+  },
+  {
+    "id": "4839373743900",
+    "title": "智能编码新纪元：亚马逊云科技 Agentic Al 全链路指南",
+    "time": "2025/12/21 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/4839373743900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/4839373743900/745828984655687.jpg",
+    "status": "unknown",
+    "views": 964,
+    "favorites": 95,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 11,
+    "localImage": "4839373743900.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "智能编码新纪元亚马逊云科技-agentic-al-全链路指南-4839373743900",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/21 周日 05:30"
+  },
+  {
+    "id": "5838579571000",
+    "title": "2025 re:Invent re:Cap 深圳站",
+    "time": "2025/12/20 周六 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/5838579571000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/5838579571000/865824735803050.jpg",
+    "status": "unknown",
+    "views": 3842,
+    "favorites": 94,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 12,
+    "localImage": "5838579571000.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "2025-reinvent-recap-深圳站-5838579571000",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/20 周六 05:30"
+  },
+  {
+    "id": "7839297032300",
+    "title": "西安 UG 2025 re:Invent re:Cap",
+    "time": "2025/12/20 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/7839297032300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/7839297032300/175828451904802.jpg",
+    "status": "unknown",
+    "views": 284,
+    "favorites": 51,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 13,
+    "localImage": "7839297032300.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "西安-ug-2025-reinvent-recap-7839297032300",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/20 周六 05:30"
+  },
+  {
+    "id": "2838150286500",
+    "title": "人工智能安全治理实践",
+    "time": "2025/12/12 周五 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/2838150286500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202512/2838150286500/325821834348217.jpg",
+    "status": "unknown",
+    "views": 309,
+    "favorites": 37,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 14,
+    "localImage": "2838150286500.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "人工智能安全治理实践-2838150286500",
+    "tags": [
+      "人工智能"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/12/12 周五 05:30"
+  },
+  {
+    "id": "9833549582500",
+    "title": "亚麻拉松12小时极客说",
+    "time": "2025/11/22 周六 04:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/9833549582500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202511/9833549582500/895788538933211.jpg",
+    "status": "unknown",
+    "views": 605,
+    "favorites": 49,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 15,
+    "localImage": "9833549582500.jpg",
+    "cityMappings": [],
+    "slug": "亚麻拉松12小时极客说-9833549582500",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/11/22 周六 04:00"
+  },
+  {
+    "id": "1834869468900",
+    "title": "创业小酒馆水面之下的 AI搞钱说",
+    "time": "2025/11/20 周四 11:00",
+    "location": "上海黄浦",
+    "url": "https://usergroup.huodongxing.com/event/1834869468900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202511/1834869468900/715797705876265.jpg",
+    "status": "unknown",
+    "views": 1356,
+    "favorites": 41,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 16,
+    "localImage": "1834869468900.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "创业小酒馆水面之下的-ai搞钱说-1834869468900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/11/20 周四 11:00"
+  },
+  {
+    "id": "8833125133600",
+    "title": "Kiro 快速上手：零基础 AI 开发实战与范式！",
+    "time": "2025/11/09 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/8833125133600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202511/8833125133600/895786557939720.jpg",
+    "status": "unknown",
+    "views": 215,
+    "favorites": 27,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 17,
+    "localImage": "8833125133600.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "kiro-快速上手零基础-ai-开发实战与范式-8833125133600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/11/09 周日 05:30"
+  },
+  {
+    "id": "2832254473000",
+    "title": "基于 Kiro 和 Strands SDK 的智能体开发实践",
+    "time": "2025/11/08 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/2832254473000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202510/2832254473000/125779833778024.jpg",
+    "status": "unknown",
+    "views": 573,
+    "favorites": 53,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 18,
+    "localImage": "2832254473000.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "基于-kiro-和-strands-sdk-的智能体开发实践-2832254473000",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/11/08 周六 05:30"
+  },
+  {
+    "id": "7830995688800",
+    "title": "Kiro IDE  Strands SDK 助你实现 AI 驱动的高效开发",
+    "time": "2025/11/01 周六 05:30",
+    "location": "福建厦门",
+    "url": "https://usergroup.huodongxing.com/event/7830995688800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202510/7830995688800/985770803056485.jpg",
+    "status": "unknown",
+    "views": 652,
+    "favorites": 118,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 19,
+    "localImage": "7830995688800.jpg",
+    "cityMappings": [
+      "xiamen"
+    ],
+    "slug": "kiro-ide-strands-sdk-助你实现-ai-驱动的高效开发-7830995688800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/11/01 周六 05:30"
+  },
+  {
+    "id": "7827076896900",
+    "title": "深圳community day 开发者的聚会",
+    "time": "2025/10/26 周日 01:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/7827076896900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202509/7827076896900/245743588891621.jpg",
+    "status": "unknown",
+    "views": 16076,
+    "favorites": 388,
+    "scrapedAt": "2026-01-27T06:21:37.476Z",
+    "sort": 20,
+    "localImage": "7827076896900.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "深圳community-day-开发者的聚会-7827076896900",
+    "tags": [
+      "meetup",
+      "community"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/10/26 周日 01:00"
+  },
+  {
+    "id": "1829657717000",
+    "title": "多模态数据湖与Agentic AI 打造现代化企业智能基座",
+    "time": "2025/10/18 周六 05:30",
+    "location": "北京朝阳",
+    "url": "https://usergroup.huodongxing.com/event/1829657717000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202510/1829657717000/825761771557151.jpg",
+    "status": "unknown",
+    "views": 1198,
+    "favorites": 44,
+    "scrapedAt": "2026-01-27T06:21:53.220Z",
+    "sort": 21,
+    "localImage": "1829657717000.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "多模态数据湖与agentic-ai-打造现代化企业智能基座-1829657717000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/10/18 周六 05:30"
+  },
+  {
+    "id": "7827122841500",
+    "title": "S 创工作坊：一人工作室体验Kiro加持下的极简独立游戏开发！",
+    "time": "2025/09/27 周六 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/7827122841500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202509/7827122841500/265743908625239.jpg",
+    "status": "unknown",
+    "views": 814,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 22,
+    "localImage": "7827122841500.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "s-创工作坊一人工作室体验kiro加持下的极简独立游戏开发-7827122841500",
+    "tags": [
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/09/27 周六 05:30"
+  },
+  {
+    "id": "3825656249900",
+    "title": "Kiro IDE 与 Strands SDK 驱动开发全生命周期智能升级",
+    "time": "2025/09/21 周日 06:00",
+    "location": "福建福州",
+    "url": "https://usergroup.huodongxing.com/event/3825656249900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202509/3825656249900/295733723733988.jpg",
+    "status": "unknown",
+    "views": 479,
+    "favorites": 30,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 23,
+    "localImage": "3825656249900.jpg",
+    "cityMappings": [
+      "fuzhou"
+    ],
+    "slug": "kiro-ide-与-strands-sdk-驱动开发全生命周期智能升级-3825656249900",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/09/21 周日 06:00"
+  },
+  {
+    "id": "3825927559300",
+    "title": "融合创新：Kiro 如何驱动智能体生态协作",
+    "time": "2025/09/21 周日 06:00",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/3825927559300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202509/3825927559300/505735608070540.jpg",
+    "status": "unknown",
+    "views": 270,
+    "favorites": 37,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 24,
+    "localImage": "3825927559300.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "融合创新kiro-如何驱动智能体生态协作-3825927559300",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/09/21 周日 06:00"
+  },
+  {
+    "id": "9826190998600",
+    "title": "Agentic IDE: 一人工作室 Kiro 开发你的第一个小游戏",
+    "time": "2025/09/20 周六 05:30",
+    "location": "重庆渝北",
+    "url": "https://usergroup.huodongxing.com/event/9826190998600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202509/9826190998600/635737559300234.jpg",
+    "status": "unknown",
+    "views": 267,
+    "favorites": 11,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 25,
+    "localImage": "9826190998600.jpg",
+    "cityMappings": [],
+    "slug": "agentic-ide-一人工作室-kiro-开发你的第一个小游戏-9826190998600",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/09/20 周六 05:30"
+  },
+  {
+    "id": "9823831544800",
+    "title": "零距离体验：具身智能与 Kiro 的双重魅力！",
+    "time": "2025/09/14 周日 06:00",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/9823831544800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202508/9823831544800/895723833356960.jpg",
+    "status": "unknown",
+    "views": 1311,
+    "favorites": 112,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 26,
+    "localImage": "9823831544800.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "零距离体验具身智能与-kiro-的双重魅力-9823831544800",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/09/14 周日 06:00"
+  },
+  {
+    "id": "9825098921900",
+    "title": "Kiro 领航：Agentic AI 开发实战与行业创新！",
+    "time": "2025/09/14 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/9825098921900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202509/9825098921900/445729862443741.jpg",
+    "status": "unknown",
+    "views": 1681,
+    "favorites": 107,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 27,
+    "localImage": "9825098921900.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "kiro-领航agentic-ai-开发实战与行业创新-9825098921900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/09/14 周日 05:30"
+  },
+  {
+    "id": "2822211069600",
+    "title": "2025 深圳 生成式AI应用的可观测性实践 Meetup",
+    "time": "2025/08/30 周六 06:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/2822211069600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202508/2822211069600/395709802524565.jpg",
+    "status": "unknown",
+    "views": 938,
+    "favorites": 22,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 28,
+    "localImage": "2822211069600.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "2025-深圳-生成式ai应用的可观测性实践-meetup-2822211069600",
+    "tags": [
+      "ai",
+      "生成式ai",
+      "meetup"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/08/30 周六 06:00"
+  },
+  {
+    "id": "9822020061900",
+    "title": "AI 创业加速器：Agent  MCP  IDE  向量数据库的实战与应用",
+    "time": "2025/08/24 周日 06:00",
+    "location": "广东广州",
+    "url": "https://usergroup.huodongxing.com/event/9822020061900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202508/9822020061900/475709464116167.jpg",
+    "status": "unknown",
+    "views": 654,
+    "favorites": 49,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 29,
+    "localImage": "9822020061900.jpg",
+    "cityMappings": [
+      "guangzhou"
+    ],
+    "slug": "ai-创业加速器agent-mcp-ide-向量数据库的实战与应用-9822020061900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/08/24 周日 06:00"
+  },
+  {
+    "id": "6821155937900",
+    "title": "生成式AI应用探索与实践：Kiro  Strands Agents SDK 实战指南",
+    "time": "2025/08/23 周六 06:00",
+    "location": "河南郑州",
+    "url": "https://usergroup.huodongxing.com/event/6821155937900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202508/6821155937900/945703785791837.jpg",
+    "status": "unknown",
+    "views": 340,
+    "favorites": 7,
+    "scrapedAt": "2026-01-27T06:21:53.221Z",
+    "sort": 30,
+    "localImage": "6821155937900.jpg",
+    "cityMappings": [],
+    "slug": "生成式ai应用探索与实践kiro-strands-agents-sdk-实战指南-6821155937900",
+    "tags": [
+      "ai",
+      "生成式ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/08/23 周六 06:00"
+  },
+  {
+    "id": "3820347975700",
+    "title": "Agentic Al从概念验证到生产级部署的进化解锁！",
+    "time": "2025/08/16 周六 05:30",
+    "location": "北京朝阳",
+    "url": "https://usergroup.huodongxing.com/event/3820347975700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202508/3820347975700/195698485377349.jpg",
+    "status": "unknown",
+    "views": 1676,
+    "favorites": 53,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 31,
+    "localImage": "3820347975700.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "agentic-al从概念验证到生产级部署的进化解锁-3820347975700",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/08/16 周六 05:30"
+  },
+  {
+    "id": "1818418634800",
+    "title": "Kiro 与 Strands Agents SDK 带你迈入 AI 开发新纪元",
+    "time": "2025/08/02 周六 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/1818418634800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/1818418634800/625683474811673.jpg",
+    "status": "unknown",
+    "views": 2728,
+    "favorites": 89,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 32,
+    "localImage": "1818418634800.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "kiro-与-strands-agents-sdk-带你迈入-ai-开发新纪元-1818418634800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/08/02 周六 05:30"
+  },
+  {
+    "id": "7818422738700",
+    "title": "成都 User Group柴火空间：开源硬件驱动 AI 与云的创新实践！",
+    "time": "2025/08/02 周六 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/7818422738700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/7818422738700/475684562832923.jpg",
+    "status": "unknown",
+    "views": 3489,
+    "favorites": 120,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 33,
+    "localImage": "7818422738700.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都-user-group柴火空间开源硬件驱动-ai-与云的创新实践-7818422738700",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/08/02 周六 05:30"
+  },
+  {
+    "id": "5817259712100",
+    "title": "拥抱智能体时代，共筑AGI未来",
+    "time": "2025/07/27 周日 05:30",
+    "location": "河南郑州",
+    "url": "https://usergroup.huodongxing.com/event/5817259712100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/5817259712100/855675415979158.jpg",
+    "status": "unknown",
+    "views": 866,
+    "favorites": 47,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 34,
+    "localImage": "5817259712100.jpg",
+    "cityMappings": [],
+    "slug": "拥抱智能体时代共筑agi未来-5817259712100",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/07/27 周日 05:30"
+  },
+  {
+    "id": "6817997897000",
+    "title": "智践未来:Agentic AI 的落地探索与实战",
+    "time": "2025/07/26 周六 05:30",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/6817997897000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/6817997897000/885680577565450.jpg",
+    "status": "unknown",
+    "views": 2451,
+    "favorites": 96,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 35,
+    "localImage": "6817997897000.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "智践未来agentic-ai-的落地探索与实战-6817997897000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/07/26 周六 05:30"
+  },
+  {
+    "id": "1816558028000",
+    "title": "联合工作坊：AI 自动化智能体开发实战解密！",
+    "time": "2025/07/19 周六 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/1816558028000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/1816558028000/545672492320678.jpg",
+    "status": "unknown",
+    "views": 1874,
+    "favorites": 95,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 36,
+    "localImage": "1816558028000.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "联合工作坊ai-自动化智能体开发实战解密-1816558028000",
+    "tags": [
+      "ai",
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/07/19 周六 06:00"
+  },
+  {
+    "id": "9816117811600",
+    "title": "动手构建未来：Agentic智能体开发实战",
+    "time": "2025/07/19 周六 06:00",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/9816117811600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/9816117811600/315672492990690.jpg",
+    "status": "unknown",
+    "views": 4279,
+    "favorites": 165,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 37,
+    "localImage": "9816117811600.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "动手构建未来agentic智能体开发实战-9816117811600",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/07/19 周六 06:00"
+  },
+  {
+    "id": "2815600917800",
+    "title": "智能体协同时代：MCP 生态AI Agent 与生成式研发的融合实践",
+    "time": "2025/07/13 周日 06:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/2815600917800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/2815600917800/875663942506776.jpg",
+    "status": "unknown",
+    "views": 2772,
+    "favorites": 168,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 38,
+    "localImage": "2815600917800.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "智能体协同时代mcp-生态ai-agent-与生成式研发的融合实践-2815600917800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/07/13 周日 06:00"
+  },
+  {
+    "id": "2815541527900",
+    "title": "卡牌学云架构：亚马逊云科技 Builder Cards 中文版成都首发！",
+    "time": "2025/07/12 周六 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/2815541527900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202507/2815541527900/395663874152551.jpg",
+    "status": "unknown",
+    "views": 1589,
+    "favorites": 29,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 39,
+    "localImage": "2815541527900.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "卡牌学云架构亚马逊云科技-builder-cards-中文版成都首发-2815541527900",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/07/12 周六 06:00"
+  },
+  {
+    "id": "5811935359300",
+    "title": "Agentic AI 革命：智能体应用开发新时代！带你开启玩中学！",
+    "time": "2025/06/21 周六 06:00",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/5811935359300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202506/5811935359300/715638447058831.jpg",
+    "status": "unknown",
+    "views": 890,
+    "favorites": 110,
+    "scrapedAt": "2026-01-27T06:22:04.985Z",
+    "sort": 40,
+    "localImage": "5811935359300.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "agentic-ai-革命智能体应用开发新时代带你开启玩中学-5811935359300",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/06/21 周六 06:00"
+  },
+  {
+    "id": "8812399964800",
+    "title": "1000 AIdea 应用计划",
+    "time": "2025/06/20 周五 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/8812399964800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202506/8812399964800/875641667684304.jpg",
+    "status": "unknown",
+    "views": 282,
+    "favorites": 26,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 41,
+    "localImage": "8812399964800.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "1000-aidea-应用计划-8812399964800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/06/20 周五 05:30"
+  },
+  {
+    "id": "3806075715500",
+    "title": "Community Day 北京站开发者们的夏日聚会",
+    "time": "2025/05/25 周日 05:00",
+    "location": "北京东城",
+    "url": "https://usergroup.huodongxing.com/event/3806075715500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202504/3806075715500/865604785077113.jpg",
+    "status": "unknown",
+    "views": 18108,
+    "favorites": 299,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 42,
+    "localImage": "3806075715500.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "community-day-北京站开发者们的夏日聚会-3806075715500",
+    "tags": [
+      "meetup",
+      "community"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/05/25 周日 05:00"
+  },
+  {
+    "id": "2808830546600",
+    "title": "从构想到部署：AI 驱动的全链路开发者体验！",
+    "time": "2025/05/24 周六 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/2808830546600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202505/2808830546600/565616923460549.jpg",
+    "status": "unknown",
+    "views": 4784,
+    "favorites": 84,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 43,
+    "localImage": "2808830546600.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "从构想到部署ai-驱动的全链路开发者体验-2808830546600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/05/24 周六 06:00"
+  },
+  {
+    "id": "4808103746100",
+    "title": "生成式 AI 赋能开发提效",
+    "time": "2025/05/24 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/4808103746100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202505/4808103746100/385612661862270.jpg",
+    "status": "unknown",
+    "views": 3538,
+    "favorites": 37,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 44,
+    "localImage": "4808103746100.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "生成式-ai-赋能开发提效-4808103746100",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/05/24 周六 05:30"
+  },
+  {
+    "id": "9807937198600",
+    "title": "Amazon Q Developer 的极简开发工坊！",
+    "time": "2025/05/18 周日 06:00",
+    "location": "重庆九龙坡",
+    "url": "https://usergroup.huodongxing.com/event/9807937198600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202505/9807937198600/545610675379306.jpg",
+    "status": "unknown",
+    "views": 2675,
+    "favorites": 109,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 45,
+    "localImage": "9807937198600.jpg",
+    "cityMappings": [],
+    "slug": "amazon-q-developer-的极简开发工坊-9807937198600",
+    "tags": [
+      "amazon"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/05/18 周日 06:00"
+  },
+  {
+    "id": "6808094019500",
+    "title": "大模型应用挑战赛",
+    "time": "2025/05/18 周日 02:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/6808094019500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202505/6808094019500/525611765885258.jpg",
+    "status": "unknown",
+    "views": 2280,
+    "favorites": 43,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 46,
+    "localImage": "6808094019500.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "大模型应用挑战赛-6808094019500",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/05/18 周日 02:00"
+  },
+  {
+    "id": "1807054044300",
+    "title": "用 Amazon Q 从0到1打造智能番茄钟",
+    "time": "2025/05/17 周六 06:00",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/1807054044300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202505/1807054044300/835604542388798.jpg",
+    "status": "unknown",
+    "views": 6207,
+    "favorites": 201,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 47,
+    "localImage": "1807054044300.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "用-amazon-q-从0到1打造智能番茄钟-1807054044300",
+    "tags": [
+      "amazon"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/05/17 周六 06:00"
+  },
+  {
+    "id": "7804338550900",
+    "title": "Amazon Q工作坊：定义开发新范式",
+    "time": "2025/04/24 周四 06:00",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/7804338550900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202504/7804338550900/585585684390872.jpg",
+    "status": "unknown",
+    "views": 2374,
+    "favorites": 93,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 48,
+    "localImage": "7804338550900.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "amazon-q工作坊定义开发新范式-7804338550900",
+    "tags": [
+      "amazon",
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/04/24 周四 06:00"
+  },
+  {
+    "id": "3803086190000",
+    "title": "开源数据湖仓:数据开源软件技术与动手实践",
+    "time": "2025/04/19 周六 06:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/3803086190000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202504/3803086190000/645576987855704.jpg",
+    "status": "unknown",
+    "views": 3433,
+    "favorites": 60,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 49,
+    "localImage": "3803086190000.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "开源数据湖仓数据开源软件技术与动手实践-3803086190000",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/04/19 周六 06:00"
+  },
+  {
+    "id": "6803510816000",
+    "title": "多智能体系统与 AI 应用开发",
+    "time": "2025/04/19 周六 06:00",
+    "location": "广东广州",
+    "url": "https://usergroup.huodongxing.com/event/6803510816000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202504/6803510816000/345579939478262.jpg",
+    "status": "unknown",
+    "views": 6451,
+    "favorites": 171,
+    "scrapedAt": "2026-01-27T06:22:15.766Z",
+    "sort": 50,
+    "localImage": "6803510816000.jpg",
+    "cityMappings": [
+      "guangzhou"
+    ],
+    "slug": "多智能体系统与-ai-应用开发-6803510816000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/04/19 周六 06:00"
+  },
+  {
+    "id": "5801134260000",
+    "title": "AI 大模型开发运维新范式",
+    "time": "2025/04/12 周六 06:00",
+    "location": "河南郑州",
+    "url": "https://usergroup.huodongxing.com/event/5801134260000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/5801134260000/575565648410275.jpg",
+    "status": "unknown",
+    "views": 3384,
+    "favorites": 34,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 51,
+    "localImage": "5801134260000.jpg",
+    "cityMappings": [],
+    "slug": "ai-大模型开发运维新范式-5801134260000",
+    "tags": [
+      "ai",
+      "开发运维"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/04/12 周六 06:00"
+  },
+  {
+    "id": "4800850014800",
+    "title": "智解千题：DeepSeek全员实战",
+    "time": "2025/04/12 周六 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/4800850014800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/4800850014800/425561459746281.jpg",
+    "status": "unknown",
+    "views": 9111,
+    "favorites": 138,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 52,
+    "localImage": "4800850014800.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "智解千题deepseek全员实战-4800850014800",
+    "tags": [
+      "deepseek"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/04/12 周六 05:30"
+  },
+  {
+    "id": "3800273787900",
+    "title": "AI应用创新：从项目管理到大模型实战",
+    "time": "2025/03/30 周日 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/3800273787900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/3800273787900/875561695401489.jpg",
+    "status": "unknown",
+    "views": 6915,
+    "favorites": 259,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 53,
+    "localImage": "3800273787900.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "ai应用创新从项目管理到大模型实战-3800273787900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/30 周日 06:00"
+  },
+  {
+    "id": "7799839395800",
+    "title": "DeepSeek，探索AI无限潜力",
+    "time": "2025/03/23 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/7799839395800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/7799839395800/865554439811209.jpg",
+    "status": "unknown",
+    "views": 7196,
+    "favorites": 130,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 54,
+    "localImage": "7799839395800.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "deepseek探索ai无限潜力-7799839395800",
+    "tags": [
+      "ai",
+      "deepseek"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/23 周日 05:30"
+  },
+  {
+    "id": "4798983005200",
+    "title": "多模态大模型探索之旅！",
+    "time": "2025/03/22 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/4798983005200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/4798983005200/885551696664083.jpg",
+    "status": "unknown",
+    "views": 5324,
+    "favorites": 140,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 55,
+    "localImage": "4798983005200.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "多模态大模型探索之旅-4798983005200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/22 周六 05:30"
+  },
+  {
+    "id": "5799179688200",
+    "title": "DeepSeek探秘之旅：大模型前沿探索应用",
+    "time": "2025/03/22 周六 05:30",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/5799179688200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/5799179688200/145552784993249.jpg",
+    "status": "unknown",
+    "views": 3591,
+    "favorites": 60,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 56,
+    "localImage": "5799179688200.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "deepseek探秘之旅大模型前沿探索应用-5799179688200",
+    "tags": [
+      "deepseek"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/22 周六 05:30"
+  },
+  {
+    "id": "5799564943800",
+    "title": "DeepSeek 碰上大数据",
+    "time": "2025/03/22 周六 05:30",
+    "location": "浙江杭州",
+    "url": "https://usergroup.huodongxing.com/event/5799564943800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/5799564943800/705553577295930.jpg",
+    "status": "unknown",
+    "views": 6783,
+    "favorites": 87,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 57,
+    "localImage": "5799564943800.jpg",
+    "cityMappings": [
+      "hangzhou"
+    ],
+    "slug": "deepseek-碰上大数据-5799564943800",
+    "tags": [
+      "deepseek"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/22 周六 05:30"
+  },
+  {
+    "id": "3799125236800",
+    "title": "DeepSeek与Amazon Bedrock应用实践",
+    "time": "2025/03/19 周三 06:00",
+    "location": "甘肃兰州",
+    "url": "https://usergroup.huodongxing.com/event/3799125236800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/3799125236800/705549481623639.jpg",
+    "status": "unknown",
+    "views": 1364,
+    "favorites": 6,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 58,
+    "localImage": "3799125236800.jpg",
+    "cityMappings": [
+      "lanzhou"
+    ],
+    "slug": "deepseek与amazon-bedrock应用实践-3799125236800",
+    "tags": [
+      "amazon",
+      "bedrock",
+      "deepseek"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/19 周三 06:00"
+  },
+  {
+    "id": "9798152545200",
+    "title": "破界她力量：科技女性，未来无限",
+    "time": "2025/03/16 周日 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/9798152545200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/9798152545200/685545520117729.jpg",
+    "status": "unknown",
+    "views": 9304,
+    "favorites": 265,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 59,
+    "localImage": "9798152545200.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "破界她力量科技女性未来无限-9798152545200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/16 周日 05:30"
+  },
+  {
+    "id": "9798314204700",
+    "title": "【活动邀请上海】破界她力量：编码未来！",
+    "time": "2025/03/15 周六 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/9798314204700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/9798314204700/515543849513463.jpg",
+    "status": "unknown",
+    "views": 10834,
+    "favorites": 265,
+    "scrapedAt": "2026-01-27T06:22:25.610Z",
+    "sort": 60,
+    "localImage": "9798314204700.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "活动邀请上海破界她力量编码未来-9798314204700",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/15 周六 05:30"
+  },
+  {
+    "id": "2797827224500",
+    "title": "在 DeepSeek浪潮下的技术革新与企业实践",
+    "time": "2025/03/09 周日 05:30",
+    "location": "江苏苏州",
+    "url": "https://usergroup.huodongxing.com/event/2797827224500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202503/2797827224500/835542414782685.jpg",
+    "status": "unknown",
+    "views": 3853,
+    "favorites": 90,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 61,
+    "localImage": "2797827224500.jpg",
+    "cityMappings": [
+      "suzhou"
+    ],
+    "slug": "在-deepseek浪潮下的技术革新与企业实践-2797827224500",
+    "tags": [
+      "deepseek"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/09 周日 05:30"
+  },
+  {
+    "id": "6797271898200",
+    "title": "IWD：智创未来，女性职场新力量",
+    "time": "2025/03/08 周六 06:00",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/6797271898200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202502/6797271898200/575539098706282.jpg",
+    "status": "unknown",
+    "views": 9837,
+    "favorites": 241,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 62,
+    "localImage": "6797271898200.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "iwd智创未来女性职场新力量-6797271898200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2025/03/08 周六 06:00"
+  },
+  {
+    "id": "1797105335300",
+    "title": "智启云程:Amazon Q开发技术与 re:Invent",
+    "time": "2025/02/27 周四 06:00",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/1797105335300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202502/1797105335300/755535453767997.jpg",
+    "status": "unknown",
+    "views": 288,
+    "favorites": 21,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 63,
+    "localImage": "1797105335300.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "智启云程amazon-q开发技术与-reinvent-1797105335300",
+    "tags": [
+      "amazon",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/02/27 周四 06:00"
+  },
+  {
+    "id": "3794987216300",
+    "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
+    "time": "2025/02/23 周日 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/3794987216300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202502/3794987216300/465521554598282.jpg",
+    "status": "unknown",
+    "views": 13323,
+    "favorites": 267,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 64,
+    "localImage": "3794987216300.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "bedrock-开发进阶reinventdeepseek-探索-ai-无限潜力-3794987216300",
+    "tags": [
+      "ai",
+      "bedrock",
+      "deepseek",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/02/23 周日 05:30"
+  },
+  {
+    "id": "9794223409200",
+    "title": "观测无垠云启新程 2025云原生可观测性技术分享Meetup成都站",
+    "time": "2025/02/23 周日 05:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/9794223409200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202502/9794223409200/675516649453167.jpg",
+    "status": "unknown",
+    "views": 9473,
+    "favorites": 45,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 65,
+    "localImage": "9794223409200.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "观测无垠云启新程-2025云原生可观测性技术分享meetup成都站-9794223409200",
+    "tags": [
+      "meetup"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/02/23 周日 05:00"
+  },
+  {
+    "id": "4795308171000",
+    "title": "re:InventreCap探索生成式 AI 技术",
+    "time": "2025/02/22 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/4795308171000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202502/4795308171000/425523692160250.jpg",
+    "status": "unknown",
+    "views": 4920,
+    "favorites": 69,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 66,
+    "localImage": "4795308171000.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "reinventrecap探索生成式-ai-技术-4795308171000",
+    "tags": [
+      "ai",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/02/22 周六 05:30"
+  },
+  {
+    "id": "3795274906300",
+    "title": "re:Invent reCap 全国巡演上海场：云端新春-引领技术新浪潮 GenAI 斜杠计划第三期",
+    "time": "2025/02/22 周六 01:00",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/3795274906300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202502/3795274906300/475522742316168.jpg",
+    "status": "unknown",
+    "views": 7513,
+    "favorites": 145,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 67,
+    "localImage": "3795274906300.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "reinvent-recap-全国巡演上海场云端新春-引领技术新浪潮-genai-斜杠计划第三期-3795274906300",
+    "tags": [
+      "ai",
+      "genai",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/02/22 周六 01:00"
+  },
+  {
+    "id": "4794558028800",
+    "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
+    "time": "2025/02/16 周日 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/4794558028800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202502/4794558028800/765519541791650.jpg",
+    "status": "unknown",
+    "views": 11595,
+    "favorites": 225,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 68,
+    "localImage": "4794558028800.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "reinvent-云启al新篇deepseek引领未来聚焦ai技术与创新-4794558028800",
+    "tags": [
+      "ai",
+      "deepseek",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2025/02/16 周日 05:30"
+  },
+  {
+    "id": "6786188434000",
+    "title": "成都 UG 2024 re:Invent re:Cap",
+    "time": "2024/12/29 周日 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/6786188434000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202412/6786188434000/645459642017384.jpg",
+    "status": "unknown",
+    "views": 10122,
+    "favorites": 214,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 69,
+    "localImage": "6786188434000.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都-ug-2024-reinvent-recap-6786188434000",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/29 周日 06:00"
+  },
+  {
+    "id": "4786187629400",
+    "title": "re:Invent 让理想发生，迈向 GenAI 新时代",
+    "time": "2024/12/28 周六 06:00",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/4786187629400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202412/4786187629400/915459639327262.jpg",
+    "status": "unknown",
+    "views": 6083,
+    "favorites": 231,
+    "scrapedAt": "2026-01-27T06:22:35.110Z",
+    "sort": 70,
+    "localImage": "4786187629400.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "reinvent-让理想发生迈向-genai-新时代-4786187629400",
+    "tags": [
+      "ai",
+      "genai",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/28 周六 06:00"
+  },
+  {
+    "id": "3786185811400",
+    "title": "AI赋能企业数字化转型：re:Invent 2024 创新回顾",
+    "time": "2024/12/22 周日 06:00",
+    "location": "广东广州",
+    "url": "https://usergroup.huodongxing.com/event/3786185811400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202412/3786185811400/715466936375905.jpg",
+    "status": "unknown",
+    "views": 2834,
+    "favorites": 38,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 71,
+    "localImage": "3786185811400.jpg",
+    "cityMappings": [
+      "guangzhou"
+    ],
+    "slug": "ai赋能企业数字化转型reinvent-2024-创新回顾-3786185811400",
+    "tags": [
+      "ai",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/22 周日 06:00"
+  },
+  {
+    "id": "8786187262100",
+    "title": "深圳UG 2024 re:Invent re:Cap",
+    "time": "2024/12/22 周日 06:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/8786187262100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202412/8786187262100/825459633466959.jpg",
+    "status": "unknown",
+    "views": 3259,
+    "favorites": 117,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 72,
+    "localImage": "8786187262100.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "深圳ug-2024-reinvent-recap-8786187262100",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/22 周日 06:00"
+  },
+  {
+    "id": "5786173516700",
+    "title": "re:Invent 2024 - Nova 智联：构建客户之声与行业革新",
+    "time": "2024/12/21 周六 06:00",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/5786173516700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202412/5786173516700/735464863304687.jpg",
+    "status": "unknown",
+    "views": 2330,
+    "favorites": 38,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 73,
+    "localImage": "5786173516700.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "reinvent-2024-nova-智联构建客户之声与行业革新-5786173516700",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/21 周六 06:00"
+  },
+  {
+    "id": "9786026165700",
+    "title": "GenAl 连接非结构化数据",
+    "time": "2024/12/21 周六 05:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/9786026165700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202412/9786026165700/555458514419575.jpg",
+    "status": "unknown",
+    "views": 1275,
+    "favorites": 36,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 74,
+    "localImage": "9786026165700.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "genal-连接非结构化数据-9786026165700",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/21 周六 05:00"
+  },
+  {
+    "id": "1784748005700",
+    "title": "探索 Amazon 生成式AI技术",
+    "time": "2024/12/04 周三 11:00",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/1784748005700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202412/1784748005700/755449646594849.jpg",
+    "status": "unknown",
+    "views": 206,
+    "favorites": 36,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 75,
+    "localImage": "1784748005700.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "探索-amazon-生成式ai技术-1784748005700",
+    "tags": [
+      "ai",
+      "amazon",
+      "生成式ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/04 周三 11:00"
+  },
+  {
+    "id": "5783725362300",
+    "title": "成都 UG Amazon Bedrock 实操专场：探索生成式 AI 与 3D 技术新边界",
+    "time": "2024/12/01 周日 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/5783725362300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202411/5783725362300/575442846172798.jpg",
+    "status": "unknown",
+    "views": 4351,
+    "favorites": 40,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 76,
+    "localImage": "5783725362300.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都-ug-amazon-bedrock-实操专场探索生成式-ai-与-3d-技术新边界-5783725362300",
+    "tags": [
+      "ai",
+      "amazon",
+      "bedrock"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/12/01 周日 06:00"
+  },
+  {
+    "id": "1781838388800",
+    "title": "智慧生活：AI 技术体验会",
+    "time": "2024/11/30 周六 05:30",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/1781838388800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202411/1781838388800/245431450043274.jpg",
+    "status": "unknown",
+    "views": 577,
+    "favorites": 56,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 77,
+    "localImage": "1781838388800.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "智慧生活ai-技术体验会-1781838388800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/11/30 周六 05:30"
+  },
+  {
+    "id": "5782995356200",
+    "title": "AIGC时代重塑开发新范式",
+    "time": "2024/11/30 周六 05:30",
+    "location": "江苏苏州",
+    "url": "https://usergroup.huodongxing.com/event/5782995356200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202411/5782995356200/885437858900374.jpg",
+    "status": "unknown",
+    "views": 2047,
+    "favorites": 95,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 78,
+    "localImage": "5782995356200.jpg",
+    "cityMappings": [
+      "suzhou"
+    ],
+    "slug": "aigc时代重塑开发新范式-5782995356200",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/11/30 周六 05:30"
+  },
+  {
+    "id": "2781983127600",
+    "title": "生成式 AI 训练营与创新实践",
+    "time": "2024/11/24 周日 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/2781983127600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202411/2781983127600/505431448363206.jpg",
+    "status": "unknown",
+    "views": 2451,
+    "favorites": 103,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 79,
+    "localImage": "2781983127600.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "生成式-ai-训练营与创新实践-2781983127600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/11/24 周日 05:30"
+  },
+  {
+    "id": "6780862627800",
+    "title": "游戏工坊： AI 手搓游戏挑战",
+    "time": "2024/11/17 周日 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/6780862627800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202411/6780862627800/615423344930571.jpg",
+    "status": "unknown",
+    "views": 1900,
+    "favorites": 53,
+    "scrapedAt": "2026-01-27T06:22:44.397Z",
+    "sort": 80,
+    "localImage": "6780862627800.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "游戏工坊-ai-手搓游戏挑战-6780862627800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/11/17 周日 05:30"
+  },
+  {
+    "id": "5782316601222",
+    "title": "亚麻拉松预热直播，超级闪电演讲来袭！",
+    "time": "2024/11/16 周六 11:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/5782316601222",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202411/5782316601222/275432756878806.jpg",
+    "status": "unknown",
+    "views": 477,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 81,
+    "localImage": "5782316601222.jpg",
+    "cityMappings": [],
+    "slug": "亚麻拉松预热直播超级闪电演讲来袭-5782316601222",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/11/16 周六 11:00"
+  },
+  {
+    "id": "4781149826000",
+    "title": "GenAI 斜杠计划第二期：解锁代码新世界，AI 辅助编码带你飞！",
+    "time": "2024/11/16 周六 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/4781149826000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202411/4781149826000/675426717847213.jpg",
+    "status": "unknown",
+    "views": 1867,
+    "favorites": 42,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 82,
+    "localImage": "4781149826000.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "genai-斜杠计划第二期解锁代码新世界ai-辅助编码带你飞-4781149826000",
+    "tags": [
+      "ai",
+      "genai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/11/16 周六 05:30"
+  },
+  {
+    "id": "4778708850800",
+    "title": "成都 UG 1024 程序员节专题：开发者在 AI 时代的工作与生活变革",
+    "time": "2024/10/27 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/4778708850800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202410/4778708850800/325407701015055.jpg",
+    "status": "unknown",
+    "views": 2430,
+    "favorites": 130,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 83,
+    "localImage": "4778708850800.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都-ug-1024-程序员节专题开发者在-ai-时代的工作与生活变革-4778708850800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/10/27 周日 05:30"
+  },
+  {
+    "id": "9775722672000",
+    "title": "明月湖 生成式AI训练营与创新实践",
+    "time": "2024/10/18 周五 01:30",
+    "location": "重庆江北",
+    "url": "https://usergroup.huodongxing.com/event/9775722672000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202409/9775722672000/795386963296171.jpg",
+    "status": "unknown",
+    "views": 1581,
+    "favorites": 107,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 84,
+    "localImage": "9775722672000.jpg",
+    "cityMappings": [],
+    "slug": "明月湖-生成式ai训练营与创新实践-9775722672000",
+    "tags": [
+      "ai",
+      "生成式ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/10/18 周五 01:30"
+  },
+  {
+    "id": "3772102690300",
+    "title": "从LLM到多模态应用，探索生成式Al的无限可能",
+    "time": "2024/09/21 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/3772102690300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202409/3772102690300/735362872779498.jpg",
+    "status": "unknown",
+    "views": 7841,
+    "favorites": 224,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 85,
+    "localImage": "3772102690300.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "从llm到多模态应用探索生成式al的无限可能-3772102690300",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/09/21 周六 05:30"
+  },
+  {
+    "id": "3771067734100",
+    "title": "智能新纪元：AI 驱动未来！",
+    "time": "2024/09/08 周日 05:30",
+    "location": "广东广州",
+    "url": "https://usergroup.huodongxing.com/event/3771067734100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202408/3771067734100/955355590966375.jpg",
+    "status": "unknown",
+    "views": 5666,
+    "favorites": 195,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 86,
+    "localImage": "3771067734100.jpg",
+    "cityMappings": [
+      "guangzhou"
+    ],
+    "slug": "智能新纪元ai-驱动未来-3771067734100",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/09/08 周日 05:30"
+  },
+  {
+    "id": "8771519774900",
+    "title": "成都 UG 生成式 AI 工作坊：探索未来职场新边界",
+    "time": "2024/09/08 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/8771519774900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202409/8771519774900/655358880713886.jpg",
+    "status": "unknown",
+    "views": 2912,
+    "favorites": 73,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 87,
+    "localImage": "8771519774900.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都-ug-生成式-ai-工作坊探索未来职场新边界-8771519774900",
+    "tags": [
+      "ai",
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/09/08 周日 05:30"
+  },
+  {
+    "id": "9770626076700",
+    "title": "生成式 AI 的突破与挑战！",
+    "time": "2024/09/07 周六 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/9770626076700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202408/9770626076700/735353561084018.jpg",
+    "status": "unknown",
+    "views": 3003,
+    "favorites": 160,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 88,
+    "localImage": "9770626076700.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "生成式-ai-的突破与挑战-9770626076700",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/09/07 周六 05:30"
+  },
+  {
+    "id": "7768164737000",
+    "title": "生成式 AI 工作坊：大模型应用探索与实践！",
+    "time": "2024/08/24 周六 05:30",
+    "location": "北京丰台",
+    "url": "https://usergroup.huodongxing.com/event/7768164737000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202408/7768164737000/345335609304595.jpg",
+    "status": "unknown",
+    "views": 2688,
+    "favorites": 127,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 89,
+    "localImage": "7768164737000.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "生成式-ai-工作坊大模型应用探索与实践-7768164737000",
+    "tags": [
+      "ai",
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/08/24 周六 05:30"
+  },
+  {
+    "id": "8766358112000",
+    "title": "GenAI 斜杠计划 开启职业加速密码：图文设计专场",
+    "time": "2024/08/24 周六 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/8766358112000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202407/8766358112000/795321933752957.jpg",
+    "status": "unknown",
+    "views": 6310,
+    "favorites": 291,
+    "scrapedAt": "2026-01-27T06:22:54.114Z",
+    "sort": 90,
+    "localImage": "8766358112000.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "genai-斜杠计划-开启职业加速密码图文设计专场-8766358112000",
+    "tags": [
+      "ai",
+      "genai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/08/24 周六 05:30"
+  },
+  {
+    "id": "6765700054700",
+    "title": "AI 应用创新与探索",
+    "time": "2024/08/17 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/6765700054700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202407/6765700054700/315323767408696.jpg",
+    "status": "unknown",
+    "views": 1504,
+    "favorites": 56,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 91,
+    "localImage": "6765700054700.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "ai-应用创新与探索-6765700054700",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/08/17 周六 05:30"
+  },
+  {
+    "id": "2765745772300",
+    "title": "暑期少儿开发之旅",
+    "time": "2024/08/04 周日 05:30",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/2765745772300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202407/2765745772300/405318952053971.jpg",
+    "status": "unknown",
+    "views": 1069,
+    "favorites": 52,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 92,
+    "localImage": "2765745772300.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "暑期少儿开发之旅-2765745772300",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/08/04 周日 05:30"
+  },
+  {
+    "id": "1765629496200",
+    "title": "大模型应用构建与落地",
+    "time": "2024/08/03 周六 05:30",
+    "location": "北京朝阳",
+    "url": "https://usergroup.huodongxing.com/event/1765629496200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202407/1765629496200/265318477538858.jpg",
+    "status": "unknown",
+    "views": 3862,
+    "favorites": 158,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 93,
+    "localImage": "1765629496200.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "大模型应用构建与落地-1765629496200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/08/03 周六 05:30"
+  },
+  {
+    "id": "4758529746400",
+    "title": "2024 Community Day：云计算与 AI 技术交融盛会，共筑多元智慧未来",
+    "time": "2024/07/07 周日 01:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/4758529746400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202406/4758529746400/835267567527128.jpg",
+    "status": "unknown",
+    "views": 5225,
+    "favorites": 356,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 94,
+    "localImage": "4758529746400.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "2024-community-day云计算与-ai-技术交融盛会共筑多元智慧未来-4758529746400",
+    "tags": [
+      "ai",
+      "云计算",
+      "community"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/07/07 周日 01:00"
+  },
+  {
+    "id": "8760958437200",
+    "title": "成都 UG 生成式 AI 工作坊：AI 革命下的商业模式创新！",
+    "time": "2024/06/30 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/8760958437200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202406/8760958437200/185284434325177.jpg",
+    "status": "unknown",
+    "views": 1309,
+    "favorites": 108,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 95,
+    "localImage": "8760958437200.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都-ug-生成式-ai-工作坊ai-革命下的商业模式创新-8760958437200",
+    "tags": [
+      "ai",
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/06/30 周日 05:30"
+  },
+  {
+    "id": "1760699577300",
+    "title": "大模型的演进与 AI 创新之路",
+    "time": "2024/06/29 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/1760699577300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202406/1760699577300/265282635225605.jpg",
+    "status": "unknown",
+    "views": 1875,
+    "favorites": 154,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 96,
+    "localImage": "1760699577300.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "大模型的演进与-ai-创新之路-1760699577300",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/06/29 周六 05:30"
+  },
+  {
+    "id": "8760550798200",
+    "title": "探索生成式 AI 的无限可能",
+    "time": "2024/06/22 周六 05:30",
+    "location": "江苏苏州",
+    "url": "https://usergroup.huodongxing.com/event/8760550798200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202406/8760550798200/335281672330399.jpg",
+    "status": "unknown",
+    "views": 668,
+    "favorites": 36,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 97,
+    "localImage": "8760550798200.jpg",
+    "cityMappings": [
+      "suzhou"
+    ],
+    "slug": "探索生成式-ai-的无限可能-8760550798200",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/06/22 周六 05:30"
+  },
+  {
+    "id": "8760515081400",
+    "title": "AI 探索与实践",
+    "time": "2024/06/19 周三 06:00",
+    "location": "甘肃兰州",
+    "url": "https://usergroup.huodongxing.com/event/8760515081400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202406/8760515081400/375281491624900.jpg",
+    "status": "unknown",
+    "views": 86,
+    "favorites": 40,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 98,
+    "localImage": "8760515081400.jpg",
+    "cityMappings": [
+      "lanzhou"
+    ],
+    "slug": "ai-探索与实践-8760515081400",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/06/19 周三 06:00"
+  },
+  {
+    "id": "2758529264000",
+    "title": "数字化升级与 AI 赋能：创意产业的升级之路！",
+    "time": "2024/06/15 周六 05:30",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/2758529264000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202406/2758529264000/835269644115516.jpg",
+    "status": "unknown",
+    "views": 970,
+    "favorites": 138,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 99,
+    "localImage": "2758529264000.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "数字化升级与-ai-赋能创意产业的升级之路-2758529264000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/06/15 周六 05:30"
+  },
+  {
+    "id": "6757500440900",
+    "title": "AI 创作工坊：AI 探索与实践",
+    "time": "2024/06/02 周日 07:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/6757500440900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202405/6757500440900/715260425014955.jpg",
+    "status": "unknown",
+    "views": 1392,
+    "favorites": 36,
+    "scrapedAt": "2026-01-27T06:23:05.849Z",
+    "sort": 100,
+    "localImage": "6757500440900.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "ai-创作工坊ai-探索与实践-6757500440900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/06/02 周日 07:30"
+  },
+  {
+    "id": "9751762562000",
+    "title": "六一特别企划：孩子们的开发之旅",
+    "time": "2024/06/01 周六 05:00",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/9751762562000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/9751762562000/845250450262666.jpg",
+    "status": "unknown",
+    "views": 2425,
+    "favorites": 156,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 101,
+    "localImage": "9751762562000.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "六一特别企划孩子们的开发之旅-9751762562000",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/06/01 周六 05:00"
+  },
+  {
+    "id": "4754651963700",
+    "title": "AI 时代女性力量大爆发",
+    "time": "2024/05/19 周日 06:00",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/4754651963700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202405/4754651963700/475240700221368.jpg",
+    "status": "unknown",
+    "views": 3141,
+    "favorites": 259,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 102,
+    "localImage": "4754651963700.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "ai-时代女性力量大爆发-4754651963700",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/05/19 周日 06:00"
+  },
+  {
+    "id": "7754798368600",
+    "title": "多模态AI大模型 AGI的关键驱动力",
+    "time": "2024/05/18 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/7754798368600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202405/7754798368600/335242641625660.jpg",
+    "status": "unknown",
+    "views": 2403,
+    "favorites": 197,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 103,
+    "localImage": "7754798368600.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "多模态ai大模型-agi的关键驱动力-7754798368600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/05/18 周六 05:30"
+  },
+  {
+    "id": "6751765480600",
+    "title": "成都UG生成式AI工作坊：AI原生应用的探索与创新",
+    "time": "2024/04/27 周六 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/6751765480600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/6751765480600/595225423319632.jpg",
+    "status": "unknown",
+    "views": 1280,
+    "favorites": 145,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 104,
+    "localImage": "6751765480600.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都ug生成式ai工作坊ai原生应用的探索与创新-6751765480600",
+    "tags": [
+      "ai",
+      "生成式ai",
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/27 周六 05:30"
+  },
+  {
+    "id": "2751763696700",
+    "title": "科技女性启航交流会",
+    "time": "2024/04/25 周四 10:30",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/2751763696700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/2751763696700/765225565525663.jpg",
+    "status": "unknown",
+    "views": 99,
+    "favorites": 42,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 105,
+    "localImage": "2751763696700.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "科技女性启航交流会-2751763696700",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/25 周四 10:30"
+  },
+  {
+    "id": "8750794794300",
+    "title": "认识人工智能",
+    "time": "2024/04/21 周日 07:00",
+    "location": "广西河池",
+    "url": "https://usergroup.huodongxing.com/event/8750794794300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/8750794794300/955221438291562.jpg",
+    "status": "unknown",
+    "views": 110,
+    "favorites": 43,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 106,
+    "localImage": "8750794794300.jpg",
+    "cityMappings": [],
+    "slug": "认识人工智能-8750794794300",
+    "tags": [
+      "人工智能"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/21 周日 07:00"
+  },
+  {
+    "id": "3750791136800",
+    "title": "AI 创意工坊：Claude3 Demo 与 Stable DiffusionLlama2 实践体验",
+    "time": "2024/04/21 周日 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/3750791136800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/3750791136800/625214680226406.jpg",
+    "status": "unknown",
+    "views": 1752,
+    "favorites": 229,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 107,
+    "localImage": "3750791136800.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "ai-创意工坊claude3-demo-与-stable-diffusionllama2-实践体验-3750791136800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/21 周日 05:30"
+  },
+  {
+    "id": "7750309476900",
+    "title": "AI 创新探索：赋能未来的无限可能",
+    "time": "2024/04/21 周日 05:00",
+    "location": "安徽合肥",
+    "url": "https://usergroup.huodongxing.com/event/7750309476900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/7750309476900/595210736232817.jpg",
+    "status": "unknown",
+    "views": 1081,
+    "favorites": 28,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 108,
+    "localImage": "7750309476900.jpg",
+    "cityMappings": [
+      "hefei"
+    ],
+    "slug": "ai-创新探索赋能未来的无限可能-7750309476900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/21 周日 05:00"
+  },
+  {
+    "id": "8749656126100",
+    "title": "活力 AI 工作坊，动手实践加入生成式 AI 新赛道",
+    "time": "2024/04/20 周六 05:30",
+    "location": "北京朝阳",
+    "url": "https://usergroup.huodongxing.com/event/8749656126100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/8749656126100/425205946639023.jpg",
+    "status": "unknown",
+    "views": 963,
+    "favorites": 96,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 109,
+    "localImage": "8749656126100.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "活力-ai-工作坊动手实践加入生成式-ai-新赛道-8749656126100",
+    "tags": [
+      "ai",
+      "workshop"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/20 周六 05:30"
+  },
+  {
+    "id": "3749610016200",
+    "title": "智慧交融，共筑 AI 未来",
+    "time": "2024/04/14 周日 07:00",
+    "location": "河北张家口",
+    "url": "https://usergroup.huodongxing.com/event/3749610016200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202404/3749610016200/115205624984646.jpg",
+    "status": "unknown",
+    "views": 125,
+    "favorites": 21,
+    "scrapedAt": "2026-01-27T06:23:15.917Z",
+    "sort": 110,
+    "localImage": "3749610016200.jpg",
+    "cityMappings": [
+      "zhangjiakou"
+    ],
+    "slug": "智慧交融共筑-ai-未来-3749610016200",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/14 周日 07:00"
+  },
+  {
+    "id": "7746563433900",
+    "title": "开启 AI 技术的探索与实践应用",
+    "time": "2024/04/13 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/7746563433900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202403/7746563433900/385204540319846.jpg",
+    "status": "unknown",
+    "views": 3162,
+    "favorites": 179,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 111,
+    "localImage": "7746563433900.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "开启-ai-技术的探索与实践应用-7746563433900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/13 周六 05:30"
+  },
+  {
+    "id": "7749010975400",
+    "title": "LLM大语言模型的前沿应用与未来展望",
+    "time": "2024/04/10 周三 06:00",
+    "location": "甘肃兰州",
+    "url": "https://usergroup.huodongxing.com/event/7749010975400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202403/7749010975400/285201465630563.jpg",
+    "status": "unknown",
+    "views": 391,
+    "favorites": 27,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 112,
+    "localImage": "7749010975400.jpg",
+    "cityMappings": [
+      "lanzhou"
+    ],
+    "slug": "llm大语言模型的前沿应用与未来展望-7749010975400",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/04/10 周三 06:00"
+  },
+  {
+    "id": "6746849370000",
+    "title": "春日活力 AI 工坊：生成式 AI 前沿分享和动手实践",
+    "time": "2024/03/23 周六 01:30",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/6746849370000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202403/6746849370000/175187480130017.jpg",
+    "status": "unknown",
+    "views": 2609,
+    "favorites": 105,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 113,
+    "localImage": "6746849370000.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "春日活力-ai-工坊生成式-ai-前沿分享和动手实践-6746849370000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/03/23 周六 01:30"
+  },
+  {
+    "id": "9747150065100",
+    "title": "生成式 AI 领航：加速业务创新实践！",
+    "time": "2024/03/20 周三 05:30",
+    "location": "重庆渝北",
+    "url": "https://usergroup.huodongxing.com/event/9747150065100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202403/9747150065100/455188544217810.jpg",
+    "status": "unknown",
+    "views": 655,
+    "favorites": 54,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 114,
+    "localImage": "9747150065100.jpg",
+    "cityMappings": [],
+    "slug": "生成式-ai-领航加速业务创新实践-9747150065100",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/03/20 周三 05:30"
+  },
+  {
+    "id": "2745427115200",
+    "title": "女性创新力量影响未来",
+    "time": "2024/03/16 周六 05:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/2745427115200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202403/2745427115200/395176578176372.jpg",
+    "status": "unknown",
+    "views": 5301,
+    "favorites": 403,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 115,
+    "localImage": "2745427115200.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "女性创新力量影响未来-2745427115200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2024/03/16 周六 05:00"
+  },
+  {
+    "id": "8744985349000",
+    "title": "AI大模型：技术创新与未来智能的关键驱动力",
+    "time": "2024/03/10 周日 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/8744985349000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202403/8744985349000/395176464197850.jpg",
+    "status": "unknown",
+    "views": 5764,
+    "favorites": 355,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 116,
+    "localImage": "8744985349000.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "ai大模型技术创新与未来智能的关键驱动力-8744985349000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/03/10 周日 05:30"
+  },
+  {
+    "id": "8743850377900",
+    "title": "AI 原生应用的探索与创新",
+    "time": "2024/03/02 周六 06:00",
+    "location": "北京丰台",
+    "url": "https://usergroup.huodongxing.com/event/8743850377900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202402/8743850377900/565170630757809.jpg",
+    "status": "unknown",
+    "views": 4114,
+    "favorites": 236,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 117,
+    "localImage": "8743850377900.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "ai-原生应用的探索与创新-8743850377900",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2024/03/02 周六 06:00"
+  },
+  {
+    "id": "6735485240800",
+    "title": "re:Invent：拥抱信息世界！",
+    "time": "2023/12/28 周四 06:00",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/6735485240800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202312/6735485240800/515107562242983.jpg",
+    "status": "unknown",
+    "views": 1850,
+    "favorites": 28,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 118,
+    "localImage": "6735485240800.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "reinvent拥抱信息世界-6735485240800",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/28 周四 06:00"
+  },
+  {
+    "id": "2734641428400",
+    "title": "re:lnvent：AIGC 应用架构与实践",
+    "time": "2023/12/27 周三 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/2734641428400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202312/2734641428400/995101677306591.jpg",
+    "status": "unknown",
+    "views": 4280,
+    "favorites": 152,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 119,
+    "localImage": "2734641428400.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "relnventaigc-应用架构与实践-2734641428400",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/27 周三 05:30"
+  },
+  {
+    "id": "9734343119500",
+    "title": "圣诞特辑： AIGC 动手实践！",
+    "time": "2023/12/24 周日 06:00",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/9734343119500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202312/9734343119500/735099606192702.jpg",
+    "status": "unknown",
+    "views": 3347,
+    "favorites": 126,
+    "scrapedAt": "2026-01-27T06:23:25.927Z",
+    "sort": 120,
+    "localImage": "9734343119500.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "圣诞特辑-aigc-动手实践-9734343119500",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/24 周日 06:00"
+  },
+  {
+    "id": "2733316339300",
+    "title": "re:Invent 走进生成式 AI：速度与激情",
+    "time": "2023/12/17 周日 06:30",
+    "location": "河北张家口",
+    "url": "https://usergroup.huodongxing.com/event/2733316339300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202312/2733316339300/755092669563147.jpg",
+    "status": "unknown",
+    "views": 5205,
+    "favorites": 312,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 121,
+    "localImage": "2733316339300.jpg",
+    "cityMappings": [
+      "zhangjiakou"
+    ],
+    "slug": "reinvent-走进生成式-ai速度与激情-2733316339300",
+    "tags": [
+      "ai",
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/17 周日 06:30"
+  },
+  {
+    "id": "6733316947000",
+    "title": "re:lnvent：多模态大模型与 AIGC 应用",
+    "time": "2023/12/17 周日 06:00",
+    "location": "北京丰台",
+    "url": "https://usergroup.huodongxing.com/event/6733316947000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202312/6733316947000/865092622856029.jpg",
+    "status": "unknown",
+    "views": 2982,
+    "favorites": 100,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 122,
+    "localImage": "6733316947000.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "relnvent多模态大模型与-aigc-应用-6733316947000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/17 周日 06:00"
+  },
+  {
+    "id": "4733318769900",
+    "title": "成都 UG 2023 re:Invent re:Cap",
+    "time": "2023/12/17 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/4733318769900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202312/4733318769900/335094574140109.jpg",
+    "status": "unknown",
+    "views": 3469,
+    "favorites": 138,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 123,
+    "localImage": "4733318769900.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "成都-ug-2023-reinvent-recap-4733318769900",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/17 周日 05:30"
+  },
+  {
+    "id": "1731886522900",
+    "title": "无服务器计算：构建Web应用程序和数据分析的灵活解决方案",
+    "time": "2023/12/09 周六 05:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/1731886522900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202312/1731886522900/775082582830880.jpg",
+    "status": "unknown",
+    "views": 2123,
+    "favorites": 40,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 124,
+    "localImage": "1731886522900.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "无服务器计算构建web应用程序和数据分析的灵活解决方案-1731886522900",
+    "tags": [
+      "无服务器"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/09 周六 05:00"
+  },
+  {
+    "id": "6731746770100",
+    "title": "深圳 UG 2023 re:Invent re:Cap",
+    "time": "2023/12/09 周六 05:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/6731746770100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202311/6731746770100/115081639390107.jpg",
+    "status": "unknown",
+    "views": 3689,
+    "favorites": 157,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 125,
+    "localImage": "6731746770100.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "深圳-ug-2023-reinvent-recap-6731746770100",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/12/09 周六 05:00"
+  },
+  {
+    "id": "1729717030900",
+    "title": "人工智能未来视野：GenAI 的探索与创新",
+    "time": "2023/11/22 周三 06:30",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/1729717030900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202311/1729717030900/385067486229149.jpg",
+    "status": "unknown",
+    "views": 3906,
+    "favorites": 203,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 126,
+    "localImage": "1729717030900.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "人工智能未来视野genai-的探索与创新-1729717030900",
+    "tags": [
+      "ai",
+      "人工智能",
+      "genai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/11/22 周三 06:30"
+  },
+  {
+    "id": "3727549328200",
+    "title": "【Data  AI Con Shanghai 2023】报名火热开启，User Group 带你解锁生成式AI创新！",
+    "time": "2023/11/18 周六 05:00",
+    "location": "上海普陀",
+    "url": "https://usergroup.huodongxing.com/event/3727549328200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202311/3727549328200/145052566626728.jpg",
+    "status": "unknown",
+    "views": 4041,
+    "favorites": 191,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 127,
+    "localImage": "3727549328200.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "data-ai-con-shanghai-2023报名火热开启user-group-带你解锁生成式ai创新-3727549328200",
+    "tags": [
+      "ai",
+      "生成式ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/11/18 周六 05:00"
+  },
+  {
+    "id": "1729422829200",
+    "title": "生成式人工智能：创新与应用",
+    "time": "2023/11/15 周三 06:00",
+    "location": "甘肃兰州",
+    "url": "https://usergroup.huodongxing.com/event/1729422829200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202311/1729422829200/155065437758307.jpg",
+    "status": "unknown",
+    "views": 177,
+    "favorites": 29,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 128,
+    "localImage": "1729422829200.jpg",
+    "cityMappings": [
+      "lanzhou"
+    ],
+    "slug": "生成式人工智能创新与应用-1729422829200",
+    "tags": [
+      "人工智能"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/11/15 周三 06:00"
+  },
+  {
+    "id": "3727858006600",
+    "title": "AI 我能行",
+    "time": "2023/11/10 周五 07:30",
+    "location": "新疆昌吉",
+    "url": "https://usergroup.huodongxing.com/event/3727858006600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202311/3727858006600/535054571560325.jpg",
+    "status": "unknown",
+    "views": 316,
+    "favorites": 32,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 129,
+    "localImage": "3727858006600.jpg",
+    "cityMappings": [
+      "changji"
+    ],
+    "slug": "ai-我能行-3727858006600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/11/10 周五 07:30"
+  },
+  {
+    "id": "3721674476500",
+    "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
+    "time": "2023/11/05 周日 01:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/3721674476500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202309/3721674476500/335011631708885.jpg",
+    "status": "unknown",
+    "views": 17718,
+    "favorites": 1408,
+    "scrapedAt": "2026-01-27T06:23:35.645Z",
+    "sort": 130,
+    "localImage": "3721674476500.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "云上聚力-智见未来-生成式-ai-与云原生大会亚马逊云科技-community-day-成都站-3721674476500",
+    "tags": [
+      "ai",
+      "conference",
+      "community"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/11/05 周日 01:00"
+  },
+  {
+    "id": "3723978744800",
+    "title": "探索未来：生成式AI技术的应用与挑战",
+    "time": "2023/10/15 周日 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/3723978744800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202310/3723978744800/505027634561475.jpg",
+    "status": "unknown",
+    "views": 2484,
+    "favorites": 175,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 131,
+    "localImage": "3723978744800.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "探索未来生成式ai技术的应用与挑战-3723978744800",
+    "tags": [
+      "ai",
+      "生成式ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/10/15 周日 05:30"
+  },
+  {
+    "id": "7720671762600",
+    "title": "云原生加速生成式 AI 应用创新论坛",
+    "time": "2023/09/26 周二 05:30",
+    "location": "上海普陀",
+    "url": "https://usergroup.huodongxing.com/event/7720671762600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202309/7720671762600/855004668498772.jpg",
+    "status": "unknown",
+    "views": 4096,
+    "favorites": 166,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 132,
+    "localImage": "7720671762600.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "云原生加速生成式-ai-应用创新论坛-7720671762600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/09/26 周二 05:30"
+  },
+  {
+    "id": "2721256704600",
+    "title": "让 AI 无痛进入你的生活帮你成为 AI 加持的[超级个体]",
+    "time": "2023/09/23 周六 05:30",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/2721256704600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202309/2721256704600/285010463139752.jpg",
+    "status": "unknown",
+    "views": 2518,
+    "favorites": 41,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 133,
+    "localImage": "2721256704600.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "让-ai-无痛进入你的生活帮你成为-ai-加持的超级个体-2721256704600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/09/23 周六 05:30"
+  },
+  {
+    "id": "4717669483600",
+    "title": "生成式人工智能技术的应用和实践",
+    "time": "2023/09/02 周六 05:00",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/4717669483600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202308/4717669483600/704987752719396.jpg",
+    "status": "unknown",
+    "views": 5150,
+    "favorites": 153,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 134,
+    "localImage": "4717669483600.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "生成式人工智能技术的应用和实践-4717669483600",
+    "tags": [
+      "人工智能"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/09/02 周六 05:00"
+  },
+  {
+    "id": "8713322434100",
+    "title": "AIGC浪潮来袭！亚马逊云科技开发者社区嘉年华！",
+    "time": "2023/08/27 周日 01:00",
+    "location": "上海长宁",
+    "url": "https://usergroup.huodongxing.com/event/8713322434100",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202307/8713322434100/404954555772817.jpg",
+    "status": "unknown",
+    "views": 8749,
+    "favorites": 784,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 135,
+    "localImage": "8713322434100.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "aigc浪潮来袭亚马逊云科技开发者社区嘉年华-8713322434100",
+    "tags": [
+      "ai",
+      "community"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/08/27 周日 01:00"
+  },
+  {
+    "id": "4712606010900",
+    "title": "探索云原生现代化应用的架构与构建",
+    "time": "2023/07/29 周六 05:00",
+    "location": "北京朝阳",
+    "url": "https://usergroup.huodongxing.com/event/4712606010900",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202307/4712606010900/294948653880023.jpg",
+    "status": "unknown",
+    "views": 3377,
+    "favorites": 64,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 136,
+    "localImage": "4712606010900.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "探索云原生现代化应用的架构与构建-4712606010900",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/07/29 周六 05:00"
+  },
+  {
+    "id": "9711590055200",
+    "title": "云原生与前端: 跨界创新的融合",
+    "time": "2023/07/22 周六 05:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/9711590055200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202307/9711590055200/164941598941706.jpg",
+    "status": "unknown",
+    "views": 3454,
+    "favorites": 154,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 137,
+    "localImage": "9711590055200.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "云原生与前端-跨界创新的融合-9711590055200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/07/22 周六 05:00"
+  },
+  {
+    "id": "1710557941600",
+    "title": "AI与云原生技术融合：开启AIGC新时代的探索与实践",
+    "time": "2023/07/16 周日 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/1710557941600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202307/1710557941600/474935755440499.jpg",
+    "status": "unknown",
+    "views": 3342,
+    "favorites": 85,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 138,
+    "localImage": "1710557941600.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "ai与云原生技术融合开启aigc新时代的探索与实践-1710557941600",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/07/16 周日 06:00"
+  },
+  {
+    "id": "7709295888600",
+    "title": "拥抱云原生，助力企业数字化转型",
+    "time": "2023/07/08 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/7709295888600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202306/7709295888600/344925667233063.jpg",
+    "status": "unknown",
+    "views": 2405,
+    "favorites": 15,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 139,
+    "localImage": "7709295888600.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "拥抱云原生助力企业数字化转型-7709295888600",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/07/08 周六 05:30"
+  },
+  {
+    "id": "2706404873400",
+    "title": "从上云到用云遇见云原生",
+    "time": "2023/06/14 周三 10:30",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/2706404873400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202306/2706404873400/264905589928155.jpg",
+    "status": "unknown",
+    "views": 2042,
+    "favorites": 52,
+    "scrapedAt": "2026-01-27T06:23:46.090Z",
+    "sort": 140,
+    "localImage": "2706404873400.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "从上云到用云遇见云原生-2706404873400",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/06/14 周三 10:30"
+  },
+  {
+    "id": "3699753931800",
+    "title": "亚马逊云科技User Group 深圳Community Day社区活动嘉年华",
+    "time": "2023/05/28 周日 01:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/3699753931800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202304/3699753931800/434876614306699.jpg",
+    "status": "unknown",
+    "views": 6270,
+    "favorites": 337,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 141,
+    "localImage": "3699753931800.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "亚马逊云科技user-group-深圳community-day社区活动嘉年华-3699753931800",
+    "tags": [
+      "community"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/05/28 周日 01:00"
+  },
+  {
+    "id": "1699479710500",
+    "title": "关注她力量",
+    "time": "2023/04/26 周三 06:00",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/1699479710500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202304/1699479710500/174857498516453.jpg",
+    "status": "unknown",
+    "views": 4156,
+    "favorites": 19,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 142,
+    "localImage": "1699479710500.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "关注她力量-1699479710500",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/04/26 周三 06:00"
+  },
+  {
+    "id": "6699187826500",
+    "title": "拥抱公平，自我成长",
+    "time": "2023/04/22 周六 06:00",
+    "location": "浙江杭州",
+    "url": "https://usergroup.huodongxing.com/event/6699187826500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202304/6699187826500/734855472415447.jpg",
+    "status": "unknown",
+    "views": 2000,
+    "favorites": 51,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 143,
+    "localImage": "6699187826500.jpg",
+    "cityMappings": [
+      "hangzhou"
+    ],
+    "slug": "拥抱公平自我成长-6699187826500",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/04/22 周六 06:00"
+  },
+  {
+    "id": "8697457760000",
+    "title": "拥抱公平看见女性她力量Lets See Womens Power",
+    "time": "2023/04/16 周日 06:00",
+    "location": "上海浦东",
+    "url": "https://usergroup.huodongxing.com/event/8697457760000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202304/8697457760000/654843508186491.jpg",
+    "status": "unknown",
+    "views": 1764,
+    "favorites": 53,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 144,
+    "localImage": "8697457760000.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "拥抱公平看见女性她力量lets-see-womens-power-8697457760000",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/04/16 周日 06:00"
+  },
+  {
+    "id": "1697602925200",
+    "title": "拥抱公平 IT 女性的职业发展与规划",
+    "time": "2023/04/12 周三 07:30",
+    "location": "新疆昌吉",
+    "url": "https://usergroup.huodongxing.com/event/1697602925200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202304/1697602925200/114844559094157.jpg",
+    "status": "unknown",
+    "views": 360,
+    "favorites": 45,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 145,
+    "localImage": "1697602925200.jpg",
+    "cityMappings": [
+      "changji"
+    ],
+    "slug": "拥抱公平-it-女性的职业发展与规划-1697602925200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/04/12 周三 07:30"
+  },
+  {
+    "id": "6696185782700",
+    "title": "向前一步----职场发展与平衡",
+    "time": "2023/04/08 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/6696185782700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202303/6696185782700/914834628095339.jpg",
+    "status": "unknown",
+    "views": 4646,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 146,
+    "localImage": "6696185782700.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "向前一步-职场发展与平衡-6696185782700",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/04/08 周六 05:30"
+  },
+  {
+    "id": "8695607871000",
+    "title": "强化学习，提高程序媛竞争力",
+    "time": "2023/04/01 周六 08:00",
+    "location": "甘肃兰州",
+    "url": "https://usergroup.huodongxing.com/event/8695607871000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202303/8695607871000/944830610574446.jpg",
+    "status": "unknown",
+    "views": 435,
+    "favorites": 27,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 147,
+    "localImage": "8695607871000.jpg",
+    "cityMappings": [
+      "lanzhou"
+    ],
+    "slug": "强化学习提高程序媛竞争力-8695607871000",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/04/01 周六 08:00"
+  },
+  {
+    "id": "8693146783700",
+    "title": "春日相约 拥抱公平【深圳UG】",
+    "time": "2023/04/01 周六 05:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/8693146783700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202303/8693146783700/344828528631309.jpg",
+    "status": "unknown",
+    "views": 5991,
+    "favorites": 121,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 148,
+    "localImage": "8693146783700.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "春日相约-拥抱公平深圳ug-8693146783700",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/04/01 周六 05:00"
+  },
+  {
+    "id": "7695461695000",
+    "title": "科技她力量",
+    "time": "2023/03/29 周三 06:00",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/7695461695000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202303/7695461695000/494829594780576.jpg",
+    "status": "unknown",
+    "views": 2726,
+    "favorites": 45,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 149,
+    "localImage": "7695461695000.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "科技她力量-7695461695000",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/03/29 周三 06:00"
+  },
+  {
+    "id": "8694903821500",
+    "title": "Impact Tech, She Can",
+    "time": "2023/03/26 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/8694903821500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202303/8694903821500/824825721295173.jpg",
+    "status": "unknown",
+    "views": 2126,
+    "favorites": 48,
+    "scrapedAt": "2026-01-27T06:23:55.171Z",
+    "sort": 150,
+    "localImage": "8694903821500.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "impact-tech-she-can-8694903821500",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/03/26 周日 05:30"
+  },
+  {
+    "id": "1695152488000",
+    "title": "拥抱公平，共同成长",
+    "time": "2023/03/25 周六 05:30",
+    "location": "河北张家口",
+    "url": "https://usergroup.huodongxing.com/event/1695152488000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202303/1695152488000/154827484302680.jpg",
+    "status": "unknown",
+    "views": 849,
+    "favorites": 44,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 151,
+    "localImage": "1695152488000.jpg",
+    "cityMappings": [
+      "zhangjiakou"
+    ],
+    "slug": "拥抱公平共同成长-1695152488000",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/03/25 周六 05:30"
+  },
+  {
+    "id": "4694737248700",
+    "title": "多样自我，无限可能：探索个人职场发展之路",
+    "time": "2023/03/25 周六 05:30",
+    "location": "北京朝阳",
+    "url": "https://usergroup.huodongxing.com/event/4694737248700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202303/4694737248700/604824564575900.jpg",
+    "status": "unknown",
+    "views": 1475,
+    "favorites": 113,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 152,
+    "localImage": "4694737248700.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "多样自我无限可能探索个人职场发展之路-4694737248700",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/03/25 周六 05:30"
+  },
+  {
+    "id": "5690309633000",
+    "title": "AIGC 助力企业构建数字战略",
+    "time": "2023/02/26 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/5690309633000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202302/5690309633000/284793817605043.jpg",
+    "status": "unknown",
+    "views": 2379,
+    "favorites": 104,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 153,
+    "localImage": "5690309633000.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "aigc-助力企业构建数字战略-5690309633000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/02/26 周日 05:30"
+  },
+  {
+    "id": "5690993419300",
+    "title": "re:Invent : DevOps 落地实践与效能提升",
+    "time": "2023/02/25 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/5690993419300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202302/5690993419300/474798566508192.jpg",
+    "status": "unknown",
+    "views": 2080,
+    "favorites": 34,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 154,
+    "localImage": "5690993419300.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "reinvent-devops-落地实践与效能提升-5690993419300",
+    "tags": [
+      "re:invent",
+      "devops"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/02/25 周六 05:30"
+  },
+  {
+    "id": "8688111388000",
+    "title": "AI 应用助力企业构建数字战略",
+    "time": "2023/02/12 周日 05:30",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/8688111388000",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202301/8688111388000/374778552851304.jpg",
+    "status": "unknown",
+    "views": 4911,
+    "favorites": 155,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 155,
+    "localImage": "8688111388000.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "ai-应用助力企业构建数字战略-8688111388000",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2023/02/12 周日 05:30"
+  },
+  {
+    "id": "4688392694300",
+    "title": "碰撞大数据，拥抱云原生",
+    "time": "2023/02/11 周六 05:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/4688392694300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202302/4688392694300/994780504628466.jpg",
+    "status": "unknown",
+    "views": 4081,
+    "favorites": 146,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 156,
+    "localImage": "4688392694300.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "碰撞大数据拥抱云原生-4688392694300",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2023/02/11 周六 05:00"
+  },
+  {
+    "id": "7682508706723",
+    "title": "数据上云带来的机遇和挑战：物联网和数据库",
+    "time": "2022/12/30 周五 06:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/7682508706723",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202212/7682508706723/864739644719923.jpg",
+    "status": "unknown",
+    "views": 2496,
+    "favorites": 46,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 157,
+    "localImage": "7682508706723.jpg",
+    "cityMappings": [],
+    "slug": "数据上云带来的机遇和挑战物联网和数据库-7682508706723",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/12/30 周五 06:00"
+  },
+  {
+    "id": "6682188658023",
+    "title": "云服务技术与 DeepRacer",
+    "time": "2022/12/22 周四 06:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/6682188658023",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202212/6682188658023/474737421857277.jpg",
+    "status": "unknown",
+    "views": 600,
+    "favorites": 49,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 158,
+    "localImage": "6682188658023.jpg",
+    "cityMappings": [],
+    "slug": "云服务技术与-deepracer-6682188658023",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/12/22 周四 06:00"
+  },
+  {
+    "id": "4681490276423",
+    "title": "高性能高效率的云端服务",
+    "time": "2022/12/20 周二 10:30",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/4681490276423",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202212/4681490276423/294732571712301.jpg",
+    "status": "unknown",
+    "views": 794,
+    "favorites": 41,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 159,
+    "localImage": "4681490276423.jpg",
+    "cityMappings": [],
+    "slug": "高性能高效率的云端服务-4681490276423",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/12/20 周二 10:30"
+  },
+  {
+    "id": "4681107326400",
+    "title": "直击大数据前沿：AI引擎与数据分析",
+    "time": "2022/12/17 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/4681107326400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202212/4681107326400/994729913746663.jpg",
+    "status": "unknown",
+    "views": 1883,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:24:06.163Z",
+    "sort": 160,
+    "localImage": "4681107326400.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "直击大数据前沿ai引擎与数据分析-4681107326400",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/12/17 周六 05:30"
+  },
+  {
+    "id": "7680171385123",
+    "title": "re:Invent re:Cap - 智能物联网技术与应用",
+    "time": "2022/12/10 周六 08:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/7680171385123",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202212/7680171385123/174723902485256.jpg",
+    "status": "unknown",
+    "views": 1309,
+    "favorites": 46,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 161,
+    "localImage": "7680171385123.jpg",
+    "cityMappings": [],
+    "slug": "reinvent-recap-智能物联网技术与应用-7680171385123",
+    "tags": [
+      "re:invent"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/12/10 周六 08:00"
+  },
+  {
+    "id": "4678305202923",
+    "title": "Flux CD 实现 GitOps 持续交付 Kubernetes 应用程序",
+    "time": "2022/11/30 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/4678305202923",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202211/4678305202923/154710453315577.jpg",
+    "status": "unknown",
+    "views": 1141,
+    "favorites": 35,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 162,
+    "localImage": "4678305202923.jpg",
+    "cityMappings": [],
+    "slug": "flux-cd-实现-gitops-持续交付-kubernetes-应用程序-4678305202923",
+    "tags": [
+      "kubernetes"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/30 周三 12:00"
+  },
+  {
+    "id": "8676333297300",
+    "title": "AI GC 的技术与应用构建",
+    "time": "2022/11/19 周六 06:00",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/8676333297300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202211/8676333297300/434696759051078.jpg",
+    "status": "unknown",
+    "views": 5115,
+    "favorites": 46,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 163,
+    "localImage": "8676333297300.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "ai-gc-的技术与应用构建-8676333297300",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/19 周六 06:00"
+  },
+  {
+    "id": "9676182375323",
+    "title": "从数据到部署-端到端无监督异常检测快速上手分享",
+    "time": "2022/11/17 周四 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/9676182375323",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202211/9676182375323/194695756466230.jpg",
+    "status": "unknown",
+    "views": 1436,
+    "favorites": 6,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 164,
+    "localImage": "9676182375323.jpg",
+    "cityMappings": [],
+    "slug": "从数据到部署-端到端无监督异常检测快速上手分享-9676182375323",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/17 周四 12:00"
+  },
+  {
+    "id": "4670441872623",
+    "title": "见证技术升级，共建云原生生态",
+    "time": "2022/11/12 周六 06:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/4670441872623",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202209/4670441872623/704655975295917.jpg",
+    "status": "unknown",
+    "views": 5268,
+    "favorites": 90,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 165,
+    "localImage": "4670441872623.jpg",
+    "cityMappings": [],
+    "slug": "见证技术升级共建云原生生态-4670441872623",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/12 周六 06:00"
+  },
+  {
+    "id": "2675882337300",
+    "title": "Apps Everywhere - 揭秘 Serverless 技术的发展与应用",
+    "time": "2022/11/12 周六 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/2675882337300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202211/2675882337300/454693628190514.jpg",
+    "status": "unknown",
+    "views": 4282,
+    "favorites": 41,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 166,
+    "localImage": "2675882337300.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "apps-everywhere-揭秘-serverless-技术的发展与应用-2675882337300",
+    "tags": [
+      "serverless"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/12 周六 05:30"
+  },
+  {
+    "id": "5675464967223",
+    "title": "无服务器打造高并发的电商独立站",
+    "time": "2022/11/09 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/5675464967223",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202211/5675464967223/334690729704554.jpg",
+    "status": "unknown",
+    "views": 1377,
+    "favorites": 8,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 167,
+    "localImage": "5675464967223.jpg",
+    "cityMappings": [],
+    "slug": "无服务器打造高并发的电商独立站-5675464967223",
+    "tags": [
+      "无服务器"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/09 周三 12:00"
+  },
+  {
+    "id": "2674870028811",
+    "title": "现代化应用开发",
+    "time": "2022/11/05 周六 05:30",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/2674870028811",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202210/2674870028811/754686599453890.jpg",
+    "status": "unknown",
+    "views": 1153,
+    "favorites": 13,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 168,
+    "localImage": "2674870028811.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "现代化应用开发-2674870028811",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/05 周六 05:30"
+  },
+  {
+    "id": "7673992699623",
+    "title": "如何使用NNCF模型压缩工具，加速深度学习网络推理",
+    "time": "2022/11/03 周四 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/7673992699623",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202210/7673992699623/954681766491070.jpg",
+    "status": "unknown",
+    "views": 2824,
+    "favorites": 40,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 169,
+    "localImage": "7673992699623.jpg",
+    "cityMappings": [],
+    "slug": "如何使用nncf模型压缩工具加速深度学习网络推理-7673992699623",
+    "tags": [
+      "深度学习"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/11/03 周四 12:00"
+  },
+  {
+    "id": "2673447618600",
+    "title": "云时代，应用基础设施架构解读",
+    "time": "2022/10/29 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/2673447618600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202210/2673447618600/464676720370317.jpg",
+    "status": "unknown",
+    "views": 3775,
+    "favorites": 61,
+    "scrapedAt": "2026-01-27T06:24:17.682Z",
+    "sort": 170,
+    "localImage": "2673447618600.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "云时代应用基础设施架构解读-2673447618600",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/10/29 周六 05:30"
+  },
+  {
+    "id": "9673286251600",
+    "title": "现代化应用开发",
+    "time": "2022/10/29 周六 05:30",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/9673286251600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202210/9673286251600/334675600413289.jpg",
+    "status": "unknown",
+    "views": 1559,
+    "favorites": 38,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 171,
+    "localImage": "9673286251600.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "现代化应用开发-9673286251600",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/10/29 周六 05:30"
+  },
+  {
+    "id": "2672694358500",
+    "title": "云与APP",
+    "time": "2022/10/27 周四 05:30",
+    "location": "湖北武汉",
+    "url": "https://usergroup.huodongxing.com/event/2672694358500",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202210/2672694358500/474671531711639.jpg",
+    "status": "unknown",
+    "views": 1582,
+    "favorites": 23,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 172,
+    "localImage": "2672694358500.jpg",
+    "cityMappings": [
+      "wuhan"
+    ],
+    "slug": "云与app-2672694358500",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/10/27 周四 05:30"
+  },
+  {
+    "id": "3673318737023",
+    "title": "轻松自建APP，Serverless 助你打造云上无人照相馆",
+    "time": "2022/10/26 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/3673318737023",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202210/3673318737023/684675825969023.jpg",
+    "status": "unknown",
+    "views": 2216,
+    "favorites": 52,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 173,
+    "localImage": "3673318737023.jpg",
+    "cityMappings": [],
+    "slug": "轻松自建appserverless-助你打造云上无人照相馆-3673318737023",
+    "tags": [
+      "serverless"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/10/26 周三 12:00"
+  },
+  {
+    "id": "8672837592723",
+    "title": "使用API Gateway, Lambda, DynamoDB构建CRUD增删查改API",
+    "time": "2022/10/19 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/8672837592723",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202210/8672837592723/544672488993762.jpg",
+    "status": "unknown",
+    "views": 519,
+    "favorites": 34,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 174,
+    "localImage": "8672837592723.jpg",
+    "cityMappings": [],
+    "slug": "使用api-gateway-lambda-dynamodb构建crud增删查改api-8672837592723",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/10/19 周三 12:00"
+  },
+  {
+    "id": "4669119177123",
+    "title": "使用 DolphinScheduler 构建机器学习工作流",
+    "time": "2022/09/28 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/4669119177123",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202209/4669119177123/894646662578261.jpg",
+    "status": "unknown",
+    "views": 1319,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 175,
+    "localImage": "4669119177123.jpg",
+    "cityMappings": [],
+    "slug": "使用-dolphinscheduler-构建机器学习工作流-4669119177123",
+    "tags": [
+      "机器学习"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/09/28 周三 12:00"
+  },
+  {
+    "id": "5668278489023",
+    "title": "sealos - 以 kubernetes 为内核的云操作系统发行版",
+    "time": "2022/09/21 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/5668278489023",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202209/5668278489023/254640842230753.jpg",
+    "status": "unknown",
+    "views": 3495,
+    "favorites": 45,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 176,
+    "localImage": "5668278489023.jpg",
+    "cityMappings": [],
+    "slug": "sealos-以-kubernetes-为内核的云操作系统发行版-5668278489023",
+    "tags": [
+      "kubernetes"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/09/21 周三 12:00"
+  },
+  {
+    "id": "3667722384223",
+    "title": "如何用 shifu 快速开发 IoT 应用",
+    "time": "2022/09/15 周四 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/3667722384223",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202209/3667722384223/624636961015310.jpg",
+    "status": "unknown",
+    "views": 4036,
+    "favorites": 44,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 177,
+    "localImage": "3667722384223.jpg",
+    "cityMappings": [],
+    "slug": "如何用-shifu-快速开发-iot-应用-3667722384223",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/09/15 周四 12:00"
+  },
+  {
+    "id": "9666982558923",
+    "title": "可伸缩的研发流程管理方案",
+    "time": "2022/09/14 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/9666982558923",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202209/9666982558923/404631823312118.jpg",
+    "status": "unknown",
+    "views": 2236,
+    "favorites": 37,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 178,
+    "localImage": "9666982558923.jpg",
+    "cityMappings": [],
+    "slug": "可伸缩的研发流程管理方案-9666982558923",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/09/14 周三 12:00"
+  },
+  {
+    "id": "5666121232511",
+    "title": "探索大数据，赋能新时代",
+    "time": "2022/09/08 周四 06:00",
+    "location": "福建福州",
+    "url": "https://usergroup.huodongxing.com/event/5666121232511",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/5666121232511/634625848981070.jpg",
+    "status": "unknown",
+    "views": 4444,
+    "favorites": 14,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 179,
+    "localImage": "5666121232511.jpg",
+    "cityMappings": [
+      "fuzhou"
+    ],
+    "slug": "探索大数据赋能新时代-5666121232511",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/09/08 周四 06:00"
+  },
+  {
+    "id": "9666063948123",
+    "title": "构建统一的多云基础设施数据分析系统",
+    "time": "2022/09/07 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/9666063948123",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/9666063948123/434625444676955.jpg",
+    "status": "unknown",
+    "views": 733,
+    "favorites": 41,
+    "scrapedAt": "2026-01-27T06:24:30.589Z",
+    "sort": 180,
+    "localImage": "9666063948123.jpg",
+    "cityMappings": [],
+    "slug": "构建统一的多云基础设施数据分析系统-9666063948123",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/09/07 周三 12:00"
+  },
+  {
+    "id": "2665848010311",
+    "title": "元宇宙新观",
+    "time": "2022/09/03 周六 06:00",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/2665848010311",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/2665848010311/364623945451987.jpg",
+    "status": "unknown",
+    "views": 3156,
+    "favorites": 66,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 181,
+    "localImage": "2665848010311.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "元宇宙新观-2665848010311",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/09/03 周六 06:00"
+  },
+  {
+    "id": "4664987567023",
+    "title": "深入理解去中心化分布式存储 IPFS",
+    "time": "2022/08/31 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/4664987567023",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/4664987567023/254617969438619.jpg",
+    "status": "unknown",
+    "views": 999,
+    "favorites": 35,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 182,
+    "localImage": "4664987567023.jpg",
+    "cityMappings": [],
+    "slug": "深入理解去中心化分布式存储-ipfs-4664987567023",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/08/31 周三 12:00"
+  },
+  {
+    "id": "2664777877811",
+    "title": "基于 MediaPipe 和 JAX 的云上虚拟数字人实践",
+    "time": "2022/08/28 周日 06:30",
+    "location": "福建福州",
+    "url": "https://usergroup.huodongxing.com/event/2664777877811",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/2664777877811/194616512948905.jpg",
+    "status": "unknown",
+    "views": 973,
+    "favorites": 26,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 183,
+    "localImage": "2664777877811.jpg",
+    "cityMappings": [
+      "fuzhou"
+    ],
+    "slug": "基于-mediapipe-和-jax-的云上虚拟数字人实践-2664777877811",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/08/28 周日 06:30"
+  },
+  {
+    "id": "9664345906511",
+    "title": "云原生架构探索与实践",
+    "time": "2022/08/27 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/9664345906511",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/9664345906511/744613875080254.jpg",
+    "status": "unknown",
+    "views": 1332,
+    "favorites": 42,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 184,
+    "localImage": "9664345906511.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "云原生架构探索与实践-9664345906511",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/08/27 周六 05:30"
+  },
+  {
+    "id": "7663978740723",
+    "title": "用 Serverless 函数定制 GitHub 工作流",
+    "time": "2022/08/24 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/7663978740723",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/7663978740723/684610969984900.jpg",
+    "status": "unknown",
+    "views": 857,
+    "favorites": 43,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 185,
+    "localImage": "7663978740723.jpg",
+    "cityMappings": [],
+    "slug": "用-serverless-函数定制-github-工作流-7663978740723",
+    "tags": [
+      "serverless"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/08/24 周三 12:00"
+  },
+  {
+    "id": "1662475083823",
+    "title": "应用容器化基于 KubeSphere 的务虚与务实",
+    "time": "2022/08/17 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/1662475083823",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/1662475083823/894600521094192.jpg",
+    "status": "unknown",
+    "views": 3934,
+    "favorites": 58,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 186,
+    "localImage": "1662475083823.jpg",
+    "cityMappings": [],
+    "slug": "应用容器化基于-kubesphere-的务虚与务实-1662475083823",
+    "tags": [
+      "容器"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/08/17 周三 12:00"
+  },
+  {
+    "id": "4662467638211",
+    "title": "开源遇上大数据",
+    "time": "2022/08/13 周六 00:00",
+    "location": "浙江杭州",
+    "url": "https://usergroup.huodongxing.com/event/4662467638211",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/4662467638211/874600517954137.jpg",
+    "status": "unknown",
+    "views": 2627,
+    "favorites": 83,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 187,
+    "localImage": "4662467638211.jpg",
+    "cityMappings": [
+      "hangzhou"
+    ],
+    "slug": "开源遇上大数据-4662467638211",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/08/13 周六 00:00"
+  },
+  {
+    "id": "4662499461423",
+    "title": "如何搭建数据湖上的指标中台？",
+    "time": "2022/08/10 周三 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/4662499461423",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202208/4662499461423/124600887755627.jpg",
+    "status": "unknown",
+    "views": 535,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 188,
+    "localImage": "4662499461423.jpg",
+    "cityMappings": [],
+    "slug": "如何搭建数据湖上的指标中台-4662499461423",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/08/10 周三 12:00"
+  },
+  {
+    "id": "6660157063511",
+    "title": "大数据的流向，究竟去向何处？",
+    "time": "2022/07/30 周六 06:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/6660157063511",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202207/6660157063511/284584425216376.jpg",
+    "status": "unknown",
+    "views": 3362,
+    "favorites": 92,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 189,
+    "localImage": "6660157063511.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "大数据的流向究竟去向何处-6660157063511",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/30 周六 06:00"
+  },
+  {
+    "id": "9660308259723",
+    "title": "DAO漫谈：从Bitcoin到DAO元年",
+    "time": "2022/07/26 周二 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/9660308259723",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202207/9660308259723/914585475458607.jpg",
+    "status": "unknown",
+    "views": 3003,
+    "favorites": 41,
+    "scrapedAt": "2026-01-27T06:24:44.793Z",
+    "sort": 190,
+    "localImage": "9660308259723.jpg",
+    "cityMappings": [],
+    "slug": "dao漫谈从bitcoin到dao元年-9660308259723",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/26 周二 12:00"
+  },
+  {
+    "id": "3659052519511",
+    "title": "【创客聚会】线下来交友吧！一起创造大数据与AI的有趣发明",
+    "time": "2022/07/23 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/3659052519511",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202207/3659052519511/324576755484699.jpg",
+    "status": "unknown",
+    "views": 2792,
+    "favorites": 27,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 191,
+    "localImage": "3659052519511.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "创客聚会线下来交友吧一起创造大数据与ai的有趣发明-3659052519511",
+    "tags": [
+      "ai",
+      "meetup"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/23 周六 05:30"
+  },
+  {
+    "id": "3659439397623",
+    "title": "区块链与数字化转型趋势",
+    "time": "2022/07/21 周四 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/3659439397623",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202207/3659439397623/984579440177971.jpg",
+    "status": "unknown",
+    "views": 1046,
+    "favorites": 20,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 192,
+    "localImage": "3659439397623.jpg",
+    "cityMappings": [],
+    "slug": "区块链与数字化转型趋势-3659439397623",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/21 周四 12:00"
+  },
+  {
+    "id": "2658863460211",
+    "title": "用现代化数据架构为企业增长赋能",
+    "time": "2022/07/16 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/2658863460211",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202207/2658863460211/404575441733841.jpg",
+    "status": "unknown",
+    "views": 4900,
+    "favorites": 29,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 193,
+    "localImage": "2658863460211.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "用现代化数据架构为企业增长赋能-2658863460211",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/16 周六 05:30"
+  },
+  {
+    "id": "4657932157823",
+    "title": "如何帮助技术工程师做好职业成长规划",
+    "time": "2022/07/12 周二 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/4657932157823",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202207/4657932157823/914568973809202.jpg",
+    "status": "unknown",
+    "views": 11242,
+    "favorites": 56,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 194,
+    "localImage": "4657932157823.jpg",
+    "cityMappings": [],
+    "slug": "如何帮助技术工程师做好职业成长规划-4657932157823",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/12 周二 12:00"
+  },
+  {
+    "id": "8657313597223",
+    "title": "构建高性能开源推理平台-- 使用 DJLServing",
+    "time": "2022/07/07 周四 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/8657313597223",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202207/8657313597223/854565453296306.jpg",
+    "status": "unknown",
+    "views": 3113,
+    "favorites": 23,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 195,
+    "localImage": "8657313597223.jpg",
+    "cityMappings": [],
+    "slug": "构建高性能开源推理平台-使用-djlserving-8657313597223",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/07 周四 12:00"
+  },
+  {
+    "id": "1656276763400",
+    "title": "数字时代 共同探索元宇宙",
+    "time": "2022/07/02 周六 06:00",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/1656276763400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/1656276763400/834557481410399.jpg",
+    "status": "unknown",
+    "views": 2179,
+    "favorites": 132,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 196,
+    "localImage": "1656276763400.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "数字时代-共同探索元宇宙-1656276763400",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/07/02 周六 06:00"
+  },
+  {
+    "id": "2656416846423",
+    "title": "浅谈以数据为中心的人工智能 Data-Centric AI",
+    "time": "2022/06/28 周二 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/2656416846423",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/2656416846423/114558450521371.jpg",
+    "status": "unknown",
+    "views": 5409,
+    "favorites": 28,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 197,
+    "localImage": "2656416846423.jpg",
+    "cityMappings": [],
+    "slug": "浅谈以数据为中心的人工智能-data-centric-ai-2656416846423",
+    "tags": [
+      "ai",
+      "人工智能"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/28 周二 12:00"
+  },
+  {
+    "id": "9655331488823",
+    "title": "建立公开数据集标准，推动数据开源",
+    "time": "2022/06/25 周六 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/9655331488823",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/9655331488823/944553892169231.jpg",
+    "status": "unknown",
+    "views": 1322,
+    "favorites": 53,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 198,
+    "localImage": "9655331488823.jpg",
+    "cityMappings": [],
+    "slug": "建立公开数据集标准推动数据开源-9655331488823",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/25 周六 12:00"
+  },
+  {
+    "id": "1655868746423",
+    "title": "揭秘大数据架构--从数据服务架构到数据存储架构",
+    "time": "2022/06/25 周六 06:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/1655868746423",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/1655868746423/304554645946020.jpg",
+    "status": "unknown",
+    "views": 951,
+    "favorites": 20,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 199,
+    "localImage": "1655868746423.jpg",
+    "cityMappings": [],
+    "slug": "揭秘大数据架构-从数据服务架构到数据存储架构-1655868746423",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/25 周六 06:00"
+  },
+  {
+    "id": "9654617549423",
+    "title": "应用混合云部署的实践方案下集",
+    "time": "2022/06/21 周二 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/9654617549423",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/9654617549423/344545955808261.jpg",
+    "status": "unknown",
+    "views": 1535,
+    "favorites": 50,
+    "scrapedAt": "2026-01-27T06:24:56.627Z",
+    "sort": 200,
+    "localImage": "9654617549423.jpg",
+    "cityMappings": [],
+    "slug": "应用混合云部署的实践方案下集-9654617549423",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/21 周二 12:00"
+  },
+  {
+    "id": "1654617303123",
+    "title": "应用混合云部署的实践方案",
+    "time": "2022/06/16 周四 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/1654617303123",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/1654617303123/184545953928253.jpg",
+    "status": "unknown",
+    "views": 2114,
+    "favorites": 52,
+    "scrapedAt": "2026-01-27T06:25:09.587Z",
+    "sort": 201,
+    "localImage": "1654617303123.jpg",
+    "cityMappings": [],
+    "slug": "应用混合云部署的实践方案-1654617303123",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/16 周四 12:00"
+  },
+  {
+    "id": "3654183554723",
+    "title": "排序模型的样本工程",
+    "time": "2022/06/14 周二 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/3654183554723",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/3654183554723/464542943151570.jpg",
+    "status": "unknown",
+    "views": 48,
+    "favorites": 15,
+    "scrapedAt": "2026-01-27T06:25:09.587Z",
+    "sort": 202,
+    "localImage": "3654183554723.jpg",
+    "cityMappings": [],
+    "slug": "排序模型的样本工程-3654183554723",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/14 周二 12:00"
+  },
+  {
+    "id": "1653998000823",
+    "title": "基于 Amazon SageMakerHuggingFace 快速搭建评论数据细粒度情感分析应用下集",
+    "time": "2022/06/09 周四 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/1653998000823",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/1653998000823/254541654382179.jpg",
+    "status": "unknown",
+    "views": 474,
+    "favorites": 9,
+    "scrapedAt": "2026-01-27T06:25:09.587Z",
+    "sort": 203,
+    "localImage": "1653998000823.jpg",
+    "cityMappings": [],
+    "slug": "基于-amazon-sagemakerhuggingface-快速搭建评论数据细粒度情感分析应用下集-1653998000823",
+    "tags": [
+      "amazon"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/09 周四 12:00"
+  },
+  {
+    "id": "6653824124223",
+    "title": "基于 Amazon SageMakerHuggingFace 快速搭建评论数据细粒度情感分析应用",
+    "time": "2022/06/07 周二 12:00",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/6653824124223",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202206/6653824124223/154540445286143.jpg",
+    "status": "unknown",
+    "views": 984,
+    "favorites": 48,
+    "scrapedAt": "2026-01-27T06:25:09.587Z",
+    "sort": 204,
+    "localImage": "6653824124223.jpg",
+    "cityMappings": [],
+    "slug": "基于-amazon-sagemakerhuggingface-快速搭建评论数据细粒度情感分析应用-6653824124223",
+    "tags": [
+      "amazon"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/07 周二 12:00"
+  },
+  {
+    "id": "9652463191200",
+    "title": "6月5日 成都 挑战与机遇并存：AI 新时代应用",
+    "time": "2022/06/05 周日 05:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/9652463191200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202205/9652463191200/264530998739579.jpg",
+    "status": "unknown",
+    "views": 3144,
+    "favorites": 182,
+    "scrapedAt": "2026-01-27T06:25:09.587Z",
+    "sort": 205,
+    "localImage": "9652463191200.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "6月5日-成都-挑战与机遇并存ai-新时代应用-9652463191200",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/06/05 周日 05:00"
+  },
+  {
+    "id": "3651561376123",
+    "title": "构建大数据生态",
+    "time": "2022/05/28 周六 05:30",
+    "location": "线上活动",
+    "url": "https://usergroup.huodongxing.com/event/3651561376123",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202205/3651561376123/224524735258244.jpg",
+    "status": "unknown",
+    "views": 4175,
+    "favorites": 41,
+    "scrapedAt": "2026-01-27T06:25:09.587Z",
+    "sort": 206,
+    "localImage": "3651561376123.jpg",
+    "cityMappings": [],
+    "slug": "构建大数据生态-3651561376123",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/05/28 周六 05:30"
+  },
+  {
+    "id": "6651571164400",
+    "title": "【打破偏见，绽放自己】职业女性经验分享",
+    "time": "2022/05/28 周六 05:30",
+    "location": "广东深圳",
+    "url": "https://usergroup.huodongxing.com/event/6651571164400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202205/6651571164400/594524802898761.jpg",
+    "status": "unknown",
+    "views": 1070,
+    "favorites": 60,
+    "scrapedAt": "2026-01-27T06:25:09.587Z",
+    "sort": 207,
+    "localImage": "6651571164400.jpg",
+    "cityMappings": [
+      "shenzhen"
+    ],
+    "slug": "打破偏见绽放自己职业女性经验分享-6651571164400",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/05/28 周六 05:30"
+  },
+  {
+    "id": "7650082597200",
+    "title": "互联网女性职业发展与规划",
+    "time": "2022/05/14 周六 05:30",
+    "location": "陕西西安",
+    "url": "https://usergroup.huodongxing.com/event/7650082597200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202205/7650082597200/574514465257490.jpg",
+    "status": "unknown",
+    "views": 1034,
+    "favorites": 48,
+    "scrapedAt": "2026-01-27T06:25:09.588Z",
+    "sort": 208,
+    "localImage": "7650082597200.jpg",
+    "cityMappings": [
+      "xian"
+    ],
+    "slug": "互联网女性职业发展与规划-7650082597200",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/05/14 周六 05:30"
+  },
+  {
+    "id": "9646787019300",
+    "title": "从数据到大数据，激发数据潜力深耕智能应用",
+    "time": "2022/04/23 周六 06:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/9646787019300",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202204/9646787019300/224491587847187.jpg",
+    "status": "unknown",
+    "views": 1734,
+    "favorites": 143,
+    "scrapedAt": "2026-01-27T06:25:09.588Z",
+    "sort": 209,
+    "localImage": "9646787019300.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "从数据到大数据激发数据潜力深耕智能应用-9646787019300",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/04/23 周六 06:00"
+  },
+  {
+    "id": "6644176403800",
+    "title": "程序媛职业发展之路 【绽放-她们】精彩职业人生",
+    "time": "2022/04/16 周六 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/6644176403800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202204/6644176403800/194473448682975.jpg",
+    "status": "unknown",
+    "views": 3432,
+    "favorites": 118,
+    "scrapedAt": "2026-01-27T06:25:09.588Z",
+    "sort": 210,
+    "localImage": "6644176403800.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "程序媛职业发展之路-绽放-她们精彩职业人生-6644176403800",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/04/16 周六 05:30"
+  },
+  {
+    "id": "7642082069600",
+    "title": "打破职场偏见 绽放-她们精彩的职业人生",
+    "time": "2022/03/27 周日 05:30",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/7642082069600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202203/7642082069600/894458906158281.jpg",
+    "status": "unknown",
+    "views": 7753,
+    "favorites": 173,
+    "scrapedAt": "2026-01-27T06:25:21.354Z",
+    "sort": 211,
+    "localImage": "7642082069600.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "打破职场偏见-绽放-她们精彩的职业人生-7642082069600",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2022/03/27 周日 05:30"
+  },
+  {
+    "id": "9640010846400",
+    "title": "3月19日北京】机器学习Meetup  机器学习前沿快报！直击学术前沿与业务实战",
+    "time": "2022/03/19 周六 05:00",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/9640010846400",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202203/9640010846400/964444523656238.jpg",
+    "status": "unknown",
+    "views": 3297,
+    "favorites": 119,
+    "scrapedAt": "2026-01-27T06:25:21.354Z",
+    "sort": 212,
+    "localImage": "9640010846400.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "3月19日北京机器学习meetup-机器学习前沿快报直击学术前沿与业务实战-9640010846400",
+    "tags": [
+      "机器学习",
+      "meetup"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/03/19 周六 05:00"
+  },
+  {
+    "id": "4631251331700",
+    "title": "云 PyTorch, 探讨 机器学习 如何驱动业务实践",
+    "time": "2022/01/15 周六 05:30",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/4631251331700",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202201/4631251331700/874383690839868.jpg",
+    "status": "unknown",
+    "views": 1463,
+    "favorites": 126,
+    "scrapedAt": "2026-01-27T06:25:21.354Z",
+    "sort": 213,
+    "localImage": "4631251331700.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "云-pytorch-探讨-机器学习-如何驱动业务实践-4631251331700",
+    "tags": [
+      "机器学习"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2022/01/15 周六 05:30"
+  },
+  {
+    "id": "7628333688800",
+    "title": "深度学习算法优化最新研究  云上AIML工程化最佳实践分享交流会",
+    "time": "2021/12/26 周日 05:30",
+    "location": "北京海淀",
+    "url": "https://usergroup.huodongxing.com/event/7628333688800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202112/7628333688800/174363428620200.jpg",
+    "status": "unknown",
+    "views": 2023,
+    "favorites": 102,
+    "scrapedAt": "2026-01-27T06:25:21.354Z",
+    "sort": 214,
+    "localImage": "7628333688800.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "深度学习算法优化最新研究-云上aiml工程化最佳实践分享交流会-7628333688800",
+    "tags": [
+      "ai",
+      "ml",
+      "深度学习"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2021/12/26 周日 05:30"
+  },
+  {
+    "id": "7627034132600",
+    "title": "玩转EKS科技沙龙分享会",
+    "time": "2021/12/11 周六 05:30",
+    "location": "上海徐汇",
+    "url": "https://usergroup.huodongxing.com/event/7627034132600",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202112/7627034132600/844354467893646.jpg",
+    "status": "unknown",
+    "views": 299,
+    "favorites": 39,
+    "scrapedAt": "2026-01-27T06:25:21.354Z",
+    "sort": 215,
+    "localImage": "7627034132600.jpg",
+    "cityMappings": [
+      "shanghai"
+    ],
+    "slug": "玩转eks科技沙龙分享会-7627034132600",
+    "tags": [],
+    "isUpcoming": false,
+    "formattedDate": "2021/12/11 周六 05:30"
+  }
+]

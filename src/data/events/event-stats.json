@@ -1,88 +1,296 @@
 {
-  "totalEvents": 0,
+  "totalEvents": 215,
   "upcomingEvents": 0,
-  "pastEvents": 0,
-  "cityDistribution": {},
+  "pastEvents": 215,
+  "cityDistribution": {
+    "guangzhou": 5,
+    "shanghai": 28,
+    "beijing": 32,
+    "shenzhen": 26,
+    "chengdu": 28,
+    "hefei": 9,
+    "xian": 11,
+    "xiamen": 1,
+    "fuzhou": 3,
+    "wuhan": 12,
+    "hangzhou": 3,
+    "lanzhou": 5,
+    "suzhou": 3,
+    "zhangjiakou": 3,
+    "changji": 2
+  },
   "engagementMetrics": {
-    "totalViews": 0,
-    "totalFavorites": 0,
-    "averageViews": 0,
-    "averageFavorites": 0,
-    "topViewedEvents": [],
-    "topFavoritedEvents": []
+    "totalViews": 656400,
+    "totalFavorites": 22259,
+    "averageViews": 3053,
+    "averageFavorites": 104,
+    "topViewedEvents": [
+      {
+        "id": "3806075715500",
+        "title": "Community Day 北京站开发者们的夏日聚会",
+        "views": 18108
+      },
+      {
+        "id": "3721674476500",
+        "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
+        "views": 17718
+      },
+      {
+        "id": "7827076896900",
+        "title": "深圳community day 开发者的聚会",
+        "views": 16076
+      },
+      {
+        "id": "3794987216300",
+        "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
+        "views": 13323
+      },
+      {
+        "id": "4794558028800",
+        "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
+        "views": 11595
+      }
+    ],
+    "topFavoritedEvents": [
+      {
+        "id": "3721674476500",
+        "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
+        "favorites": 1408
+      },
+      {
+        "id": "8713322434100",
+        "title": "AIGC浪潮来袭！亚马逊云科技开发者社区嘉年华！",
+        "favorites": 784
+      },
+      {
+        "id": "2745427115200",
+        "title": "女性创新力量影响未来",
+        "favorites": 403
+      },
+      {
+        "id": "7827076896900",
+        "title": "深圳community day 开发者的聚会",
+        "favorites": 388
+      },
+      {
+        "id": "4758529746400",
+        "title": "2024 Community Day：云计算与 AI 技术交融盛会，共筑多元智慧未来",
+        "favorites": 356
+      }
+    ]
   },
   "mappingStats": {
-    "totalEvents": 0,
-    "mappedEvents": 0,
-    "unmappedEvents": 0,
+    "totalEvents": 215,
+    "mappedEvents": 171,
+    "unmappedEvents": 44,
     "mappingsByConfidence": {
-      "high": 0,
+      "high": 171,
       "medium": 0,
       "low": 0
     },
-    "mappingsByType": {},
-    "unmappedLocations": []
+    "mappingsByType": {
+      "province": 171
+    },
+    "unmappedLocations": [
+      "河南郑州",
+      "线上活动",
+      "重庆渝北",
+      "重庆九龙坡",
+      "重庆江北",
+      "广西河池"
+    ]
   },
-  "timeDistribution": {},
-  "lastUpdated": "2026-01-26T19:28:05.616Z",
+  "timeDistribution": {
+    "01/25": 1,
+    "01/23": 1,
+    "01/18": 2,
+    "01/10": 1,
+    "2025/": 63,
+    "2024/": 49,
+    "2023/": 39,
+    "2022/": 57,
+    "2021/": 2
+  },
+  "lastUpdated": "2026-01-27T06:25:49.852Z",
   "processing": {
-    "totalRawEvents": 0,
+    "totalRawEvents": 215,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 0,
-    "eventsCleaned": 0,
-    "validEvents": 0,
+    "eventsAfterDeduplication": 215,
+    "eventsCleaned": 44,
+    "validEvents": 215,
     "invalidEvents": 0,
-    "warningEvents": 0,
-    "processedEvents": 0,
-    "citiesWithEvents": 0,
-    "dataQualityScore": 0,
-    "processedAt": "2026-01-26T19:28:05.617Z"
+    "warningEvents": 17,
+    "processedEvents": 215,
+    "citiesWithEvents": 15,
+    "dataQualityScore": 100,
+    "processedAt": "2026-01-27T06:25:49.856Z"
   },
   "qualityReport": {
-    "timestamp": "2026-01-26T19:28:05.617Z",
+    "timestamp": "2026-01-27T06:25:49.856Z",
     "summary": {
-      "originalEventCount": 0,
-      "finalEventCount": 0,
-      "dataQualityScore": 0,
+      "originalEventCount": 215,
+      "finalEventCount": 215,
+      "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 0,
-          "uniqueCount": 0,
+          "originalCount": 215,
+          "uniqueCount": 215,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 0,
-          "cleanedEvents": 0,
-          "cleaningStats": {}
+          "totalEvents": 215,
+          "cleanedEvents": 44,
+          "cleaningStats": {
+            "Cleaned title": 44
+          }
         },
         "validation": {
-          "totalEvents": 0,
-          "validEvents": 0,
+          "totalEvents": 215,
+          "validEvents": 215,
           "invalidEvents": 0,
-          "warningEvents": 0,
-          "commonIssues": {},
-          "qualityScore": 0
+          "warningEvents": 17,
+          "commonIssues": {
+            "Very short title (might be incomplete)": 17
+          },
+          "qualityScore": 100
         }
       }
     },
     "issues": {
       "critical": [],
-      "warnings": [],
+      "warnings": [
+        {
+          "eventId": "6808094019500",
+          "title": "大模型应用挑战赛",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "2765745772300",
+          "title": "暑期少儿开发之旅",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "8760515081400",
+          "title": "AI 探索与实践",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "2751763696700",
+          "title": "科技女性启航交流会",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "8750794794300",
+          "title": "认识人工智能",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "3727858006600",
+          "title": "AI 我能行",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "1699479710500",
+          "title": "关注她力量",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "6699187826500",
+          "title": "拥抱公平，自我成长",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "7695461695000",
+          "title": "科技她力量",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "1695152488000",
+          "title": "拥抱公平，共同成长",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "2674870028811",
+          "title": "现代化应用开发",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "9673286251600",
+          "title": "现代化应用开发",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "2672694358500",
+          "title": "云与APP",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "2665848010311",
+          "title": "元宇宙新观",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "4662467638211",
+          "title": "开源遇上大数据",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "3654183554723",
+          "title": "排序模型的样本工程",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "3651561376123",
+          "title": "构建大数据生态",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        }
+      ],
       "duplicates": []
     },
     "statistics": {
-      "commonIssues": {},
+      "commonIssues": {
+        "Very short title (might be incomplete)": 17
+      },
       "duplicateReasons": {},
-      "cleaningActions": {}
-    },
-    "recommendations": [
-      {
-        "priority": "high",
-        "category": "overall_quality",
-        "message": "Data quality score is 0% (below 80% threshold)",
-        "action": "Comprehensive review of data collection and processing pipeline needed"
+      "cleaningActions": {
+        "Cleaned title": 44
       }
-    ]
+    },
+    "recommendations": []
   }
 }
