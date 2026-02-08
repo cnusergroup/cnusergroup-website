@@ -133,7 +133,7 @@ export class CityMappingEngine {
     
     // Define province mappings
     const provinceMap: Record<string, string[]> = {
-      '北京': ['北京市?', '京'],
+      '北京': ['北京市?', '(?<![南东])京(?!都|阪)'],
       '上海': ['上海市?', '沪'],
       '深圳': ['广东.*深圳', '深圳.*广东', '粤.*深圳'],
       '广州': ['广东.*广州', '广州.*广东', '粤.*广州'],
