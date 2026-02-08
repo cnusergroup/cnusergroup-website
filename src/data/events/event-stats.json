@@ -6,7 +6,7 @@
     "chengdu": 29,
     "guangzhou": 5,
     "shanghai": 28,
-    "beijing": 32,
+    "beijing": 31,
     "shenzhen": 26,
     "hefei": 9,
     "xian": 11,
@@ -20,7 +20,7 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 664539,
+    "totalViews": 664574,
     "totalFavorites": 22328,
     "averageViews": 3077,
     "averageFavorites": 103,
@@ -81,17 +81,18 @@
   },
   "mappingStats": {
     "totalEvents": 216,
-    "mappedEvents": 172,
-    "unmappedEvents": 44,
+    "mappedEvents": 171,
+    "unmappedEvents": 45,
     "mappingsByConfidence": {
-      "high": 172,
+      "high": 171,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 172
+      "province": 171
     },
     "unmappedLocations": [
+      "江苏南京",
       "河南郑州",
       "线上活动",
       "重庆渝北",
@@ -112,7 +113,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-02-08T02:43:13.299Z",
+  "lastUpdated": "2026-02-08T04:07:18.130Z",
   "processing": {
     "totalRawEvents": 216,
     "duplicatesRemoved": 0,
@@ -124,10 +125,10 @@
     "processedEvents": 216,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-02-08T02:43:13.303Z"
+    "processedAt": "2026-02-08T04:07:18.134Z"
   },
   "qualityReport": {
-    "timestamp": "2026-02-08T02:43:13.303Z",
+    "timestamp": "2026-02-08T04:07:18.134Z",
     "summary": {
       "originalEventCount": 216,
       "finalEventCount": 216,
