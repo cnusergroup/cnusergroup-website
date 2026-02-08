@@ -430,5 +430,29 @@
       "events": 33,
       "founded": 2019
     }
+  },
+  {
+    "id": "nanjing",
+    "name": {
+      "zh": "南京",
+      "en": "Nanjing"
+    },
+    "logo": "/images/cities/nanjing-pc.png",
+    "logoMobile": "/images/cities/nanjing-mobile.png",
+    "active": true,
+    "description": {
+      "zh": "南京 亚马逊云科技 User Group 服务于江苏地区的云计算开发者，推动长三角技术创新与交流。",
+      "en": "Nanjing User Group serves cloud computing developers in Jiangsu, promoting technological innovation and exchange in the Yangtze River Delta."
+    },
+    "contact": {
+      "wechat": "nanjing-ug",
+      "email": "nanjing@cnusergroup.org",
+      "leader": ""
+    },
+    "stats": {
+      "members": 0,
+      "events": 0,
+      "founded": 2025
+    }
   }
 ]

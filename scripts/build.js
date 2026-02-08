@@ -59,7 +59,8 @@ function generateSitemap() {
   const cities = [
     'beijing', 'shanghai', 'shenzhen', 'wuhan', 'xian', 'changji',
     'chengdu', 'lanzhou', 'guangzhou', 'fuzhou', 'suzhou', 'hangzhou',
-    'hechi', 'urumqi', 'qingdao', 'xiamen', 'zhangjiakou', 'hefei'
+    'hechi', 'urumqi', 'qingdao', 'xiamen', 'zhangjiakou', 'hefei',
+    'nanjing'
   ];
   
   cities.forEach(city => {
