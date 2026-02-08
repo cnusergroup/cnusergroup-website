@@ -1,0 +1,161 @@
+---
+import { getLocalizedValue, t } from '../../utils';
+import { getSpecializedCommunityImage } from '../../utils/images';
+import Card from '../ui/Card.astro';
+import type { SpecializedCommunity, Language } from '../../types';
+
+interface Props {
+  community: SpecializedCommunity;
+  lang: Language;
+}
+
+const { community, lang } = Astro.props;
+const communityName = getLocalizedValue(community.name, lang);
+const communityDescription = getLocalizedValue(community.description, lang);
+---
+
+<div class="community-detail">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-aws-blue to-blue-700 text-white py-16 lg:py-24">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Community Info -->
+        <div class="lg:order-1">
+          <div class="mb-6">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+              {community.name.zh}
+            </h1>
+            <p class="text-2xl text-blue-100 font-medium mb-2">
+              {community.name.en}
+            </p>
+            {community.active && (
+              <div class="inline-flex items-center bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                <div class="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                {lang === 'zh' ? '活跃社区' : 'Active Community'}
+              </div>
+            )}
+          </div>
+          
+          <p class="text-xl text-blue-100 leading-relaxed mb-8">
+            {communityDescription}
+          </p>
+        </div>
+        
+        <!-- Community Image -->
+        <div class="lg:order-2">
+          <div class="relative">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset={getSpecializedCommunityImage(community.id, 'mobile')}
+              />
+              <img 
+                src={getSpecializedCommunityImage(community.id, 'pc')}
+                alt={communityName}
+                class="w-full h-auto rounded-lg shadow-2xl"
+                loading="eager"
+              />
+            </picture>
+            
+            <!-- Decorative Elements -->
+            <div class="absolute -top-4 -right-4 w-16 h-16 bg-aws-orange rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              UG
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content Sections -->
+  <section class="py-16 lg:py-24">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-3 gap-12">
+        
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-12">
+          
+          <!-- About Section -->
+          <Card class="p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <svg class="w-6 h-6 text-aws-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              {t('specializedDetail.description', lang)}
+            </h2>
+            <div class="prose prose-lg max-w-none text-gray-700">
+              <p class="leading-relaxed">
+                {communityDescription}
+              </p>
+              <p class="leading-relaxed mt-4">
+                {lang === 'zh' 
+                  ? `${communityName}是亚马逊云科技 User Group 旗下的专项社区，致力于为开发者和技术爱好者提供专注于特定技术领域的学习、交流和成长平台。我们定期举办技术分享会、实践工作坊和社区活动，帮助成员深入掌握相关技术和最佳实践。`
+                  : `${communityName} is a specialized community under User Group, dedicated to providing developers and tech enthusiasts with a focused platform for learning, communication and growth in specific technology areas. We regularly host tech sharing sessions, hands-on workshops and community events to help members master related technologies and best practices.`
+                }
+              </p>
+            </div>
+          </Card>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="lg:col-span-1 space-y-8">
+          
+          <!-- Quick Actions -->
+          <Card class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">
+              {lang === 'zh' ? '快速操作' : 'Quick Actions'}
+            </h3>
+            <div class="space-y-3">
+              <button 
+                onclick="showWeChatQR()"
+                class="w-full bg-aws-orange hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-medium flex items-center justify-center"
+              >
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.045c.134 0 .24-.111.24-.248 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1 .134-.98c1.516-1.121 2.497-2.795 2.497-4.626 0-3.697-3.446-6.611-7.013-6.688zm-3.729 3.334c.413 0 .748.336.748.748 0 .413-.335.747-.748.747a.748.748 0 1 1 0-1.495zm5.748 0c.413 0 .747.336.747.748 0 .413-.334.747-.747.747a.748.748 0 1 1 0-1.495z"/>
+                </svg>
+                {lang === 'zh' ? '加入社区' : 'Join Community'}
+              </button>
+            </div>
+          </Card>
+          
+          <!-- Community Stats -->
+          <Card class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">
+              {lang === 'zh' ? '社区数据' : 'Community Stats'}
+            </h3>
+            <div class="space-y-4">
+              {community.stats?.members !== undefined && (
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">{lang === 'zh' ? '成员数量' : 'Members'}</span>
+                  <span class="font-semibold text-aws-orange">{community.stats.members}</span>
+                </div>
+              )}
+              {community.stats?.events !== undefined && (
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">{lang === 'zh' ? '活动次数' : 'Events'}</span>
+                  <span class="font-semibold text-aws-orange">{community.stats.events}</span>
+                </div>
+              )}
+              {community.stats?.founded && (
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">{lang === 'zh' ? '成立时间' : 'Founded'}</span>
+                  <span class="font-semibold text-aws-orange">{community.stats.founded}</span>
+                </div>
+              )}
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .prose p {
+    margin-bottom: 1rem;
+  }
+  
+  .prose p:last-child {
+    margin-bottom: 0;
+  }
+</style>

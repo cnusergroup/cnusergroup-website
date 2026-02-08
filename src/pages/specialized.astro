@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SpecializedCommunityGrid from '../components/sections/SpecializedCommunityGrid.astro';
+import { getLanguageFromUrl, t } from '../utils';
+
+const lang = getLanguageFromUrl(Astro.url);
+const pageTitle = t('specialized.title', lang);
+---
+
+<BaseLayout title={pageTitle}>
+  <!-- Breadcrumb Navigation -->
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4" aria-label="Breadcrumb">
+    <ol class="flex items-center space-x-2 text-sm text-gray-500">
+      <li>
+        <a href={import.meta.env.BASE_URL || "/"} class="hover:text-orange-600" style="transition: color 0.2s;">首页</a>
+      </li>
+      <li>
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </li>
+      <li class="text-gray-900 font-medium">专项社区</li>
+    </ol>
+  </nav>
+  
+  <!-- Page Header -->
+  <div class="bg-gradient-to-r from-aws-blue to-blue-700 text-white py-6">
+    <div class="container-custom text-center">
+      <h1 class="text-3xl lg:text-4xl font-bold mb-3">
+        {pageTitle}
+      </h1>
+      <p class="text-lg text-blue-100 max-w-2xl mx-auto">
+        {t('specialized.subtitle', lang)}
+      </p>
+    </div>
+  </div>
+  
+  <!-- Specialized Community Grid -->
+  <SpecializedCommunityGrid />
+</BaseLayout>

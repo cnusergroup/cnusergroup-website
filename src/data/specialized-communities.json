@@ -1,0 +1,98 @@
+[
+  {
+    "id": "kiro",
+    "name": {
+      "zh": "Kiro社区",
+      "en": "Kiro Community"
+    },
+    "logo": "/images/specialized/kiro-pc.png",
+    "logoMobile": "/images/specialized/kiro-mobile.png",
+    "active": true,
+    "description": {
+      "zh": "Kiro社区专注于 Kiro IDE 的技术分享和实践交流，帮助开发者提升开发效率。",
+      "en": "Kiro Community focuses on Kiro IDE technology sharing and practical exchange, helping developers improve development efficiency."
+    },
+    "contact": {
+      "wechat": "kiro-ug",
+      "email": "kiro@cnusergroup.org",
+      "leader": ""
+    },
+    "stats": {
+      "members": 0,
+      "events": 0,
+      "founded": 2025
+    }
+  },
+  {
+    "id": "security",
+    "name": {
+      "zh": "Security社区",
+      "en": "Security Community"
+    },
+    "logo": "/images/specialized/security-pc.png",
+    "logoMobile": "/images/specialized/security-mobile.png",
+    "active": true,
+    "description": {
+      "zh": "Security社区聚焦云安全技术，分享安全最佳实践和合规经验。",
+      "en": "Security Community focuses on cloud security technology, sharing security best practices and compliance experience."
+    },
+    "contact": {
+      "wechat": "security-ug",
+      "email": "security@cnusergroup.org",
+      "leader": ""
+    },
+    "stats": {
+      "members": 0,
+      "events": 0,
+      "founded": 2025
+    }
+  },
+  {
+    "id": "observability",
+    "name": {
+      "zh": "可观测性社区",
+      "en": "Observability Community"
+    },
+    "logo": "/images/specialized/observability-pc.png",
+    "logoMobile": "/images/specialized/observability-mobile.png",
+    "active": true,
+    "description": {
+      "zh": "可观测性社区专注于监控、日志和追踪技术，帮助团队构建可观测的云原生系统。",
+      "en": "Observability Community focuses on monitoring, logging and tracing technologies, helping teams build observable cloud-native systems."
+    },
+    "contact": {
+      "wechat": "observability-ug",
+      "email": "observability@cnusergroup.org",
+      "leader": ""
+    },
+    "stats": {
+      "members": 0,
+      "events": 0,
+      "founded": 2025
+    }
+  },
+  {
+    "id": "online-events",
+    "name": {
+      "zh": "线上活动社区",
+      "en": "Online Events Community"
+    },
+    "logo": "/images/specialized/online-events-pc.png",
+    "logoMobile": "/images/specialized/online-events-mobile.png",
+    "active": true,
+    "description": {
+      "zh": "线上活动社区组织和管理各类线上技术活动，让全国开发者都能参与技术交流。",
+      "en": "Online Events Community organizes and manages various online technical events, enabling developers nationwide to participate in technical exchanges."
+    },
+    "contact": {
+      "wechat": "online-events-ug",
+      "email": "online-events@cnusergroup.org",
+      "leader": ""
+    },
+    "stats": {
+      "members": 0,
+      "events": 0,
+      "founded": 2025
+    }
+  }
+]

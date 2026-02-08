@@ -107,6 +107,45 @@ export function getCityImageResponsive(cityId: string): {
   };
 }
 
+// 获取专项社区图片
+export function getSpecializedCommunityImage(communityId: string, device: DeviceType = 'pc', optimized: boolean = true): string {
+  let imagePath = `/images/specialized/${communityId}-${device}.png`;
+
+  // 处理路径以包含正确的 base path
+  imagePath = processImagePath(imagePath);
+
+  // 如果需要优化，返回优化后的 URL
+  if (optimized) {
+    const width = device === 'mobile' ? 640 : 1024;
+    return getOptimizedImageUrl(imagePath, { width, quality: 85, format: 'webp' });
+  }
+
+  return imagePath;
+}
+
+// 获取专项社区图片的完整响应式配置
+export function getSpecializedCommunityImageResponsive(communityId: string): {
+  src: string;
+  srcset: string;
+  sizes: string;
+  mobileSrc: string;
+  alt: string;
+  fallbackSrc: string;
+} {
+  const desktopPath = getSpecializedCommunityImage(communityId, 'pc', false);
+  const mobilePath = getSpecializedCommunityImage(communityId, 'mobile', false);
+
+  return {
+    src: desktopPath,
+    srcset: `${mobilePath} 640w, ${desktopPath} 1024w, ${desktopPath} 1536w`,
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw',
+    mobileSrc: mobilePath,
+    alt: communityId,
+    fallbackSrc: processImagePath(`/images/specialized/default-pc.png`)
+  };
+}
+
+
 // 获取默认城市图片
 export function getDefaultCityImage(device: DeviceType = 'pc'): string {
   return processImagePath(`/images/cities/default-${device}.png`);

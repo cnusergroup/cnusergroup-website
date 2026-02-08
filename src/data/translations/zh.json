@@ -6,6 +6,7 @@
   "navigation": {
     "home": "首页",
     "cities": "城市社区",
+    "specialized": "专项社区",
     "events": "活动",
     "about": "关于我们",
     "contact": "联系我们"
@@ -162,6 +163,20 @@
     "noEventsDesc": "该城市目前没有安排活动，请关注我们的更新。",
     "eventCount": "共 {count} 个活动",
     "moreEvents": "还有 {count} 个活动"
+  },
+  "specialized": {
+    "title": "专项社区",
+    "subtitle": "探索按技术主题组织的亚马逊云科技 User Group 专项社区",
+    "viewDetails": "查看详情",
+    "viewAll": "查看所有专项社区",
+    "search": "搜索专项社区..."
+  },
+  "specializedDetail": {
+    "contact": "联系方式",
+    "description": "社区介绍",
+    "leader": "社区负责人",
+    "wechat": "微信群",
+    "email": "邮箱"
   },
   "common": {
     "loading": "加载中...",

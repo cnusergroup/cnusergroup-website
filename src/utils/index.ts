@@ -3,6 +3,9 @@ export {
   getCities,
   getCityById,
   getActiveCities,
+  getSpecializedCommunities,
+  getSpecializedCommunityById,
+  getActiveSpecializedCommunities,
   getTranslations,
   t,
   getLocalizedValue,
@@ -52,6 +55,8 @@ export {
   getQRImage,
   getResponsiveImageSources,
   getCityImageResponsive,
+  getSpecializedCommunityImage,
+  getSpecializedCommunityImageResponsive,
   generateImageAlt,
   validateImagePath
 } from './images';

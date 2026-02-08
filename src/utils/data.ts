@@ -1,5 +1,6 @@
-import type { City, Translations, SiteConfig, Language } from '@/types';
+import type { City, SpecializedCommunity, Translations, SiteConfig, Language } from '@/types';
 import citiesData from '@/data/cities.json';
+import specializedData from '@/data/specialized-communities.json';
 import zhTranslations from '@/data/translations/zh.json';
 import enTranslations from '@/data/translations/en.json';
 import { load } from 'js-yaml';
@@ -20,6 +21,22 @@ export function getCityById(id: string): City | undefined {
 // 获取活跃城市
 export function getActiveCities(): City[] {
   return getCities().filter(city => city.active);
+}
+
+// 加载专项社区数据
+export function getSpecializedCommunities(): SpecializedCommunity[] {
+  return specializedData as SpecializedCommunity[];
+}
+
+// 根据ID获取单个专项社区
+export function getSpecializedCommunityById(id: string): SpecializedCommunity | undefined {
+  const communities = getSpecializedCommunities();
+  return communities.find(community => community.id === id);
+}
+
+// 获取活跃专项社区
+export function getActiveSpecializedCommunities(): SpecializedCommunity[] {
+  return getSpecializedCommunities().filter(community => community.active);
 }
 
 // 加载翻译数据

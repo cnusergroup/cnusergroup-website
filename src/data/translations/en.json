@@ -6,6 +6,7 @@
   "navigation": {
     "home": "Home",
     "cities": "City Communities",
+    "specialized": "Specialized",
     "events": "Events",
     "about": "About Us",
     "contact": "Contact"
@@ -39,6 +40,20 @@
       "south": "South China", 
       "west": "West China"
     }
+  },
+  "specialized": {
+    "title": "Specialized Communities",
+    "subtitle": "Explore User Group specialized communities organized by technology topics",
+    "viewDetails": "View Details",
+    "viewAll": "View All Specialized Communities",
+    "search": "Search specialized communities..."
+  },
+  "specializedDetail": {
+    "contact": "Contact Information",
+    "description": "Community Introduction",
+    "leader": "Community Leader",
+    "wechat": "WeChat Group",
+    "email": "Email"
   },
   "events": {
     "title": "Events",

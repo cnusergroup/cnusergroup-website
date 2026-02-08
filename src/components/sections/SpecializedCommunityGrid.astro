@@ -1,0 +1,168 @@
+---
+import { getLanguageFromUrl, t, getActiveSpecializedCommunities } from '../../utils';
+import { getUIImage } from '../../utils/images';
+import SpecializedCommunityCard from '../ui/SpecializedCommunityCard.astro';
+import type { SpecializedCommunityGridProps } from '../../types/components';
+
+interface Props extends SpecializedCommunityGridProps {}
+
+const lang = getLanguageFromUrl(Astro.url);
+const { 
+  title = t('specialized.title', lang),
+  subtitle = t('specialized.subtitle', lang),
+  lang: propLang,
+  communities: propCommunities,
+} = Astro.props;
+
+// 使用传入的 lang 或从 URL 获取
+const currentLang = propLang || lang;
+
+// 获取专项社区数据
+const communities = propCommunities || getActiveSpecializedCommunities();
+---
+
+<section class="py-8 lg:py-12 bg-white" aria-labelledby="specialized-section-title">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="text-center mb-8">
+      <div class="flex items-center justify-center mb-6">
+        <img 
+          src={getUIImage('titleLeft')}
+          alt="" 
+          class="h-8"
+          role="presentation"
+        />
+        <h2 id="specialized-section-title" class="text-3xl lg:text-4xl font-bold text-aws-blue mx-6">
+          {title}
+        </h2>
+        <img 
+          src={getUIImage('titleRight')}
+          alt="" 
+          class="h-8"
+          role="presentation"
+        />
+      </div>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto" id="specialized-section-description">
+        {subtitle}
+      </p>
+    </div>
+    
+    <!-- Specialized Communities Grid -->
+    <div 
+      class="specialized-grid" 
+      role="list" 
+      aria-labelledby="specialized-section-title"
+      aria-describedby="specialized-section-description"
+    >
+      {communities.map((community) => (
+        <SpecializedCommunityCard 
+          community={community} 
+          lang={currentLang}
+          class="specialized-grid-item"
+          showStatus={community.active}
+        />
+      ))}
+    </div>
+    
+    <!-- Empty State -->
+    {communities.length === 0 && (
+      <div 
+        class="text-center py-16" 
+        role="status" 
+        aria-live="polite"
+        aria-label={currentLang === 'zh' ? '专项社区列表为空' : 'Specialized community list is empty'}
+      >
+        <div class="text-gray-400 mb-4" aria-hidden="true">
+          <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-600 mb-2">
+          {currentLang === 'zh' ? '暂无专项社区' : 'No Specialized Communities'}
+        </h3>
+        <p class="text-gray-500">
+          {currentLang === 'zh' ? '更多专项社区即将推出' : 'More specialized communities coming soon'}
+        </p>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .specialized-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 2rem;
+    width: 100%;
+    
+    /* Ensure consistent card sizing */
+    grid-auto-rows: max-content;
+    align-items: start;
+    justify-items: stretch;
+  }
+  
+  /* Small Tablet (641px-767px) */
+  @media (min-width: 641px) {
+    .specialized-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+  
+  /* Tablet (768px-1199px) */
+  @media (min-width: 768px) {
+    .specialized-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+  }
+  
+  /* Desktop (≥1200px) */
+  @media (min-width: 1200px) {
+    .specialized-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+  }
+  
+  .specialized-grid-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .specialized-grid-item:nth-child(1) { animation-delay: 0.1s; }
+  .specialized-grid-item:nth-child(2) { animation-delay: 0.15s; }
+  .specialized-grid-item:nth-child(3) { animation-delay: 0.2s; }
+  .specialized-grid-item:nth-child(4) { animation-delay: 0.25s; }
+  .specialized-grid-item:nth-child(5) { animation-delay: 0.3s; }
+  .specialized-grid-item:nth-child(6) { animation-delay: 0.35s; }
+  .specialized-grid-item:nth-child(7) { animation-delay: 0.4s; }
+  .specialized-grid-item:nth-child(8) { animation-delay: 0.45s; }
+  .specialized-grid-item:nth-child(9) { animation-delay: 0.5s; }
+  .specialized-grid-item:nth-child(10) { animation-delay: 0.55s; }
+  .specialized-grid-item:nth-child(11) { animation-delay: 0.6s; }
+  .specialized-grid-item:nth-child(12) { animation-delay: 0.65s; }
+  
+  /* For items beyond 12, use a more subtle delay pattern */
+  .specialized-grid-item:nth-child(n+13) { 
+    animation-delay: 0.7s; 
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .specialized-grid-item {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+</style>

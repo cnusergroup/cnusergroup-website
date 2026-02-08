@@ -1,0 +1,314 @@
+---
+import { getRoute } from '../../utils';
+import { getSpecializedCommunityImageResponsive } from '../../utils/images';
+import type { SpecializedCommunityCardProps } from '../../types/components';
+
+interface Props extends SpecializedCommunityCardProps {}
+
+const { 
+  community, 
+  lang, 
+  class: className = '', 
+  showStatus = true 
+} = Astro.props;
+
+const detailUrl = getRoute('specializedDetail', lang, { id: community.id });
+const imageConfig = getSpecializedCommunityImageResponsive(community.id);
+
+// 生成详细的 aria-label
+const statusText = community.active 
+  ? (lang === 'zh' ? '活跃社区' : 'active community')
+  : (lang === 'zh' ? '社区' : 'community');
+
+const ariaLabel = lang === 'zh' 
+  ? `${community.name.zh}${statusText}，点击查看详情`
+  : `${community.name.en} ${statusText}, click to view details`;
+---
+
+<div class:list={["specialized-card", className]} data-community-id={community.id}>
+  <a 
+    href={detailUrl}
+    class="specialized-card__link"
+    aria-label={ariaLabel}
+    tabindex={0}
+  >
+    <!-- Desktop/Tablet Image -->
+    <img 
+      src={imageConfig.src}
+      alt={lang === 'zh' ? `${community.name.zh} 专项社区` : `${community.name.en} Specialized Community`}
+      class="pc-proper ipad-proper"
+      loading="lazy"
+    />
+    
+    <!-- Mobile Image -->
+    <img 
+      src={imageConfig.mobileSrc || imageConfig.src}
+      alt={lang === 'zh' ? `${community.name.zh} 专项社区` : `${community.name.en} Specialized Community`}
+      class="mobile-proper"
+      loading="lazy"
+    />
+    
+    <!-- Community Name -->
+    <div class="specialized-card__name">
+      <div>{community.name.zh}</div>
+      <div>{community.name.en}</div>
+    </div>
+    
+    <!-- Active Status Badge -->
+    {showStatus && community.active && (
+      <div 
+        class="specialized-card__badge specialized-card__badge--active"
+        role="status"
+        aria-label={lang === 'zh' ? '活跃社区状态' : 'Active community status'}
+      >
+        {lang === 'zh' ? '活跃' : 'Active'}
+      </div>
+    )}
+  </a>
+</div>
+
+<style>
+  /* 专项社区卡片样式 - 基于 CityCard 的视觉风格 */
+  .specialized-card {
+    position: relative;
+    display: block;
+    margin: 0 0 20px;
+    padding: 0;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .specialized-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--aws-orange, #ff9900);
+  }
+
+  .specialized-card__link {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .specialized-card__link:focus {
+    outline: 2px solid var(--aws-orange, #ff9900);
+    outline-offset: 2px;
+  }
+
+  .specialized-card:focus-within {
+    border-color: var(--aws-orange, #ff9900);
+  }
+
+  .specialized-card__link:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* 图片样式 */
+  .pc-proper,
+  .ipad-proper {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .mobile-proper {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: cover;
+  }
+
+  /* 社区名称样式 - 默认上下排列 */
+  .specialized-card__name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
+    padding: 16px 12px 12px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .specialized-card__name > div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .specialized-card__name > div:first-child {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .specialized-card__name > div:last-child {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  /* 容器查询支持 */
+  .specialized-card {
+    container-type: inline-size;
+  }
+
+  @container (max-width: 200px) {
+    .specialized-card__name {
+      flex-direction: row;
+      gap: 6px;
+    }
+
+    .specialized-card__name > div:first-child {
+      font-size: 16px;
+    }
+
+    .specialized-card__name > div:last-child {
+      font-size: 14px;
+    }
+  }
+
+  @container (max-width: 160px) {
+    .specialized-card__name {
+      gap: 4px;
+    }
+
+    .specialized-card__name > div:first-child {
+      font-size: 14px;
+    }
+
+    .specialized-card__name > div:last-child {
+      font-size: 12px;
+    }
+  }
+
+  /* 活跃状态徽章 */
+  .specialized-card__badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    z-index: 3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .specialized-card__badge--active {
+    background-color: #10b981;
+    color: white;
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .pc-proper,
+    .ipad-proper {
+      display: none;
+    }
+
+    .mobile-proper {
+      display: block;
+    }
+
+    .specialized-card__badge {
+      top: 6px;
+      right: 6px;
+      padding: 3px 6px;
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .specialized-card {
+      margin: 0 0 15px;
+    }
+
+    .specialized-card__name {
+      bottom: 8px;
+    }
+
+    /* 在小屏幕上强制使用左右排列 */
+    .specialized-card__name {
+      flex-direction: row !important;
+      gap: 4px !important;
+    }
+
+    .specialized-card__name > div:first-child {
+      font-size: 14px !important;
+    }
+
+    .specialized-card__name > div:last-child {
+      font-size: 12px !important;
+    }
+  }
+
+  /* 超小屏幕优化 */
+  @media (max-width: 320px) {
+    .specialized-card__name {
+      gap: 2px !important;
+    }
+
+    .specialized-card__name > div:first-child {
+      font-size: 12px !important;
+    }
+
+    .specialized-card__name > div:last-child {
+      font-size: 10px !important;
+    }
+  }
+
+  /* 悬停效果 */
+  .specialized-card:hover .specialized-card__name {
+    color: var(--aws-orange, #ff9900);
+  }
+
+  /* 无障碍支持 */
+  @media (prefers-reduced-motion: reduce) {
+    .specialized-card {
+      transition: none;
+    }
+    
+    .specialized-card:hover {
+      transform: none;
+    }
+  }
+
+  /* 高对比度模式支持 */
+  @media (prefers-contrast: high) {
+    .specialized-card {
+      border: 2px solid;
+    }
+    
+    .specialized-card__name {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  /* 打印样式 */
+  @media print {
+    .specialized-card {
+      break-inside: avoid;
+      margin-bottom: 10px;
+    }
+    
+    .specialized-card__badge {
+      display: none;
+    }
+  }
+</style>

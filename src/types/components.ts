@@ -2,7 +2,7 @@
  * 组件相关的 TypeScript 接口定义
  */
 
-import type { City, Language } from './index';
+import type { City, SpecializedCommunity, Language } from './index';
 
 // 城市图片配置接口
 export interface CityImageConfig {
@@ -74,6 +74,23 @@ export interface CityGridProps {
   forceHorizontalLayout?: boolean;
   onCityClick?: (city: City) => void;
   filterOptions?: CityFilterOptions;
+}
+
+// 专项社区卡片组件属性
+export interface SpecializedCommunityCardProps {
+  community: SpecializedCommunity;
+  lang: Language;
+  class?: string;
+  showStatus?: boolean;
+}
+
+// 专项社区网格组件属性
+export interface SpecializedCommunityGridProps {
+  title?: string;
+  subtitle?: string;
+  lang?: Language;
+  communities?: SpecializedCommunity[];
+  showAll?: boolean;
 }
 
 // 城市过滤选项

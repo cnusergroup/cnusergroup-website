@@ -32,6 +32,8 @@ export const routes = {
   home: '',
   cities: 'cities',
   city: 'cities/[id]',
+  specialized: 'specialized',
+  specializedDetail: 'specialized/[id]',
   events: 'events',
   about: 'about',
   contact: 'contact',
@@ -157,6 +159,27 @@ export function generateBreadcrumbs(currentPath: string, lang: Language): Array<
       breadcrumbs.push({
         label: cityName,
         path: getRoute('city', lang, { id: pathParts[1] })
+      });
+    }
+  } else if (pathParts[0] === 'specialized') {
+    breadcrumbs.push({
+      label: lang === 'zh' ? '专项社区' : 'Specialized Communities',
+      path: getRoute('specialized', lang)
+    });
+    
+    if (pathParts[1]) {
+      // 从专项社区数据中获取社区名称
+      const specializedNames: Record<string, { zh: string; en: string }> = {
+        kiro: { zh: 'Kiro社区', en: 'Kiro Community' },
+        security: { zh: 'Security社区', en: 'Security Community' },
+        observability: { zh: '可观测性社区', en: 'Observability Community' },
+        'online-events': { zh: '线上活动社区', en: 'Online Events Community' }
+      };
+      
+      const communityName = specializedNames[pathParts[1]]?.[lang] || pathParts[1];
+      breadcrumbs.push({
+        label: communityName,
+        path: getRoute('specializedDetail', lang, { id: pathParts[1] })
       });
     }
   } else if (pathParts[0] === 'events') {

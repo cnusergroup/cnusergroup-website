@@ -54,6 +54,14 @@ const basePath = getBasePath();
           <div class="nav-link-bg"></div>
         </a>
         <a 
+          href={getRoute('specialized', lang)} 
+          class="nav-link"
+          data-text={t('navigation.specialized', lang)}
+        >
+          <span class="nav-link-text">{t('navigation.specialized', lang)}</span>
+          <div class="nav-link-bg"></div>
+        </a>
+        <a 
           href={getRoute('events', lang)} 
           class="nav-link"
           data-text={t('navigation.events', lang)}
@@ -105,6 +113,14 @@ const basePath = getBasePath();
           data-text={t('navigation.cities', lang)}
         >
           <span class="nav-link-text">{t('navigation.cities', lang)}</span>
+          <div class="nav-link-bg"></div>
+        </a>
+        <a 
+          href={getRoute('specialized', lang)} 
+          class="nav-link mobile-nav-link"
+          data-text={t('navigation.specialized', lang)}
+        >
+          <span class="nav-link-text">{t('navigation.specialized', lang)}</span>
           <div class="nav-link-bg"></div>
         </a>
         <a 

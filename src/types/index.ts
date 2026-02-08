@@ -25,6 +25,32 @@ export interface City {
   events?: Event[];
 }
 
+// 专项社区数据模型
+export interface SpecializedCommunity {
+  id: string;
+  name: {
+    zh: string;
+    en: string;
+  };
+  logo: string;
+  logoMobile: string;
+  active: boolean;
+  description: {
+    zh: string;
+    en: string;
+  };
+  contact?: {
+    wechat?: string;
+    email?: string;
+    leader?: string;
+  };
+  stats?: {
+    members: number;
+    events: number;
+    founded: number;
+  };
+}
+
 // 翻译数据模型
 export interface Translations {
   [key: string]: {
