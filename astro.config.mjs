@@ -4,9 +4,9 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://cnusergroup.github.io',
-  // GitHub Pages 部署时使用 base URL，本地开发时使用根路径
-  base: (process.env.NODE_ENV === 'production' || process.env.CI) ? '/cnusergroup-website' : '/',
+  site: 'https://awscommunity.cn',
+  // 使用自定义域名时 base 为根路径
+  base: '/',
   output: 'static',
   build: {
     assets: 'assets'

@@ -6,9 +6,8 @@ function getBasePath(): string {
   if (typeof window !== 'undefined') {
     return import.meta.env.BASE_URL || '/';
   }
-  // 在服务器端，检查环境变量
-  const isProduction = process.env.NODE_ENV === 'production' || process.env.CI;
-  return isProduction ? '/cnusergroup-website' : '/';
+  // 自定义域名下始终使用根路径
+  return '/';
 }
 
 // 导出基础路径获取函数供其他地方使用

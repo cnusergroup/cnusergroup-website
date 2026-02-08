@@ -29,7 +29,7 @@ function generateRobotsTxt() {
 Allow: /
 
 # Sitemap
-Sitemap: https://cnusergroup.github.io/cnusergroup-website/sitemap.xml
+Sitemap: https://awscommunity.cn/sitemap.xml
 
 # 禁止访问的路径
 Disallow: /api/
@@ -44,7 +44,7 @@ Disallow: /admin/
 
 // 3. 生成 sitemap.xml
 function generateSitemap() {
-  const baseUrl = 'https://cnusergroup.github.io/cnusergroup-website';
+  const baseUrl = 'https://awscommunity.cn';
   const currentDate = new Date().toISOString().split('T')[0];
   
   // 基础页面

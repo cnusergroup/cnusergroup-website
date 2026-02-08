@@ -8,8 +8,8 @@ const STATIC_CACHE = 'cnusergroup-static-v1.0.0';
 const DYNAMIC_CACHE = 'cnusergroup-dynamic-v1.0.0';
 const IMAGE_CACHE = 'cnusergroup-images-v1.0.0';
 
-// 获取BASE_URL，支持GitHub Pages部署
-const BASE_URL = self.location.pathname.includes('/cnusergroup-website/') ? '/cnusergroup-website' : '';
+// 自定义域名下 BASE_URL 为空（根路径）
+const BASE_URL = '';
 
 // 需要缓存的静态资源 - 动态添加BASE_URL前缀
 const STATIC_ASSETS = [
