@@ -139,7 +139,8 @@ export function generateImageAlt(cityId: string, lang: 'zh' | 'en'): string {
     qingdao: { zh: '青岛', en: 'Qingdao' },
     xiamen: { zh: '厦门', en: 'Xiamen' },
     zhangjiakou: { zh: '张家口', en: 'Zhangjiakou' },
-    hefei: { zh: '合肥', en: 'Hefei' }
+    hefei: { zh: '合肥', en: 'Hefei' },
+    nanjing: { zh: '南京', en: 'Nanjing' }
   };
 
   const cityName = cityNames[cityId]?.[lang] || cityId;
