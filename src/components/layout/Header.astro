@@ -21,10 +21,7 @@ const basePath = getBasePath();
           class="flex items-center space-x-3 group"
           aria-label={lang === 'zh' ? '返回首页' : 'Go to homepage'}
         >
-          <div class="relative w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105" aria-hidden="true">
-            <span class="text-white font-bold text-xl">UG</span>
-            <div class="absolute inset-0 bg-gradient-to-br from-orange-300 to-orange-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-          </div>
+          <img src="/images/ug-icon.png" alt="UG" class="w-12 h-12 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 object-cover" />
           <div class="hidden sm:block">
             <h1 class="text-2xl font-bold bg-gradient-to-r from-aws-blue to-blue-600 bg-clip-text text-transparent">
               {t('site.title', lang)}
