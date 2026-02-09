@@ -456,6 +456,30 @@
     }
   },
   {
+    "id": "zhengzhou",
+    "name": {
+      "zh": "郑州",
+      "en": "Zhengzhou"
+    },
+    "logo": "/images/cities/zhengzhou-pc.png",
+    "logoMobile": "/images/cities/zhengzhou-mobile.png",
+    "active": true,
+    "description": {
+      "zh": "郑州 亚马逊云科技 User Group 服务于中原地区的云计算开发者，推动河南省技术创新与交流。",
+      "en": "Zhengzhou User Group serves cloud computing developers in Central China, promoting technological innovation and exchange in Henan province."
+    },
+    "contact": {
+      "wechat": "zhengzhou-ug",
+      "email": "zhengzhou@cnusergroup.org",
+      "leader": ""
+    },
+    "stats": {
+      "members": 0,
+      "events": 0,
+      "founded": 2025
+    }
+  },
+  {
     "id": "nanjing",
     "name": {
       "zh": "南京",

@@ -153,7 +153,8 @@ export function generateBreadcrumbs(currentPath: string, lang: Language): Array<
         zhangjiakou: { zh: '张家口', en: 'Zhangjiakou' },
         hefei: { zh: '合肥', en: 'Hefei' },
         nanjing: { zh: '南京', en: 'Nanjing' },
-        chongqing: { zh: '重庆', en: 'Chongqing' }
+        chongqing: { zh: '重庆', en: 'Chongqing' },
+        zhengzhou: { zh: '郑州', en: 'Zhengzhou' }
       };
       
       const cityName = cityNames[pathParts[1]]?.[lang] || pathParts[1];

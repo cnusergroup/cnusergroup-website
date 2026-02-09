@@ -79,6 +79,10 @@
     "chongqing": {
       "pc": "/images/cities/chongqing-pc.png",
       "mobile": "/images/cities/chongqing-mobile.png"
+    },
+    "zhengzhou": {
+      "pc": "/images/cities/zhengzhou-pc.png",
+      "mobile": "/images/cities/zhengzhou-mobile.png"
     }
   },
   "ui": {

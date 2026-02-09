@@ -28,7 +28,8 @@ const cityRegions: CityRegions = {
   'changji': 'west',
   'chongqing': 'west',
   'wuhan': 'central',
-  'nanjing': 'east'
+  'nanjing': 'east',
+  'zhengzhou': 'central'
 };
 
 // 城市名称映射
@@ -52,7 +53,8 @@ const cityNameMap: Record<string, string> = {
   '河池': 'hechi',
   '张家口': 'zhangjiakou',
   '重庆': 'chongqing',
-  '南京': 'nanjing'
+  '南京': 'nanjing',
+  '郑州': 'zhengzhou'
 };
 
 class CitySearchManager {
