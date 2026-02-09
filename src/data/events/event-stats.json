@@ -9,6 +9,7 @@
     "beijing": 31,
     "nanjing": 1,
     "shenzhen": 26,
+    "zhengzhou": 4,
     "hefei": 9,
     "xian": 11,
     "xiamen": 1,
@@ -22,7 +23,7 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 665236,
+    "totalViews": 665261,
     "totalFavorites": 22328,
     "averageViews": 3080,
     "averageFavorites": 103,
@@ -45,12 +46,12 @@
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 13858
+        "views": 13863
       },
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 11885
+        "views": 11890
       }
     ],
     "topFavoritedEvents": [
@@ -83,18 +84,17 @@
   },
   "mappingStats": {
     "totalEvents": 216,
-    "mappedEvents": 176,
-    "unmappedEvents": 40,
+    "mappedEvents": 180,
+    "unmappedEvents": 36,
     "mappingsByConfidence": {
-      "high": 176,
+      "high": 180,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 176
+      "province": 180
     },
     "unmappedLocations": [
-      "河南郑州",
       "线上活动",
       "广西河池"
     ]
@@ -111,7 +111,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-02-09T03:38:58.182Z",
+  "lastUpdated": "2026-02-09T05:16:08.188Z",
   "processing": {
     "totalRawEvents": 216,
     "duplicatesRemoved": 0,
@@ -121,12 +121,12 @@
     "invalidEvents": 0,
     "warningEvents": 17,
     "processedEvents": 216,
-    "citiesWithEvents": 17,
+    "citiesWithEvents": 18,
     "dataQualityScore": 100,
-    "processedAt": "2026-02-09T03:38:58.187Z"
+    "processedAt": "2026-02-09T05:16:08.191Z"
   },
   "qualityReport": {
-    "timestamp": "2026-02-09T03:38:58.186Z",
+    "timestamp": "2026-02-09T05:16:08.191Z",
     "summary": {
       "originalEventCount": 216,
       "finalEventCount": 216,
