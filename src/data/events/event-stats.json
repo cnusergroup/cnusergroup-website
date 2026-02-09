@@ -13,6 +13,7 @@
     "xian": 11,
     "xiamen": 1,
     "fuzhou": 3,
+    "chongqing": 4,
     "wuhan": 12,
     "hangzhou": 3,
     "lanzhou": 5,
@@ -21,15 +22,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 664926,
+    "totalViews": 665221,
     "totalFavorites": 22328,
-    "averageViews": 3078,
+    "averageViews": 3080,
     "averageFavorites": 103,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 18409
+        "views": 18418
       },
       {
         "id": "3721674476500",
@@ -44,12 +45,12 @@
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 13839
+        "views": 13858
       },
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 11888
+        "views": 11885
       }
     ],
     "topFavoritedEvents": [
@@ -82,22 +83,19 @@
   },
   "mappingStats": {
     "totalEvents": 216,
-    "mappedEvents": 172,
-    "unmappedEvents": 44,
+    "mappedEvents": 176,
+    "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 172,
+      "high": 176,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 172
+      "province": 176
     },
     "unmappedLocations": [
       "河南郑州",
       "线上活动",
-      "重庆渝北",
-      "重庆九龙坡",
-      "重庆江北",
       "广西河池"
     ]
   },
@@ -113,7 +111,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-02-08T19:32:57.985Z",
+  "lastUpdated": "2026-02-09T03:23:48.425Z",
   "processing": {
     "totalRawEvents": 216,
     "duplicatesRemoved": 0,
@@ -123,12 +121,12 @@
     "invalidEvents": 0,
     "warningEvents": 17,
     "processedEvents": 216,
-    "citiesWithEvents": 16,
+    "citiesWithEvents": 17,
     "dataQualityScore": 100,
-    "processedAt": "2026-02-08T19:32:57.988Z"
+    "processedAt": "2026-02-09T03:23:48.429Z"
   },
   "qualityReport": {
-    "timestamp": "2026-02-08T19:32:57.988Z",
+    "timestamp": "2026-02-09T03:23:48.429Z",
     "summary": {
       "originalEventCount": 216,
       "finalEventCount": 216,
