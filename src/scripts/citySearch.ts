@@ -26,7 +26,9 @@ const cityRegions: CityRegions = {
   'lanzhou': 'west',
   'urumqi': 'west',
   'changji': 'west',
-  'wuhan': 'central'
+  'chongqing': 'west',
+  'wuhan': 'central',
+  'nanjing': 'east'
 };
 
 // 城市名称映射
@@ -48,7 +50,9 @@ const cityNameMap: Record<string, string> = {
   '乌鲁木齐': 'urumqi',
   '昌吉': 'changji',
   '河池': 'hechi',
-  '张家口': 'zhangjiakou'
+  '张家口': 'zhangjiakou',
+  '重庆': 'chongqing',
+  '南京': 'nanjing'
 };
 
 class CitySearchManager {
