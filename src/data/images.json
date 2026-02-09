@@ -75,6 +75,10 @@
     "nanjing": {
       "pc": "/images/cities/nanjing-pc.png",
       "mobile": "/images/cities/nanjing-mobile.png"
+    },
+    "chongqing": {
+      "pc": "/images/cities/chongqing-pc.png",
+      "mobile": "/images/cities/chongqing-mobile.png"
     }
   },
   "ui": {
