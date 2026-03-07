@@ -23,9 +23,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 681476,
+    "totalViews": 681496,
     "totalFavorites": 22565,
-    "averageViews": 3140,
+    "averageViews": 3141,
     "averageFavorites": 104,
     "topViewedEvents": [
       {
@@ -36,7 +36,7 @@
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17802
+        "views": 17807
       },
       {
         "id": "7827076896900",
@@ -112,7 +112,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-03-07T18:24:24.135Z",
+  "lastUpdated": "2026-03-07T19:29:10.638Z",
   "processing": {
     "totalRawEvents": 217,
     "duplicatesRemoved": 0,
@@ -124,10 +124,10 @@
     "processedEvents": 217,
     "citiesWithEvents": 18,
     "dataQualityScore": 100,
-    "processedAt": "2026-03-07T18:24:24.138Z"
+    "processedAt": "2026-03-07T19:29:10.642Z"
   },
   "qualityReport": {
-    "timestamp": "2026-03-07T18:24:24.138Z",
+    "timestamp": "2026-03-07T19:29:10.641Z",
     "summary": {
       "originalEventCount": 217,
       "finalEventCount": 217,
