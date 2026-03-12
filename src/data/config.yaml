@@ -47,13 +47,13 @@ applications:
       zh: "申请成为 User Group Leader"
       en: "Apply to Become User Group Leader"
     icon: "https://dev-media.amazoncloud.cn/client-250819071524/img/user.587e69d.png"
-    url: "#"
+    url: "https://ycncgf36nxp0.feishu.cn/share/base/form/shrcnuUcjiiTqRw20PZCnYjdEfd"
   - type: "volunteer"
     title:
       zh: "申请志愿者"
       en: "Apply as Volunteer"
     icon: "https://dev-media.amazoncloud.cn/client-250819071524/img/volunteer_p.7e56947.png"
-    url: "#"
+    url: "https://ycncgf36nxp0.feishu.cn/share/base/form/shrcnQDHAIhJYnukpc94BoEjYygUGL"
   - type: "instructor"
     title:
       zh: "申请讲师"
