@@ -13,19 +13,17 @@
     "zhengzhou": 4,
     "hefei": 9,
     "xian": 11,
-    "xiamen": 1,
     "fuzhou": 3,
     "chongqing": 4,
     "wuhan": 12,
     "lanzhou": 5,
-    "suzhou": 3,
     "zhangjiakou": 3,
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 701119,
-    "totalFavorites": 23127,
-    "averageViews": 3187,
+    "totalViews": 701347,
+    "totalFavorites": 23131,
+    "averageViews": 3188,
     "averageFavorites": 105,
     "topViewedEvents": [
       {
@@ -84,18 +82,20 @@
   },
   "mappingStats": {
     "totalEvents": 220,
-    "mappedEvents": 184,
-    "unmappedEvents": 36,
+    "mappedEvents": 180,
+    "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 184,
+      "high": 180,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 184
+      "province": 180
     },
     "unmappedLocations": [
       "线上活动",
+      "福建厦门",
+      "江苏苏州",
       "广西河池"
     ]
   },
@@ -114,7 +114,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-03-17T06:56:53.862Z",
+  "lastUpdated": "2026-03-17T09:40:10.767Z",
   "processing": {
     "totalRawEvents": 220,
     "duplicatesRemoved": 0,
@@ -124,12 +124,12 @@
     "invalidEvents": 0,
     "warningEvents": 17,
     "processedEvents": 220,
-    "citiesWithEvents": 18,
+    "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-03-17T06:56:53.865Z"
+    "processedAt": "2026-03-17T09:40:10.770Z"
   },
   "qualityReport": {
-    "timestamp": "2026-03-17T06:56:53.865Z",
+    "timestamp": "2026-03-17T09:40:10.770Z",
     "summary": {
       "originalEventCount": 220,
       "finalEventCount": 220,
