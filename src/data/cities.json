@@ -247,7 +247,7 @@
     },
     "logo": "/images/cities/suzhou-pc.png",
     "logoMobile": "/images/cities/suzhou-mobile.png",
-    "active": true,
+    "active": false,
     "description": {
       "zh": "苏州 亚马逊云科技 User Group 服务于长三角地区，促进云计算技术的交流与合作。",
       "en": "Suzhou User Group serves the Yangtze River Delta region, promoting cloud computing technology exchange and cooperation."
@@ -295,7 +295,7 @@
     },
     "logo": "/images/cities/hechi-pc.png",
     "logoMobile": "/images/cities/hechi-mobile.png",
-    "active": true,
+    "active": false,
     "description": {
       "zh": "河池 亚马逊云科技 User Group 致力于推动广西地区云计算技术的发展和普及。",
       "en": "Hechi User Group is committed to promoting the development and popularization of cloud computing technology in Guangxi."
@@ -343,7 +343,7 @@
     },
     "logo": "/images/cities/qingdao-pc.png",
     "logoMobile": "/images/cities/qingdao-mobile.png",
-    "active": true,
+    "active": false,
     "description": {
       "zh": "青岛 亚马逊云科技 User Group 服务于山东半岛地区，推动海洋城市的云计算发展。",
       "en": "Qingdao User Group serves the Shandong Peninsula region, promoting cloud computing development in the coastal city."
@@ -367,7 +367,7 @@
     },
     "logo": "/images/cities/xiamen-pc.png",
     "logoMobile": "/images/cities/xiamen-mobile.png",
-    "active": true,
+    "active": false,
     "description": {
       "zh": "厦门 亚马逊云科技 User Group 为海峡西岸经济区提供云计算技术交流平台。",
       "en": "Xiamen User Group provides a cloud computing technology exchange platform for the West Taiwan Strait Economic Zone."
