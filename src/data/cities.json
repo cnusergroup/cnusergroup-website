@@ -319,7 +319,7 @@
     },
     "logo": "/images/cities/urumqi-pc.png",
     "logoMobile": "/images/cities/urumqi-mobile.png",
-    "active": true,
+    "active": false,
     "description": {
       "zh": "乌鲁木齐 亚马逊云科技 User Group 为新疆地区提供云计算技术支持和社区服务。",
       "en": "Urumqi User Group provides cloud computing technical support and community services for Xinjiang region."
