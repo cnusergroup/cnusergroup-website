@@ -21,7 +21,7 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 706860,
+    "totalViews": 706895,
     "totalFavorites": 23246,
     "averageViews": 3213,
     "averageFavorites": 106,
@@ -29,7 +29,7 @@
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 19589
+        "views": 19594
       },
       {
         "id": "3721674476500",
@@ -114,7 +114,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-03-19T18:46:07.299Z",
+  "lastUpdated": "2026-03-19T19:52:40.674Z",
   "processing": {
     "totalRawEvents": 220,
     "duplicatesRemoved": 0,
@@ -126,10 +126,10 @@
     "processedEvents": 220,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-03-19T18:46:07.302Z"
+    "processedAt": "2026-03-19T19:52:40.679Z"
   },
   "qualityReport": {
-    "timestamp": "2026-03-19T18:46:07.302Z",
+    "timestamp": "2026-03-19T19:52:40.679Z",
     "summary": {
       "originalEventCount": 220,
       "finalEventCount": 220,
