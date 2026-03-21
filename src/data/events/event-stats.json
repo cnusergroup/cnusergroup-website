@@ -1,55 +1,55 @@
 {
-  "totalEvents": 220,
+  "totalEvents": 130,
   "upcomingEvents": 0,
-  "pastEvents": 220,
+  "pastEvents": 130,
   "cityDistribution": {
-    "hangzhou": 4,
+    "xian": 7,
+    "hangzhou": 3,
     "nanjing": 2,
-    "beijing": 32,
-    "chengdu": 30,
-    "guangzhou": 5,
-    "shanghai": 28,
-    "shenzhen": 26,
-    "zhengzhou": 4,
-    "hefei": 9,
-    "xian": 11,
-    "fuzhou": 3,
-    "chongqing": 4,
-    "wuhan": 12,
+    "beijing": 19,
+    "chengdu": 19,
+    "guangzhou": 3,
+    "shanghai": 17,
+    "shenzhen": 17,
+    "zhengzhou": 2,
+    "hefei": 6,
+    "chongqing": 3,
+    "wuhan": 9,
     "lanzhou": 5,
     "zhangjiakou": 3,
-    "changji": 2
+    "changji": 2,
+    "fuzhou": 2
   },
   "engagementMetrics": {
-    "totalViews": 709392,
-    "totalFavorites": 23289,
-    "averageViews": 3225,
-    "averageFavorites": 106,
+    "totalViews": 457695,
+    "totalFavorites": 15967,
+    "averageViews": 3521,
+    "averageFavorites": 123,
     "topViewedEvents": [
-      {
-        "id": "3806075715500",
-        "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 19608
-      },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17822
-      },
-      {
-        "id": "7827076896900",
-        "title": "深圳community day 开发者的聚会",
-        "views": 16191
+        "views": 17827
       },
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 14653
+        "views": 14679
       },
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 12410
+        "views": 12415
+      },
+      {
+        "id": "9798314204700",
+        "title": "【活动邀请上海】破界她力量：编码未来！",
+        "views": 11493
+      },
+      {
+        "id": "6786188434000",
+        "title": "成都 UG 2024 re:Invent re:Cap",
+        "views": 10706
       }
     ],
     "topFavoritedEvents": [
@@ -69,37 +69,37 @@
         "favorites": 403
       },
       {
-        "id": "7827076896900",
-        "title": "深圳community day 开发者的聚会",
-        "favorites": 388
+        "id": "8744985349000",
+        "title": "AI大模型：技术创新与未来智能的关键驱动力",
+        "favorites": 355
       },
       {
-        "id": "4758529746400",
-        "title": "2024 Community Day：云计算与 AI 技术交融盛会，共筑多元智慧未来",
-        "favorites": 356
+        "id": "3699753931800",
+        "title": "亚马逊云科技User Group 深圳Community Day社区活动嘉年华",
+        "favorites": 337
       }
     ]
   },
   "mappingStats": {
-    "totalEvents": 220,
-    "mappedEvents": 180,
-    "unmappedEvents": 40,
+    "totalEvents": 130,
+    "mappedEvents": 119,
+    "unmappedEvents": 11,
     "mappingsByConfidence": {
-      "high": 180,
+      "high": 119,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 180
+      "province": 119
     },
     "unmappedLocations": [
-      "线上活动",
-      "福建厦门",
       "江苏苏州",
+      "线上活动",
       "广西河池"
     ]
   },
   "timeDistribution": {
+    "03/28": 1,
     "03/22": 2,
     "03/14": 1,
     "03/08": 1,
@@ -108,53 +108,52 @@
     "01/23": 1,
     "01/18": 2,
     "01/10": 1,
-    "2025/": 63,
-    "2024/": 49,
-    "2023/": 39,
-    "2022/": 57,
-    "2021/": 2
+    "2025/": 33,
+    "2024/": 39,
+    "2023/": 37,
+    "2022/": 10
   },
-  "lastUpdated": "2026-03-20T19:43:23.003Z",
+  "lastUpdated": "2026-03-21T04:30:17.037Z",
   "processing": {
-    "totalRawEvents": 220,
+    "totalRawEvents": 130,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 220,
-    "eventsCleaned": 46,
-    "validEvents": 220,
+    "eventsAfterDeduplication": 130,
+    "eventsCleaned": 26,
+    "validEvents": 130,
     "invalidEvents": 0,
-    "warningEvents": 17,
-    "processedEvents": 220,
+    "warningEvents": 10,
+    "processedEvents": 130,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-03-20T19:43:23.007Z"
+    "processedAt": "2026-03-21T04:30:17.039Z"
   },
   "qualityReport": {
-    "timestamp": "2026-03-20T19:43:23.007Z",
+    "timestamp": "2026-03-21T04:30:17.039Z",
     "summary": {
-      "originalEventCount": 220,
-      "finalEventCount": 220,
+      "originalEventCount": 130,
+      "finalEventCount": 130,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 220,
-          "uniqueCount": 220,
+          "originalCount": 130,
+          "uniqueCount": 130,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 220,
-          "cleanedEvents": 46,
+          "totalEvents": 130,
+          "cleanedEvents": 26,
           "cleaningStats": {
-            "Cleaned title": 46
+            "Cleaned title": 26
           }
         },
         "validation": {
-          "totalEvents": 220,
-          "validEvents": 220,
+          "totalEvents": 130,
+          "validEvents": 130,
           "invalidEvents": 0,
-          "warningEvents": 17,
+          "warningEvents": 10,
           "commonIssues": {
-            "Very short title (might be incomplete)": 17
+            "Very short title (might be incomplete)": 10
           },
           "qualityScore": 100
         }
@@ -166,13 +165,6 @@
         {
           "eventId": "6808094019500",
           "title": "大模型应用挑战赛",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "2765745772300",
-          "title": "暑期少儿开发之旅",
           "issues": [
             "Very short title (might be incomplete)"
           ]
@@ -234,50 +226,8 @@
           ]
         },
         {
-          "eventId": "2674870028811",
-          "title": "现代化应用开发",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "9673286251600",
-          "title": "现代化应用开发",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "2672694358500",
-          "title": "云与APP",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
           "eventId": "2665848010311",
           "title": "元宇宙新观",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "4662467638211",
-          "title": "开源遇上大数据",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "3654183554723",
-          "title": "排序模型的样本工程",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "3651561376123",
-          "title": "构建大数据生态",
           "issues": [
             "Very short title (might be incomplete)"
           ]
@@ -287,11 +237,11 @@
     },
     "statistics": {
       "commonIssues": {
-        "Very short title (might be incomplete)": 17
+        "Very short title (might be incomplete)": 10
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 46
+        "Cleaned title": 26
       }
     },
     "recommendations": []
