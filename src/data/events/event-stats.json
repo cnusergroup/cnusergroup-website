@@ -21,15 +21,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 721848,
-    "totalFavorites": 23536,
-    "averageViews": 3237,
+    "totalViews": 723022,
+    "totalFavorites": 23553,
+    "averageViews": 3242,
     "averageFavorites": 106,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 19849
+        "views": 19864
       },
       {
         "id": "3721674476500",
@@ -39,17 +39,17 @@
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 16216
+        "views": 16211
       },
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 14818
+        "views": 14824
       },
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 12510
+        "views": 12520
       }
     ],
     "topFavoritedEvents": [
@@ -116,7 +116,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-03-27T19:47:14.649Z",
+  "lastUpdated": "2026-03-28T06:50:00.779Z",
   "processing": {
     "totalRawEvents": 223,
     "duplicatesRemoved": 0,
@@ -128,10 +128,10 @@
     "processedEvents": 223,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-03-27T19:47:14.652Z"
+    "processedAt": "2026-03-28T06:50:00.783Z"
   },
   "qualityReport": {
-    "timestamp": "2026-03-27T19:47:14.652Z",
+    "timestamp": "2026-03-28T06:50:00.783Z",
     "summary": {
       "originalEventCount": 223,
       "finalEventCount": 223,
