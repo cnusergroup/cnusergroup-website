@@ -21,7 +21,7 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 728499,
+    "totalViews": 728524,
     "totalFavorites": 23573,
     "averageViews": 3267,
     "averageFavorites": 106,
@@ -39,7 +39,7 @@
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 16231
+        "views": 16236
       },
       {
         "id": "3794987216300",
@@ -116,7 +116,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-04-07T18:51:01.223Z",
+  "lastUpdated": "2026-04-07T20:02:45.865Z",
   "processing": {
     "totalRawEvents": 223,
     "duplicatesRemoved": 0,
@@ -128,10 +128,10 @@
     "processedEvents": 223,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-04-07T18:51:01.226Z"
+    "processedAt": "2026-04-07T20:02:45.870Z"
   },
   "qualityReport": {
-    "timestamp": "2026-04-07T18:51:01.226Z",
+    "timestamp": "2026-04-07T20:02:45.870Z",
     "summary": {
       "originalEventCount": 223,
       "finalEventCount": 223,
