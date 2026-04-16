@@ -21,20 +21,20 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 731386,
+    "totalViews": 731567,
     "totalFavorites": 23572,
-    "averageViews": 3280,
+    "averageViews": 3281,
     "averageFavorites": 106,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 20403
+        "views": 20423
       },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17907
+        "views": 17912
       },
       {
         "id": "7827076896900",
@@ -49,7 +49,7 @@
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 12700
+        "views": 12706
       }
     ],
     "topFavoritedEvents": [
@@ -116,7 +116,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-04-15T20:09:11.724Z",
+  "lastUpdated": "2026-04-16T07:23:13.455Z",
   "processing": {
     "totalRawEvents": 223,
     "duplicatesRemoved": 0,
@@ -128,10 +128,10 @@
     "processedEvents": 223,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-04-15T20:09:11.728Z"
+    "processedAt": "2026-04-16T07:23:13.459Z"
   },
   "qualityReport": {
-    "timestamp": "2026-04-15T20:09:11.728Z",
+    "timestamp": "2026-04-16T07:23:13.459Z",
     "summary": {
       "originalEventCount": 223,
       "finalEventCount": 223,
