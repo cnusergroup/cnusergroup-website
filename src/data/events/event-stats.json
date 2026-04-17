@@ -1,30 +1,30 @@
 {
-  "totalEvents": 213,
+  "totalEvents": 223,
   "upcomingEvents": 0,
-  "pastEvents": 213,
+  "pastEvents": 223,
   "cityDistribution": {
-    "shenzhen": 26,
-    "shanghai": 27,
-    "xian": 11,
+    "shenzhen": 27,
+    "shanghai": 29,
+    "xian": 12,
     "hangzhou": 4,
     "nanjing": 2,
-    "beijing": 30,
-    "chengdu": 29,
+    "beijing": 32,
+    "chengdu": 30,
     "guangzhou": 5,
     "zhengzhou": 4,
-    "hefei": 8,
+    "hefei": 9,
     "fuzhou": 3,
     "chongqing": 4,
     "wuhan": 12,
-    "lanzhou": 4,
+    "lanzhou": 5,
     "zhangjiakou": 3,
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 710356,
-    "totalFavorites": 22131,
-    "averageViews": 3335,
-    "averageFavorites": 104,
+    "totalViews": 732169,
+    "totalFavorites": 23572,
+    "averageViews": 3283,
+    "averageFavorites": 106,
     "topViewedEvents": [
       {
         "id": "3806075715500",
@@ -74,23 +74,23 @@
         "favorites": 388
       },
       {
-        "id": "8744985349000",
-        "title": "AI大模型：技术创新与未来智能的关键驱动力",
-        "favorites": 353
+        "id": "4758529746400",
+        "title": "2024 Community Day：云计算与 AI 技术交融盛会，共筑多元智慧未来",
+        "favorites": 356
       }
     ]
   },
   "mappingStats": {
-    "totalEvents": 213,
-    "mappedEvents": 174,
-    "unmappedEvents": 39,
+    "totalEvents": 223,
+    "mappedEvents": 183,
+    "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 174,
+      "high": 183,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 174
+      "province": 183
     },
     "unmappedLocations": [
       "线上活动",
@@ -111,52 +111,52 @@
     "01/18": 2,
     "01/10": 1,
     "2025/": 63,
-    "2024/": 39,
+    "2024/": 49,
     "2023/": 39,
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-04-17T18:47:37.754Z",
+  "lastUpdated": "2026-04-17T20:03:43.645Z",
   "processing": {
-    "totalRawEvents": 213,
+    "totalRawEvents": 223,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 213,
-    "eventsCleaned": 47,
-    "validEvents": 213,
+    "eventsAfterDeduplication": 223,
+    "eventsCleaned": 48,
+    "validEvents": 223,
     "invalidEvents": 0,
-    "warningEvents": 16,
-    "processedEvents": 213,
+    "warningEvents": 17,
+    "processedEvents": 223,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-04-17T18:47:37.757Z"
+    "processedAt": "2026-04-17T20:03:43.648Z"
   },
   "qualityReport": {
-    "timestamp": "2026-04-17T18:47:37.757Z",
+    "timestamp": "2026-04-17T20:03:43.648Z",
     "summary": {
-      "originalEventCount": 213,
-      "finalEventCount": 213,
+      "originalEventCount": 223,
+      "finalEventCount": 223,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 213,
-          "uniqueCount": 213,
+          "originalCount": 223,
+          "uniqueCount": 223,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 213,
-          "cleanedEvents": 47,
+          "totalEvents": 223,
+          "cleanedEvents": 48,
           "cleaningStats": {
-            "Cleaned title": 47
+            "Cleaned title": 48
           }
         },
         "validation": {
-          "totalEvents": 213,
-          "validEvents": 213,
+          "totalEvents": 223,
+          "validEvents": 223,
           "invalidEvents": 0,
-          "warningEvents": 16,
+          "warningEvents": 17,
           "commonIssues": {
-            "Very short title (might be incomplete)": 16
+            "Very short title (might be incomplete)": 17
           },
           "qualityScore": 100
         }
@@ -175,6 +175,13 @@
         {
           "eventId": "2765745772300",
           "title": "暑期少儿开发之旅",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "8760515081400",
+          "title": "AI 探索与实践",
           "issues": [
             "Very short title (might be incomplete)"
           ]
@@ -282,11 +289,11 @@
     },
     "statistics": {
       "commonIssues": {
-        "Very short title (might be incomplete)": 16
+        "Very short title (might be incomplete)": 17
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 47
+        "Cleaned title": 48
       }
     },
     "recommendations": []
