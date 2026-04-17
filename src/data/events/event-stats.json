@@ -1,35 +1,35 @@
 {
-  "totalEvents": 223,
+  "totalEvents": 213,
   "upcomingEvents": 0,
-  "pastEvents": 223,
+  "pastEvents": 213,
   "cityDistribution": {
-    "shenzhen": 27,
-    "shanghai": 29,
-    "xian": 12,
+    "shenzhen": 26,
+    "shanghai": 27,
+    "xian": 11,
     "hangzhou": 4,
     "nanjing": 2,
-    "beijing": 32,
-    "chengdu": 30,
+    "beijing": 30,
+    "chengdu": 29,
     "guangzhou": 5,
     "zhengzhou": 4,
-    "hefei": 9,
+    "hefei": 8,
     "fuzhou": 3,
     "chongqing": 4,
     "wuhan": 12,
-    "lanzhou": 5,
+    "lanzhou": 4,
     "zhangjiakou": 3,
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 732003,
-    "totalFavorites": 23572,
-    "averageViews": 3283,
-    "averageFavorites": 106,
+    "totalViews": 710356,
+    "totalFavorites": 22131,
+    "averageViews": 3335,
+    "averageFavorites": 104,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 20450
+        "views": 20460
       },
       {
         "id": "3721674476500",
@@ -44,12 +44,12 @@
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 15058
+        "views": 15063
       },
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 12720
+        "views": 12730
       }
     ],
     "topFavoritedEvents": [
@@ -74,23 +74,23 @@
         "favorites": 388
       },
       {
-        "id": "4758529746400",
-        "title": "2024 Community Day：云计算与 AI 技术交融盛会，共筑多元智慧未来",
-        "favorites": 356
+        "id": "8744985349000",
+        "title": "AI大模型：技术创新与未来智能的关键驱动力",
+        "favorites": 353
       }
     ]
   },
   "mappingStats": {
-    "totalEvents": 223,
-    "mappedEvents": 183,
-    "unmappedEvents": 40,
+    "totalEvents": 213,
+    "mappedEvents": 174,
+    "unmappedEvents": 39,
     "mappingsByConfidence": {
-      "high": 183,
+      "high": 174,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 183
+      "province": 174
     },
     "unmappedLocations": [
       "线上活动",
@@ -111,52 +111,52 @@
     "01/18": 2,
     "01/10": 1,
     "2025/": 63,
-    "2024/": 49,
+    "2024/": 39,
     "2023/": 39,
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-04-17T07:23:29.233Z",
+  "lastUpdated": "2026-04-17T18:47:37.754Z",
   "processing": {
-    "totalRawEvents": 223,
+    "totalRawEvents": 213,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 223,
-    "eventsCleaned": 48,
-    "validEvents": 223,
+    "eventsAfterDeduplication": 213,
+    "eventsCleaned": 47,
+    "validEvents": 213,
     "invalidEvents": 0,
-    "warningEvents": 17,
-    "processedEvents": 223,
+    "warningEvents": 16,
+    "processedEvents": 213,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-04-17T07:23:29.237Z"
+    "processedAt": "2026-04-17T18:47:37.757Z"
   },
   "qualityReport": {
-    "timestamp": "2026-04-17T07:23:29.237Z",
+    "timestamp": "2026-04-17T18:47:37.757Z",
     "summary": {
-      "originalEventCount": 223,
-      "finalEventCount": 223,
+      "originalEventCount": 213,
+      "finalEventCount": 213,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 223,
-          "uniqueCount": 223,
+          "originalCount": 213,
+          "uniqueCount": 213,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 223,
-          "cleanedEvents": 48,
+          "totalEvents": 213,
+          "cleanedEvents": 47,
           "cleaningStats": {
-            "Cleaned title": 48
+            "Cleaned title": 47
           }
         },
         "validation": {
-          "totalEvents": 223,
-          "validEvents": 223,
+          "totalEvents": 213,
+          "validEvents": 213,
           "invalidEvents": 0,
-          "warningEvents": 17,
+          "warningEvents": 16,
           "commonIssues": {
-            "Very short title (might be incomplete)": 17
+            "Very short title (might be incomplete)": 16
           },
           "qualityScore": 100
         }
@@ -175,13 +175,6 @@
         {
           "eventId": "2765745772300",
           "title": "暑期少儿开发之旅",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "8760515081400",
-          "title": "AI 探索与实践",
           "issues": [
             "Very short title (might be incomplete)"
           ]
@@ -289,11 +282,11 @@
     },
     "statistics": {
       "commonIssues": {
-        "Very short title (might be incomplete)": 17
+        "Very short title (might be incomplete)": 16
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 48
+        "Cleaned title": 47
       }
     },
     "recommendations": []
