@@ -1,30 +1,30 @@
 {
-  "totalEvents": 208,
+  "totalEvents": 228,
   "upcomingEvents": 0,
-  "pastEvents": 208,
+  "pastEvents": 228,
   "cityDistribution": {
-    "hangzhou": 4,
-    "chengdu": 29,
-    "shanghai": 28,
-    "beijing": 30,
-    "shenzhen": 24,
-    "xian": 11,
+    "hangzhou": 5,
+    "chengdu": 32,
+    "shanghai": 30,
+    "beijing": 33,
+    "shenzhen": 27,
+    "xian": 12,
     "nanjing": 2,
-    "hefei": 8,
+    "guangzhou": 5,
+    "zhengzhou": 4,
+    "hefei": 9,
     "fuzhou": 3,
     "chongqing": 4,
-    "guangzhou": 4,
-    "zhengzhou": 3,
-    "wuhan": 10,
-    "lanzhou": 4,
+    "wuhan": 12,
+    "lanzhou": 5,
     "zhangjiakou": 3,
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 611635,
-    "totalFavorites": 21476,
-    "averageViews": 2941,
-    "averageFavorites": 103,
+    "totalViews": 753809,
+    "totalFavorites": 24060,
+    "averageViews": 3306,
+    "averageFavorites": 106,
     "topViewedEvents": [
       {
         "id": "3806075715500",
@@ -42,14 +42,14 @@
         "views": 16281
       },
       {
+        "id": "3794987216300",
+        "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
+        "views": 15633
+      },
+      {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
         "views": 13030
-      },
-      {
-        "id": "7851864008311",
-        "title": "编程无界：杭州 OpenClaw 开发者聚会来了！",
-        "views": 12142
       }
     ],
     "topFavoritedEvents": [
@@ -81,16 +81,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 208,
-    "mappedEvents": 169,
-    "unmappedEvents": 39,
+    "totalEvents": 228,
+    "mappedEvents": 188,
+    "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 169,
+      "high": 188,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 169
+      "province": 188
     },
     "unmappedLocations": [
       "线上活动",
@@ -107,56 +107,56 @@
     "03/29": 1,
     "03/28": 2,
     "03/22": 2,
-    "2025/": 43,
-    "2024/": 49,
-    "2023/": 39,
-    "2022/": 57,
-    "2021/": 2,
     "03/14": 1,
     "03/08": 1,
     "02/01": 1,
     "01/25": 1,
     "01/23": 1,
     "01/18": 2,
-    "01/10": 1
+    "01/10": 1,
+    "2025/": 63,
+    "2024/": 49,
+    "2023/": 39,
+    "2022/": 57,
+    "2021/": 2
   },
-  "lastUpdated": "2026-05-08T19:08:41.960Z",
+  "lastUpdated": "2026-05-08T20:12:08.099Z",
   "processing": {
-    "totalRawEvents": 208,
+    "totalRawEvents": 228,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 208,
-    "eventsCleaned": 46,
-    "validEvents": 208,
+    "eventsAfterDeduplication": 228,
+    "eventsCleaned": 53,
+    "validEvents": 228,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 208,
+    "processedEvents": 228,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-05-08T19:08:41.963Z"
+    "processedAt": "2026-05-08T20:12:08.102Z"
   },
   "qualityReport": {
-    "timestamp": "2026-05-08T19:08:41.963Z",
+    "timestamp": "2026-05-08T20:12:08.102Z",
     "summary": {
-      "originalEventCount": 208,
-      "finalEventCount": 208,
+      "originalEventCount": 228,
+      "finalEventCount": 228,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 208,
-          "uniqueCount": 208,
+          "originalCount": 228,
+          "uniqueCount": 228,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 208,
-          "cleanedEvents": 46,
+          "totalEvents": 228,
+          "cleanedEvents": 53,
           "cleaningStats": {
-            "Cleaned title": 46
+            "Cleaned title": 53
           }
         },
         "validation": {
-          "totalEvents": 208,
-          "validEvents": 208,
+          "totalEvents": 228,
+          "validEvents": 228,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
@@ -297,7 +297,7 @@
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 46
+        "Cleaned title": 53
       }
     },
     "recommendations": []
