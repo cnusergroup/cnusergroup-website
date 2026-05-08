@@ -1,35 +1,35 @@
 {
-  "totalEvents": 228,
+  "totalEvents": 208,
   "upcomingEvents": 0,
-  "pastEvents": 228,
+  "pastEvents": 208,
   "cityDistribution": {
-    "hangzhou": 5,
-    "chengdu": 32,
-    "shanghai": 30,
-    "beijing": 33,
-    "shenzhen": 27,
-    "xian": 12,
+    "hangzhou": 4,
+    "chengdu": 29,
+    "shanghai": 28,
+    "beijing": 30,
+    "shenzhen": 24,
+    "xian": 11,
     "nanjing": 2,
-    "guangzhou": 5,
-    "zhengzhou": 4,
-    "hefei": 9,
+    "hefei": 8,
     "fuzhou": 3,
     "chongqing": 4,
-    "wuhan": 12,
-    "lanzhou": 5,
+    "guangzhou": 4,
+    "zhengzhou": 3,
+    "wuhan": 10,
+    "lanzhou": 4,
     "zhangjiakou": 3,
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 753051,
-    "totalFavorites": 24049,
-    "averageViews": 3303,
-    "averageFavorites": 105,
+    "totalViews": 611635,
+    "totalFavorites": 21476,
+    "averageViews": 2941,
+    "averageFavorites": 103,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21099
+        "views": 21124
       },
       {
         "id": "3721674476500",
@@ -42,14 +42,14 @@
         "views": 16281
       },
       {
-        "id": "3794987216300",
-        "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 15628
-      },
-      {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 13025
+        "views": 13030
+      },
+      {
+        "id": "7851864008311",
+        "title": "编程无界：杭州 OpenClaw 开发者聚会来了！",
+        "views": 12142
       }
     ],
     "topFavoritedEvents": [
@@ -81,16 +81,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 228,
-    "mappedEvents": 188,
-    "unmappedEvents": 40,
+    "totalEvents": 208,
+    "mappedEvents": 169,
+    "unmappedEvents": 39,
     "mappingsByConfidence": {
-      "high": 188,
+      "high": 169,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 188
+      "province": 169
     },
     "unmappedLocations": [
       "线上活动",
@@ -107,56 +107,56 @@
     "03/29": 1,
     "03/28": 2,
     "03/22": 2,
+    "2025/": 43,
+    "2024/": 49,
+    "2023/": 39,
+    "2022/": 57,
+    "2021/": 2,
     "03/14": 1,
     "03/08": 1,
     "02/01": 1,
     "01/25": 1,
     "01/23": 1,
     "01/18": 2,
-    "01/10": 1,
-    "2025/": 63,
-    "2024/": 49,
-    "2023/": 39,
-    "2022/": 57,
-    "2021/": 2
+    "01/10": 1
   },
-  "lastUpdated": "2026-05-08T07:20:55.484Z",
+  "lastUpdated": "2026-05-08T19:08:41.960Z",
   "processing": {
-    "totalRawEvents": 228,
+    "totalRawEvents": 208,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 228,
-    "eventsCleaned": 53,
-    "validEvents": 228,
+    "eventsAfterDeduplication": 208,
+    "eventsCleaned": 46,
+    "validEvents": 208,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 228,
+    "processedEvents": 208,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-05-08T07:20:55.486Z"
+    "processedAt": "2026-05-08T19:08:41.963Z"
   },
   "qualityReport": {
-    "timestamp": "2026-05-08T07:20:55.486Z",
+    "timestamp": "2026-05-08T19:08:41.963Z",
     "summary": {
-      "originalEventCount": 228,
-      "finalEventCount": 228,
+      "originalEventCount": 208,
+      "finalEventCount": 208,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 228,
-          "uniqueCount": 228,
+          "originalCount": 208,
+          "uniqueCount": 208,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 228,
-          "cleanedEvents": 53,
+          "totalEvents": 208,
+          "cleanedEvents": 46,
           "cleaningStats": {
-            "Cleaned title": 53
+            "Cleaned title": 46
           }
         },
         "validation": {
-          "totalEvents": 228,
-          "validEvents": 228,
+          "totalEvents": 208,
+          "validEvents": 208,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
@@ -297,7 +297,7 @@
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 53
+        "Cleaned title": 46
       }
     },
     "recommendations": []
