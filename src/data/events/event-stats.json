@@ -1,15 +1,15 @@
 {
-  "totalEvents": 229,
+  "totalEvents": 219,
   "upcomingEvents": 0,
-  "pastEvents": 229,
+  "pastEvents": 219,
   "cityDistribution": {
-    "hangzhou": 5,
+    "hangzhou": 4,
     "nanjing": 3,
     "chengdu": 32,
     "shanghai": 30,
-    "beijing": 33,
-    "shenzhen": 27,
-    "xian": 12,
+    "beijing": 32,
+    "shenzhen": 25,
+    "xian": 11,
     "guangzhou": 5,
     "zhengzhou": 4,
     "hefei": 9,
@@ -21,35 +21,35 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 757474,
-    "totalFavorites": 24105,
-    "averageViews": 3308,
-    "averageFavorites": 105,
+    "totalViews": 722932,
+    "totalFavorites": 23589,
+    "averageViews": 3301,
+    "averageFavorites": 108,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21200
+        "views": 21224
       },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 18052
+        "views": 18062
       },
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 16281
+        "views": 16286
       },
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 15653
+        "views": 15663
       },
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 13056
+        "views": 13065
       }
     ],
     "topFavoritedEvents": [
@@ -81,16 +81,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 229,
-    "mappedEvents": 189,
-    "unmappedEvents": 40,
+    "totalEvents": 219,
+    "mappedEvents": 184,
+    "unmappedEvents": 35,
     "mappingsByConfidence": {
-      "high": 189,
+      "high": 184,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 189
+      "province": 184
     },
     "unmappedLocations": [
       "线上活动",
@@ -118,50 +118,50 @@
     "2025/": 63,
     "2024/": 49,
     "2023/": 39,
-    "2022/": 57,
+    "2022/": 47,
     "2021/": 2
   },
-  "lastUpdated": "2026-05-10T20:04:10.591Z",
+  "lastUpdated": "2026-05-11T09:01:48.308Z",
   "processing": {
-    "totalRawEvents": 229,
+    "totalRawEvents": 219,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 229,
+    "eventsAfterDeduplication": 219,
     "eventsCleaned": 54,
-    "validEvents": 229,
+    "validEvents": 219,
     "invalidEvents": 0,
-    "warningEvents": 17,
-    "processedEvents": 229,
+    "warningEvents": 16,
+    "processedEvents": 219,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-05-10T20:04:10.595Z"
+    "processedAt": "2026-05-11T09:01:48.310Z"
   },
   "qualityReport": {
-    "timestamp": "2026-05-10T20:04:10.595Z",
+    "timestamp": "2026-05-11T09:01:48.310Z",
     "summary": {
-      "originalEventCount": 229,
-      "finalEventCount": 229,
+      "originalEventCount": 219,
+      "finalEventCount": 219,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 229,
-          "uniqueCount": 229,
+          "originalCount": 219,
+          "uniqueCount": 219,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 229,
+          "totalEvents": 219,
           "cleanedEvents": 54,
           "cleaningStats": {
             "Cleaned title": 54
           }
         },
         "validation": {
-          "totalEvents": 229,
-          "validEvents": 229,
+          "totalEvents": 219,
+          "validEvents": 219,
           "invalidEvents": 0,
-          "warningEvents": 17,
+          "warningEvents": 16,
           "commonIssues": {
-            "Very short title (might be incomplete)": 17
+            "Very short title (might be incomplete)": 16
           },
           "qualityScore": 100
         }
@@ -269,13 +269,6 @@
           ]
         },
         {
-          "eventId": "4662467638211",
-          "title": "开源遇上大数据",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
           "eventId": "3654183554723",
           "title": "排序模型的样本工程",
           "issues": [
@@ -294,7 +287,7 @@
     },
     "statistics": {
       "commonIssues": {
-        "Very short title (might be incomplete)": 17
+        "Very short title (might be incomplete)": 16
       },
       "duplicateReasons": {},
       "cleaningActions": {
