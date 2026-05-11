@@ -1,15 +1,15 @@
 {
-  "totalEvents": 219,
+  "totalEvents": 229,
   "upcomingEvents": 0,
-  "pastEvents": 219,
+  "pastEvents": 229,
   "cityDistribution": {
-    "hangzhou": 4,
+    "hangzhou": 5,
     "nanjing": 3,
     "chengdu": 32,
     "shanghai": 30,
-    "beijing": 32,
-    "shenzhen": 25,
-    "xian": 11,
+    "beijing": 33,
+    "shenzhen": 27,
+    "xian": 12,
     "guangzhou": 5,
     "zhengzhou": 4,
     "hefei": 9,
@@ -21,20 +21,20 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 722932,
-    "totalFavorites": 23589,
-    "averageViews": 3301,
-    "averageFavorites": 108,
+    "totalViews": 758446,
+    "totalFavorites": 24134,
+    "averageViews": 3312,
+    "averageFavorites": 105,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21224
+        "views": 21229
       },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 18062
+        "views": 18082
       },
       {
         "id": "7827076896900",
@@ -49,7 +49,7 @@
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 13065
+        "views": 13085
       }
     ],
     "topFavoritedEvents": [
@@ -81,16 +81,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 219,
-    "mappedEvents": 184,
-    "unmappedEvents": 35,
+    "totalEvents": 229,
+    "mappedEvents": 189,
+    "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 184,
+      "high": 189,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 184
+      "province": 189
     },
     "unmappedLocations": [
       "线上活动",
@@ -118,50 +118,50 @@
     "2025/": 63,
     "2024/": 49,
     "2023/": 39,
-    "2022/": 47,
+    "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-05-11T09:01:48.308Z",
+  "lastUpdated": "2026-05-11T19:32:24.316Z",
   "processing": {
-    "totalRawEvents": 219,
+    "totalRawEvents": 229,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 219,
+    "eventsAfterDeduplication": 229,
     "eventsCleaned": 54,
-    "validEvents": 219,
+    "validEvents": 229,
     "invalidEvents": 0,
-    "warningEvents": 16,
-    "processedEvents": 219,
+    "warningEvents": 17,
+    "processedEvents": 229,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-05-11T09:01:48.310Z"
+    "processedAt": "2026-05-11T19:32:24.319Z"
   },
   "qualityReport": {
-    "timestamp": "2026-05-11T09:01:48.310Z",
+    "timestamp": "2026-05-11T19:32:24.318Z",
     "summary": {
-      "originalEventCount": 219,
-      "finalEventCount": 219,
+      "originalEventCount": 229,
+      "finalEventCount": 229,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 219,
-          "uniqueCount": 219,
+          "originalCount": 229,
+          "uniqueCount": 229,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 219,
+          "totalEvents": 229,
           "cleanedEvents": 54,
           "cleaningStats": {
             "Cleaned title": 54
           }
         },
         "validation": {
-          "totalEvents": 219,
-          "validEvents": 219,
+          "totalEvents": 229,
+          "validEvents": 229,
           "invalidEvents": 0,
-          "warningEvents": 16,
+          "warningEvents": 17,
           "commonIssues": {
-            "Very short title (might be incomplete)": 16
+            "Very short title (might be incomplete)": 17
           },
           "qualityScore": 100
         }
@@ -269,6 +269,13 @@
           ]
         },
         {
+          "eventId": "4662467638211",
+          "title": "开源遇上大数据",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
           "eventId": "3654183554723",
           "title": "排序模型的样本工程",
           "issues": [
@@ -287,7 +294,7 @@
     },
     "statistics": {
       "commonIssues": {
-        "Very short title (might be incomplete)": 16
+        "Very short title (might be incomplete)": 17
       },
       "duplicateReasons": {},
       "cleaningActions": {
