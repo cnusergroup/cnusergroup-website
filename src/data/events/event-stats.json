@@ -21,9 +21,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 776877,
+    "totalViews": 776777,
     "totalFavorites": 24418,
-    "averageViews": 3378,
+    "averageViews": 3377,
     "averageFavorites": 106,
     "topViewedEvents": [
       {
@@ -44,12 +44,12 @@
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 15718
+        "views": 15713
       },
       {
         "id": "4794558028800",
         "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 13191
+        "views": 13190
       }
     ],
     "topFavoritedEvents": [
@@ -122,7 +122,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-06-01T21:25:04.954Z",
+  "lastUpdated": "2026-06-01T22:16:59.610Z",
   "processing": {
     "totalRawEvents": 230,
     "duplicatesRemoved": 0,
@@ -134,10 +134,10 @@
     "processedEvents": 230,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-06-01T21:25:04.958Z"
+    "processedAt": "2026-06-01T22:16:59.613Z"
   },
   "qualityReport": {
-    "timestamp": "2026-06-01T21:25:04.958Z",
+    "timestamp": "2026-06-01T22:16:59.613Z",
     "summary": {
       "originalEventCount": 230,
       "finalEventCount": 230,
