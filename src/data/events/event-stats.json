@@ -1,11 +1,11 @@
 {
-  "totalEvents": 233,
+  "totalEvents": 234,
   "upcomingEvents": 0,
-  "pastEvents": 233,
+  "pastEvents": 234,
   "cityDistribution": {
     "hangzhou": 6,
+    "chengdu": 34,
     "beijing": 35,
-    "chengdu": 33,
     "nanjing": 3,
     "shanghai": 30,
     "shenzhen": 27,
@@ -21,15 +21,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 795473,
-    "totalFavorites": 24837,
-    "averageViews": 3414,
-    "averageFavorites": 107,
+    "totalViews": 796263,
+    "totalFavorites": 24909,
+    "averageViews": 3403,
+    "averageFavorites": 106,
     "topViewedEvents": [
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21529
+        "views": 21534
       },
       {
         "id": "3721674476500",
@@ -39,7 +39,7 @@
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 16291
+        "views": 16296
       },
       {
         "id": "3794987216300",
@@ -81,16 +81,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 233,
-    "mappedEvents": 193,
+    "totalEvents": 234,
+    "mappedEvents": 194,
     "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 193,
+      "high": 194,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 193
+      "province": 194
     },
     "unmappedLocations": [
       "线上活动",
@@ -101,6 +101,7 @@
   },
   "timeDistribution": {
     "06/28": 1,
+    "06/14": 1,
     "06/13": 1,
     "06/07": 2,
     "05/23": 1,
@@ -124,43 +125,43 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-06-07T20:19:15.028Z",
+  "lastUpdated": "2026-06-08T10:20:05.368Z",
   "processing": {
-    "totalRawEvents": 233,
+    "totalRawEvents": 234,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 233,
-    "eventsCleaned": 55,
-    "validEvents": 233,
+    "eventsAfterDeduplication": 234,
+    "eventsCleaned": 56,
+    "validEvents": 234,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 233,
+    "processedEvents": 234,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-06-07T20:19:15.031Z"
+    "processedAt": "2026-06-08T10:20:05.370Z"
   },
   "qualityReport": {
-    "timestamp": "2026-06-07T20:19:15.031Z",
+    "timestamp": "2026-06-08T10:20:05.370Z",
     "summary": {
-      "originalEventCount": 233,
-      "finalEventCount": 233,
+      "originalEventCount": 234,
+      "finalEventCount": 234,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 233,
-          "uniqueCount": 233,
+          "originalCount": 234,
+          "uniqueCount": 234,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 233,
-          "cleanedEvents": 55,
+          "totalEvents": 234,
+          "cleanedEvents": 56,
           "cleaningStats": {
-            "Cleaned title": 55
+            "Cleaned title": 56
           }
         },
         "validation": {
-          "totalEvents": 233,
-          "validEvents": 233,
+          "totalEvents": 234,
+          "validEvents": 234,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
@@ -301,7 +302,7 @@
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 55
+        "Cleaned title": 56
       }
     },
     "recommendations": []
