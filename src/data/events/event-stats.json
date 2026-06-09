@@ -1,10 +1,11 @@
 {
-  "totalEvents": 234,
+  "totalEvents": 235,
   "upcomingEvents": 0,
-  "pastEvents": 234,
+  "pastEvents": 235,
   "cityDistribution": {
     "hangzhou": 6,
     "chengdu": 34,
+    "hefei": 10,
     "beijing": 35,
     "nanjing": 3,
     "shanghai": 30,
@@ -12,7 +13,6 @@
     "xian": 12,
     "guangzhou": 5,
     "zhengzhou": 4,
-    "hefei": 9,
     "fuzhou": 3,
     "chongqing": 4,
     "wuhan": 12,
@@ -21,10 +21,10 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 797656,
-    "totalFavorites": 24930,
-    "averageViews": 3409,
-    "averageFavorites": 107,
+    "totalViews": 798675,
+    "totalFavorites": 24942,
+    "averageViews": 3399,
+    "averageFavorites": 106,
     "topViewedEvents": [
       {
         "id": "3806075715500",
@@ -81,16 +81,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 234,
-    "mappedEvents": 194,
+    "totalEvents": 235,
+    "mappedEvents": 195,
     "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 194,
+      "high": 195,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 194
+      "province": 195
     },
     "unmappedLocations": [
       "线上活动",
@@ -102,7 +102,7 @@
   "timeDistribution": {
     "06/28": 1,
     "06/14": 1,
-    "06/13": 1,
+    "06/13": 2,
     "06/07": 2,
     "05/23": 1,
     "05/16": 1,
@@ -125,43 +125,43 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-06-09T09:03:46.547Z",
+  "lastUpdated": "2026-06-09T20:00:09.774Z",
   "processing": {
-    "totalRawEvents": 234,
+    "totalRawEvents": 235,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 234,
-    "eventsCleaned": 56,
-    "validEvents": 234,
+    "eventsAfterDeduplication": 235,
+    "eventsCleaned": 57,
+    "validEvents": 235,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 234,
+    "processedEvents": 235,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-06-09T09:03:46.551Z"
+    "processedAt": "2026-06-09T20:00:09.778Z"
   },
   "qualityReport": {
-    "timestamp": "2026-06-09T09:03:46.551Z",
+    "timestamp": "2026-06-09T20:00:09.778Z",
     "summary": {
-      "originalEventCount": 234,
-      "finalEventCount": 234,
+      "originalEventCount": 235,
+      "finalEventCount": 235,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 234,
-          "uniqueCount": 234,
+          "originalCount": 235,
+          "uniqueCount": 235,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 234,
-          "cleanedEvents": 56,
+          "totalEvents": 235,
+          "cleanedEvents": 57,
           "cleaningStats": {
-            "Cleaned title": 56
+            "Cleaned title": 57
           }
         },
         "validation": {
-          "totalEvents": 234,
-          "validEvents": 234,
+          "totalEvents": 235,
+          "validEvents": 235,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
@@ -302,7 +302,7 @@
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 56
+        "Cleaned title": 57
       }
     },
     "recommendations": []
