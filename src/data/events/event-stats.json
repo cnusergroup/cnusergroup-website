@@ -21,10 +21,10 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 798706,
-    "totalFavorites": 24943,
-    "averageViews": 3399,
-    "averageFavorites": 106,
+    "totalViews": 800119,
+    "totalFavorites": 25033,
+    "averageViews": 3405,
+    "averageFavorites": 107,
     "topViewedEvents": [
       {
         "id": "3806075715500",
@@ -47,9 +47,9 @@
         "views": 15743
       },
       {
-        "id": "4794558028800",
-        "title": "re:Invent 云启Al新篇DeepSeek引领未来，聚焦AI技术与创新",
-        "views": 13240
+        "id": "6857607994600",
+        "title": "杭州亚马逊云科技 User Group Community 2026Summer",
+        "views": 13432
       }
     ],
     "topFavoritedEvents": [
@@ -125,7 +125,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-06-09T21:05:26.550Z",
+  "lastUpdated": "2026-06-10T09:43:49.580Z",
   "processing": {
     "totalRawEvents": 235,
     "duplicatesRemoved": 0,
@@ -137,10 +137,10 @@
     "processedEvents": 235,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-06-09T21:05:26.553Z"
+    "processedAt": "2026-06-10T09:43:49.583Z"
   },
   "qualityReport": {
-    "timestamp": "2026-06-09T21:05:26.553Z",
+    "timestamp": "2026-06-10T09:43:49.583Z",
     "summary": {
       "originalEventCount": 235,
       "finalEventCount": 235,
