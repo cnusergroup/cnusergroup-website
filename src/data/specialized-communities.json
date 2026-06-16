@@ -94,5 +94,29 @@
       "events": 0,
       "founded": 2026
     }
+  },
+  {
+    "id": "data-ai",
+    "name": {
+      "zh": "Data&AI社区",
+      "en": "Data&AI Community"
+    },
+    "logo": "/images/specialized/data-ai-pc.png",
+    "logoMobile": "/images/specialized/data-ai-mobile.png",
+    "active": true,
+    "description": {
+      "zh": "Data&AI社区专注于大数据与人工智能技术，分享数据分析、机器学习和生成式 AI 的最佳实践。",
+      "en": "Data&AI Community focuses on big data and artificial intelligence technologies, sharing best practices in data analytics, machine learning and generative AI."
+    },
+    "contact": {
+      "wechat": "data-ai-ug",
+      "email": "data-ai@cnusergroup.org",
+      "leader": ""
+    },
+    "stats": {
+      "members": 0,
+      "events": 0,
+      "founded": 2026
+    }
   }
 ]

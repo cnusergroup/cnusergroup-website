@@ -144,11 +144,8 @@ export function generateBreadcrumbs(currentPath: string, lang: Language): Array<
         lanzhou: { zh: '兰州', en: 'Lanzhou' },
         guangzhou: { zh: '广州', en: 'Guangzhou' },
         fuzhou: { zh: '福州', en: 'Fuzhou' },
-        suzhou: { zh: '苏州', en: 'Suzhou' },
         hangzhou: { zh: '杭州', en: 'Hangzhou' },
-        hechi: { zh: '河池', en: 'Hechi' },
         urumqi: { zh: '乌鲁木齐', en: 'Urumqi' },
-        qingdao: { zh: '青岛', en: 'Qingdao' },
         xiamen: { zh: '厦门', en: 'Xiamen' },
         zhangjiakou: { zh: '张家口', en: 'Zhangjiakou' },
         hefei: { zh: '合肥', en: 'Hefei' },
@@ -175,7 +172,8 @@ export function generateBreadcrumbs(currentPath: string, lang: Language): Array<
         kiro: { zh: 'Kiro社区', en: 'Kiro Community' },
         security: { zh: 'Security社区', en: 'Security Community' },
         observability: { zh: '可观测性社区', en: 'Observability Community' },
-        'online-events': { zh: '线上活动社区', en: 'Online Events Community' }
+        'online-events': { zh: '线上活动社区', en: 'Online Events Community' },
+        'data-ai': { zh: 'Data&AI社区', en: 'Data&AI Community' }
       };
       
       const communityName = specializedNames[pathParts[1]]?.[lang] || pathParts[1];
