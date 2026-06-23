@@ -21,30 +21,30 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 819902,
-    "totalFavorites": 25524,
-    "averageViews": 3474,
+    "totalViews": 821613,
+    "totalFavorites": 25584,
+    "averageViews": 3481,
     "averageFavorites": 108,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 24253
+        "views": 25902
       },
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21689
+        "views": 21700
       },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 18382
+        "views": 18387
       },
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 16276
+        "views": 16281
       },
       {
         "id": "3794987216300",
@@ -59,14 +59,14 @@
         "favorites": 1408
       },
       {
+        "id": "6857607994600",
+        "title": "杭州亚马逊云科技 User Group Community 2026Summer",
+        "favorites": 794
+      },
+      {
         "id": "8713322434100",
         "title": "AIGC浪潮来袭！亚马逊云科技开发者社区嘉年华！",
         "favorites": 784
-      },
-      {
-        "id": "6857607994600",
-        "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "favorites": 734
       },
       {
         "id": "2745427115200",
@@ -126,7 +126,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-06-22T21:37:07.505Z",
+  "lastUpdated": "2026-06-23T09:01:42.246Z",
   "processing": {
     "totalRawEvents": 236,
     "duplicatesRemoved": 0,
@@ -138,10 +138,10 @@
     "processedEvents": 236,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-06-22T21:37:07.508Z"
+    "processedAt": "2026-06-23T09:01:42.248Z"
   },
   "qualityReport": {
-    "timestamp": "2026-06-22T21:37:07.508Z",
+    "timestamp": "2026-06-23T09:01:42.248Z",
     "summary": {
       "originalEventCount": 236,
       "finalEventCount": 236,
