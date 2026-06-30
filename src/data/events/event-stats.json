@@ -21,25 +21,25 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 850189,
-    "totalFavorites": 26240,
-    "averageViews": 3572,
+    "totalViews": 851470,
+    "totalFavorites": 26269,
+    "averageViews": 3578,
     "averageFavorites": 110,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 52031
+        "views": 52572
       },
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21759
+        "views": 21769
       },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 18402
+        "views": 18407
       },
       {
         "id": "7827076896900",
@@ -127,7 +127,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-06-29T20:54:39.495Z",
+  "lastUpdated": "2026-06-30T09:01:45.576Z",
   "processing": {
     "totalRawEvents": 238,
     "duplicatesRemoved": 0,
@@ -139,10 +139,10 @@
     "processedEvents": 238,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-06-29T20:54:39.497Z"
+    "processedAt": "2026-06-30T09:01:45.579Z"
   },
   "qualityReport": {
-    "timestamp": "2026-06-29T20:54:39.497Z",
+    "timestamp": "2026-06-30T09:01:45.579Z",
     "summary": {
       "originalEventCount": 238,
       "finalEventCount": 238,
