@@ -1,15 +1,15 @@
 {
-  "totalEvents": 239,
+  "totalEvents": 240,
   "upcomingEvents": 0,
-  "pastEvents": 239,
+  "pastEvents": 240,
   "cityDistribution": {
+    "nanjing": 4,
     "shenzhen": 29,
     "chengdu": 35,
     "wuhan": 13,
     "hangzhou": 6,
     "hefei": 10,
     "beijing": 35,
-    "nanjing": 3,
     "shanghai": 30,
     "xian": 12,
     "guangzhou": 5,
@@ -21,20 +21,20 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 861064,
-    "totalFavorites": 26443,
-    "averageViews": 3603,
-    "averageFavorites": 111,
+    "totalViews": 862389,
+    "totalFavorites": 26474,
+    "averageViews": 3593,
+    "averageFavorites": 110,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 57073
+        "views": 57349
       },
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21789
+        "views": 21799
       },
       {
         "id": "3721674476500",
@@ -81,16 +81,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 239,
-    "mappedEvents": 199,
+    "totalEvents": 240,
+    "mappedEvents": 200,
     "unmappedEvents": 40,
     "mappingsByConfidence": {
-      "high": 199,
+      "high": 200,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 199
+      "province": 200
     },
     "unmappedLocations": [
       "线上活动",
@@ -100,6 +100,7 @@
     ]
   },
   "timeDistribution": {
+    "07/11": 1,
     "07/04": 2,
     "07/03": 1,
     "06/28": 1,
@@ -128,43 +129,43 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-07-02T20:25:39.256Z",
+  "lastUpdated": "2026-07-03T08:52:02.737Z",
   "processing": {
-    "totalRawEvents": 239,
+    "totalRawEvents": 240,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 239,
+    "eventsAfterDeduplication": 240,
     "eventsCleaned": 59,
-    "validEvents": 239,
+    "validEvents": 240,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 239,
+    "processedEvents": 240,
     "citiesWithEvents": 16,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-02T20:25:39.259Z"
+    "processedAt": "2026-07-03T08:52:02.740Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-02T20:25:39.258Z",
+    "timestamp": "2026-07-03T08:52:02.740Z",
     "summary": {
-      "originalEventCount": 239,
-      "finalEventCount": 239,
+      "originalEventCount": 240,
+      "finalEventCount": 240,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 239,
-          "uniqueCount": 239,
+          "originalCount": 240,
+          "uniqueCount": 240,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 239,
+          "totalEvents": 240,
           "cleanedEvents": 59,
           "cleaningStats": {
             "Cleaned title": 59
           }
         },
         "validation": {
-          "totalEvents": 239,
-          "validEvents": 239,
+          "totalEvents": 240,
+          "validEvents": 240,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
