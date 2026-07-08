@@ -15,13 +15,12 @@
     "guangzhou": 5,
     "zhengzhou": 4,
     "fuzhou": 3,
-    "chongqing": 4,
     "lanzhou": 5,
     "zhangjiakou": 3,
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 869676,
+    "totalViews": 869716,
     "totalFavorites": 26665,
     "averageViews": 3624,
     "averageFavorites": 111,
@@ -29,7 +28,7 @@
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 58382
+        "views": 58387
       },
       {
         "id": "3806075715500",
@@ -82,20 +81,23 @@
   },
   "mappingStats": {
     "totalEvents": 240,
-    "mappedEvents": 200,
-    "unmappedEvents": 40,
+    "mappedEvents": 196,
+    "unmappedEvents": 44,
     "mappingsByConfidence": {
-      "high": 200,
+      "high": 196,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 200
+      "province": 196
     },
     "unmappedLocations": [
       "线上活动",
       "福建厦门",
+      "重庆渝北",
+      "重庆九龙坡",
       "江苏苏州",
+      "重庆江北",
       "广西河池"
     ]
   },
@@ -129,7 +131,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-07-08T08:11:31.159Z",
+  "lastUpdated": "2026-07-08T08:49:04.027Z",
   "processing": {
     "totalRawEvents": 240,
     "duplicatesRemoved": 0,
@@ -139,12 +141,12 @@
     "invalidEvents": 0,
     "warningEvents": 17,
     "processedEvents": 240,
-    "citiesWithEvents": 16,
+    "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-08T08:11:31.162Z"
+    "processedAt": "2026-07-08T08:49:04.030Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-08T08:11:31.161Z",
+    "timestamp": "2026-07-08T08:49:04.029Z",
     "summary": {
       "originalEventCount": 240,
       "finalEventCount": 240,
