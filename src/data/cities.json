@@ -439,7 +439,7 @@
     },
     "logo": "/images/cities/chongqing-pc.png",
     "logoMobile": "/images/cities/chongqing-mobile.png",
-    "active": true,
+    "active": false,
     "description": {
       "zh": "重庆 亚马逊云科技 User Group 服务于西南地区的云计算开发者，推动山城技术创新与交流。",
       "en": "Chongqing User Group serves cloud computing developers in Southwest China, promoting technological innovation and exchange in the Mountain City."
