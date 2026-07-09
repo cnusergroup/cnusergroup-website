@@ -1,7 +1,7 @@
 {
-  "totalEvents": 240,
+  "totalEvents": 241,
   "upcomingEvents": 0,
-  "pastEvents": 240,
+  "pastEvents": 241,
   "cityDistribution": {
     "nanjing": 4,
     "shenzhen": 29,
@@ -20,15 +20,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 870094,
-    "totalFavorites": 26667,
-    "averageViews": 3625,
+    "totalViews": 870592,
+    "totalFavorites": 26669,
+    "averageViews": 3612,
     "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 58477
+        "views": 58592
       },
       {
         "id": "3806075715500",
@@ -80,9 +80,9 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 240,
+    "totalEvents": 241,
     "mappedEvents": 196,
-    "unmappedEvents": 44,
+    "unmappedEvents": 45,
     "mappingsByConfidence": {
       "high": 196,
       "medium": 0,
@@ -92,6 +92,7 @@
       "province": 196
     },
     "unmappedLocations": [
+      "广东东莞",
       "线上活动",
       "福建厦门",
       "重庆渝北",
@@ -102,6 +103,7 @@
     ]
   },
   "timeDistribution": {
+    "07/18": 1,
     "07/11": 1,
     "07/04": 2,
     "07/03": 1,
@@ -131,43 +133,43 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-07-08T20:27:16.495Z",
+  "lastUpdated": "2026-07-09T09:28:49.753Z",
   "processing": {
-    "totalRawEvents": 240,
+    "totalRawEvents": 241,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 240,
-    "eventsCleaned": 59,
-    "validEvents": 240,
+    "eventsAfterDeduplication": 241,
+    "eventsCleaned": 60,
+    "validEvents": 241,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 240,
+    "processedEvents": 241,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-08T20:27:16.497Z"
+    "processedAt": "2026-07-09T09:28:49.756Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-08T20:27:16.497Z",
+    "timestamp": "2026-07-09T09:28:49.756Z",
     "summary": {
-      "originalEventCount": 240,
-      "finalEventCount": 240,
+      "originalEventCount": 241,
+      "finalEventCount": 241,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 240,
-          "uniqueCount": 240,
+          "originalCount": 241,
+          "uniqueCount": 241,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 240,
-          "cleanedEvents": 59,
+          "totalEvents": 241,
+          "cleanedEvents": 60,
           "cleaningStats": {
-            "Cleaned title": 59
+            "Cleaned title": 60
           }
         },
         "validation": {
-          "totalEvents": 240,
-          "validEvents": 240,
+          "totalEvents": 241,
+          "validEvents": 241,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
@@ -308,7 +310,7 @@
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 59
+        "Cleaned title": 60
       }
     },
     "recommendations": []
