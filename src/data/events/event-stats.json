@@ -1,7 +1,7 @@
 {
   "totalEvents": 241,
-  "upcomingEvents": 0,
-  "pastEvents": 241,
+  "upcomingEvents": 2,
+  "pastEvents": 239,
   "cityDistribution": {
     "nanjing": 4,
     "shenzhen": 29,
@@ -20,15 +20,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 871034,
-    "totalFavorites": 26674,
-    "averageViews": 3614,
+    "totalViews": 871250,
+    "totalFavorites": 26700,
+    "averageViews": 3615,
     "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 58693
+        "views": 58804
       },
       {
         "id": "3806075715500",
@@ -103,37 +103,14 @@
     ]
   },
   "timeDistribution": {
-    "07/18": 1,
-    "07/11": 1,
-    "07/04": 2,
-    "07/03": 1,
-    "06/28": 1,
-    "06/16": 1,
-    "06/14": 1,
-    "06/13": 2,
-    "06/07": 2,
-    "05/23": 1,
-    "05/16": 1,
-    "05/10": 1,
-    "04/26": 2,
-    "04/25": 1,
-    "03/29": 1,
-    "03/28": 2,
-    "03/22": 2,
-    "03/14": 1,
-    "03/08": 1,
-    "02/01": 1,
-    "01/25": 1,
-    "01/23": 1,
-    "01/18": 2,
-    "01/10": 1,
+    "2026/": 31,
     "2025/": 63,
     "2024/": 49,
     "2023/": 39,
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-07-09T20:52:55.502Z",
+  "lastUpdated": "2026-07-10T06:56:48.936Z",
   "processing": {
     "totalRawEvents": 241,
     "duplicatesRemoved": 0,
@@ -145,10 +122,10 @@
     "processedEvents": 241,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-09T20:52:55.504Z"
+    "processedAt": "2026-07-10T06:56:48.938Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-09T20:52:55.504Z",
+    "timestamp": "2026-07-10T06:56:48.938Z",
     "summary": {
       "originalEventCount": 241,
       "finalEventCount": 241,
