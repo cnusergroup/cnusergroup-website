@@ -183,17 +183,41 @@ class EventPaginationScraper {
             }
           }
 
+          // 提取活动状态：检查是否有"立即报名"或"已结束"文本
+          let status = 'unknown';
+          const itemText = linkElement.textContent || '';
+          if (itemText.includes('立即报名')) {
+            status = 'upcoming';
+          } else if (itemText.includes('已结束')) {
+            status = 'ended';
+          }
+
+          // 补齐年份：如果时间格式为 MM/DD（无年份），补充当前年份
+          let fullTime = time;
+          if (time && !time.match(/^\d{4}\//)) {
+            // 时间不以 YYYY/ 开头，说明缺少年份，补充当前年份
+            const currentYear = new Date().getFullYear();
+            const monthMatch = time.match(/^(\d{2})\//);
+            if (monthMatch) {
+              const eventMonth = parseInt(monthMatch[1]);
+              const currentMonth = new Date().getMonth() + 1;
+              // 如果活动月份大于当前月份+2，可能是去年的活动（网站倒序排列情况下不太会出现）
+              // 正常情况下无年份=当前年份
+              fullTime = `${currentYear}/${time}`;
+            }
+          }
+
           // 构建完整URL
           const fullUrl = href.startsWith('http') ? href : `https://usergroup.huodongxing.com${href}`;
 
           const event = {
             id: eventId,
             title,
-            time,
+            time: fullTime,
             location,
             url: fullUrl,
             imageUrl,
-            status: 'unknown', // 初始状态，稍后访问详情页获取
+            status,
             views,
             favorites,
             scrapedAt: new Date().toISOString()

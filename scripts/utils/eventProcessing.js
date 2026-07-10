@@ -70,23 +70,35 @@ export function formatEventDate(timeStr, locale = 'zh') {
   if (!timeStr) return '';
 
   try {
-    const match = timeStr.match(/(\d{2})\/(\d{2})\s+(\d{2}):(\d{2})/);
-    if (!match) return timeStr;
+    // Match time with year prefix: YYYY/MM/DD ... HH:MM
+    const matchWithYear = timeStr.match(/(\d{4})\/(\d{2})\/(\d{2}).*?(\d{2}):(\d{2})/);
+    // Match time without year: MM/DD ... HH:MM
+    const matchWithoutYear = timeStr.match(/^(\d{2})\/(\d{2}).*?(\d{2}):(\d{2})/);
 
-    const [, month, day, hour, minute] = match;
-    const currentYear = new Date().getFullYear();
+    let year, month, day, hour, minute;
 
-    const eventDate = new Date(currentYear, parseInt(month) - 1, parseInt(day), parseInt(hour), parseInt(minute));
+    if (matchWithYear) {
+      [, year, month, day, hour, minute] = matchWithYear;
+      year = parseInt(year);
+    } else if (matchWithoutYear) {
+      [, month, day, hour, minute] = matchWithoutYear;
+      year = new Date().getFullYear();
+    } else {
+      return timeStr;
+    }
+
+    const eventDate = new Date(year, parseInt(month) - 1, parseInt(day), parseInt(hour), parseInt(minute));
 
     if (locale === 'en') {
       return eventDate.toLocaleDateString('en-US', {
+        year: 'numeric',
         month: 'short',
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit'
       });
     } else {
-      return `${month}月${day}日 ${hour}:${minute}`;
+      return `${year}年${month}月${day}日 ${hour}:${minute}`;
     }
   } catch {
     return timeStr;
@@ -301,21 +313,30 @@ export function cleanEventData(events) {
     // Normalize time format
     if (cleanedEvent.time) {
       const originalTime = cleanedEvent.time;
-      // Try to normalize various time formats to MM/DD HH:MM
+      // Try to normalize various time formats, preserving year when present
       let normalizedTime = cleanedEvent.time.trim();
 
       // Handle formats like "2024-06-05 13:00" or "06-05 13:00"
-      const dateTimeMatch = normalizedTime.match(/(\d{2,4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})/);
+      const dateTimeMatch = normalizedTime.match(/(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})/);
       if (dateTimeMatch) {
         const [, year, month, day, hour, minute] = dateTimeMatch;
-        normalizedTime = `${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
+        normalizedTime = `${year}/${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
+      } else {
+        // Handle short format "06-05 13:00" (no year)
+        const shortDateTimeMatch = normalizedTime.match(/^(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})/);
+        if (shortDateTimeMatch) {
+          const [, month, day, hour, minute] = shortDateTimeMatch;
+          const currentYear = new Date().getFullYear();
+          normalizedTime = `${currentYear}/${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
+        }
       }
 
       // Handle formats like "6月5日 13:00"
       const chineseDateMatch = normalizedTime.match(/(\d{1,2})月(\d{1,2})日\s+(\d{1,2}):(\d{2})/);
       if (chineseDateMatch) {
         const [, month, day, hour, minute] = chineseDateMatch;
-        normalizedTime = `${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
+        const currentYear = new Date().getFullYear();
+        normalizedTime = `${currentYear}/${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
       }
 
       cleanedEvent.time = normalizedTime;
