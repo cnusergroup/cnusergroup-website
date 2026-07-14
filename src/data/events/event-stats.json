@@ -20,15 +20,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 874606,
-    "totalFavorites": 26754,
-    "averageViews": 3614,
+    "totalViews": 874799,
+    "totalFavorites": 26760,
+    "averageViews": 3615,
     "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 59389
+        "views": 59481
       },
       {
         "id": "3806075715500",
@@ -48,7 +48,7 @@
       {
         "id": "3794987216300",
         "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 15848
+        "views": 15853
       }
     ],
     "topFavoritedEvents": [
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-07-13T20:21:55.729Z",
+  "lastUpdated": "2026-07-14T07:50:24.814Z",
   "processing": {
     "totalRawEvents": 242,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 242,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-13T20:21:55.733Z"
+    "processedAt": "2026-07-14T07:50:24.817Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-13T20:21:55.733Z",
+    "timestamp": "2026-07-14T07:50:24.817Z",
     "summary": {
       "originalEventCount": 242,
       "finalEventCount": 242,
