@@ -20,20 +20,20 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 881920,
-    "totalFavorites": 26947,
-    "averageViews": 3614,
+    "totalViews": 882798,
+    "totalFavorites": 26954,
+    "averageViews": 3618,
     "averageFavorites": 110,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 60006
+        "views": 60026
       },
       {
         "id": "3806075715500",
         "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 21969
+        "views": 21974
       },
       {
         "id": "3721674476500",
@@ -43,7 +43,7 @@
       {
         "id": "7827076896900",
         "title": "深圳community day 开发者的聚会",
-        "views": 16301
+        "views": 16311
       },
       {
         "id": "3794987216300",
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-07-18T07:31:13.515Z",
+  "lastUpdated": "2026-07-18T18:49:53.206Z",
   "processing": {
     "totalRawEvents": 244,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 244,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-18T07:31:13.518Z"
+    "processedAt": "2026-07-18T18:49:53.208Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-18T07:31:13.517Z",
+    "timestamp": "2026-07-18T18:49:53.208Z",
     "summary": {
       "originalEventCount": 244,
       "finalEventCount": 244,
