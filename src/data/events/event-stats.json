@@ -20,15 +20,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 883974,
-    "totalFavorites": 26961,
+    "totalViews": 884010,
+    "totalFavorites": 26962,
     "averageViews": 3623,
-    "averageFavorites": 110,
+    "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 60145
+        "views": 60150
       },
       {
         "id": "3806075715500",
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-07-19T18:53:25.263Z",
+  "lastUpdated": "2026-07-19T20:13:32.053Z",
   "processing": {
     "totalRawEvents": 244,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 244,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-19T18:53:25.266Z"
+    "processedAt": "2026-07-19T20:13:32.056Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-19T18:53:25.266Z",
+    "timestamp": "2026-07-19T20:13:32.056Z",
     "summary": {
       "originalEventCount": 244,
       "finalEventCount": 244,
