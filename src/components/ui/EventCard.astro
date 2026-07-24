@@ -31,7 +31,12 @@ const translationsModule = locale === 'zh'
 const translations = translationsModule.default;
 const t = translations.events;
 
-// Status display removed - no longer showing event status
+// Event status badge: mark whether the event has already ended
+const isEnded = event.status === 'ended' || event.isUpcoming === false;
+const statusLabel = isEnded ? t.status.past : t.status.upcoming;
+const statusBadgeClass = isEnded
+  ? 'bg-gray-700 bg-opacity-85 text-white'
+  : 'bg-green-600 bg-opacity-90 text-white';
 
 // Format date for display
 const displayDate = locale === 'zh' ? event.formattedDate : event.time;
@@ -90,8 +95,19 @@ const eventStructuredData = {
       locale={locale}
       className="w-full h-full group-hover:scale-105 transition-transform duration-200"
     />
-    
-    
+
+    <!-- Event Status Badge -->
+    <div class="absolute top-3 left-3">
+      <span class={`inline-flex items-center px-2 py-1 rounded text-xs font-medium ${statusBadgeClass}`}>
+        {isEnded && (
+          <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        )}
+        {statusLabel}
+      </span>
+    </div>
+
     <!-- Engagement Metrics (if enabled) -->
     {showEngagement && (event.views > 0 || event.favorites > 0) && (
       <div class="absolute top-3 right-3 flex space-x-2">
