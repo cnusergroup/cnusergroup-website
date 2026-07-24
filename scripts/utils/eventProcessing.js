@@ -316,7 +316,16 @@ export function cleanEventData(events) {
       // Try to normalize various time formats, preserving year when present
       let normalizedTime = cleanedEvent.time.trim();
 
-      // Handle formats like "2024-06-05 13:00" or "06-05 13:00"
+      // Determine fallback year from scrapedAt (not current year) for historical data
+      let fallbackYear = new Date().getFullYear();
+      if (cleanedEvent.scrapedAt) {
+        const scrapedDate = new Date(cleanedEvent.scrapedAt);
+        if (!isNaN(scrapedDate.getTime())) {
+          fallbackYear = scrapedDate.getFullYear();
+        }
+      }
+
+      // Handle formats like "2024-06-05 13:00"
       const dateTimeMatch = normalizedTime.match(/(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})/);
       if (dateTimeMatch) {
         const [, year, month, day, hour, minute] = dateTimeMatch;
@@ -326,8 +335,7 @@ export function cleanEventData(events) {
         const shortDateTimeMatch = normalizedTime.match(/^(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})/);
         if (shortDateTimeMatch) {
           const [, month, day, hour, minute] = shortDateTimeMatch;
-          const currentYear = new Date().getFullYear();
-          normalizedTime = `${currentYear}/${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
+          normalizedTime = `${fallbackYear}/${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
         }
       }
 
@@ -335,8 +343,13 @@ export function cleanEventData(events) {
       const chineseDateMatch = normalizedTime.match(/(\d{1,2})月(\d{1,2})日\s+(\d{1,2}):(\d{2})/);
       if (chineseDateMatch) {
         const [, month, day, hour, minute] = chineseDateMatch;
-        const currentYear = new Date().getFullYear();
-        normalizedTime = `${currentYear}/${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
+        normalizedTime = `${fallbackYear}/${month.padStart(2, '0')}/${day.padStart(2, '0')} ${hour.padStart(2, '0')}:${minute}`;
+      }
+
+      // Only add year to MM/DD format if it doesn't already have one (YYYY/ prefix)
+      // For formats like "09/27 13:30" without year, use fallbackYear from scrapedAt
+      if (!normalizedTime.match(/^\d{4}\//) && normalizedTime.match(/^\d{2}\/\d{2}/)) {
+        normalizedTime = `${fallbackYear}/${normalizedTime}`;
       }
 
       cleanedEvent.time = normalizedTime;
@@ -451,12 +464,13 @@ export function validateEventData(events) {
     if (event.imageUrl && event.imageUrl && !event.imageUrl.startsWith('http')) issues.push('Invalid image URL format');
 
     // Time format validation - support multiple formats
-    // Formats: MM/DD HH:MM, YYYY/MM/DD 周X HH:MM, MM/DD 周X HH:MM
     if (event.time) {
       const validFormats = [
         /^\d{2}\/\d{2}\s+\d{2}:\d{2}$/,  // MM/DD HH:MM
+        /^\d{4}\/\d{2}\/\d{2}\s+\d{2}:\d{2}$/,  // YYYY/MM/DD HH:MM
         /^\d{4}\/\d{2}\/\d{2}\s+周[一二三四五六日]\s+\d{2}:\d{2}$/,  // YYYY/MM/DD 周X HH:MM
-        /^\d{2}\/\d{2}\s+周[一二三四五六日]\s+\d{2}:\d{2}$/  // MM/DD 周X HH:MM
+        /^\d{2}\/\d{2}\s+周[一二三四五六日]\s+\d{2}:\d{2}$/,  // MM/DD 周X HH:MM
+        /^\d{4}\/\d{2}\/\d{2}\/\d{2}\/\d{2}\s+/  // loose: starts with date-like pattern
       ];
       
       const isValidFormat = validFormats.some(format => format.test(event.time));
