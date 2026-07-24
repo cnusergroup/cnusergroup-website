@@ -23,6 +23,11 @@ on:
         default: false
         type: boolean
 
+  # 数据更新工作流使用 GITHUB_TOKEN 推送时不会触发 push 工作流，显式监听其完成事件。
+  workflow_run:
+    workflows: ["Update Event Data"]
+    types: [completed]
+
 # 设置 GITHUB_TOKEN 的权限
 permissions:
   contents: write  # 需要写权限来提交抓取的数据
@@ -37,6 +42,7 @@ concurrency:
 
 jobs:
   scrape-and-build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -49,7 +55,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: ${{ github.event.inputs.skip_cache != 'true' && 'npm' || '' }}
           
       - name: Install dependencies
@@ -59,132 +65,18 @@ jobs:
           else
             npm ci
           fi
-        
-      - name: Setup Playwright (for scraping)
-        run: |
-          npx playwright install chromium
-          npx playwright install-deps chromium
-        
-      - name: Clear previous event data
-        run: |
-          echo "🧹 清空上次抓取的活动数据..."
-          
-          # 清空事件数据文件，但保留目录结构
-          mkdir -p src/data/events
-          echo "[]" > src/data/events/processed-events.json
-          echo "{}" > src/data/events/city-mappings.json
-          echo '{"totalEvents":0,"lastUpdated":"'$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")'","status":"cleared"}' > src/data/events/event-stats.json
-          
-          # 清空原始数据文件（如果存在）
-          if [ -f "data/events/events.json" ]; then
-            echo "[]" > data/events/events.json
-          fi
-          
-          echo "✅ 活动数据已清空，准备重新抓取"
-        
-      - name: Scrape event data
-        run: |
-          echo "🕷️ 开始抓取活动数据..."
-          
-          # 设置抓取参数 - 总是执行完整抓取（因为已清空数据）
-          if [ "${{ github.event.inputs.force_scrape }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "🔄 执行强制完整数据抓取"
-            npm run scrape:events:force
-          else
-            echo "🔄 执行标准数据抓取（分页抓取）"
-            npm run scrape:events
-          fi
-          
-          # 验证抓取结果
-          if [ -f "src/data/events/processed-events.json" ]; then
-            event_count=$(jq length src/data/events/processed-events.json 2>/dev/null || echo "0")
-            echo "📊 抓取到 $event_count 个事件"
-            
-            if [ "$event_count" -eq 0 ]; then
-              echo "⚠️ 没有抓取到事件数据，但继续构建"
-            fi
-          else
-            echo "❌ 抓取失败，创建空数据文件"
-            mkdir -p src/data/events
-            echo "[]" > src/data/events/processed-events.json
-            echo "{}" > src/data/events/city-mappings.json
-            echo '{"totalEvents":0,"lastUpdated":"'$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")'","status":"scrape_failed"}' > src/data/events/event-stats.json
-          fi
-        env:
-          NODE_ENV: production
-          CI: true
-          FORCE_EVENT_SCRAPING: ${{ github.event.inputs.force_scrape }}
-        timeout-minutes: 15
 
-      - name: Process event data
+      - name: Validate committed event data
         run: |
-          echo "⚙️ 处理事件数据..."
-          
-          # 运行事件数据处理脚本
-          if [ -f "data/events/events.json" ]; then
-            echo "📊 开始处理原始事件数据"
-            node scripts/process-events.js --force
-            
-            # 验证处理结果
-            if [ -f "src/data/events/processed-events.json" ]; then
-              processed_count=$(jq length src/data/events/processed-events.json 2>/dev/null || echo "0")
-              echo "✅ 处理完成，生成 $processed_count 个处理后的事件"
-            else
-              echo "❌ 事件处理失败，未生成处理后的数据"
-            fi
-          else
-            echo "⚠️ 没有原始事件数据，跳过处理步骤"
-          fi
-        env:
-          NODE_ENV: production
-          CI: true
-        timeout-minutes: 10
-          
-      - name: Validate scraped data
-        run: |
-          echo "🔍 验证抓取的数据..."
-          
-          # 检查必需的数据文件
-          files_to_check=(
-            "src/data/events/processed-events.json"
-            "src/data/events/city-mappings.json"
-            "src/data/events/event-stats.json"
-          )
-          
-          for file in "${files_to_check[@]}"; do
-            if [ -f "$file" ]; then
-              # 验证JSON格式
-              if jq empty "$file" 2>/dev/null; then
-                echo "✅ $file - 格式正确"
-                
-                # 显示数据统计
-                if [ "$file" = "src/data/events/processed-events.json" ]; then
-                  event_count=$(jq length "$file")
-                  echo "📊 事件数量: $event_count"
-                fi
-              else
-                echo "❌ $file - JSON格式错误"
-                exit 1
-              fi
-            else
-              echo "⚠️ $file - 文件不存在"
-            fi
-          done
-          
-      - name: Commit scraped data
-        run: |
-          # 配置git
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          
-          # 检查是否有数据更新
-          if git diff --quiet src/data/events/; then
-            echo "📝 没有数据更新"
-          else
-            echo "📝 提交更新的事件数据"
-            git add src/data/events/
-            git commit -m "🤖 自动更新事件数据 - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-            git push
+          echo "🔍 验证待部署的活动数据..."
+          jq empty data/events/events.json
+          jq empty src/data/events/processed-events.json
+          raw_count=$(jq length data/events/events.json)
+          processed_count=$(jq length src/data/events/processed-events.json)
+          echo "📊 原始活动: $raw_count，处理后活动: $processed_count"
+          if [ "$raw_count" -eq 0 ] || [ "$processed_count" -eq 0 ]; then
+            echo "❌ 活动数据为空，终止部署以保留当前线上版本"
+            exit 1
           fi
         
       - name: Run deployment preparation

@@ -136,8 +136,26 @@ class EventProcessor {
       const data = readFileSync(config.eventsFile, 'utf8');
       const events = JSON.parse(data);
 
-      this.log(`Loaded ${events.length} raw events`);
-      return events;
+      if (!Array.isArray(events) || events.length === 0) {
+        throw new Error('Event data is empty; refusing to overwrite existing processed data');
+      }
+
+      // Historical workflows did not commit raw data, so preserve any events that only exist
+      // in the last valid processed dataset until the scraper sees them again.
+      let mergedEvents = events;
+      if (existsSync(config.outputFiles.processedEvents)) {
+        const previousProcessed = JSON.parse(readFileSync(config.outputFiles.processedEvents, 'utf8'));
+        if (Array.isArray(previousProcessed)) {
+          const rawIds = new Set(events.map(event => event.id));
+          mergedEvents = [
+            ...events,
+            ...previousProcessed.filter(event => !rawIds.has(event.id))
+          ];
+        }
+      }
+
+      this.log(`Loaded ${mergedEvents.length} raw and preserved events`);
+      return mergedEvents;
     } catch (error) {
       throw new Error(`Failed to load event data: ${error.message}`);
     }
@@ -463,9 +481,14 @@ class EventProcessor {
     try {
       this.log('🚀 Starting event processing workflow');
 
-      // Check if refresh is needed
+      // Skip scraping when the workflow has already produced and validated raw data.
+      const skipScrape = options.skipScrape || false;
       const forceRefresh = options.force || false;
-      const needsRefresh = forceRefresh || this.needsRefresh();
+      const needsRefresh = !skipScrape && (forceRefresh || this.needsRefresh());
+
+      if (skipScrape) {
+        this.log('Skipping scraper and processing existing raw event data');
+      }
 
       // Run scraper if needed
       if (needsRefresh) {
@@ -545,6 +568,7 @@ async function main() {
   const args = process.argv.slice(2);
   const options = {
     force: args.includes('--force') || args.includes('-f'),
+    skipScrape: args.includes('--skip-scrape'),
     help: args.includes('--help') || args.includes('-h')
   };
 

@@ -1,11 +1,8 @@
 name: Update Event Data
 
 on:
-  # 每天凌晨2点和下午2点更新数据
   schedule:
     - cron: '0 18,6 * * *'
-  
-  # 允许手动触发
   workflow_dispatch:
     inputs:
       force_full_scrape:
@@ -18,142 +15,108 @@ permissions:
   contents: write
   actions: read
 
+concurrency:
+  group: event-data-update
+  cancel-in-progress: false
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          
+          fetch-depth: 0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Setup Playwright
         run: |
           npx playwright install chromium
           npx playwright install-deps chromium
-        
-      - name: Clear previous event data
+
+      - name: Record previous event count
         run: |
-          echo "🧹 清空上次的活动数据..."
-          
-          # 清空事件数据
-          mkdir -p src/data/events
-          echo "[]" > src/data/events/processed-events.json
-          echo "{}" > src/data/events/city-mappings.json
-          echo '{"totalEvents":0,"lastUpdated":"'$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")'","status":"cleared"}' > src/data/events/event-stats.json
-          
-          if [ -f "data/events/events.json" ]; then
-            echo "[]" > data/events/events.json
+          previous_count=$(jq length src/data/events/processed-events.json)
+          echo "PREVIOUS_EVENT_COUNT=$previous_count" >> "$GITHUB_ENV"
+          echo "📊 更新前活动数: $previous_count"
+          if [ "$previous_count" -eq 0 ]; then
+            echo "❌ 仓库中的活动数据为空，请先恢复数据"
+            exit 1
           fi
-          
-          echo "✅ 活动数据已清空，准备重新抓取"
-          
+
+
       - name: Scrape event data
         run: |
           echo "🕷️ 开始抓取最新活动数据..."
-          
-          # 设置抓取模式
           if [ "${{ github.event.inputs.force_full_scrape }}" = "true" ]; then
-            echo "🔄 执行强制完整数据抓取"
             npm run scrape:events:force
           else
-            echo "🔄 执行标准数据抓取（分页抓取）"
             npm run scrape:events
           fi
-          
-          # 验证抓取结果
-          if [ -f "data/events/events.json" ]; then
-            event_count=$(jq length data/events/events.json 2>/dev/null || echo "0")
-            echo "📊 抓取到 $event_count 个原始事件"
-          else
-            echo "❌ 抓取失败，未生成原始数据文件"
+
+          raw_count=$(jq length data/events/events.json)
+          echo "📊 抓取合并后的原始活动数: $raw_count"
+          if [ "$raw_count" -eq 0 ]; then
+            echo "❌ 抓取结果为空，终止更新并保留旧数据"
             exit 1
           fi
         env:
           CI: true
         timeout-minutes: 15
-          
-      - name: Process event data
-        run: |
-          echo "⚙️ 处理事件数据..."
-          
-          # 运行事件数据处理脚本
-          if [ -f "data/events/events.json" ]; then
-            echo "📊 开始处理原始事件数据"
-            node scripts/process-events.js --force
-            
-            # 验证处理结果
-            if [ -f "src/data/events/processed-events.json" ]; then
-              processed_count=$(jq length src/data/events/processed-events.json 2>/dev/null || echo "0")
-              echo "✅ 处理完成，生成 $processed_count 个处理后的事件"
-            else
-              echo "❌ 事件处理失败，未生成处理后的数据"
-              exit 1
-            fi
-          else
-            echo "❌ 没有原始事件数据，无法处理"
-            exit 1
-          fi
+
+      - name: Process existing event data
+        run: node scripts/process-events.js --skip-scrape
         env:
           NODE_ENV: production
           CI: true
         timeout-minutes: 10
-          
+
       - name: Validate data
         run: |
-          echo "🔍 验证数据完整性..."
-          
-          # 检查关键文件
-          if [ -f "src/data/events/processed-events.json" ]; then
-            event_count=$(jq length src/data/events/processed-events.json)
-            echo "📊 当前事件数量: $event_count"
-            
-            if [ $event_count -eq 0 ]; then
-              echo "⚠️ 没有事件数据，可能抓取失败"
-              exit 1
-            fi
-          else
-            echo "❌ 事件数据文件不存在"
+          jq empty data/events/events.json
+          jq empty src/data/events/processed-events.json
+          jq empty src/data/events/city-mappings.json
+          jq empty src/data/events/event-stats.json
+
+          raw_count=$(jq length data/events/events.json)
+          processed_count=$(jq length src/data/events/processed-events.json)
+          minimum_count=$((PREVIOUS_EVENT_COUNT / 2))
+          echo "📊 原始活动: $raw_count，处理后活动: $processed_count，安全下限: $minimum_count"
+
+          if [ "$raw_count" -eq 0 ] || [ "$processed_count" -eq 0 ]; then
+            echo "❌ 活动数据为空，拒绝提交"
             exit 1
           fi
-          
+          if [ "$processed_count" -lt "$minimum_count" ]; then
+            echo "❌ 活动数量异常下降超过 50%，拒绝提交"
+            exit 1
+          fi
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          
-          # 检查是否有更新
-          if git diff --quiet src/data/events/; then
+
+          git add data/events/events.json \
+            src/data/events/processed-events.json \
+            src/data/events/city-mappings.json \
+            src/data/events/event-stats.json
+
+          if git diff --cached --quiet; then
             echo "📝 没有数据更新"
           else
-            echo "📝 发现数据更新，提交更改"
-            
-            # 显示更改统计
-            echo "📊 更改统计:"
-            git diff --stat src/data/events/
-            
-            git add src/data/events/
             git commit -m "🤖 自动更新事件数据 $(date -u +"%Y-%m-%d %H:%M UTC")"
-            git push
-            
+            git pull --rebase origin main
+            git push origin main
             echo "✅ 数据更新已提交"
-          fi
-          
-      - name: Trigger deployment
-        if: success()
-        run: |
-          # 如果有数据更新，触发部署工作流
-          if ! git diff --quiet HEAD~1 src/data/events/; then
-            echo "🚀 数据已更新，将触发网站重新部署"
-            # GitHub Actions 会自动触发 deploy.yml（因为推送到 main 分支）
           fi

@@ -13,7 +13,7 @@ const http = require('http');
 
 class EventPaginationScraper {
   constructor(options = {}) {
-    this.baseUrl = 'https://usergroup.huodongxing.com/';
+    this.baseUrl = 'https://usergroup.huodongxing.com/org/691333798680';
     this.dataDir = './data/events';
     this.imageDir = './data/events/images';
     this.dataFile = path.join(this.dataDir, 'events.json');
@@ -309,14 +309,32 @@ class EventPaginationScraper {
       const browserPage = await browser.newPage();
       browserPage.setDefaultTimeout(60000);
 
-      // 访问首页
-      this.log('访问首页...');
-      await browserPage.goto(this.baseUrl, {
-        waitUntil: 'networkidle',
-        timeout: 60000
-      });
+      // 访问活动列表页。活动行会持续发起统计请求，不能使用 networkidle。
+      this.log(`访问活动列表: ${this.baseUrl}`);
+      let navigationError = null;
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          await browserPage.goto(this.baseUrl, {
+            waitUntil: 'domcontentloaded',
+            timeout: 90000
+          });
+          await browserPage.waitForSelector('a[href*="/event/"]', { timeout: 30000 });
+          navigationError = null;
+          break;
+        } catch (error) {
+          navigationError = error;
+          this.log(`第 ${attempt} 次加载活动列表失败: ${error.message}`);
+          if (attempt < 3) {
+            await browserPage.waitForTimeout(attempt * 5000);
+          }
+        }
+      }
 
-      await browserPage.waitForTimeout(5000);
+      if (navigationError) {
+        throw new Error(`活动列表连续加载失败: ${navigationError.message}`);
+      }
+
+      await browserPage.waitForTimeout(2000);
 
       // 增量采集状态跟踪
       let consecutiveEmptyPages = 0;
@@ -386,7 +404,8 @@ class EventPaginationScraper {
             }
           }
 
-          allEvents = allEvents.concat(newEvents);
+          // 保留本次页面上的全部活动，用于刷新已有活动的状态和时间。
+          allEvents = allEvents.concat(pageEvents);
 
           // 检查是否有下一页
           const hasNextPage = await this.isNextPageAvailable(browserPage);
@@ -428,35 +447,31 @@ class EventPaginationScraper {
     return allEvents;
   }
 
-  saveEvents(newEvents) {
-    if (newEvents.length === 0) {
-      this.log('没有新活动需要保存');
-      return;
+  saveEvents(scrapedEvents) {
+    if (scrapedEvents.length === 0) {
+      throw new Error('没有抓取到任何活动，拒绝覆盖现有数据');
     }
 
-    // 合并新旧数据
-    const allEvents = [...this.existingEvents, ...newEvents];
+    // 抓取到的活动排在前面并刷新状态；未出现在本次增量抓取中的旧活动继续保留。
+    const existingById = new Map(this.existingEvents.map(event => [event.id, event]));
+    const scrapedIds = new Set(scrapedEvents.map(event => event.id));
+    const refreshedEvents = scrapedEvents.map(event => ({
+      ...existingById.get(event.id),
+      ...event,
+      localImage: event.localImage || existingById.get(event.id)?.localImage
+    }));
+    const preservedEvents = this.existingEvents.filter(event => !scrapedIds.has(event.id));
+    const mergedEvents = [...refreshedEvents, ...preservedEvents];
 
-    // 按ID去重
-    const uniqueEvents = allEvents.reduce((acc, event) => {
-      if (!acc.find(e => e.id === event.id)) {
-        acc.push(event);
-      }
-      return acc;
-    }, []);
-
-    // 不进行排序，保持网站原始顺序
-    // 添加sort字段，从1开始顺序递增，按照抓取顺序（即网站显示顺序）
-    uniqueEvents.forEach((event, index) => {
+    mergedEvents.forEach((event, index) => {
       event.sort = index + 1;
     });
 
-    // 保存到文件
-    fs.writeFileSync(this.dataFile, JSON.stringify(uniqueEvents, null, 2));
-    this.log(`保存了 ${newEvents.length} 个新活动，总计 ${uniqueEvents.length} 个活动`);
+    fs.writeFileSync(this.dataFile, JSON.stringify(mergedEvents, null, 2));
+    const newEvents = scrapedEvents.filter(event => !existingById.has(event.id));
+    this.log(`刷新了 ${scrapedEvents.length} 个活动，新增 ${newEvents.length} 个，总计 ${mergedEvents.length} 个活动`);
 
-    // 生成统计报告
-    this.generateReport(newEvents, uniqueEvents);
+    this.generateReport(newEvents, mergedEvents);
   }
 
   generateReport(newEvents, allEvents) {
@@ -579,30 +594,19 @@ class EventPaginationScraper {
 
 if (require.main === module) {
   const args = process.argv.slice(2);
-  const mode = args[0] || 'incremental'; // 默认使用增量模式
-
+  const mode = args[0] || 'incremental';
   const scraper = new EventPaginationScraper();
 
-  switch (mode) {
-    case 'full':
-    case '--full':
-      console.log('🔄 启动完整采集模式...');
-      scraper.runFull().catch(console.error);
-      break;
+  const run = mode === 'full' || mode === '--full'
+    ? scraper.runFull()
+    : mode === 'quick' || mode === '--quick'
+      ? scraper.runIncremental({ earlyStopThreshold: 1 })
+      : scraper.run();
 
-    case 'quick':
-    case '--quick':
-      console.log('⚡ 启动快速增量采集模式...');
-      scraper.runIncremental({ earlyStopThreshold: 1 }).catch(console.error);
-      break;
-
-    case 'incremental':
-    case '--incremental':
-    default:
-      console.log('📊 启动标准增量采集模式...');
-      scraper.run().catch(console.error);
-      break;
-  }
+  run.catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
 }
 
 module.exports = EventPaginationScraper;
