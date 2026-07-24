@@ -2,7 +2,10 @@ name: Update Event Data
 
 on:
   schedule:
-    - cron: '0 18 * * *'
+    # 周一 UTC 18:00（北京时间周二凌晨 2 点）完整抓取，刷新全部活动的浏览量
+    - cron: '0 18 * * 1'
+    # 其余日期 UTC 18:00 增量抓取
+    - cron: '0 18 * * 0,2,3,4,5,6'
   workflow_dispatch:
     inputs:
       force_full_scrape:
@@ -22,7 +25,7 @@ concurrency:
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,10 +60,12 @@ jobs:
 
       - name: Scrape event data
         run: |
-          echo "🕷️ 开始抓取最新活动数据..."
-          if [ "${{ github.event.inputs.force_full_scrape }}" = "true" ]; then
+          # 手动勾选强制完整抓取，或每周一的定时任务 -> 完整抓取（刷新全部活动浏览量）
+          if [ "${{ github.event.inputs.force_full_scrape }}" = "true" ] || [ "${{ github.event.schedule }}" = "0 18 * * 1" ]; then
+            echo "🕷️ 执行完整抓取（遍历所有分页，刷新全部活动数据）..."
             npm run scrape:events:force
           else
+            echo "🕷️ 执行增量抓取（刷新最新活动数据）..."
             npm run scrape:events
           fi
 
@@ -72,7 +77,7 @@ jobs:
           fi
         env:
           CI: true
-        timeout-minutes: 15
+        timeout-minutes: 25
 
       - name: Process existing event data
         run: node scripts/process-events.js --skip-scrape
