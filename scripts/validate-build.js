@@ -50,8 +50,8 @@ function validateCitiesData(cities) {
   const cityIds = new Set();
   
   cities.forEach((city, index) => {
-    // 检查必要字段
-    const missingFields = requiredFields.filter(field => !city[field]);
+    // 检查必要字段（使用 undefined 判断，避免 active: false 被误判为缺失）
+    const missingFields = requiredFields.filter(field => city[field] === undefined || city[field] === null);
     if (missingFields.length > 0) {
       errors.push(`城市 ${index}: 缺少字段 ${missingFields.join(', ')}`);
     }

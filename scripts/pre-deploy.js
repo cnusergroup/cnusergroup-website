@@ -91,7 +91,7 @@ function checkDataIntegrity() {
     const invalidCities = [];
     
     cities.forEach((city, index) => {
-      const missingFields = requiredCityFields.filter(field => !city[field]);
+      const missingFields = requiredCityFields.filter(field => city[field] === undefined || city[field] === null);
       if (missingFields.length > 0) {
         invalidCities.push({ index, id: city.id, missingFields });
       }
