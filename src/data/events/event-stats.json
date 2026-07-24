@@ -20,20 +20,25 @@
     "fuzhou": 3
   },
   "engagementMetrics": {
-    "totalViews": 778670,
-    "totalFavorites": 26514,
-    "averageViews": 3191,
-    "averageFavorites": 109,
+    "totalViews": 800344,
+    "totalFavorites": 27035,
+    "averageViews": 3280,
+    "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 60508
+        "views": 60656
       },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
         "views": 17441
+      },
+      {
+        "id": "7827076896900",
+        "title": "深圳community day 开发者的聚会",
+        "views": 16331
       },
       {
         "id": "3806075715500",
@@ -43,12 +48,7 @@
       {
         "id": "7851864008311",
         "title": "编程无界：杭州 OpenClaw 开发者聚会来了！",
-        "views": 12284
-      },
-      {
-        "id": "3794987216300",
-        "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
-        "views": 11493
+        "views": 12289
       }
     ],
     "topFavoritedEvents": [
@@ -73,9 +73,9 @@
         "favorites": 403
       },
       {
-        "id": "4758529746400",
-        "title": "2024 Community Day：云计算与 AI 技术交融盛会，共筑多元智慧未来",
-        "favorites": 356
+        "id": "7827076896900",
+        "title": "深圳community day 开发者的聚会",
+        "favorites": 388
       }
     ]
   },
@@ -108,22 +108,22 @@
     "2024/": 1,
     "2022/": 33
   },
-  "lastUpdated": "2026-07-24T17:02:00.700Z",
+  "lastUpdated": "2026-07-24T19:41:30.637Z",
   "processing": {
     "totalRawEvents": 244,
     "duplicatesRemoved": 0,
     "eventsAfterDeduplication": 244,
-    "eventsCleaned": 167,
+    "eventsCleaned": 180,
     "validEvents": 244,
     "invalidEvents": 0,
     "warningEvents": 17,
     "processedEvents": 244,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-24T17:02:00.701Z"
+    "processedAt": "2026-07-24T19:41:30.639Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-24T17:02:00.701Z",
+    "timestamp": "2026-07-24T19:41:30.639Z",
     "summary": {
       "originalEventCount": 244,
       "finalEventCount": 244,
@@ -137,10 +137,10 @@
         },
         "cleaning": {
           "totalEvents": 244,
-          "cleanedEvents": 167,
+          "cleanedEvents": 180,
           "cleaningStats": {
-            "Normalized time format": 164,
-            "Cleaned title": 39
+            "Cleaned title": 61,
+            "Normalized time format": 150
           }
         },
         "validation": {
@@ -286,8 +286,8 @@
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Normalized time format": 164,
-        "Cleaned title": 39
+        "Cleaned title": 61,
+        "Normalized time format": 150
       }
     },
     "recommendations": []
