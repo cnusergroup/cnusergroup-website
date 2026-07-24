@@ -71,17 +71,10 @@ jobs:
             exit 1
           fi
         
-      - name: Run deployment preparation
-        run: |
-          echo "🚀 执行部署准备..."
-          # 运行完整的部署准备，但跳过事件处理（已经完成）
-          node scripts/deploy-ready.js --skip-events || {
-            echo "⚠️ 部署准备脚本失败，尝试直接构建"
-          }
-        env:
-          NODE_ENV: production
-          CI: true
-          
+      # 原先这里有一个 "Run deployment preparation" 步骤（deploy-ready.js），
+      # 它会完整跑一次 npm run build，但紧接着的 astro build 会清空 dist 重建，
+      # 产物全部被丢弃。已移除，构建后优化改由 build:ci 内部调用 scripts/build.js。
+
       - name: Build with Astro
         run: |
           echo "🔨 构建 Astro 项目..."

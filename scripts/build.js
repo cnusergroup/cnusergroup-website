@@ -52,16 +52,14 @@ function generateSitemap() {
     { url: '', priority: '1.0', changefreq: 'weekly' },
     { url: '/en', priority: '1.0', changefreq: 'weekly' },
     { url: '/cities', priority: '0.9', changefreq: 'weekly' },
-    { url: '/en/cities', priority: '0.9', changefreq: 'weekly' }
+    { url: '/en/cities', priority: '0.9', changefreq: 'weekly' },
+    { url: '/events', priority: '0.9', changefreq: 'daily' },
+    { url: '/en/events', priority: '0.9', changefreq: 'daily' }
   ];
-  
-  // 城市页面
-  const cities = [
-    'beijing', 'shanghai', 'shenzhen', 'wuhan', 'xian', 'changji',
-    'chengdu', 'lanzhou', 'guangzhou', 'fuzhou', 'suzhou', 'hangzhou',
-    'hechi', 'urumqi', 'qingdao', 'xiamen', 'zhangjiakou', 'hefei',
-    'nanjing'
-  ];
+
+  // 城市页面：从 cities.json 读取，避免和实际生成的页面产生偏差
+  const citiesPath = path.join(rootDir, 'src/data/cities.json');
+  const cities = JSON.parse(fs.readFileSync(citiesPath, 'utf8')).map(city => city.id);
   
   cities.forEach(city => {
     pages.push({
@@ -114,11 +112,12 @@ function optimizeHtmlFiles() {
   
   htmlFiles.forEach(filePath => {
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // 移除多余的空白字符
-    content = content.replace(/\s+/g, ' ');
-    content = content.replace(/>\s+</g, '><');
-    
+
+    // 注意：这里不做空白压缩。
+    // 全局 /\s+/g -> ' ' 会把 inline <script> 的换行也压掉，
+    // 使 `//` 行注释吞掉其后的整段代码（例如 EventCard 的 is:inline 脚本）。
+    // HTML 空白对 gzip 后体积影响很小，不值得这个风险。
+
     // 添加安全头部
     if (content.includes('<head>')) {
       const securityHeaders = `

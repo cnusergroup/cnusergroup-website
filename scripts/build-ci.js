@@ -117,13 +117,23 @@ function buildProject() {
   logStep('🔨', '开始 Astro 构建...');
   
   // 运行 Astro 检查
+  // astro build 不做类型检查（esbuild 直接剥类型），astro check 是唯一的类型门禁，
+  // 所以这里必须硬失败，否则类型错误会静默上线。
   if (!runCommand('npx astro check', 'TypeScript 类型检查')) {
-    logStep('⚠️', '类型检查失败，但继续构建');
+    logStep('❌', '类型检查失败，终止构建');
+    process.exit(1);
   }
   
   // 运行构建
   if (!runCommand('npx astro build', 'Astro 构建')) {
     logStep('❌', '构建失败');
+    process.exit(1);
+  }
+
+  // 构建后优化：生成 robots.txt / sitemap.xml / build-info.json 等
+  // astro build 会清空 dist，因此必须放在它之后
+  if (!runCommand('node scripts/build.js', '构建后优化')) {
+    logStep('❌', '构建后优化失败');
     process.exit(1);
   }
   
