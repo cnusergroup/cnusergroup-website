@@ -40,15 +40,12 @@ const cityNameMap: Record<string, Record<string, string>> = {
     '成都': 'chengdu',
     '武汉': 'wuhan',
     '西安': 'xian',
-    '苏州': 'suzhou',
     '厦门': 'xiamen',
-    '青岛': 'qingdao',
     '福州': 'fuzhou',
     '合肥': 'hefei',
     '兰州': 'lanzhou',
     '乌鲁木齐': 'urumqi',
     '昌吉': 'changji',
-    '河池': 'hechi',
     '张家口': 'zhangjiakou'
   },
   en: {
@@ -60,15 +57,12 @@ const cityNameMap: Record<string, Record<string, string>> = {
     'Chengdu': 'chengdu',
     'Wuhan': 'wuhan',
     'Xi\'an': 'xian',
-    'Suzhou': 'suzhou',
     'Xiamen': 'xiamen',
-    'Qingdao': 'qingdao',
     'Fuzhou': 'fuzhou',
     'Hefei': 'hefei',
     'Lanzhou': 'lanzhou',
     'Urumqi': 'urumqi',
     'Changji': 'changji',
-    'Hechi': 'hechi',
     'Zhangjiakou': 'zhangjiakou'
   }
 };

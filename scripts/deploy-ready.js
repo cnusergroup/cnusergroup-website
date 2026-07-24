@@ -369,15 +369,24 @@ function processEvents() {
 // 9. 安装依赖
 function installDependencies() {
   console.log('📥 安装/更新依赖...');
-  
+
+  // CI 环境已在工作流中安装过依赖，重复安装会在 NODE_ENV=production 下
+  // 移除 devDependencies（typescript、@types/*），导致 astro check 失败
+  if (process.env.CI === 'true' && existsSync(join(rootDir, 'node_modules'))) {
+    console.log('✅ 检测到 CI 环境且依赖已存在，跳过重复安装');
+    console.log('');
+    return true;
+  }
+
+  // --include=dev 确保 NODE_ENV=production 时仍安装构建期需要的 devDependencies
   try {
-    console.log('正在运行 npm ci...');
-    execSync('npm ci', { stdio: 'inherit', cwd: rootDir });
+    console.log('正在运行 npm ci --include=dev...');
+    execSync('npm ci --include=dev', { stdio: 'inherit', cwd: rootDir });
     console.log('✅ 依赖安装完成');
   } catch {
     try {
-      console.log('npm ci 失败，尝试 npm install...');
-      execSync('npm install', { stdio: 'inherit', cwd: rootDir });
+      console.log('npm ci 失败，尝试 npm install --include=dev...');
+      execSync('npm install --include=dev', { stdio: 'inherit', cwd: rootDir });
       console.log('✅ 依赖安装完成');
     } catch (error) {
       console.log('❌ 依赖安装失败:', error.message);
@@ -534,7 +543,7 @@ async function main() {
     }
     
     createDeploymentFiles();
-    generateReport();
+    const report = generateReport();
     
     // 显示最终结果
     console.log('🎯 部署准备总结');
