@@ -3,21 +3,21 @@
   "upcomingEvents": 2,
   "pastEvents": 242,
   "cityDistribution": {
-    "shenzhen": 29,
-    "shanghai": 30,
-    "fuzhou": 3,
-    "hefei": 10,
-    "chengdu": 36,
-    "guangzhou": 5,
-    "zhengzhou": 4,
-    "beijing": 36,
     "xian": 13,
+    "chengdu": 36,
+    "beijing": 36,
+    "nanjing": 4,
+    "shenzhen": 29,
     "wuhan": 13,
     "hangzhou": 6,
-    "lanzhou": 5,
+    "hefei": 10,
+    "shanghai": 30,
+    "guangzhou": 5,
+    "zhengzhou": 4,
     "zhangjiakou": 3,
+    "lanzhou": 5,
     "changji": 2,
-    "nanjing": 4
+    "fuzhou": 3
   },
   "engagementMetrics": {
     "totalViews": 778670,
@@ -92,38 +92,38 @@
       "province": 199
     },
     "unmappedLocations": [
+      "广东东莞",
+      "江苏苏州",
+      "线上活动",
+      "福建厦门",
+      "重庆江北",
       "重庆渝北",
       "重庆九龙坡",
-      "江苏苏州",
-      "重庆江北",
-      "广西河池",
-      "福建厦门",
-      "线上活动",
-      "广东东莞"
+      "广西河池"
     ]
   },
   "timeDistribution": {
+    "2026/": 34,
     "2025/": 176,
     "2024/": 1,
-    "2022/": 33,
-    "2026/": 34
+    "2022/": 33
   },
-  "lastUpdated": "2026-07-24T16:55:55.656Z",
+  "lastUpdated": "2026-07-24T17:02:00.700Z",
   "processing": {
     "totalRawEvents": 244,
     "duplicatesRemoved": 0,
     "eventsAfterDeduplication": 244,
-    "eventsCleaned": 178,
+    "eventsCleaned": 167,
     "validEvents": 244,
     "invalidEvents": 0,
     "warningEvents": 17,
     "processedEvents": 244,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-24T16:55:55.657Z"
+    "processedAt": "2026-07-24T17:02:00.701Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-24T16:55:55.657Z",
+    "timestamp": "2026-07-24T17:02:00.701Z",
     "summary": {
       "originalEventCount": 244,
       "finalEventCount": 244,
@@ -137,10 +137,10 @@
         },
         "cleaning": {
           "totalEvents": 244,
-          "cleanedEvents": 178,
+          "cleanedEvents": 167,
           "cleaningStats": {
             "Normalized time format": 164,
-            "Cleaned title": 50
+            "Cleaned title": 39
           }
         },
         "validation": {
@@ -287,7 +287,7 @@
       "duplicateReasons": {},
       "cleaningActions": {
         "Normalized time format": 164,
-        "Cleaned title": 50
+        "Cleaned title": 39
       }
     },
     "recommendations": []

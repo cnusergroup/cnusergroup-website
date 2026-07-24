@@ -109,7 +109,7 @@ export function formatEventDate(timeStr, locale = 'zh') {
  * Process raw events into enhanced event objects
  */
 export function processEvents(rawEvents) {
-  return rawEvents.map(event => ({
+  const processed = rawEvents.map(event => ({
     ...event,
     cityMappings: [], // Will be populated by city mapping system
     slug: generateEventSlug(event.title, event.id),
@@ -117,6 +117,46 @@ export function processEvents(rawEvents) {
     isUpcoming: isEventUpcoming(event),
     formattedDate: formatEventDate(event.time)
   }));
+
+  // Sort: upcoming events first (by date ascending), then past events by date descending
+  processed.sort((a, b) => {
+    if (a.isUpcoming !== b.isUpcoming) {
+      return a.isUpcoming ? -1 : 1;
+    }
+    // Parse time for comparison (YYYY/MM/DD ... HH:MM)
+    const timeA = parseEventTime(a.time);
+    const timeB = parseEventTime(b.time);
+    if (a.isUpcoming) {
+      return timeA - timeB; // upcoming: soonest first
+    }
+    return timeB - timeA; // past: most recent first
+  });
+
+  // Reassign sort field after sorting
+  processed.forEach((event, index) => {
+    event.sort = index + 1;
+  });
+
+  return processed;
+}
+
+/**
+ * Parse event time string to timestamp for sorting
+ */
+function parseEventTime(timeStr) {
+  if (!timeStr) return 0;
+  const match = timeStr.match(/(\d{4})\/(\d{2})\/(\d{2}).*?(\d{2}):(\d{2})/);
+  if (match) {
+    const [, year, month, day, hour, minute] = match;
+    return new Date(parseInt(year), parseInt(month) - 1, parseInt(day), parseInt(hour), parseInt(minute)).getTime();
+  }
+  // Fallback for MM/DD HH:MM without year
+  const shortMatch = timeStr.match(/(\d{2})\/(\d{2}).*?(\d{2}):(\d{2})/);
+  if (shortMatch) {
+    const [, month, day, hour, minute] = shortMatch;
+    return new Date(2025, parseInt(month) - 1, parseInt(day), parseInt(hour), parseInt(minute)).getTime();
+  }
+  return 0;
 }
 
 /**
