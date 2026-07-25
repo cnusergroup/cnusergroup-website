@@ -1,10 +1,10 @@
 {
   "totalEvents": 244,
-  "upcomingEvents": 2,
-  "pastEvents": 242,
+  "upcomingEvents": 1,
+  "pastEvents": 243,
   "cityDistribution": {
-    "xian": 13,
     "chengdu": 36,
+    "xian": 13,
     "beijing": 36,
     "nanjing": 4,
     "shenzhen": 29,
@@ -20,15 +20,15 @@
     "fuzhou": 3
   },
   "engagementMetrics": {
-    "totalViews": 800344,
-    "totalFavorites": 27035,
-    "averageViews": 3280,
+    "totalViews": 801299,
+    "totalFavorites": 27053,
+    "averageViews": 3284,
     "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 60656
+        "views": 60736
       },
       {
         "id": "3721674476500",
@@ -108,7 +108,7 @@
     "2024/": 1,
     "2022/": 33
   },
-  "lastUpdated": "2026-07-24T19:41:30.637Z",
+  "lastUpdated": "2026-07-25T18:52:32.050Z",
   "processing": {
     "totalRawEvents": 244,
     "duplicatesRemoved": 0,
@@ -120,10 +120,10 @@
     "processedEvents": 244,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-24T19:41:30.639Z"
+    "processedAt": "2026-07-25T18:52:32.052Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-24T19:41:30.639Z",
+    "timestamp": "2026-07-25T18:52:32.052Z",
     "summary": {
       "originalEventCount": 244,
       "finalEventCount": 244,
