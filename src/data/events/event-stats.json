@@ -1,7 +1,7 @@
 {
   "totalEvents": 244,
-  "upcomingEvents": 1,
-  "pastEvents": 243,
+  "upcomingEvents": 0,
+  "pastEvents": 244,
   "cityDistribution": {
     "chengdu": 36,
     "xian": 13,
@@ -14,26 +14,31 @@
     "shanghai": 30,
     "guangzhou": 5,
     "zhengzhou": 4,
-    "zhangjiakou": 3,
+    "fuzhou": 3,
     "lanzhou": 5,
-    "changji": 2,
-    "fuzhou": 3
+    "zhangjiakou": 3,
+    "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 801299,
-    "totalFavorites": 27053,
-    "averageViews": 3284,
+    "totalViews": 891084,
+    "totalFavorites": 27051,
+    "averageViews": 3652,
     "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 60736
+        "views": 60793
+      },
+      {
+        "id": "3806075715500",
+        "title": "Community Day 北京站开发者们的夏日聚会",
+        "views": 22039
       },
       {
         "id": "3721674476500",
         "title": "云上聚力, 智见未来 生成式 AI 与云原生大会亚马逊云科技 Community Day 成都站",
-        "views": 17441
+        "views": 18497
       },
       {
         "id": "7827076896900",
@@ -41,14 +46,9 @@
         "views": 16331
       },
       {
-        "id": "3806075715500",
-        "title": "Community Day 北京站开发者们的夏日聚会",
-        "views": 15313
-      },
-      {
-        "id": "7851864008311",
-        "title": "编程无界：杭州 OpenClaw 开发者聚会来了！",
-        "views": 12289
+        "id": "3794987216300",
+        "title": "Bedrock 开发进阶：re:InventDeepseek ，探索 AI 无限潜力",
+        "views": 15908
       }
     ],
     "topFavoritedEvents": [
@@ -93,37 +93,39 @@
     },
     "unmappedLocations": [
       "广东东莞",
-      "江苏苏州",
       "线上活动",
       "福建厦门",
-      "重庆江北",
       "重庆渝北",
       "重庆九龙坡",
+      "江苏苏州",
+      "重庆江北",
       "广西河池"
     ]
   },
   "timeDistribution": {
     "2026/": 34,
-    "2025/": 176,
-    "2024/": 1,
-    "2022/": 33
+    "2025/": 63,
+    "2024/": 49,
+    "2023/": 39,
+    "2022/": 57,
+    "2021/": 2
   },
-  "lastUpdated": "2026-07-25T18:52:32.050Z",
+  "lastUpdated": "2026-07-26T04:20:47.697Z",
   "processing": {
     "totalRawEvents": 244,
     "duplicatesRemoved": 0,
     "eventsAfterDeduplication": 244,
-    "eventsCleaned": 180,
+    "eventsCleaned": 61,
     "validEvents": 244,
     "invalidEvents": 0,
     "warningEvents": 17,
     "processedEvents": 244,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-07-25T18:52:32.052Z"
+    "processedAt": "2026-07-26T04:20:47.698Z"
   },
   "qualityReport": {
-    "timestamp": "2026-07-25T18:52:32.052Z",
+    "timestamp": "2026-07-26T04:20:47.698Z",
     "summary": {
       "originalEventCount": 244,
       "finalEventCount": 244,
@@ -137,10 +139,9 @@
         },
         "cleaning": {
           "totalEvents": 244,
-          "cleanedEvents": 180,
+          "cleanedEvents": 61,
           "cleaningStats": {
-            "Cleaned title": 61,
-            "Normalized time format": 150
+            "Cleaned title": 61
           }
         },
         "validation": {
@@ -161,13 +162,6 @@
         {
           "eventId": "6808094019500",
           "title": "大模型应用挑战赛",
-          "issues": [
-            "Very short title (might be incomplete)"
-          ]
-        },
-        {
-          "eventId": "3727858006600",
-          "title": "AI 我能行",
           "issues": [
             "Very short title (might be incomplete)"
           ]
@@ -196,6 +190,13 @@
         {
           "eventId": "8750794794300",
           "title": "认识人工智能",
+          "issues": [
+            "Very short title (might be incomplete)"
+          ]
+        },
+        {
+          "eventId": "3727858006600",
+          "title": "AI 我能行",
           "issues": [
             "Very short title (might be incomplete)"
           ]
@@ -286,8 +287,7 @@
       },
       "duplicateReasons": {},
       "cleaningActions": {
-        "Cleaned title": 61,
-        "Normalized time format": 150
+        "Cleaned title": 61
       }
     },
     "recommendations": []

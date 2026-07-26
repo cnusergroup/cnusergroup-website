@@ -26,6 +26,9 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    env:
+      # 活动时间以北京时间为准，runner 默认 UTC 会导致抓取和年份推断偏差 8 小时
+      TZ: Asia/Shanghai
     steps:
       - name: Checkout
         uses: actions/checkout@v4

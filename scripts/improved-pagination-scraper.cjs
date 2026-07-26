@@ -306,7 +306,13 @@ class EventPaginationScraper {
         ]
       });
 
-      const browserPage = await browser.newPage();
+      // 活动时间由页面 JS 按浏览器时区渲染，必须固定为北京时间。
+      // 否则在 UTC 环境（如 GitHub Actions runner）抓到的时间会早 8 小时。
+      const context = await browser.newContext({
+        timezoneId: 'Asia/Shanghai',
+        locale: 'zh-CN'
+      });
+      const browserPage = await context.newPage();
       browserPage.setDefaultTimeout(60000);
 
       // 访问活动列表页。活动行会持续发起统计请求，不能使用 networkidle。
