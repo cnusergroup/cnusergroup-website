@@ -31,8 +31,22 @@ const translationsModule = locale === 'zh'
 const translations = translationsModule.default;
 const t = translations.events;
 
-// Event status badge: mark whether the event has already ended
-const isEnded = event.status === 'ended' || event.isUpcoming === false;
+// Event status badge: mark whether the event has already ended.
+// 不能直接用 event.status —— 源站的「已结束」指报名结束，活动本身可能还没开始。
+// 因此以活动时间为准，时间无法解析时才回退到 status。
+// 时间字符串形如 "2026/07/26 周日 13:30"，一律按北京时间（UTC+8）解释，
+// 这样构建机在任何时区下结果都一致。
+function getEventTimestamp(timeStr: string | undefined): number | null {
+  const match = timeStr?.match(/(\d{4})\/(\d{2})\/(\d{2}).*?(\d{2}):(\d{2})/);
+  if (!match) return null;
+  const [, year, month, day, hour, minute] = match;
+  return Date.UTC(Number(year), Number(month) - 1, Number(day), Number(hour) - 8, Number(minute));
+}
+
+const eventTimestamp = getEventTimestamp(event.time);
+const isEnded = eventTimestamp !== null
+  ? eventTimestamp < Date.now()
+  : event.isUpcoming === false;
 const statusLabel = isEnded ? t.status.past : t.status.upcoming;
 const statusBadgeClass = isEnded
   ? 'bg-gray-700 bg-opacity-85 text-white'
