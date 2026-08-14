@@ -1,10 +1,10 @@
 {
   "totalEvents": 246,
-  "upcomingEvents": 2,
-  "pastEvents": 244,
+  "upcomingEvents": 1,
+  "pastEvents": 245,
   "cityDistribution": {
-    "beijing": 37,
     "shanghai": 31,
+    "beijing": 37,
     "chengdu": 36,
     "xian": 13,
     "nanjing": 4,
@@ -20,10 +20,10 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 901696,
-    "totalFavorites": 27167,
-    "averageViews": 3665,
-    "averageFavorites": 110,
+    "totalViews": 902874,
+    "totalFavorites": 27237,
+    "averageViews": 3670,
+    "averageFavorites": 111,
     "topViewedEvents": [
       {
         "id": "6857607994600",
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-08-13T18:47:19.999Z",
+  "lastUpdated": "2026-08-14T18:40:31.346Z",
   "processing": {
     "totalRawEvents": 246,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 246,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-08-13T18:47:20.001Z"
+    "processedAt": "2026-08-14T18:40:31.349Z"
   },
   "qualityReport": {
-    "timestamp": "2026-08-13T18:47:20.001Z",
+    "timestamp": "2026-08-14T18:40:31.349Z",
     "summary": {
       "originalEventCount": 246,
       "finalEventCount": 246,
