@@ -6,10 +6,10 @@
     "location": "上海浦东",
     "url": "https://usergroup.huodongxing.com/event/6873756538711",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/6873756538711/596067856827306.jpg",
-    "status": "upcoming",
-    "views": 7013,
-    "favorites": 248,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "status": "ended",
+    "views": 8608,
+    "favorites": 285,
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 1,
     "localImage": "6873756538711.jpg",
     "cityMappings": [
@@ -19,7 +19,7 @@
     "tags": [
       "ai"
     ],
-    "isUpcoming": true,
+    "isUpcoming": false,
     "formattedDate": "2026年08月21日 13:00"
   },
   {
@@ -30,9 +30,9 @@
     "url": "https://usergroup.huodongxing.com/event/1872584825411",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/1872584825411/456059719470494.jpg",
     "status": "ended",
-    "views": 1985,
+    "views": 2010,
     "favorites": 78,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 2,
     "localImage": "1872584825411.jpg",
     "cityMappings": [
@@ -53,7 +53,7 @@
     "status": "ended",
     "views": 3939,
     "favorites": 94,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 3,
     "localImage": "4869917478311.jpg",
     "cityMappings": [
@@ -76,7 +76,7 @@
     "status": "ended",
     "views": 1991,
     "favorites": 48,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 4,
     "localImage": "2869686580911.jpg",
     "cityMappings": [
@@ -100,7 +100,7 @@
     "status": "ended",
     "views": 4319,
     "favorites": 86,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 5,
     "localImage": "7868985919311.jpg",
     "cityMappings": [
@@ -123,7 +123,7 @@
     "status": "ended",
     "views": 2802,
     "favorites": 125,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 6,
     "localImage": "4868809852511.jpg",
     "cityMappings": [],
@@ -144,7 +144,7 @@
     "status": "ended",
     "views": 2104,
     "favorites": 74,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 7,
     "localImage": "1867892983411.jpg",
     "cityMappings": [
@@ -168,7 +168,7 @@
     "status": "ended",
     "views": 8770,
     "favorites": 255,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 8,
     "localImage": "3867100195611.jpg",
     "cityMappings": [
@@ -192,7 +192,7 @@
     "status": "ended",
     "views": 1547,
     "favorites": 49,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 9,
     "localImage": "2867099738111.jpg",
     "cityMappings": [
@@ -215,7 +215,7 @@
     "status": "ended",
     "views": 1840,
     "favorites": 184,
-    "scrapedAt": "2026-08-19T18:21:26.922Z",
+    "scrapedAt": "2026-08-20T18:23:03.986Z",
     "sort": 10,
     "localImage": "9867807992311.jpg",
     "cityMappings": [
