@@ -11,10 +11,10 @@
         "url": "https://usergroup.huodongxing.com/event/3875778857800",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/3875778857800/146081804695422.jpg",
         "status": "upcoming",
-        "views": 115,
-        "favorites": 15,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
-        "sort": 2,
+        "views": 205,
+        "favorites": 42,
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
+        "sort": 1,
         "localImage": "3875778857800.jpg",
         "cityMappings": [
           "beijing"
@@ -828,7 +828,7 @@
         "status": "ended",
         "views": 4314,
         "favorites": 86,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
         "sort": 8,
         "localImage": "7868985919311.jpg",
         "cityMappings": [
@@ -849,9 +849,9 @@
         "url": "https://usergroup.huodongxing.com/event/1872584825411",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/1872584825411/456059719470494.jpg",
         "status": "ended",
-        "views": 2116,
+        "views": 2130,
         "favorites": 78,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
         "sort": 5,
         "localImage": "1872584825411.jpg",
         "cityMappings": [
@@ -864,7 +864,7 @@
       }
     ],
     "eventCount": 38,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "shanghai",
@@ -1559,9 +1559,9 @@
         "url": "https://usergroup.huodongxing.com/event/6873756538711",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/6873756538711/596067856827306.jpg",
         "status": "ended",
-        "views": 12526,
+        "views": 12636,
         "favorites": 315,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
         "sort": 4,
         "localImage": "6873756538711.jpg",
         "cityMappings": [
@@ -1576,7 +1576,7 @@
       }
     ],
     "eventCount": 31,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "shenzhen",
@@ -1590,10 +1590,10 @@
         "url": "https://usergroup.huodongxing.com/event/9872593983600",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/9872593983600/246059680696409.jpg",
         "status": "upcoming",
-        "views": 648,
-        "favorites": 106,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
-        "sort": 3,
+        "views": 760,
+        "favorites": 109,
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
+        "sort": 2,
         "localImage": "9872593983600.jpg",
         "cityMappings": [
           "shenzhen"
@@ -2267,7 +2267,7 @@
       }
     ],
     "eventCount": 30,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "wuhan",
@@ -2566,7 +2566,7 @@
       }
     ],
     "eventCount": 13,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "xian",
@@ -2847,7 +2847,7 @@
         "status": "ended",
         "views": 2006,
         "favorites": 48,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
         "sort": 7,
         "localImage": "2869686580911.jpg",
         "cityMappings": [
@@ -2863,7 +2863,7 @@
       }
     ],
     "eventCount": 13,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "changji",
@@ -2915,36 +2915,12 @@
       }
     ],
     "eventCount": 2,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "chengdu",
     "cityName": "成都",
     "events": [
-      {
-        "id": "9875605732511",
-        "title": "Amazon Quick 工作坊",
-        "time": "2026/08/29 周六 13:00",
-        "location": "四川成都",
-        "url": "https://usergroup.huodongxing.com/event/9875605732511",
-        "imageUrl": "https://cdn.huodongxing.com/logo/202608/9875605732511/806080600808332.jpg",
-        "status": "upcoming",
-        "views": 228,
-        "favorites": 41,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
-        "sort": 1,
-        "localImage": "9875605732511.jpg",
-        "cityMappings": [
-          "chengdu"
-        ],
-        "slug": "amazon-quick-工作坊-9875605732511",
-        "tags": [
-          "amazon",
-          "workshop"
-        ],
-        "isUpcoming": true,
-        "formattedDate": "2026年08月29日 13:00"
-      },
       {
         "id": "7642082069600",
         "title": "打破职场偏见 绽放-她们精彩的职业人生",
@@ -3752,9 +3728,9 @@
         "url": "https://usergroup.huodongxing.com/event/4869917478311",
         "imageUrl": "https://cdn.huodongxing.com/logo/202607/4869917478311/796041093560651.jpg",
         "status": "ended",
-        "views": 3939,
+        "views": 3944,
         "favorites": 94,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
         "sort": 6,
         "localImage": "4869917478311.jpg",
         "cityMappings": [
@@ -3766,10 +3742,34 @@
         ],
         "isUpcoming": false,
         "formattedDate": "2026年07月26日 13:30"
+      },
+      {
+        "id": "9875605732511",
+        "title": "Amazon Quick 工作坊",
+        "time": "2026/08/29 周六 13:00",
+        "location": "四川成都",
+        "url": "https://usergroup.huodongxing.com/event/9875605732511",
+        "imageUrl": "https://cdn.huodongxing.com/logo/202608/9875605732511/806080600808332.jpg",
+        "status": "ended",
+        "views": 300,
+        "favorites": 42,
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
+        "sort": 3,
+        "localImage": "9875605732511.jpg",
+        "cityMappings": [
+          "chengdu"
+        ],
+        "slug": "amazon-quick-工作坊-9875605732511",
+        "tags": [
+          "amazon",
+          "workshop"
+        ],
+        "isUpcoming": false,
+        "formattedDate": "2026年08月29日 13:00"
       }
     ],
     "eventCount": 37,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "lanzhou",
@@ -3890,7 +3890,7 @@
       }
     ],
     "eventCount": 5,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "guangzhou",
@@ -4014,7 +4014,7 @@
       }
     ],
     "eventCount": 5,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "fuzhou",
@@ -4085,7 +4085,7 @@
       }
     ],
     "eventCount": 3,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "hangzhou",
@@ -4227,7 +4227,7 @@
       }
     ],
     "eventCount": 6,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "zhangjiakou",
@@ -4303,7 +4303,7 @@
       }
     ],
     "eventCount": 3,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "hefei",
@@ -4536,7 +4536,7 @@
       }
     ],
     "eventCount": 10,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "zhengzhou",
@@ -4634,7 +4634,7 @@
       }
     ],
     "eventCount": 4,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   },
   {
     "cityId": "nanjing",
@@ -4713,9 +4713,9 @@
         "url": "https://usergroup.huodongxing.com/event/1867892983411",
         "imageUrl": "https://cdn.huodongxing.com/logo/202607/1867892983411/616027034945502.jpg",
         "status": "ended",
-        "views": 2109,
+        "views": 2114,
         "favorites": 74,
-        "scrapedAt": "2026-08-28T01:53:35.736Z",
+        "scrapedAt": "2026-08-29T01:18:08.963Z",
         "sort": 10,
         "localImage": "1867892983411.jpg",
         "cityMappings": [
@@ -4731,6 +4731,6 @@
       }
     ],
     "eventCount": 4,
-    "lastUpdated": "2026-08-28T01:53:58.226Z"
+    "lastUpdated": "2026-08-29T01:18:18.475Z"
   }
 ]
