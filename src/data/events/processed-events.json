@@ -1,28 +1,5 @@
 [
   {
-    "id": "3875778857800",
-    "title": "牌局之下看得见 AI 掼蛋 Agent 实战与云原生可观测性",
-    "time": "2026/09/05 周六 13:30",
-    "location": "北京朝阳",
-    "url": "https://usergroup.huodongxing.com/event/3875778857800",
-    "imageUrl": "https://cdn.huodongxing.com/logo/202608/3875778857800/146081804695422.jpg",
-    "status": "upcoming",
-    "views": 3785,
-    "favorites": 172,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
-    "sort": 1,
-    "localImage": "3875778857800.jpg",
-    "cityMappings": [
-      "beijing"
-    ],
-    "slug": "牌局之下看得见-ai-掼蛋-agent-实战与云原生可观测性-3875778857800",
-    "tags": [
-      "ai"
-    ],
-    "isUpcoming": true,
-    "formattedDate": "2026年09月05日 13:30"
-  },
-  {
     "id": "7876684283200",
     "title": "AIOps Day  可观测性AIOps 与 AgentOps 闭门交流会",
     "time": "2026/09/18 周五 13:00",
@@ -30,10 +7,10 @@
     "url": "https://usergroup.huodongxing.com/event/7876684283200",
     "imageUrl": "https://cdn.huodongxing.com/logo/202609/7876684283200/616088460121762.jpg",
     "status": "upcoming",
-    "views": 406,
-    "favorites": 53,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
-    "sort": 2,
+    "views": 511,
+    "favorites": 56,
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
+    "sort": 1,
     "localImage": "7876684283200.jpg",
     "cityMappings": [
       "chengdu"
@@ -53,10 +30,10 @@
     "url": "https://usergroup.huodongxing.com/event/9872593983600",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/9872593983600/246059680696409.jpg",
     "status": "upcoming",
-    "views": 1564,
-    "favorites": 131,
-    "scrapedAt": "2026-09-03T20:16:19.958Z",
-    "sort": 3,
+    "views": 1745,
+    "favorites": 135,
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
+    "sort": 2,
     "localImage": "9872593983600.jpg",
     "cityMappings": [
       "shenzhen"
@@ -69,6 +46,29 @@
     "formattedDate": "2026年10月17日 09:00"
   },
   {
+    "id": "3875778857800",
+    "title": "牌局之下看得见 AI 掼蛋 Agent 实战与云原生可观测性",
+    "time": "2026/09/05 周六 13:30",
+    "location": "北京朝阳",
+    "url": "https://usergroup.huodongxing.com/event/3875778857800",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202608/3875778857800/146081804695422.jpg",
+    "status": "ended",
+    "views": 5991,
+    "favorites": 224,
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
+    "sort": 3,
+    "localImage": "3875778857800.jpg",
+    "cityMappings": [
+      "beijing"
+    ],
+    "slug": "牌局之下看得见-ai-掼蛋-agent-实战与云原生可观测性-3875778857800",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2026年09月05日 13:30"
+  },
+  {
     "id": "9875605732511",
     "title": "Amazon Quick 工作坊",
     "time": "2026/08/29 周六 13:00",
@@ -78,7 +78,7 @@
     "status": "ended",
     "views": 457,
     "favorites": 43,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
     "sort": 4,
     "localImage": "9875605732511.jpg",
     "cityMappings": [
@@ -100,9 +100,9 @@
     "url": "https://usergroup.huodongxing.com/event/6873756538711",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/6873756538711/596067856827306.jpg",
     "status": "ended",
-    "views": 12821,
+    "views": 12863,
     "favorites": 316,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
     "sort": 5,
     "localImage": "6873756538711.jpg",
     "cityMappings": [
@@ -125,7 +125,7 @@
     "status": "ended",
     "views": 2212,
     "favorites": 79,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
     "sort": 6,
     "localImage": "1872584825411.jpg",
     "cityMappings": [
@@ -144,9 +144,9 @@
     "url": "https://usergroup.huodongxing.com/event/4869917478311",
     "imageUrl": "https://cdn.huodongxing.com/logo/202607/4869917478311/796041093560651.jpg",
     "status": "ended",
-    "views": 3970,
+    "views": 3975,
     "favorites": 95,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
     "sort": 7,
     "localImage": "4869917478311.jpg",
     "cityMappings": [
@@ -169,7 +169,7 @@
     "status": "ended",
     "views": 2026,
     "favorites": 48,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
     "sort": 8,
     "localImage": "2869686580911.jpg",
     "cityMappings": [
@@ -191,9 +191,9 @@
     "url": "https://usergroup.huodongxing.com/event/7868985919311",
     "imageUrl": "https://cdn.huodongxing.com/logo/202607/7868985919311/726034624184589.jpg",
     "status": "ended",
-    "views": 4329,
+    "views": 4340,
     "favorites": 86,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
+    "scrapedAt": "2026-09-04T20:01:05.233Z",
     "sort": 9,
     "localImage": "7868985919311.jpg",
     "cityMappings": [
@@ -214,9 +214,9 @@
     "url": "https://usergroup.huodongxing.com/event/4868809852511",
     "imageUrl": "https://cdn.huodongxing.com/logo/202607/4868809852511/596033402771866.jpg",
     "status": "ended",
-    "views": 2852,
+    "views": 2857,
     "favorites": 125,
-    "scrapedAt": "2026-09-03T20:16:19.959Z",
+    "scrapedAt": "2026-09-04T20:01:05.234Z",
     "sort": 10,
     "localImage": "4868809852511.jpg",
     "cityMappings": [],
