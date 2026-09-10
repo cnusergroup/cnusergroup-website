@@ -1,10 +1,10 @@
 {
-  "totalEvents": 250,
-  "upcomingEvents": 2,
+  "totalEvents": 251,
+  "upcomingEvents": 3,
   "pastEvents": 248,
   "cityDistribution": {
     "chengdu": 38,
-    "shenzhen": 30,
+    "shenzhen": 31,
     "beijing": 38,
     "shanghai": 31,
     "xian": 13,
@@ -20,15 +20,15 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 940497,
-    "totalFavorites": 27996,
-    "averageViews": 3762,
+    "totalViews": 941453,
+    "totalFavorites": 28006,
+    "averageViews": 3751,
     "averageFavorites": 112,
     "topViewedEvents": [
       {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
-        "views": 64366
+        "views": 64451
       },
       {
         "id": "3806075715500",
@@ -80,16 +80,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 250,
-    "mappedEvents": 205,
+    "totalEvents": 251,
+    "mappedEvents": 206,
     "unmappedEvents": 45,
     "mappingsByConfidence": {
-      "high": 205,
+      "high": 206,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 205
+      "province": 206
     },
     "unmappedLocations": [
       "广东东莞",
@@ -103,50 +103,50 @@
     ]
   },
   "timeDistribution": {
-    "2026/": 40,
+    "2026/": 41,
     "2025/": 63,
     "2024/": 49,
     "2023/": 39,
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-09-09T20:11:16.353Z",
+  "lastUpdated": "2026-09-10T20:13:04.904Z",
   "processing": {
-    "totalRawEvents": 250,
+    "totalRawEvents": 251,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 250,
+    "eventsAfterDeduplication": 251,
     "eventsCleaned": 66,
-    "validEvents": 250,
+    "validEvents": 251,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 250,
+    "processedEvents": 251,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-09-09T20:11:16.356Z"
+    "processedAt": "2026-09-10T20:13:04.906Z"
   },
   "qualityReport": {
-    "timestamp": "2026-09-09T20:11:16.356Z",
+    "timestamp": "2026-09-10T20:13:04.906Z",
     "summary": {
-      "originalEventCount": 250,
-      "finalEventCount": 250,
+      "originalEventCount": 251,
+      "finalEventCount": 251,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 250,
-          "uniqueCount": 250,
+          "originalCount": 251,
+          "uniqueCount": 251,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 250,
+          "totalEvents": 251,
           "cleanedEvents": 66,
           "cleaningStats": {
             "Cleaned title": 66
           }
         },
         "validation": {
-          "totalEvents": 250,
-          "validEvents": 250,
+          "totalEvents": 251,
+          "validEvents": 251,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
