@@ -1,28 +1,5 @@
 [
   {
-    "id": "7876684283200",
-    "title": "AIOps Day  可观测性AIOps 与 AgentOps 闭门交流会",
-    "time": "2026/09/18 周五 13:00",
-    "location": "四川成都",
-    "url": "https://usergroup.huodongxing.com/event/7876684283200",
-    "imageUrl": "https://cdn.huodongxing.com/logo/202609/7876684283200/616088460121762.jpg",
-    "status": "upcoming",
-    "views": 1762,
-    "favorites": 122,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
-    "sort": 1,
-    "localImage": "7876684283200.jpg",
-    "cityMappings": [
-      "chengdu"
-    ],
-    "slug": "aiops-day-可观测性aiops-与-agentops-闭门交流会-7876684283200",
-    "tags": [
-      "ai"
-    ],
-    "isUpcoming": true,
-    "formattedDate": "2026年09月18日 13:00"
-  },
-  {
     "id": "9877751666300",
     "title": "当 AI 能做的越来越多，一个小而美的创业者，到底靠什么不可替代？",
     "time": "2026/09/20 周日 13:30",
@@ -30,10 +7,10 @@
     "url": "https://usergroup.huodongxing.com/event/9877751666300",
     "imageUrl": "https://cdn.huodongxing.com/logo/202609/9877751666300/986096624786361.jpg",
     "status": "upcoming",
-    "views": 1040,
-    "favorites": 125,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
-    "sort": 2,
+    "views": 1230,
+    "favorites": 129,
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
+    "sort": 1,
     "localImage": "9877751666300.jpg",
     "cityMappings": [
       "shenzhen"
@@ -53,10 +30,10 @@
     "url": "https://usergroup.huodongxing.com/event/9872593983600",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/9872593983600/946097898834170.jpg",
     "status": "upcoming",
-    "views": 6046,
-    "favorites": 269,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
-    "sort": 3,
+    "views": 6734,
+    "favorites": 298,
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
+    "sort": 2,
     "localImage": "9872593983600.jpg",
     "cityMappings": [
       "shenzhen"
@@ -69,6 +46,29 @@
     "formattedDate": "2026年10月17日 09:00"
   },
   {
+    "id": "7876684283200",
+    "title": "AIOps Day  可观测性AIOps 与 AgentOps 闭门交流会",
+    "time": "2026/09/18 周五 13:00",
+    "location": "四川成都",
+    "url": "https://usergroup.huodongxing.com/event/7876684283200",
+    "imageUrl": "https://cdn.huodongxing.com/logo/202609/7876684283200/616088460121762.jpg",
+    "status": "ended",
+    "views": 1889,
+    "favorites": 124,
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
+    "sort": 3,
+    "localImage": "7876684283200.jpg",
+    "cityMappings": [
+      "chengdu"
+    ],
+    "slug": "aiops-day-可观测性aiops-与-agentops-闭门交流会-7876684283200",
+    "tags": [
+      "ai"
+    ],
+    "isUpcoming": false,
+    "formattedDate": "2026年09月18日 13:00"
+  },
+  {
     "id": "3875778857800",
     "title": "牌局之下看得见 AI 掼蛋 Agent 实战与云原生可观测性",
     "time": "2026/09/05 周六 13:30",
@@ -76,9 +76,9 @@
     "url": "https://usergroup.huodongxing.com/event/3875778857800",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/3875778857800/146081804695422.jpg",
     "status": "ended",
-    "views": 8379,
+    "views": 8419,
     "favorites": 227,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
     "sort": 4,
     "localImage": "3875778857800.jpg",
     "cityMappings": [
@@ -99,9 +99,9 @@
     "url": "https://usergroup.huodongxing.com/event/9875605732511",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/9875605732511/806080600808332.jpg",
     "status": "ended",
-    "views": 488,
+    "views": 493,
     "favorites": 43,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
     "sort": 5,
     "localImage": "9875605732511.jpg",
     "cityMappings": [
@@ -123,9 +123,9 @@
     "url": "https://usergroup.huodongxing.com/event/6873756538711",
     "imageUrl": "https://cdn.huodongxing.com/logo/202608/6873756538711/596067856827306.jpg",
     "status": "ended",
-    "views": 13077,
+    "views": 13086,
     "favorites": 316,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
     "sort": 6,
     "localImage": "6873756538711.jpg",
     "cityMappings": [
@@ -148,7 +148,7 @@
     "status": "ended",
     "views": 2263,
     "favorites": 79,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
     "sort": 7,
     "localImage": "1872584825411.jpg",
     "cityMappings": [
@@ -169,7 +169,7 @@
     "status": "ended",
     "views": 4021,
     "favorites": 95,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
     "sort": 8,
     "localImage": "4869917478311.jpg",
     "cityMappings": [
@@ -190,9 +190,9 @@
     "url": "https://usergroup.huodongxing.com/event/2869686580911",
     "imageUrl": "https://cdn.huodongxing.com/logo/202607/2869686580911/966039490864860.jpg",
     "status": "ended",
-    "views": 2042,
+    "views": 2052,
     "favorites": 48,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
     "sort": 9,
     "localImage": "2869686580911.jpg",
     "cityMappings": [
@@ -216,7 +216,7 @@
     "status": "ended",
     "views": 4345,
     "favorites": 86,
-    "scrapedAt": "2026-09-16T20:36:43.179Z",
+    "scrapedAt": "2026-09-17T20:43:48.665Z",
     "sort": 10,
     "localImage": "7868985919311.jpg",
     "cityMappings": [
