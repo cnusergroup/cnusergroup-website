@@ -803,9 +803,9 @@
         "url": "https://usergroup.huodongxing.com/event/7868985919311",
         "imageUrl": "https://cdn.huodongxing.com/logo/202607/7868985919311/726034624184589.jpg",
         "status": "ended",
-        "views": 4360,
+        "views": 4345,
         "favorites": 86,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 10,
         "localImage": "7868985919311.jpg",
         "cityMappings": [
@@ -826,9 +826,9 @@
         "url": "https://usergroup.huodongxing.com/event/1872584825411",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/1872584825411/456059719470494.jpg",
         "status": "ended",
-        "views": 2288,
+        "views": 2293,
         "favorites": 79,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 7,
         "localImage": "1872584825411.jpg",
         "cityMappings": [
@@ -847,9 +847,9 @@
         "url": "https://usergroup.huodongxing.com/event/3875778857800",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/3875778857800/146081804695422.jpg",
         "status": "ended",
-        "views": 8464,
+        "views": 8479,
         "favorites": 227,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 4,
         "localImage": "3875778857800.jpg",
         "cityMappings": [
@@ -864,7 +864,7 @@
       }
     ],
     "eventCount": 38,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "shanghai",
@@ -1559,9 +1559,9 @@
         "url": "https://usergroup.huodongxing.com/event/6873756538711",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/6873756538711/596067856827306.jpg",
         "status": "ended",
-        "views": 13172,
+        "views": 13186,
         "favorites": 316,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 6,
         "localImage": "6873756538711.jpg",
         "cityMappings": [
@@ -1576,7 +1576,7 @@
       }
     ],
     "eventCount": 31,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "shenzhen",
@@ -1590,9 +1590,9 @@
         "url": "https://usergroup.huodongxing.com/event/9872593983600",
         "imageUrl": "https://cdn.huodongxing.com/logo/202608/9872593983600/946097898834170.jpg",
         "status": "upcoming",
-        "views": 9744,
-        "favorites": 379,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "views": 10534,
+        "favorites": 399,
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 1,
         "localImage": "9872593983600.jpg",
         "cityMappings": [
@@ -2273,9 +2273,9 @@
         "url": "https://usergroup.huodongxing.com/event/9877751666300",
         "imageUrl": "https://cdn.huodongxing.com/logo/202609/9877751666300/986096624786361.jpg",
         "status": "ended",
-        "views": 2313,
+        "views": 2323,
         "favorites": 147,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 2,
         "localImage": "9877751666300.jpg",
         "cityMappings": [
@@ -2290,7 +2290,7 @@
       }
     ],
     "eventCount": 31,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "wuhan",
@@ -2589,7 +2589,7 @@
       }
     ],
     "eventCount": 13,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "xian",
@@ -2870,7 +2870,7 @@
         "status": "ended",
         "views": 2062,
         "favorites": 48,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 9,
         "localImage": "2869686580911.jpg",
         "cityMappings": [
@@ -2886,7 +2886,7 @@
       }
     ],
     "eventCount": 13,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "changji",
@@ -2938,7 +2938,7 @@
       }
     ],
     "eventCount": 2,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "chengdu",
@@ -3751,9 +3751,9 @@
         "url": "https://usergroup.huodongxing.com/event/4869917478311",
         "imageUrl": "https://cdn.huodongxing.com/logo/202607/4869917478311/796041093560651.jpg",
         "status": "ended",
-        "views": 4026,
+        "views": 4031,
         "favorites": 95,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 8,
         "localImage": "4869917478311.jpg",
         "cityMappings": [
@@ -3776,7 +3776,7 @@
         "status": "ended",
         "views": 493,
         "favorites": 43,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 5,
         "localImage": "9875605732511.jpg",
         "cityMappings": [
@@ -3798,9 +3798,9 @@
         "url": "https://usergroup.huodongxing.com/event/7876684283200",
         "imageUrl": "https://cdn.huodongxing.com/logo/202609/7876684283200/616088460121762.jpg",
         "status": "ended",
-        "views": 2106,
+        "views": 2111,
         "favorites": 125,
-        "scrapedAt": "2026-09-21T21:36:43.557Z",
+        "scrapedAt": "2026-09-22T20:38:31.911Z",
         "sort": 3,
         "localImage": "7876684283200.jpg",
         "cityMappings": [
@@ -3815,7 +3815,7 @@
       }
     ],
     "eventCount": 38,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "lanzhou",
@@ -3936,7 +3936,7 @@
       }
     ],
     "eventCount": 5,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "guangzhou",
@@ -4060,7 +4060,7 @@
       }
     ],
     "eventCount": 5,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "fuzhou",
@@ -4131,7 +4131,7 @@
       }
     ],
     "eventCount": 3,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "hangzhou",
@@ -4273,7 +4273,7 @@
       }
     ],
     "eventCount": 6,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "zhangjiakou",
@@ -4349,7 +4349,7 @@
       }
     ],
     "eventCount": 3,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "hefei",
@@ -4582,7 +4582,7 @@
       }
     ],
     "eventCount": 10,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "zhengzhou",
@@ -4680,7 +4680,7 @@
       }
     ],
     "eventCount": 4,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   },
   {
     "cityId": "nanjing",
@@ -4777,6 +4777,6 @@
       }
     ],
     "eventCount": 4,
-    "lastUpdated": "2026-09-21T21:40:56.805Z"
+    "lastUpdated": "2026-09-22T20:38:42.186Z"
   }
 ]
