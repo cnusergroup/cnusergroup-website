@@ -20,9 +20,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 957669,
-    "totalFavorites": 28394,
-    "averageViews": 3815,
+    "totalViews": 958509,
+    "totalFavorites": 28410,
+    "averageViews": 3819,
     "averageFavorites": 113,
     "topViewedEvents": [
       {
@@ -68,14 +68,14 @@
         "favorites": 784
       },
       {
+        "id": "9872593983600",
+        "title": "Community Day 2026  深圳",
+        "favorites": 415
+      },
+      {
         "id": "2745427115200",
         "title": "女性创新力量影响未来",
         "favorites": 403
-      },
-      {
-        "id": "9872593983600",
-        "title": "Community Day 2026  深圳",
-        "favorites": 399
       }
     ]
   },
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-09-22T20:38:42.196Z",
+  "lastUpdated": "2026-09-23T20:49:41.504Z",
   "processing": {
     "totalRawEvents": 251,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 251,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-09-22T20:38:42.198Z"
+    "processedAt": "2026-09-23T20:49:41.506Z"
   },
   "qualityReport": {
-    "timestamp": "2026-09-22T20:38:42.198Z",
+    "timestamp": "2026-09-23T20:49:41.506Z",
     "summary": {
       "originalEventCount": 251,
       "finalEventCount": 251,
