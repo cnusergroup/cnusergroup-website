@@ -20,10 +20,10 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 990806,
-    "totalFavorites": 29048,
-    "averageViews": 3901,
-    "averageFavorites": 114,
+    "totalViews": 993951,
+    "totalFavorites": 29238,
+    "averageViews": 3913,
+    "averageFavorites": 115,
     "topViewedEvents": [
       {
         "id": "6857607994600",
@@ -33,7 +33,7 @@
       {
         "id": "9872593983600",
         "title": "Community Day 2026  深圳",
-        "views": 24495
+        "views": 26290
       },
       {
         "id": "3806075715500",
@@ -63,14 +63,14 @@
         "favorites": 1350
       },
       {
+        "id": "9872593983600",
+        "title": "Community Day 2026  深圳",
+        "favorites": 793
+      },
+      {
         "id": "8713322434100",
         "title": "AIGC浪潮来袭！亚马逊云科技开发者社区嘉年华！",
         "favorites": 784
-      },
-      {
-        "id": "9872593983600",
-        "title": "Community Day 2026  深圳",
-        "favorites": 733
       },
       {
         "id": "2745427115200",
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-10-09T21:59:59.940Z",
+  "lastUpdated": "2026-10-10T20:51:48.584Z",
   "processing": {
     "totalRawEvents": 254,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 254,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-10-09T21:59:59.942Z"
+    "processedAt": "2026-10-10T20:51:48.587Z"
   },
   "qualityReport": {
-    "timestamp": "2026-10-09T21:59:59.942Z",
+    "timestamp": "2026-10-10T20:51:48.587Z",
     "summary": {
       "originalEventCount": 254,
       "finalEventCount": 254,
