@@ -1,10 +1,10 @@
 {
   "totalEvents": 255,
-  "upcomingEvents": 2,
-  "pastEvents": 253,
+  "upcomingEvents": 1,
+  "pastEvents": 254,
   "cityDistribution": {
-    "shenzhen": 31,
     "shanghai": 32,
+    "shenzhen": 31,
     "beijing": 39,
     "lanzhou": 6,
     "hangzhou": 7,
@@ -20,9 +20,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 1014809,
-    "totalFavorites": 29769,
-    "averageViews": 3980,
+    "totalViews": 1021633,
+    "totalFavorites": 29834,
+    "averageViews": 4006,
     "averageFavorites": 117,
     "topViewedEvents": [
       {
@@ -33,7 +33,7 @@
       {
         "id": "9872593983600",
         "title": "Community Day 2026  深圳",
-        "views": 40856
+        "views": 46543
       },
       {
         "id": "3806075715500",
@@ -65,7 +65,7 @@
       {
         "id": "9872593983600",
         "title": "Community Day 2026  深圳",
-        "favorites": 1271
+        "favorites": 1331
       },
       {
         "id": "8713322434100",
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-10-15T20:42:17.571Z",
+  "lastUpdated": "2026-10-16T20:13:57.377Z",
   "processing": {
     "totalRawEvents": 255,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 255,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-10-15T20:42:17.574Z"
+    "processedAt": "2026-10-16T20:13:57.379Z"
   },
   "qualityReport": {
-    "timestamp": "2026-10-15T20:42:17.574Z",
+    "timestamp": "2026-10-16T20:13:57.379Z",
     "summary": {
       "originalEventCount": 255,
       "finalEventCount": 255,
