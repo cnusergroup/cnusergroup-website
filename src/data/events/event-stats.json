@@ -20,9 +20,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 1021633,
-    "totalFavorites": 29834,
-    "averageViews": 4006,
+    "totalViews": 1029279,
+    "totalFavorites": 29896,
+    "averageViews": 4036,
     "averageFavorites": 117,
     "topViewedEvents": [
       {
@@ -33,7 +33,7 @@
       {
         "id": "9872593983600",
         "title": "Community Day 2026  深圳",
-        "views": 46543
+        "views": 54033
       },
       {
         "id": "3806075715500",
@@ -58,14 +58,14 @@
         "favorites": 1408
       },
       {
+        "id": "9872593983600",
+        "title": "Community Day 2026  深圳",
+        "favorites": 1392
+      },
+      {
         "id": "6857607994600",
         "title": "杭州亚马逊云科技 User Group Community 2026Summer",
         "favorites": 1350
-      },
-      {
-        "id": "9872593983600",
-        "title": "Community Day 2026  深圳",
-        "favorites": 1331
       },
       {
         "id": "8713322434100",
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-10-16T20:13:57.377Z",
+  "lastUpdated": "2026-10-17T19:49:52.918Z",
   "processing": {
     "totalRawEvents": 255,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 255,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-10-16T20:13:57.379Z"
+    "processedAt": "2026-10-17T19:49:52.919Z"
   },
   "qualityReport": {
-    "timestamp": "2026-10-16T20:13:57.379Z",
+    "timestamp": "2026-10-17T19:49:52.919Z",
     "summary": {
       "originalEventCount": 255,
       "finalEventCount": 255,
