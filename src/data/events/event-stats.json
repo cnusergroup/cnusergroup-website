@@ -1,14 +1,14 @@
 {
-  "totalEvents": 255,
-  "upcomingEvents": 1,
+  "totalEvents": 256,
+  "upcomingEvents": 2,
   "pastEvents": 254,
   "cityDistribution": {
     "shanghai": 32,
+    "chengdu": 39,
     "shenzhen": 31,
     "beijing": 39,
     "lanzhou": 6,
     "hangzhou": 7,
-    "chengdu": 38,
     "xian": 13,
     "nanjing": 4,
     "wuhan": 13,
@@ -20,9 +20,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 1035458,
-    "totalFavorites": 29902,
-    "averageViews": 4061,
+    "totalViews": 1036081,
+    "totalFavorites": 29912,
+    "averageViews": 4047,
     "averageFavorites": 117,
     "topViewedEvents": [
       {
@@ -33,7 +33,7 @@
       {
         "id": "9872593983600",
         "title": "Community Day 2026  深圳",
-        "views": 55081
+        "views": 55391
       },
       {
         "id": "3806075715500",
@@ -80,16 +80,16 @@
     ]
   },
   "mappingStats": {
-    "totalEvents": 255,
-    "mappedEvents": 210,
+    "totalEvents": 256,
+    "mappedEvents": 211,
     "unmappedEvents": 45,
     "mappingsByConfidence": {
-      "high": 210,
+      "high": 211,
       "medium": 0,
       "low": 0
     },
     "mappingsByType": {
-      "province": 210
+      "province": 211
     },
     "unmappedLocations": [
       "广东东莞",
@@ -103,50 +103,50 @@
     ]
   },
   "timeDistribution": {
-    "2026/": 45,
+    "2026/": 46,
     "2025/": 63,
     "2024/": 49,
     "2023/": 39,
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-10-20T20:59:58.731Z",
+  "lastUpdated": "2026-10-21T21:01:06.977Z",
   "processing": {
-    "totalRawEvents": 255,
+    "totalRawEvents": 256,
     "duplicatesRemoved": 0,
-    "eventsAfterDeduplication": 255,
+    "eventsAfterDeduplication": 256,
     "eventsCleaned": 67,
-    "validEvents": 255,
+    "validEvents": 256,
     "invalidEvents": 0,
     "warningEvents": 17,
-    "processedEvents": 255,
+    "processedEvents": 256,
     "citiesWithEvents": 15,
     "dataQualityScore": 100,
-    "processedAt": "2026-10-20T20:59:58.734Z"
+    "processedAt": "2026-10-21T21:01:06.979Z"
   },
   "qualityReport": {
-    "timestamp": "2026-10-20T20:59:58.734Z",
+    "timestamp": "2026-10-21T21:01:06.978Z",
     "summary": {
-      "originalEventCount": 255,
-      "finalEventCount": 255,
+      "originalEventCount": 256,
+      "finalEventCount": 256,
       "dataQualityScore": 100,
       "processingSteps": {
         "deduplication": {
-          "originalCount": 255,
-          "uniqueCount": 255,
+          "originalCount": 256,
+          "uniqueCount": 256,
           "duplicateCount": 0,
           "duplicateReasons": {}
         },
         "cleaning": {
-          "totalEvents": 255,
+          "totalEvents": 256,
           "cleanedEvents": 67,
           "cleaningStats": {
             "Cleaned title": 67
           }
         },
         "validation": {
-          "totalEvents": 255,
-          "validEvents": 255,
+          "totalEvents": 256,
+          "validEvents": 256,
           "invalidEvents": 0,
           "warningEvents": 17,
           "commonIssues": {
