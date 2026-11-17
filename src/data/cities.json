@@ -463,7 +463,7 @@
     },
     "logo": "/images/cities/zhengzhou-pc.png",
     "logoMobile": "/images/cities/zhengzhou-mobile.png",
-    "active": true,
+    "active": false,
     "description": {
       "zh": "郑州 亚马逊云科技 User Group 服务于中原地区的云计算开发者，推动河南省技术创新与交流。",
       "en": "Zhengzhou User Group serves cloud computing developers in Central China, promoting technological innovation and exchange in Henan province."
