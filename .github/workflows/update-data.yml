@@ -24,7 +24,8 @@ concurrency:
 
 jobs:
   update-data:
-    runs-on: ubuntu-latest
+    # 固定 24.04：ubuntu-latest 已升到 26.04，Playwright 尚不支持
+    runs-on: ubuntu-24.04
     timeout-minutes: 40
     env:
       # 活动时间以北京时间为准，runner 默认 UTC 会导致抓取和年份推断偏差 8 小时
