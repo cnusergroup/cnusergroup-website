@@ -19,9 +19,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 1095221,
-    "totalFavorites": 31120,
-    "averageViews": 4180,
+    "totalViews": 1096814,
+    "totalFavorites": 31168,
+    "averageViews": 4186,
     "averageFavorites": 119,
     "topViewedEvents": [
       {
@@ -32,7 +32,7 @@
       {
         "id": "9872593983600",
         "title": "Community Day 2026  深圳",
-        "views": 63425
+        "views": 63549
       },
       {
         "id": "3806075715500",
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-11-21T22:33:59.155Z",
+  "lastUpdated": "2026-11-22T23:01:31.781Z",
   "processing": {
     "totalRawEvents": 262,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 262,
     "citiesWithEvents": 14,
     "dataQualityScore": 100,
-    "processedAt": "2026-11-21T22:33:59.156Z"
+    "processedAt": "2026-11-22T23:01:31.783Z"
   },
   "qualityReport": {
-    "timestamp": "2026-11-21T22:33:59.156Z",
+    "timestamp": "2026-11-22T23:01:31.782Z",
     "summary": {
       "originalEventCount": 262,
       "finalEventCount": 262,
