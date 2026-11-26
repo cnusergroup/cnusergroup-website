@@ -19,9 +19,9 @@
     "changji": 2
   },
   "engagementMetrics": {
-    "totalViews": 1106574,
-    "totalFavorites": 31194,
-    "averageViews": 4224,
+    "totalViews": 1107114,
+    "totalFavorites": 31200,
+    "averageViews": 4226,
     "averageFavorites": 119,
     "topViewedEvents": [
       {
@@ -32,7 +32,7 @@
       {
         "id": "9872593983600",
         "title": "Community Day 2026  深圳",
-        "views": 63764
+        "views": 63792
       },
       {
         "id": "3806075715500",
@@ -47,7 +47,7 @@
       {
         "id": "1886960427411",
         "title": "What If Lab万一实验室AI 硬件创意黑客松",
-        "views": 16652
+        "views": 16783
       }
     ],
     "topFavoritedEvents": [
@@ -110,7 +110,7 @@
     "2022/": 57,
     "2021/": 2
   },
-  "lastUpdated": "2026-11-25T01:44:40.458Z",
+  "lastUpdated": "2026-11-26T01:18:22.106Z",
   "processing": {
     "totalRawEvents": 262,
     "duplicatesRemoved": 0,
@@ -122,10 +122,10 @@
     "processedEvents": 262,
     "citiesWithEvents": 14,
     "dataQualityScore": 100,
-    "processedAt": "2026-11-25T01:44:40.460Z"
+    "processedAt": "2026-11-26T01:18:22.108Z"
   },
   "qualityReport": {
-    "timestamp": "2026-11-25T01:44:40.460Z",
+    "timestamp": "2026-11-26T01:18:22.108Z",
     "summary": {
       "originalEventCount": 262,
       "finalEventCount": 262,
